@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventViewerApp", "EventViewer\EventViewerApp.csproj", "{845186C4-64AB-441F-B7E4-AF2CD58991C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroMQ_CSharp2Delphi", "ZeroMQ_CSharp2Delphi\ZeroMQ_CSharp2Delphi.csproj", "{0CF79B0F-9C51-4789-A968-7CDE122E923C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{845186C4-64AB-441F-B7E4-AF2CD58991C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845186C4-64AB-441F-B7E4-AF2CD58991C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845186C4-64AB-441F-B7E4-AF2CD58991C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845186C4-64AB-441F-B7E4-AF2CD58991C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF79B0F-9C51-4789-A968-7CDE122E923C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF79B0F-9C51-4789-A968-7CDE122E923C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF79B0F-9C51-4789-A968-7CDE122E923C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF79B0F-9C51-4789-A968-7CDE122E923C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

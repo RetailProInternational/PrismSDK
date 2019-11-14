@@ -1,0 +1,81 @@
+<!--
+Copyright © 2017 Retail Pro International, LLC. - All Rights Reserved.
+
+This source code is proprietary and Confidential Information of Retail Pro International, LLC.
+
+Any use of this source code, or any portion thereof, for any purpose whatsoever, is subject to adherence with the 
+applicable Retail Pro Development Partner Software License.  All other use or distribution in any format whatsoever, 
+is unauthorized and subject to appropriate penalties under applicable law. 
+
+For more information please visit www.retailpro.com or email moreinfo@retailpro.com.
+-->
+
+
+<form name="employeeSearchForm">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Employee Search</h4>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="search">Employee Name</label>
+                            <input tabindex="1" type="text" id="search" name="search" class="form-control" ng-model="criteria.searchText" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-lg btn-success" ng-click="search()" ng-disabled="!employeeSearchForm.$valid">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                       <table class="table table-bordered table-striped" ng-show="employees">
+                            <caption>{{employees.length}} matches found.</caption>
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-3">Employee Name</th>
+                                    <th class="col-xs-3">First Name</th>
+                                    <th class="col-xs-3">Last Name</th>
+                                    <th class="col-xs-1">Max Discount</th>
+                                    <th class="col-xs-2">Hire Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="employee in employees">
+                                <td>
+                                    {{employee.employee_name}}
+                                </td>
+                                 <td>
+                                    {{employee.first_name}}
+                                </td>
+                                 <td>
+                                    {{employee.last_name}}
+                                </td>
+                                 <td>
+                                    {{employee.max_discount_percent}} %
+                                </td>
+                                <td>
+                                    {{employee.hire_date | date: 'short'}} 
+                                </td>
+                            </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-lg btn-default" ng-click="$close()">Close</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

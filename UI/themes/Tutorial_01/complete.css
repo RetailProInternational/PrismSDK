@@ -1,0 +1,142 @@
+/*
+Copyright © 2017 Retail Pro International, LLC. - All Rights Reserved.
+
+This source code is proprietary and Confidential Information of Retail Pro International, LLC.
+
+Any use of this source code, or any portion thereof, for any purpose whatsoever, is subject to adherence with the 
+applicable Retail Pro Development Partner Software License.  All other use or distribution in any format whatsoever, 
+is unauthorized and subject to appropriate penalties under applicable law. 
+
+For more information please visit www.retailpro.com or email moreinfo@retailpro.com.
+*/
+
+body
+{
+  background-image: url('/images/custom/back-dk.jpg');
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #060C1C;
+}
+
+body > div > div > div > div > div > div.panel-body > div.col-md-5 > img,
+body > div > div > div > div.panel-body > div > div.col-xs-2 > img
+{
+ background: url('/images/custom/badge.png') no-repeat;
+ display: block;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ width: 200px; /* Width of new image */
+ height: 199px; /* Height of new image */
+ padding-left: 200px; /* Equal to width of new image */
+}
+
+div.panel-heading
+{
+  background-image: none;
+  background: -webkit-linear-gradient(#0A0A0A, #484848, #FFFFFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#0A0A0A, #484848, #FFFFFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0A0A0A, #484848, #FFFFFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0A0A0A, #484848, #FFFFFF); /* Standard syntax */
+}
+
+body > div:nth-child(1) > div.container-fluid.ng-scope > div:nth-child(2) > div > div.panel-body > div.row.row-margin
+{
+  display: none;
+}
+
+#transactionForm > div.container-fluid > div:nth-child(1) > div:nth-child(1) > img
+{
+ background: url('/images/custom/logo.png') no-repeat;
+ display: block;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ width: 332px; /* Width of new image */
+ height: 63px; /* Height of new image */
+ padding-left: 332px; /* Equal to width of new image */
+}
+
+.btn-info
+{
+  color: #000;
+  text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+  border-color: transparent !important;
+  background-image: none;
+  background: -webkit-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#085687, #0B7AC0, #0B7AC0); /* Standard syntax */
+}
+
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info
+{
+  background-image: none;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info
+{
+  color: #000;
+  text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+  border-color: transparent !important;
+  background-image: none;
+  background: -webkit-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#085687, #0B7AC0, #0B7AC0); /* Standard syntax */
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active
+{
+  color: #000
+  text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+  border-color: transparent !important;
+  background-image: none;
+  background: -webkit-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#085687, #0B7AC0, #0B7AC0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#085687, #0B7AC0, #0B7AC0); /* Standard syntax */
+  cursor: not-allowed;
+  pointer-events: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  filter: alpha(opacity=65); /* internet explorer */
+  -khtml-opacity: 0.65; /* khtml, old safari */
+  -moz-opacity: 0.65; /* mozilla, netscape */
+  opacity: 0.65; /* fx, safari, opera */
+}
+
+#transactionForm > div.container-fluid > div.row.flex > div.col-xs-4.col-xs-offset-1
+{
+  margin-left: 0;
+}
+
+#transactionForm > div.container-fluid > div.row.flex > div.col-xs-7
+{
+  width: 66.666666666666666%;
+}
+
+#transactionItems
+{
+ height: 630px;
+}
+
