@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.SubConnection.pas
+##########################################################################################################
+Class Name: TSubConnection
+Base Class Name: TModelBase
+Database Table: REM_CONNECTION_SUBSCR
+Associate Class: False
+Identified By: 'FRemoteConnectionSid,FSubscriptionSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','SubConnection.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','SubConnection.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','SubConnection.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','SubConnection.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','SubConnection.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','SubConnection.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','SubConnection.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','SubConnection.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','SubConnection.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','SubConnection.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemoteConnectionSid
+Data Type: Int64
+Database Column: 'REMOTE_CONNECTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'remote connection reference','SubConnection.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionSid
+Data Type: Int64
+Database Column: 'SUBSCRIPTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'subscription reference','SubConnection.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Int16
+Database Column: NA
+Documentation: '0 - Not Active, 1 - Active','SubConnection.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionName
+Data Type: string
+Database Column: NA
+Documentation: 'ConnectionName','SubConnection.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionType
+Data Type: TServerMode
+Database Column: NA
+Documentation: '0 - Prism, 1 - V9','SubConnection.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

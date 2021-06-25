@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.ForeignCurrency.Associate.pas
+##########################################################################################################
+Class Name: TForeignCurrencyAssociate
+Base Class Name: 
+Database Table: CURRENCY
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: 'CURRENCY_NAME',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlphabeticCode
+Data Type: Nullable<string>
+Database Column: 'ALPHABETIC_CODE',[cpRequired,cpNotNull],3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Symbol
+Data Type: Nullable<string>
+Database Column: 'SYMBOL',[],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

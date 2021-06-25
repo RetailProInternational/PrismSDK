@@ -1,0 +1,36 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "vendsid" : "0",
+      "primaryflag" : false,
+      "active" : false,
+      "companyname" : null,
+      "address1" : null,
+      "address2" : null,
+      "address3" : null,
+      "address4" : null,
+      "address5" : null,
+      "address6" : null,
+      "city" : null,
+      "state" : null,
+      "postalcode" : null,
+      "postalcodeextension" : null,
+      "countrysid" : null,
+      "seqno" : 0,
+      "addresstypesid" : null,
+      "countrycode" : null,
+      "addresstypename" : null
+    }
+  ]
+}
+

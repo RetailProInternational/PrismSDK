@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.POItem.Associate.pas
+##########################################################################################################
+Class Name: TPOItemAssociate
+Base Class Name: 
+Database Table: PO_ITEM
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Nullable<Int64>
+Database Column: 'ITEM_SID',[cpRequired],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Nullable<Int16>
+Database Column: 'ITEM_POS',[],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

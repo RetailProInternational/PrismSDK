@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.PluginData.pas
+##########################################################################################################
+Class Name: TPluginData
+Base Class Name: TModelBase
+Database Table: PLUGIN_DATA
+Associate Class: False
+Identified By: 'FPluginAreaId,FPluginId'
+Legacy Identified By: 'PluginId,PluginAreaId'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','PluginData.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'version id of row creator using application ui','PluginData.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','PluginData.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'version id of last modifier using application ui','PluginData.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified with time zone','PluginData.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','PluginData.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively. this is the same value that will be used in licensing applications.','PluginData.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','PluginData.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value.','PluginData.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description.','PluginData.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PluginId
+Data Type: Integer
+Database Column: 'PLUGIN_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'Unique identifying value, 1=RProPromo','PluginData.11'
+Legacy Column: 'PLUGIN_ID'
+
+------------------------------------------------------
+
+Name: PluginAreaId
+Data Type: Nullable<Integer>
+Database Column: 'PLUGIN_AREA_ID',[],10,0
+Documentation: 'Id of plugin area. For RProPromo (plugin_id=1) it has next values - 0=Options, 1=Customer Pricing, 2=Promos, 3=Qty Disc, 4=Pricing, 5=BOGOs.','PluginData.12'
+Legacy Column: 'PLUGIN_AREA_ID'
+
+------------------------------------------------------
+
+Name: PluginAreaName
+Data Type: Nullable<string>
+Database Column: 'PLUGIN_AREA_NAME',[],255
+Documentation: 'Name of plugin area. For RProPromo (plugin_id=1) it has next values - for plugin_area_id=0 - "Options", for plugin_area_id=1 - "Customer Pricing", etc...','PluginData.13'
+Legacy Column: 'PLUGIN_AREA_NAME'
+
+------------------------------------------------------
+
+Name: Data
+Data Type: Nullable<string>
+Database Column: 'DATA',[],2001
+Documentation: 'Whole plugin area data (RProPromo uses XML format).','PluginData.14'
+Legacy Column: 'DATA'
+
+------------------------------------------------------
+

@@ -1,0 +1,221 @@
+##########################################################################################################
+File Name: Prism.Model.CustExtend.pas
+##########################################################################################################
+Class Name: TCustExtend
+Base Class Name: TModelBase
+Database Table: CUSTOMER_EXTEND
+Associate Class: False
+Identified By: 'FCustSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CustExtend.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CustExtend.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CustExtend.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CustExtend.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustExtend.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CustExtend.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','CustExtend.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','CustExtend.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustExtend.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CustExtend.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to customer record.','CustExtend.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'user defined field','CustExtend.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'user defined field','CustExtend.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'user defined field','CustExtend.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'user defined field','CustExtend.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'user defined field','CustExtend.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF11String
+Data Type: Nullable<string>
+Database Column: 'UDF11_STRING',[],50
+Documentation: 'user defined field','CustExtend.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF12String
+Data Type: Nullable<string>
+Database Column: 'UDF12_STRING',[],50
+Documentation: 'user defined field','CustExtend.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF13String
+Data Type: Nullable<string>
+Database Column: 'UDF13_STRING',[],50
+Documentation: 'user defined field','CustExtend.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF14String
+Data Type: Nullable<string>
+Database Column: 'UDF14_STRING',[],50
+Documentation: 'user defined field','CustExtend.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF15String
+Data Type: Nullable<string>
+Database Column: 'UDF15_STRING',[],50
+Documentation: 'user defined field','CustExtend.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF16String
+Data Type: Nullable<string>
+Database Column: 'UDF16_STRING',[],50
+Documentation: 'UDF16String','CustExtend.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF17String
+Data Type: Nullable<string>
+Database Column: 'UDF17_STRING',[],50
+Documentation: 'UDF17String','CustExtend.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF18String
+Data Type: Nullable<string>
+Database Column: 'UDF18_STRING',[],50
+Documentation: 'UDF18String','CustExtend.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF1LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF1_LARGE_STRING',[],2000
+Documentation: 'user defined field','CustExtend.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF2LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF2_LARGE_STRING',[],2000
+Documentation: 'user defined field','CustExtend.26'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.Calendar.pas
+##########################################################################################################
+Class Name: TCalendar
+Base Class Name: TModelBase
+Database Table: CALENDAR
+Associate Class: False
+Identified By: 'FCalName'
+Legacy Identified By: 'CalName'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','Calendar.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','Calendar.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','Calendar.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','Calendar.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','Calendar.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','Calendar.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','Calendar.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','Calendar.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','Calendar.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','Calendar.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CalType
+Data Type: TCalendarType
+Database Column: 'CAL_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-Store Schedule 1-Retail Calendar','Calendar.11'
+Legacy Column: 'CAL_TYPE'
+
+------------------------------------------------------
+
+Name: CalName
+Data Type: string
+Database Column: 'CAL_NAME',[cpRequired,cpNotNull],255
+Documentation: 'CalName','Calendar.12'
+Legacy Column: 'CAL_NAME'
+
+------------------------------------------------------
+
+Name: Frequency
+Data Type: TCalFrequencyType
+Database Column: 'FREQUENCY',[cpRequired,cpNotNull],5,0
+Documentation: 'second   1 minute   2 hour   3 day   4 week   5 month   6 quarter   7 year   8 10-day   10 semi-monthly   16 semi-annual   18','Calendar.13'
+Legacy Column: 'FREQUENCY'
+
+------------------------------------------------------
+
+Name: AnchorDate
+Data Type: TDateTime
+Database Column: 'ANCHOR_DATE',[cpRequired,cpNotNull
+Documentation: 'AnchorDate','Calendar.14'
+Legacy Column: 'ANCHOR_DATE'
+
+------------------------------------------------------
+
+Name: BeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'BEGIN_DATE',[
+Documentation: 'BeginDate','Calendar.15'
+Legacy Column: 'BEGIN_DATE'
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'EndDate','Calendar.16'
+Legacy Column: 'END_DATE'
+
+------------------------------------------------------
+
+Name: PlanYear
+Data Type: Nullable<Int16>
+Database Column: 'PLAN_YEAR',[],4,0
+Documentation: 'PlanYear','Calendar.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CalId
+Data Type: Integer
+Database Column: 'CAL_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'helps in identifying a calendar entry in V9. Used in prism to identify modifications','Calendar.18'
+Legacy Column: 'CAL_ID'
+
+------------------------------------------------------
+

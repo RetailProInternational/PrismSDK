@@ -1,0 +1,197 @@
+##########################################################################################################
+File Name: Prism.Model.LtyCustRewardHist.pas
+##########################################################################################################
+Class Name: TLtyCustRewardHist
+Base Class Name: TModelBase
+Database Table: LTY_CUST_REWARD_HIST
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','LtyCustRewardHist.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','LtyCustRewardHist.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','LtyCustRewardHist.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','LtyCustRewardHist.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','LtyCustRewardHist.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','LtyCustRewardHist.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','LtyCustRewardHist.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','LtyCustRewardHist.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','LtyCustRewardHist.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','LtyCustRewardHist.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Reverse
+Data Type: Boolean
+Database Column: 'REVERSE',[],1,0
+Documentation: '0 - direct modification, 1 - reversal modification.','LtyCustRewardHist.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Unique identifier of the customer.','LtyCustRewardHist.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPgmSid
+Data Type: Int64
+Database Column: 'LTY_PGM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Unique identifier of Item Reward loyalty program.','LtyCustRewardHist.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'DOC_SID and ITEM_POS identify the document item.','LtyCustRewardHist.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'DOC_SID and ITEM_POS identify the document item.','LtyCustRewardHist.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnItemUid
+Data Type: Int64
+Database Column: 'INVN_ITEM_UID',[cpRequired,cpNotNull],19,0
+Documentation: 'INVN_SBS_ITEM.invn_item_uid (aka v9 item identifier) of a reward item.','LtyCustRewardHist.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Integer
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],10,0
+Documentation: 'Subsidiary number.','LtyCustRewardHist.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Action
+Data Type: Int16
+Database Column: 'ACTION',[cpRequired,cpNotNull],1,0
+Documentation: '0 - reward, 1 - return.','LtyCustRewardHist.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocCreateDate
+Data Type: TDateTime
+Database Column: 'DOC_CREATE_DATE',[cpRequired,cpNotNull
+Documentation: 'Create date of the document.','LtyCustRewardHist.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocNo
+Data Type: Integer
+Database Column: 'DOC_NO',[cpRequired,cpNotNull],10,0
+Documentation: 'Document number.','LtyCustRewardHist.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocTotal
+Data Type: Double
+Database Column: 'DOC_TOTAL',[cpRequired,cpNotNull],16,4
+Documentation: 'Document total.','LtyCustRewardHist.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: string
+Database Column: 'STORE_CODE',[cpRequired,cpNotNull],5
+Documentation: 'Store code.','LtyCustRewardHist.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: string
+Database Column: 'EMPL_NAME',[cpRequired,cpNotNull],8
+Documentation: 'Employee name.','LtyCustRewardHist.23'
+Legacy Column: NA
+
+------------------------------------------------------
+

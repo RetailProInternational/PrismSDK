@@ -1,0 +1,43 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : null,
+      "regionsid" : null,
+      "districtsid" : null,
+      "storesid" : null,
+      "workstation" : null,
+      "active" : false,
+      "departmentname" : null,
+      "hisecsbssid" : null,
+      "hisecemplsid" : null,
+      "homeurl" : null,
+      "timein" : null,
+      "autologout" : false,
+      "autologoutminutes" : null,
+      "cms" : false,
+      "v8station" : null,
+      "v9fqdn" : null,
+      "workstationno" : null,
+      "preferences" : null,
+      "workstationtype" : 0,
+      "activepricelevelsid" : null,
+      "taxareasid" : null,
+      "documentsequencesid" : null,
+      "hardwaresid" : null,
+      "eftsid" : null,
+      "taxarea2sid" : null,
+      "prismproxysid" : null
+    }
+  ]
+}
+

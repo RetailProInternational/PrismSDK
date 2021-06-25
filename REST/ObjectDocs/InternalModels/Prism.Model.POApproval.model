@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.POApproval.pas
+##########################################################################################################
+Class Name: TPOApproval
+Base Class Name: TModelBase
+Database Table: PO_APPROVAL
+Associate Class: False
+Identified By: 'FPoSid,FApprovLevel'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','POApproval.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','POApproval.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','POApproval.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','POApproval.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','POApproval.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','POApproval.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','POApproval.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','POApproval.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','POApproval.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','POApproval.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PoSid
+Data Type: Int64
+Database Column: 'PO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PoSid','POApproval.11'
+Legacy Column: 'PO_SID'
+
+------------------------------------------------------
+
+Name: ApprovLevel
+Data Type: Int16
+Database Column: 'APPROV_LEVEL',[cpRequired,cpNotNull],5,0
+Documentation: 'ApprovLevel','POApproval.12'
+Legacy Column: 'APPROV_LEVEL'
+
+------------------------------------------------------
+
+Name: ApprovbySid
+Data Type: Nullable<Int64>
+Database Column: 'APPROVBY_SID',[],19,0
+Documentation: 'ApprovbySid','POApproval.13'
+Legacy Column: 'APPROVBY_ID'
+
+------------------------------------------------------
+
+Name: ApprovDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPROV_DATE',[
+Documentation: 'ApprovDate','POApproval.14'
+Legacy Column: 'APPROV_DATE'
+
+------------------------------------------------------
+
+Name: ApprovNotes
+Data Type: Nullable<string>
+Database Column: 'APPROV_NOTES',[],255
+Documentation: 'ApprovNotes','POApproval.15'
+Legacy Column: 'APPROV_NOTES'
+
+------------------------------------------------------
+
+Name: ApprovStatus
+Data Type: Nullable<Int16>
+Database Column: 'APPROV_STATUS',[],5,0
+Documentation: 'ApprovStatus','POApproval.16'
+Legacy Column: 'APPROV_STATUS'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','POApproval.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovBy
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'EmplID','POApproval.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovByName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','POApproval.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','POApproval.20'
+Legacy Column: NA
+
+------------------------------------------------------
+

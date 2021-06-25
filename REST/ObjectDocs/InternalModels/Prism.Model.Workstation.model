@@ -1,0 +1,301 @@
+##########################################################################################################
+File Name: Prism.Model.Workstation.pas
+##########################################################################################################
+Class Name: TWorkstation
+Base Class Name: TModelBase
+Database Table: WORKSTATION
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Workstation.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Workstation.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Workstation.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Workstation.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Workstation.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Workstation.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Workstation.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Workstation.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Workstation.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Workstation.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'reference to subsidiary record','Workstation.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionSid
+Data Type: Nullable<Int64>
+Database Column: 'REGION_SID',[],19,0
+Documentation: 'reference to region record','Workstation.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DistrictSid
+Data Type: Nullable<Int64>
+Database Column: 'DISTRICT_SID',[],19,0
+Documentation: 'reference to district record','Workstation.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'reference to store record','Workstation.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Workstation
+Data Type: string
+Database Column: 'WORKSTATION',[cpRequired,cpNotNull],64
+Documentation: 'uniquely identifying string value.  this may be a numeric string for backward compatibility.','Workstation.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates whether the workstation is enabled.','Workstation.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DepartmentName
+Data Type: Nullable<string>
+Database Column: 'DEPARTMENT_NAME',[],20
+Documentation: 'department name - not the same as dcs.','Workstation.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HisecSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'HISEC_SBS_SID',[],19,0
+Documentation: 'reference to subsidiary record associated with high security documents.','Workstation.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HisecEmplSid
+Data Type: Nullable<Int64>
+Database Column: 'HISEC_EMPL_SID',[],19,0
+Documentation: 'reference to employee record associated with high security documents.','Workstation.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HomeUrl
+Data Type: Nullable<string>
+Database Column: 'HOME_URL',[],200
+Documentation: 'page to load as main screen background.','Workstation.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TimeIn
+Data Type: Nullable<TDateTime>
+Database Column: 'TIME_IN',[
+Documentation: 'used by licensing, this is set when a workstation is "seated", and set to null when the workstation is "unseated".','Workstation.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AutoLogout
+Data Type: Boolean
+Database Column: 'AUTO_LOGOUT',[cpRequired,cpNotNull],1,0
+Documentation: 'used by ui, indicates whether a user should be automatically logged out.','Workstation.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AutoLogoutMinutes
+Data Type: Nullable<Int16>
+Database Column: 'AUTO_LOGOUT_MINUTES',[],5,0
+Documentation: 'used by ui, number of minutes of inactivity before workstation is logged out.','Workstation.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS',[],1,0
+Documentation: '0=v8 workstation, 1=v9 workstation, 2=v10 workstation','Workstation.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V8Station
+Data Type: Nullable<string>
+Database Column: 'V8_STATION',[],1
+Documentation: 'for backward compatibility: v8 station code.','Workstation.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9Fqdn
+Data Type: Nullable<string>
+Database Column: 'V9_FQDN',[],64
+Documentation: 'for backward compatibility: v9 fully qualified domain name.','Workstation.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<Int16>
+Database Column: 'WORKSTATION_NO',[],5,0
+Documentation: 'keeps the workstation number, can not be modified by the end user','Workstation.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Preferences
+Data Type: Nullable<string>
+Database Column: 'PREFERENCES',[
+Documentation: 'Default Preferences at workstation level','Workstation.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationType
+Data Type: Int16
+Database Column: 'WORKSTATION_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'WorkstationType','Workstation.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivePriceLevelSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_PRICE_LEVEL_SID',[],19,0
+Documentation: 'ActivePriceLevelSid','Workstation.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','Workstation.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocumentSequenceSid
+Data Type: Nullable<Int64>
+Database Column: 'DOCUMENT_SEQUENCE_SID',[],19,0
+Documentation: 'DocumentSequenceSid','Workstation.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HardwareSid
+Data Type: Nullable<Int64>
+Database Column: 'HARDWARE_SID',[],19,0
+Documentation: 'ref to external services table','Workstation.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftSid
+Data Type: Nullable<Int64>
+Database Column: 'EFT_SID',[],19,0
+Documentation: 'ref to external services table','Workstation.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'Reference to tax_area table','Workstation.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrismProxySid
+Data Type: Nullable<Int64>
+Database Column: 'PRISM_PROXY_SID',[],19,0
+Documentation: 'Proxy selected for this workstation','Workstation.36'
+Legacy Column: NA
+
+------------------------------------------------------
+

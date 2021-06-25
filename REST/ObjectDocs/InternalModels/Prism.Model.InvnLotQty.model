@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.InvnLotQty.pas
+##########################################################################################################
+Class Name: TInvnLotQty
+Base Class Name: TModelBase
+Database Table: INVN_SBS_ITEM_LOT_QTY
+Associate Class: False
+Identified By: 'FLotNumber,FInvnSbsItemLotSid,FSbsSid,FStoreSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','InvnLotQty.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','InvnLotQty.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','InvnLotQty.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','InvnLotQty.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','InvnLotQty.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','InvnLotQty.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','InvnLotQty.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','InvnLotQty.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','InvnLotQty.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','InvnLotQty.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemLotSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_LOT_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'InvnSbsItemLotSid','InvnLotQty.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','InvnLotQty.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','InvnLotQty.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','InvnLotQty.14'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','InvnLotQty.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','InvnLotQty.16'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+

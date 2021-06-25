@@ -1,0 +1,53 @@
+##########################################################################################################
+File Name: Prism.Model.Transformdesign.Associate.pas
+##########################################################################################################
+Class Name: TTransformdesignAssociate
+Base Class Name: TAssociateBase
+Database Table: TRANSFORMDESIGN
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DesignName
+Data Type: Nullable<string>
+Database Column: 'DESIGN_NAME',[cpRequired,cpNotNull],256
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: Nullable<string>
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustomSchemaSid
+Data Type: Nullable<Int64>
+Database Column: 'CUSTOM_SCHEMA_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DesignType
+Data Type: Nullable<Int16>
+Database Column: 'DESIGN_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

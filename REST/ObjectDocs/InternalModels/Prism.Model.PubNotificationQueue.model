@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.PubNotificationQueue.pas
+##########################################################################################################
+Class Name: TPubNotificationQueue
+Base Class Name: TModelBase
+Database Table: PUB_NOTIFICATION_QUEUE
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','PubNotificationQueue.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','PubNotificationQueue.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','PubNotificationQueue.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','PubNotificationQueue.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','PubNotificationQueue.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','PubNotificationQueue.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','PubNotificationQueue.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','PubNotificationQueue.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','PubNotificationQueue.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','PubNotificationQueue.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DataeventQueueSid
+Data Type: Int64
+Database Column: 'DATAEVENT_QUEUE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to data event queue record.','PubNotificationQueue.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionEventSid
+Data Type: Int64
+Database Column: 'SUBSCRIPTION_EVENT_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subscription data event description record.','PubNotificationQueue.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TransmitStatus
+Data Type: Int16
+Database Column: 'TRANSMIT_STATUS',[cpRequired,cpNotNull],1,0
+Documentation: '0=created while subscription was active, not sent; 1=created while subscription was suspended, not sent; 2=send unsuccessful','PubNotificationQueue.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastFailedAttemptReason
+Data Type: Nullable<string>
+Database Column: 'LAST_FAILED_ATTEMPT_REASON',[],200
+Documentation: 'reason last transmission attempt failed, including error codes.','PubNotificationQueue.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastFailedAttemptDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_FAILED_ATTEMPT_DATETIME',[
+Documentation: 'date and time of last attempted transmission','PubNotificationQueue.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriberAddress
+Data Type: String
+Database Column: NA
+Documentation: 'RemoteAddress','PubNotificationQueue.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ServerType
+Data Type: TServerMode
+Database Column: NA
+Documentation: 'ConnectionType','PubNotificationQueue.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionActive
+Data Type: Boolean
+Database Column: NA
+Documentation: 'SubscriptionActive','PubNotificationQueue.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionActive
+Data Type: Boolean
+Database Column: NA
+Documentation: 'ConnectionActive','PubNotificationQueue.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionSid
+Data Type: Int64
+Database Column: NA
+Documentation: 'subscription reference','PubNotificationQueue.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GlobalFilter
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'GlobalFilter','PubNotificationQueue.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

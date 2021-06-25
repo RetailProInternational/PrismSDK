@@ -1,0 +1,77 @@
+##########################################################################################################
+File Name: Prism.Model.VoucherLinkedSlip.Associate.pas
+##########################################################################################################
+Class Name: TVoucherLinkedSlipAssociate
+Base Class Name: 
+Database Table: Voucher_Linked_Slip_v
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSid
+Data Type: Nullable<Int64>
+Database Column: 'SLIP_SID', [], 19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipNo
+Data Type: Nullable<Integer>
+Database Column: 'SLIP_NO',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutSbsSid
+Data Type: Int64
+Database Column: 'OUT_SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreSid
+Data Type: Int64
+Database Column: 'OUT_STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Unverified
+Data Type: Nullable<Int16>
+Database Column: 'UNVERIFIED',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReversedFlag
+Data Type: Nullable<Integer>
+Database Column: 'REVERSED_FLAG',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.PrintArea.pas
+##########################################################################################################
+Class Name: TPrintArea
+Base Class Name: TModelBase
+Database Table: PRINT_AREA
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PrintArea.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PrintArea.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PrintArea.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PrintArea.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PrintArea.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PrintArea.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PrintArea.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PrintArea.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PrintArea.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PrintArea.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AreaType
+Data Type: TPrintAreaType
+Database Column: 'AREA_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: 'The type of print area 0=Retail Pro|1=Custom','PrintArea.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: string
+Database Column: 'NAME',[cpRequired,cpNotNull],64
+Documentation: 'The display name of the print area','PrintArea.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ParentSid
+Data Type: Nullable<Int64>
+Database Column: 'PARENT_SID',[],19,0
+Documentation: 'The parent sid for sub-areas','PrintArea.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OverrideFlag
+Data Type: Boolean
+Database Column: 'OVERRIDE_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'Flag indicating that children area settings are ignored','PrintArea.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: string
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: 'The API resource that this print area references','PrintArea.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReportGroup
+Data Type: IList<TReportGroup>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,237 @@
+##########################################################################################################
+File Name: Prism.Model.DocExtend.pas
+##########################################################################################################
+Class Name: TDocExtend
+Base Class Name: TModelBase
+Database Table: DOCUMENT_EXTEND
+Associate Class: False
+Identified By: 'FDocSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DocExtend.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DocExtend.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','DocExtend.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DocExtend.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DocExtend.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DocExtend.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','DocExtend.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DocExtend.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DocExtend.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','DocExtend.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to document record','DocExtend.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'user defined value','DocExtend.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'user defined value','DocExtend.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'user defined value','DocExtend.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'user defined value','DocExtend.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'user defined value','DocExtend.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6Float
+Data Type: Nullable<Double>
+Database Column: 'UDF6_FLOAT',[],16,4
+Documentation: 'user defined numeric value','DocExtend.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf7Float
+Data Type: Nullable<Double>
+Database Column: 'UDF7_FLOAT',[],16,4
+Documentation: 'user defined numeric value','DocExtend.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf8Float
+Data Type: Nullable<Double>
+Database Column: 'UDF8_FLOAT',[],16,4
+Documentation: 'user defined numeric value','DocExtend.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf9Float
+Data Type: Nullable<Double>
+Database Column: 'UDF9_FLOAT',[],16,4
+Documentation: 'user defined numeric value','DocExtend.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf10Float
+Data Type: Nullable<Double>
+Database Column: 'UDF10_FLOAT',[],16,4
+Documentation: 'user defined numeric value','DocExtend.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF4_DATE',[
+Documentation: 'user defined date value','DocExtend.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF5_DATE',[
+Documentation: 'user defined date value','DocExtend.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF6_DATE',[
+Documentation: 'user defined date value','DocExtend.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Clob
+Data Type: Nullable<string>
+Database Column: 'UDF2_CLOB',[
+Documentation: 'user defined clob value','DocExtend.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note1
+Data Type: Nullable<string>
+Database Column: 'NOTE1',[],350
+Documentation: 'Note1','DocExtend.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note2
+Data Type: Nullable<string>
+Database Column: 'NOTE2',[],350
+Documentation: 'Note2','DocExtend.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note3
+Data Type: Nullable<string>
+Database Column: 'NOTE3',[],350
+Documentation: 'Note3','DocExtend.28'
+Legacy Column: NA
+
+------------------------------------------------------
+

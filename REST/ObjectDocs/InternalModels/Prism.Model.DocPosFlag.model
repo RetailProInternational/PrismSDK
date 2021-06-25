@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.DocPosFlag.pas
+##########################################################################################################
+Class Name: TDocPosFlag
+Base Class Name: TModelBase
+Database Table: DOC_POS_FLAG
+Associate Class: False
+Identified By: 'FFlagNo, FSbsSid'
+Legacy Identified By: 'FlagNo,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','DocPosFlag.1'
+Legacy Column: 'UDF_ID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','DocPosFlag.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','DocPosFlag.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','DocPosFlag.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','DocPosFlag.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','DocPosFlag.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','DocPosFlag.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','DocPosFlag.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','DocPosFlag.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'the subsidiary to which this pos flag belongs','DocPosFlag.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','DocPosFlag.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'NAME',[],15
+Documentation: 'Name of the POS flag','DocPosFlag.12'
+Legacy Column: 'UDF_NAME'
+
+------------------------------------------------------
+
+Name: FlagNo
+Data Type: Int16
+Database Column: 'FLAG_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'Flag Numbers - 1=POS flag1,2=POS flag2,3=POS flag3','DocPosFlag.13'
+Legacy Column: 'UDF_NO'
+
+------------------------------------------------------
+
+Name: IsRequired
+Data Type: Boolean
+Database Column: 'IS_REQUIRED',[cpRequired,cpNotNull],1,0
+Documentation: 'If this POS flag required or not Default is Not Required ( 0 )','DocPosFlag.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocPosFlagOption
+Data Type: IList<TDocPosFlagOption>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','DocPosFlag.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

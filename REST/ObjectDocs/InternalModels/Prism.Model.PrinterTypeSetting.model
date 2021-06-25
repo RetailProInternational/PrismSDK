@@ -1,0 +1,165 @@
+##########################################################################################################
+File Name: Prism.Model.PrinterTypeSetting.pas
+##########################################################################################################
+Class Name: TPrinterTypeSetting
+Base Class Name: TModelBase
+Database Table: PRINTER_TYPE_SETTING
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PrinterTypeSetting.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PrinterTypeSetting.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PrinterTypeSetting.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PrinterTypeSetting.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PrinterTypeSetting.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PrinterTypeSetting.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PrinterTypeSetting.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PrinterTypeSetting.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PrinterTypeSetting.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PrinterTypeSetting.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'reference to subsidiary record','PrinterTypeSetting.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrintAreaValueSid
+Data Type: Nullable<Int64>
+Database Column: 'PRINT_AREA_VALUE_SID',[],19,0
+Documentation: 'reference to print-area-value record','PrinterTypeSetting.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrinterTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'PRINTER_TYPE_SID',[],19,0
+Documentation: 'reference to printer type record','PrinterTypeSetting.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrintDesignSid
+Data Type: Nullable<Int64>
+Database Column: 'PRINT_DESIGN_SID',[],19,0
+Documentation: 'PrintDesignSid','PrinterTypeSetting.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActiveFlag
+Data Type: Boolean
+Database Column: 'ACTIVE_FLAG',[],1,0
+Documentation: 'flag indicating this print type is to be printed to','PrinterTypeSetting.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PreviewFlag
+Data Type: Boolean
+Database Column: 'PREVIEW_FLAG',[],1,0
+Documentation: 'flag indicating that print type will preview before printing','PrinterTypeSetting.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Copies
+Data Type: Nullable<Int16>
+Database Column: 'COPIES',[],3,0
+Documentation: 'the number of copies to print for this printer type','PrinterTypeSetting.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GroupFlag
+Data Type: boolean
+Database Column: 'GROUP_FLAG',[],1,0
+Documentation: 'Indicates if it is a group or single design','PrinterTypeSetting.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReportGroupSid
+Data Type: Nullable<Int64>
+Database Column: 'REPORT_GROUP_SID',[],19,0
+Documentation: 'Reference  to report group','PrinterTypeSetting.19'
+Legacy Column: NA
+
+------------------------------------------------------
+

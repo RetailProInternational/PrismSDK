@@ -1,0 +1,253 @@
+##########################################################################################################
+File Name: Prism.Model.Inventory.Associate.pas
+##########################################################################################################
+Class Name: TInventoryAssociate
+Base Class Name: TModelBase
+Database Table: INVN_SBS_ITEM
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: 'INVN_ITEM_UID',[cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StyleSID
+Data Type: Nullable<Int64>
+Database Column: 'STYLE_SID',[cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Upc
+Data Type: Nullable<Int64>
+Database Column: 'UPC',[],18,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION1',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION2',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION3',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION4',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSize
+Data Type: Nullable<string>
+Database Column: 'ITEM_SIZE',[],8
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attribute
+Data Type: Nullable<string>
+Database Column: 'ATTRIBUTE',[],8
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: 'VEND_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: 'USE_QTY_DECIMALS',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: 'SERIAL_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: 'LOT_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: 'KIT_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ALU
+Data Type: Nullable<string>
+Database Column: 'ALU',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorListCost
+Data Type: Nullable<Double>
+Database Column: 'VENDOR_LIST_COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TradeDiscPercent
+Data Type: Nullable<Double>
+Database Column: 'TRADE_DISC_PERC',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FCCost
+Data Type: Nullable<Double>
+Database Column: 'FC_COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinOrdQty
+Data Type: Nullable<Double>
+Database Column: 'MIN_ORD_QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastRcvdDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_RCVD_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

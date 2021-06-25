@@ -1,0 +1,1581 @@
+##########################################################################################################
+File Name: Prism.Model.Receiving.pas
+##########################################################################################################
+Class Name: TReceiving
+Base Class Name: TModelBase
+Database Table: VOUCHER
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','Receiving.1'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','Receiving.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','Receiving.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','Receiving.4'
+Legacy Column: 'MODIFIEDBY_ID'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','Receiving.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','Receiving.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','Receiving.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','Receiving.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','Receiving.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','Receiving.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','Receiving.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','Receiving.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouNo
+Data Type: Integer
+Database Column: 'VOU_NO',[cpRequired,cpNotNull],10,0
+Documentation: 'VouNo','Receiving.13'
+Legacy Column: 'VOU_NO'
+
+------------------------------------------------------
+
+Name: VouType
+Data Type: TRecvDocType
+Database Column: 'VOU_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-Regular,1-Return','Receiving.14'
+Legacy Column: 'VOU_TYPE'
+
+------------------------------------------------------
+
+Name: VouClass
+Data Type: TRecvDocClass
+Database Column: 'VOU_CLASS',[cpRequired,cpNotNull],5,0
+Documentation: '0-Voucher,1-PendingVoucher,2-ASN','Receiving.15'
+Legacy Column: 'VOU_CLASS'
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: 'VEND_SID',[],19,0
+Documentation: 'VendSid','Receiving.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PayeeSid
+Data Type: Nullable<Int64>
+Database Column: 'PAYEE_SID',[],19,0
+Documentation: 'PayeeSid','Receiving.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendAcctNo
+Data Type: Nullable<string>
+Database Column: 'VEND_ACCT_NO',[],200
+Documentation: 'VendAcctNo','Receiving.18'
+Legacy Column: 'VEND_ACCT_NO'
+
+------------------------------------------------------
+
+Name: VendorInvoiceSid
+Data Type: Nullable<Int64>
+Database Column: 'VENDOR_INVOICE_SID',[],10,0
+Documentation: 'VendorInvoiceSid','Receiving.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID',[],19,0
+Documentation: 'ClerkSid','Receiving.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Station
+Data Type: Nullable<string>
+Database Column: 'STATION',[],1
+Documentation: 'Station','Receiving.21'
+Legacy Column: 'STATION'
+
+------------------------------------------------------
+
+Name: Workstation
+Data Type: Nullable<Int16>
+Database Column: 'WORKSTATION',[],5,0
+Documentation: 'Workstation','Receiving.22'
+Legacy Column: 'WORKSTATION'
+
+------------------------------------------------------
+
+Name: OrigStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_STORE_SID',[],19,0
+Documentation: 'OrigStoreSid','Receiving.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStation
+Data Type: Nullable<string>
+Database Column: 'ORIG_STATION',[],1
+Documentation: 'OrigStation','Receiving.24'
+Legacy Column: 'ORIG_STATION'
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TDocumentStatus>
+Database Column: 'STATUS',[],10,0
+Documentation: '0-None,1-Changed,2-Cancelled,3-Normal,4-Completed','Receiving.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProcStatus
+Data Type: Nullable<Integer>
+Database Column: 'PROC_STATUS',[],10,0
+Documentation: '0-Normal, 16-Reversed, 32-Reversal, 48 - Not reversed, not reversal','Receiving.26'
+Legacy Column: 'PROC_STATUS'
+
+------------------------------------------------------
+
+Name: PoNo
+Data Type: Nullable<string>
+Database Column: 'PO_NO',[],20
+Documentation: 'PoNo','Receiving.27'
+Legacy Column: 'PO_NO'
+
+------------------------------------------------------
+
+Name: ToNo
+Data Type: Nullable<string>
+Database Column: 'TO_NO',[],8
+Documentation: 'ToNo','Receiving.28'
+Legacy Column: 'TO_NO'
+
+------------------------------------------------------
+
+Name: PkgNo
+Data Type: Nullable<string>
+Database Column: 'PKG_NO',[],20
+Documentation: 'PkgNo','Receiving.29'
+Legacy Column: 'PKG_NO'
+
+------------------------------------------------------
+
+Name: ShipmentNo
+Data Type: Nullable<string>
+Database Column: 'SHIPMENT_NO',[],16
+Documentation: 'ShipmentNo','Receiving.30'
+Legacy Column: 'SHIPMENT_NO'
+
+------------------------------------------------------
+
+Name: CostHandlingCode
+Data Type: Nullable<Int16>
+Database Column: 'COST_HANDLING_CODE',[],5,0
+Documentation: '0-Undefined,1-Average,2-Overwrite,3-Leave','Receiving.31'
+Legacy Column: 'COST_HANDLING_CODE'
+
+------------------------------------------------------
+
+Name: UpdatePriceFlag
+Data Type: Boolean
+Database Column: 'UPDATE_PRICE_FLAG',[],1,0
+Documentation: 'UpdatePriceFlag','Receiving.32'
+Legacy Column: 'UPDATE_PRICE_FLAG'
+
+------------------------------------------------------
+
+Name: UseVat
+Data Type: Boolean
+Database Column: 'USE_VAT',[],1,0
+Documentation: 'UseVat','Receiving.33'
+Legacy Column: 'USE_VAT'
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'DiscPerc','Receiving.34'
+Legacy Column: 'DISC_PERC'
+
+------------------------------------------------------
+
+Name: DiscAmt
+Data Type: Nullable<Double>
+Database Column: 'DISC_AMT',[],16,4
+Documentation: 'DiscAmt','Receiving.35'
+Legacy Column: 'DISC_AMT'
+
+------------------------------------------------------
+
+Name: TaxPercIncl
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC_INCL',[],16,4
+Documentation: 'TaxPercIncl','Receiving.36'
+Legacy Column: 'TAX_PERC_INCL'
+
+------------------------------------------------------
+
+Name: TaxAmtIncl
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMT_INCL',[],17,5
+Documentation: 'TaxAmtIncl','Receiving.37'
+Legacy Column: 'TAX_AMT_INCL'
+
+------------------------------------------------------
+
+Name: TaxPercExcl
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC_EXCL',[],16,4
+Documentation: 'TaxPercExcl','Receiving.38'
+Legacy Column: 'TAX_PERC_EXCL'
+
+------------------------------------------------------
+
+Name: TaxAmtExcl
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMT_EXCL',[],17,5
+Documentation: 'TaxAmtExcl','Receiving.39'
+Legacy Column: 'TAX_AMT_EXCL'
+
+------------------------------------------------------
+
+Name: ArrivedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ARRIVED_DATE',[
+Documentation: 'ArrivedDate','Receiving.40'
+Legacy Column: 'ARRIVED_DATE'
+
+------------------------------------------------------
+
+Name: CustFld
+Data Type: Nullable<string>
+Database Column: 'CUST_FLD',[],47
+Documentation: 'CustFld','Receiving.41'
+Legacy Column: 'CUST_FLD'
+
+------------------------------------------------------
+
+Name: SeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'SEASON_SID',[],19,0
+Documentation: 'SeasonSid','Receiving.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefVouSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_VOU_SID',[],19,0
+Documentation: 'RefVouSid','Receiving.43'
+Legacy Column: 'REF_VOU_SID'
+
+------------------------------------------------------
+
+Name: Audited
+Data Type: Boolean
+Database Column: 'AUDITED',[],1,0
+Documentation: 'Audited','Receiving.44'
+Legacy Column: 'AUDITED'
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS',[],1,0
+Documentation: 'Cms','Receiving.45'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: Verified
+Data Type: Boolean
+Database Column: 'VERIFIED',[],1,0
+Documentation: 'Verified','Receiving.46'
+Legacy Column: 'VERIFIED'
+
+------------------------------------------------------
+
+Name: PurchClearAmt
+Data Type: Nullable<Double>
+Database Column: 'PURCH_CLEAR_AMT',[],16,4
+Documentation: 'PurchClearAmt','Receiving.47'
+Legacy Column: 'PURCH_CLEAR_AMT'
+
+------------------------------------------------------
+
+Name: CmsPostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CMS_POST_DATE',[
+Documentation: 'CmsPostDate','Receiving.48'
+Legacy Column: 'CMS_POST_DATE'
+
+------------------------------------------------------
+
+Name: ReviewbySid
+Data Type: Nullable<Int64>
+Database Column: 'REVIEWBY_SID',[],19,0
+Documentation: 'ReviewbySid','Receiving.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReviewDate
+Data Type: Nullable<TDateTime>
+Database Column: 'REVIEW_DATE',[
+Documentation: 'ReviewDate','Receiving.50'
+Legacy Column: 'REVIEW_DATE'
+
+------------------------------------------------------
+
+Name: ReviewNote
+Data Type: Nullable<string>
+Database Column: 'REVIEW_NOTE',[],30
+Documentation: 'ReviewNote','Receiving.51'
+Legacy Column: 'REVIEW_NOTE'
+
+------------------------------------------------------
+
+Name: ApprovbySid
+Data Type: Nullable<Int64>
+Database Column: 'APPROVBY_SID',[],19,0
+Documentation: 'Approved By Sid. For RIL Document Approval Feature (PO and Voucher Only) compitability','Receiving.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPROV_DATE',[
+Documentation: 'Approval Date. For RIL Document Approval Feature (PO and Voucher Only) compitability','Receiving.53'
+Legacy Column: 'APPROV_DATE'
+
+------------------------------------------------------
+
+Name: WsSeqNo
+Data Type: Nullable<Integer>
+Database Column: 'WS_SEQ_NO',[],10,0
+Documentation: 'WsSeqNo','Receiving.54'
+Legacy Column: 'WS_SEQ_NO'
+
+------------------------------------------------------
+
+Name: Held
+Data Type: Boolean
+Database Column: 'HELD',[],1,0
+Documentation: 'Held','Receiving.55'
+Legacy Column: 'HELD'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','Receiving.56'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: Rate
+Data Type: Nullable<Double>
+Database Column: 'RATE',[],20,8
+Documentation: 'Rate','Receiving.57'
+Legacy Column: 'RATE'
+
+------------------------------------------------------
+
+Name: CarrierId
+Data Type: Nullable<Integer>
+Database Column: 'CARRIER_ID',[],10,0
+Documentation: 'CarrierId','Receiving.58'
+Legacy Column: 'CARRIER_ID'
+
+------------------------------------------------------
+
+Name: Controller
+Data Type: Nullable<Int16>
+Database Column: 'CONTROLLER',[],5,0
+Documentation: 'Controller','Receiving.59'
+Legacy Column: 'CONTROLLER'
+
+------------------------------------------------------
+
+Name: OrigController
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_CONTROLLER',[],5,0
+Documentation: 'OrigController','Receiving.60'
+Legacy Column: 'ORIG_CONTROLLER'
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID',[],19,0
+Documentation: 'CreatedbySid','Receiving.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID',[],19,0
+Documentation: 'ModifiedbySid','Receiving.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlExtractDate
+Data Type: Nullable<TDateTime>
+Database Column: 'AL_EXTRACT_DATE',[
+Documentation: 'AlExtractDate','Receiving.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlPostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'AL_POST_DATE',[
+Documentation: 'AlPostDate','Receiving.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocRefNo
+Data Type: Nullable<Integer>
+Database Column: 'DOC_REF_NO',[],10,0
+Documentation: 'DocRefNo','Receiving.65'
+Legacy Column: 'DOC_REF_NO'
+
+------------------------------------------------------
+
+Name: SlipFlag
+Data Type: Nullable<Int16>
+Database Column: 'SLIP_FLAG',[],1,0
+Documentation: 'SlipFlag - 1=Transfer voucher, 0 or NULL, otherwise','Receiving.66'
+Legacy Column: 'SLIP_FLAG'
+
+------------------------------------------------------
+
+Name: ApprovNotes
+Data Type: Nullable<string>
+Database Column: 'APPROV_NOTES',[],255
+Documentation: 'Approval Notes. For RIL Document Approval Feature (PO and Voucher Only) compitability','Receiving.67'
+Legacy Column: 'APPROV_NOTES'
+
+------------------------------------------------------
+
+Name: ApprovStatus
+Data Type: Nullable<Int16>
+Database Column: 'APPROV_STATUS',[],5,0
+Documentation: 'Approval Status. 0=None, 1=Pending, 2=Approved, 3=Rejected, 4=OnHold. For RIL Document Approval Feature (PO and Voucher Only) compitability','Receiving.68'
+Legacy Column: 'APPROV_STATUS'
+
+------------------------------------------------------
+
+Name: PendingOverride
+Data Type: Boolean
+Database Column: 'PENDING_OVERRIDE',[],1,0
+Documentation: 'Pending Override. For RIL Document Approval Feature (PO and Voucher Only) compitability','Receiving.69'
+Legacy Column: 'PENDING_OVERRIDE'
+
+------------------------------------------------------
+
+Name: TrackingNo
+Data Type: Nullable<string>
+Database Column: 'TRACKING_NO',[],40
+Documentation: 'TrackingNo','Receiving.70'
+Legacy Column: 'TRACKING_NO'
+
+------------------------------------------------------
+
+Name: TransReasonId
+Data Type: Nullable<Integer>
+Database Column: 'TRANS_REASON_ID',[],10,0
+Documentation: 'TransReasonId - Reason code to Slips, ASN, and TO.','Receiving.71'
+Legacy Column: 'TRANS_REASON_ID'
+
+------------------------------------------------------
+
+Name: VouReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'VOU_REASON_SID',[],19,0
+Documentation: 'Points to a row in pref-reason table','Receiving.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ContractDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CONTRACT_DATE',[
+Documentation: 'ContractDate','Receiving.73'
+Legacy Column: 'CONTRACT_DATE'
+
+------------------------------------------------------
+
+Name: AsnNo
+Data Type: Nullable<Integer>
+Database Column: 'ASN_NO',[],10,0
+Documentation: 'AsnNo','Receiving.74'
+Legacy Column: 'ASN_NO'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','Receiving.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','Receiving.76'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','Receiving.77'
+Legacy Column: 'TAX2_AREA_NAME'
+
+------------------------------------------------------
+
+Name: ResolvStatus
+Data Type: Nullable<Int16>
+Database Column: 'RESOLV_STATUS',[],1,0
+Documentation: 'ResolvStatus - Flag to indicate transfer verification status. 0 or null - None, 1 - original doc, 2 - replacement doc','Receiving.78'
+Legacy Column: 'RESOLV_STATUS'
+
+------------------------------------------------------
+
+Name: ResolvSid
+Data Type: Nullable<Int64>
+Database Column: 'RESOLV_SID',[],19,0
+Documentation: 'ResolvSid','Receiving.79'
+Legacy Column: 'RESOLV_SID'
+
+------------------------------------------------------
+
+Name: Note
+Data Type: Nullable<string>
+Database Column: 'NOTE',[],255
+Documentation: 'Note','Receiving.80'
+Legacy Column: 'NOTE'
+
+------------------------------------------------------
+
+Name: NoOfPkgs
+Data Type: Nullable<Int16>
+Database Column: 'NO_OF_PKGS',[],3,0
+Documentation: 'NoOfPkgs','Receiving.81'
+Legacy Column: 'NO_OF_PKGS'
+
+------------------------------------------------------
+
+Name: PoSid
+Data Type: Nullable<Int64>
+Database Column: 'PO_SID',[],19,0
+Documentation: 'PoSid','Receiving.82'
+Legacy Column: 'POSID'
+
+------------------------------------------------------
+
+Name: ToSid
+Data Type: Nullable<Int64>
+Database Column: 'TO_SID',[],19,0
+Documentation: 'ToSid','Receiving.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AsnSid
+Data Type: Nullable<Int64>
+Database Column: 'ASN_SID',[],19,0
+Documentation: 'AsnSid','Receiving.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefDocSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_DOC_SID',[],19,0
+Documentation: 'RefDocSid','Receiving.85'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSubtotal
+Data Type: Nullable<Double>
+Database Column: 'VOU_SUBTOTAL',[],16,4
+Documentation: 'will hold sum of all qty"s multiplied by cost','Receiving.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouTotal
+Data Type: Nullable<Double>
+Database Column: 'VOU_TOTAL',[],16,4
+Documentation: 'will hold vou_subtotal plus all fees','Receiving.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscType
+Data Type: Nullable<TCalcDiscType>
+Database Column: 'DISC_TYPE',[],1,0
+Documentation: '0 = Pctg 1 = Amount','Receiving.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxInclType
+Data Type: Nullable<TCalcDiscType>
+Database Column: 'TAX_INCL_TYPE',[],1,0
+Documentation: '0 = Pctg 1 = Amount','Receiving.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxExclType
+Data Type: Nullable<TCalcDiscType>
+Database Column: 'TAX_EXCL_TYPE',[],1,0
+Documentation: '0 = Pctg 1 = Amount','Receiving.90'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BrMarked
+Data Type: Boolean
+Database Column: 'BR_MARKED',[],1,0
+Documentation: '1=Mark else Unmark. Used to set the Batch Receive status of an ASN','Receiving.91'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[cpRequired],1,0
+Documentation: '0=Published, 1=WIP, 2=ReadyToPublish','Receiving.92'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReversedFlag
+Data Type: Nullable<Integer>
+Database Column: 'REVERSED_FLAG',[],1,0
+Documentation: 'NULL or 0 - normal, 1 - reversed, 2 - reversal',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SLIP_SBS_SID',[],19,0
+Documentation: 'subsidiary sid indicating the outgoing susbsidiary for transfer voucher',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'SLIP_STORE_SID',[],19,0
+Documentation: 'store sid indicating the outgoing store for transfer voucher',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItems
+Data Type: Integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocTotalCost
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VoucherQtyDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemCostDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItemsDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvItem
+Data Type: IList<TRecvItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvFee
+Data Type: IList<TRecvFee>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvTerm
+Data Type: IList<TRecvTerm>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvComment
+Data Type: IList<TRecvComment>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvApproval
+Data Type: IList<TRecvApproval>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecvPackage
+Data Type: IList<TRecvPackage>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Receiving.93'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Receiving.94'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorCity
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorState
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorPostalCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorPostalCodeExtension
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalPackagesReceived
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalPackages
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','Receiving.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'OrderDate','Receiving.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CancelDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'CancelDate','Receiving.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','Receiving.110'
+Legacy Column: 'VEND_CODE'
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'name of the vendor business','Receiving.111'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'legacy information will be stamped with a vendor ID','Receiving.112'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PayeeCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Vendcode','Receiving.113'
+Legacy Column: 'PAYEE_CODE'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Receiving.114'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Receiving.115'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','Receiving.116'
+Legacy Column: 'CLERKNAME'
+
+------------------------------------------------------
+
+Name: ModifiedByEmplID
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'EmplID','Receiving.117'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','Receiving.118'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','Receiving.119'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','Receiving.120'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'VendInvcId','Receiving.121'
+Legacy Column: 'VEND_INVC_ID'
+
+------------------------------------------------------
+
+Name: VendInvcNo
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendInvcNo','Receiving.122'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'VendInvcDate','Receiving.123'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','Receiving.124'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','Receiving.125'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','Receiving.126'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','Receiving.127'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','Receiving.128'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','Receiving.129'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Zip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','Receiving.130'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.131'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.132'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.133'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.134'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.135'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf6String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','Receiving.136'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf1Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'user defined date value','Receiving.137'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf2Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'user defined date value','Receiving.138'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','Receiving.139'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','Receiving.140'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','Receiving.141'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','Receiving.142'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','Receiving.143'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Reason definition','Receiving.144'
+Legacy Column: 'DOC_REASON_NAME'
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: Nullable<TReasonType>
+Database Column: NA
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','Receiving.145'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season code','Receiving.146'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Receiving.147'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Receiving.148'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Receiving.149'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Receiving.150'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'subsidiary number indicating the outgoing susbsidiary for transfer voucher',''
+Legacy Column: 'SLIP_SBS_NO'
+
+------------------------------------------------------
+
+Name: SlipStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'store number indicating the outgoing store for transfer voucher',''
+Legacy Column: 'SLIP_STORE_NO'
+
+------------------------------------------------------
+
+Name: SlipSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Linked slip sid number with this voucher',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipNo
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Linked slip number with this voucher',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipReversedFlag
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Linked slip number with this voucher',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Orig Store Code',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Slip Store Code',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Code',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Receiving.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','Receiving.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','Receiving.97'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','Receiving.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','Receiving.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','Receiving.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','Receiving.101'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','Receiving.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','Receiving.103'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','Receiving.104'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','Receiving.105'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','Receiving.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Orig Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Orig Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Slip Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Slip Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

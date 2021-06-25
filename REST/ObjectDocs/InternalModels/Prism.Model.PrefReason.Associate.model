@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.PrefReason.Associate.pas
+##########################################################################################################
+Class Name: TPrefReasonAssociate
+Base Class Name: 
+Database Table: PREF_REASON
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: Nullable<TReasonType>
+Database Column: 'REASON_TYPE',[cpRequired],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<String>
+Database Column: 'NAME',[],80
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

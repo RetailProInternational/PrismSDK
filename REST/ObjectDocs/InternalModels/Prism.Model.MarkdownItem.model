@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.MarkdownItem.pas
+##########################################################################################################
+Class Name: TMarkdownItem
+Base Class Name: TModelBase
+Database Table: MARKDOWN_ITEM
+Associate Class: False
+Identified By: 'FMarkdownSid,FInvnSbsItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','MarkdownItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','MarkdownItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','MarkdownItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','MarkdownItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','MarkdownItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','MarkdownItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','MarkdownItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','MarkdownItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','MarkdownItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','MarkdownItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownSid
+Data Type: Int64
+Database Column: 'MARKDOWN_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Reference to Markdown table SID','MarkdownItem.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Reference to INVN_SBS_ITEM table SID','MarkdownItem.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownValue
+Data Type: Nullable<Double>
+Database Column: 'MARKDOWN_VALUE',[],16,4
+Documentation: 'MarkdownValue','MarkdownItem.13'
+Legacy Column: 'MARKDOWN_VALUE'
+
+------------------------------------------------------
+
+Name: OrigValue
+Data Type: Nullable<Double>
+Database Column: 'ORIG_VALUE',[],16,4
+Documentation: 'OrigValue','MarkdownItem.14'
+Legacy Column: 'ORIG_VALUE'
+
+------------------------------------------------------
+
+Name: InvnItemUID
+Data Type: Nullable<int64>
+Database Column: NA
+Documentation: 'ItemUID','MarkdownItem.15'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<int64>
+Database Column: NA
+Documentation: 'reference to tax_code record','MarkdownItem.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<double>
+Database Column: NA
+Documentation: 'cost of last order of item','MarkdownItem.17'
+Legacy Column: NA
+
+------------------------------------------------------
+

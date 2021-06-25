@@ -1,0 +1,653 @@
+##########################################################################################################
+File Name: Prism.Model.Adjustment.pas
+##########################################################################################################
+Class Name: TAdjustment
+Base Class Name: TModelBase
+Database Table: ADJUSTMENT
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID', [cpRequired, cpPrimaryKey, cpNotNull], 19, 0
+Documentation: 'Sid','Adjustment.1'
+Legacy Column: 'ADJ_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY', [cpRequired, cpNotNull], 20
+Documentation: 'CreatedBy','Adjustment.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME', [cpRequired, cpNotNull
+Documentation: 'CreatedDatetime','Adjustment.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY', [], 20
+Documentation: 'ModifiedBy','Adjustment.4'
+Legacy Column: 'MODIFIEDBY_ID'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME', [
+Documentation: 'ModifiedDatetime','Adjustment.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'ControllerSid','Adjustment.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION', [cpRequired, cpNotNull], 20
+Documentation: 'OriginApplication','Adjustment.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE', [
+Documentation: 'PostDate','Adjustment.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','Adjustment.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID', [], 19, 0
+Documentation: 'TenantSid','Adjustment.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'SbsSid','Adjustment.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'StoreSid','Adjustment.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjNo
+Data Type: Nullable<Integer>
+Database Column: 'ADJ_NO', [], 10, 0
+Documentation: 'AdjNo','Adjustment.13'
+Legacy Column: 'ADJ_NO'
+
+------------------------------------------------------
+
+Name: AdjType
+Data Type: Nullable<TAdjustmentMemoType>
+Database Column: 'ADJ_TYPE', [], 5, 0
+Documentation: '0-Qty,1-Price,2-Cost','Adjustment.14'
+Legacy Column: 'ADJ_TYPE'
+
+------------------------------------------------------
+
+Name: CreatingDocNo
+Data Type: Nullable<Integer>
+Database Column: 'CREATING_DOC_NO', [], 10, 0
+Documentation: 'CreatingDocNo','Adjustment.15'
+Legacy Column: 'CREATING_DOC_NO'
+
+------------------------------------------------------
+
+Name: CreatingDocType
+Data Type: Nullable<TAdjMemoCreatingDocType>
+Database Column: 'CREATING_DOC_TYPE', [], 5, 0
+Documentation: '0-None,1-PI,2-CostOverwrite,3-Markdown,4-Cleanup,5-PlannedPricing,6-PlannedMarkdown,7-Inventory,8-Manual,9-Reversing,10-CostLeave,11-Audit,12-Corporate,13-Kit,14-UnverifiedSlip','Adjustment.16'
+Legacy Column: 'CREATING_DOC_TYPE'
+
+------------------------------------------------------
+
+Name: CreatingDocSid
+Data Type: Nullable<Int64>
+Database Column: 'CREATING_DOC_SID', [], 19, 0
+Documentation: 'represents the sid of the document for which the adjustment was created automatically (e.g. reverse).','Adjustment.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_STORE_SID', [], 19, 0
+Documentation: 'OrigStoreSid','Adjustment.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStation
+Data Type: Nullable<string>
+Database Column: 'ORIG_STATION', [], 1
+Documentation: 'OrigStation','Adjustment.19'
+Legacy Column: 'ORIG_STATION'
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID', [], 19, 0
+Documentation: 'ClerkSid','Adjustment.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocSid
+Data Type: Nullable<Int64>
+Database Column: 'SUBLOCATION_SID', [], 10, 0
+Documentation: 'sid of a sublocation.','Adjustment.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'PRICE_LVL_SID', [], 19, 0
+Documentation: 'PriceLvlSid','Adjustment.22'
+Legacy Column: 'PRICE_LVL'
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID', [], 19, 0
+Documentation: 'WorkstationSid','Adjustment.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TDocumentStatus>
+Database Column: 'STATUS', [], 10, 0
+Documentation: '0-None,1-Changed,2-Cancelled,3-Normal,4-Completed','Adjustment.24'
+Legacy Column: 'STATUS'
+
+------------------------------------------------------
+
+Name: AdjReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'ADJ_REASON_SID', [], 19, 0
+Documentation: 'AdjReasonSid','Adjustment.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID', [], 19, 0
+Documentation: 'override tax area should be 0','Adjustment.26'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: UseVat
+Data Type: Boolean
+Database Column: 'USE_VAT', [], 1, 0
+Documentation: 'UseVat','Adjustment.27'
+Legacy Column: 'USE_VAT'
+
+------------------------------------------------------
+
+Name: Audited
+Data Type: Boolean
+Database Column: 'AUDITED', [], 1, 0
+Documentation: 'Audited','Adjustment.28'
+Legacy Column: 'AUDITED'
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS', [], 1, 0
+Documentation: 'Cms','Adjustment.29'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: Verified
+Data Type: Boolean
+Database Column: 'VERIFIED', [], 1, 0
+Documentation: 'Verified','Adjustment.30'
+Legacy Column: 'VERIFIED'
+
+------------------------------------------------------
+
+Name: WsSeqNo
+Data Type: Nullable<Integer>
+Database Column: 'WS_SEQ_NO', [], 10, 0
+Documentation: 'WsSeqNo','Adjustment.31'
+Legacy Column: 'WS_SEQ_NO'
+
+------------------------------------------------------
+
+Name: Held
+Data Type: Boolean
+Database Column: 'HELD', [], 1, 0
+Documentation: 'Held','Adjustment.32'
+Legacy Column: 'HELD'
+
+------------------------------------------------------
+
+Name: Controller
+Data Type: Nullable<Int16>
+Database Column: 'CONTROLLER', [], 5, 0
+Documentation: 'Controller','Adjustment.33'
+Legacy Column: 'CONTROLLER'
+
+------------------------------------------------------
+
+Name: OrigController
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_CONTROLLER', [], 5, 0
+Documentation: 'OrigController','Adjustment.34'
+Legacy Column: 'ORIG_CONTROLLER'
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID', [], 19, 0
+Documentation: 'CreatedbySid','Adjustment.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID', [], 19, 0
+Documentation: 'ModifiedbySid','Adjustment.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocRefNo
+Data Type: Nullable<Integer>
+Database Column: 'DOC_REF_NO', [], 10, 0
+Documentation: 'used to externally identify a document prior to that document being updated or saved/held','Adjustment.37'
+Legacy Column: 'DOC_REF_NO'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID', [], 19, 0
+Documentation: 'override tax area should be 0.','Adjustment.38'
+Legacy Column: 'TAX2_AREA_NAME'
+
+------------------------------------------------------
+
+Name: DocReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'DOC_REASON_SID', [], 19, 0
+Documentation: 'DocReasonSid','Adjustment.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'SEASON_SID', [], 19, 0
+Documentation: 'sid of season(s).','Adjustment.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocMoveType
+Data Type: Nullable<TSublocMoveType>
+Database Column: 'SUBLOC_MOVE_TYPE', [], 1, 0
+Documentation: 'used to identify Sub Location quantities related adjustments. 0=None, 1=Movement Only, 2=Movement/Adjustment.','Adjustment.41'
+Legacy Column: 'SUBLOC_MOVE_TYPE'
+
+------------------------------------------------------
+
+Name: Note
+Data Type: Nullable<string>
+Database Column: 'NOTE', [], 255
+Documentation: 'Note','Adjustment.42'
+Legacy Column: 'NOTE'
+
+------------------------------------------------------
+
+Name: GLFlag
+Data Type: Boolean
+Database Column: 'GL_FLAG', [], 1, 0
+Documentation: 'GLFlag','Adjustment.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CopiedFlag
+Data Type: Boolean
+Database Column: 'COPIED_FLAG', [], 1, 0
+Documentation: 'CopiedFlag','Adjustment.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReversedFlag
+Data Type: Nullable<Int16>
+Database Column: 'REVERSED_FLAG', [], 1, 0
+Documentation: 'ReversedFlag','Adjustment.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotOrigQty
+Data Type: Nullable<double>
+Database Column: 'TOT_ORIG_QTY', [], 10, 3
+Documentation: 'TotOrigQty','Adjustment.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotAdjQty
+Data Type: Nullable<double>
+Database Column: 'TOT_ADJ_QTY', [], 10, 3
+Documentation: 'TotAdjQty','Adjustment.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotOrigExtCost
+Data Type: Nullable<double>
+Database Column: 'TOT_ORIG_EXT_COST', [], 16, 4
+Documentation: 'TotOrigExtCost','Adjustment.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotAdjExtCost
+Data Type: Nullable<double>
+Database Column: 'TOT_ADJ_EXT_COST', [], 16, 4
+Documentation: 'TotAdjExtCost','Adjustment.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotOrigExtPrice
+Data Type: Nullable<double>
+Database Column: 'TOT_ORIG_EXT_PRICE', [], 16, 4
+Documentation: 'TotOrigExtPrice','Adjustment.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotAdjExtPrice
+Data Type: Nullable<double>
+Database Column: 'TOT_ADJ_EXT_PRICE', [], 16, 4
+Documentation: 'TotAdjExtPrice','Adjustment.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotOrigExtPriceWOTax
+Data Type: Nullable<double>
+Database Column: 'TOT_ORIG_EXT_PRICE_WO_TAX', [], 16, 4
+Documentation: 'total extended price without tax for original value','Adjustment.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotAdjExtPriceWOTax
+Data Type: Nullable<double>
+Database Column: 'TOT_ADJ_EXT_PRICE_WO_TAX', [], 16, 4
+Documentation: 'total extended price without tax for adjusted value','Adjustment.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotOrigExtPriceWTax
+Data Type: Nullable<double>
+Database Column: 'TOT_ORIG_EXT_PRICE_W_TAX', [], 16, 4
+Documentation: 'total extended price with tax for original value','Adjustment.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotAdjExtPriceWTax
+Data Type: Nullable<double>
+Database Column: 'TOT_ADJ_EXT_PRICE_W_TAX', [], 16, 4
+Documentation: 'total extended price with tax for adjusted value','Adjustment.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjItem
+Data Type: IList<TAdjItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjComment
+Data Type: IList<TAdjComment>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmployee
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'EmplID','Adjustment.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Adjustment.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Adjustment.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLevel
+Data Type: TNullableInteger
+Database Column: NA
+Documentation: 'price level','Adjustment.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','Adjustment.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','Adjustment.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season code','Adjustment.62'
+Legacy Column: 'SEASON_CODE'
+
+------------------------------------------------------
+
+Name: SeasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season name','Adjustment.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Reason definition','Adjustment.64'
+Legacy Column: 'ADJ_REASON_NAME'
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: Nullable<TReasonType>
+Database Column: NA
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','Adjustment.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Clerk
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'EmplID','Adjustment.66'
+Legacy Column: 'CLERK_ID'
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','Adjustment.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Adjustment.68'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Adjustment.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'keeps the workstation number, can not be modified by the end user','Adjustment.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Adjustment.71'
+Legacy Column: 'ORIG_STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'StoreCode','Adjustment.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','Adjustment.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Adjustment.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Adjustment.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Adjustment.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocationId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Id','Adjustment.77'
+Legacy Column: NA
+
+------------------------------------------------------
+

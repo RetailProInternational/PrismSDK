@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.RecvPackage.pas
+##########################################################################################################
+Class Name: TRecvPackage
+Base Class Name: TModelBase
+Database Table: VOU_PACKAGE
+Associate Class: False
+Identified By: 'FVouSid,FPkgNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','RecvPackage.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','RecvPackage.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','RecvPackage.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','RecvPackage.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','RecvPackage.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','RecvPackage.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','RecvPackage.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','RecvPackage.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','RecvPackage.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','RecvPackage.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSid
+Data Type: Int64
+Database Column: 'VOU_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VouSid','RecvPackage.11'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: PkgNo
+Data Type: string
+Database Column: 'PKG_NO',[cpRequired,cpNotNull],20
+Documentation: 'PkgNo','RecvPackage.12'
+Legacy Column: 'PKG_NO'
+
+------------------------------------------------------
+
+Name: Received
+Data Type: Boolean
+Database Column: 'RECEIVED',[cpRequired,cpNotNull],1,0
+Documentation: 'Received','RecvPackage.13'
+Legacy Column: 'RECEIVED'
+
+------------------------------------------------------
+
+Name: VouTotalPackagesReceived
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouTotalPackages
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AsnNo
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouHeld
+Data Type: Boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouStatus
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouClass
+Data Type: Int16
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouActive
+Data Type: Boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

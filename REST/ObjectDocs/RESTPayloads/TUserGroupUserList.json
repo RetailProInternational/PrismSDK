@@ -1,0 +1,24 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "usergroupname" : null,
+      "description" : null,
+      "usergroupid" : null,
+      "usergroupactive" : false,
+      "username" : null,
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "usergroupsid" : "0",
+      "employeesid" : "0"
+    }
+  ]
+}
+

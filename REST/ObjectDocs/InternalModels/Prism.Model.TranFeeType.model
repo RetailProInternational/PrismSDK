@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.TranFeeType.pas
+##########################################################################################################
+Class Name: TTranFeeType
+Base Class Name: TModelBase
+Database Table: TRAN_FEE_TYPE
+Associate Class: False
+Identified By: 'FSbsSid,FFeeType'
+Legacy Identified By: 'SbsNo,FeeType'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TranFeeType.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TranFeeType.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TranFeeType.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TranFeeType.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TranFeeType.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TranFeeType.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TranFeeType.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TranFeeType.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TranFeeType.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TranFeeType.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','TranFeeType.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Int16
+Database Column: 'FEE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'FeeType','TranFeeType.12'
+Legacy Column: 'FEE_TYPE'
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: 'FEE_NAME',[],6
+Documentation: 'FeeName','TranFeeType.13'
+Legacy Column: 'FEE_NAME'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','TranFeeType.14'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TranFeeType.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

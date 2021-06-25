@@ -1,0 +1,77 @@
+##########################################################################################################
+File Name: Prism.Model.Controller.Associate.pas
+##########################################################################################################
+Class Name: TControllerAssociate
+Base Class Name: 
+Database Table: CONTROLLER
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerNo
+Data Type: Nullable<Int32>
+Database Column: 'CONTROLLER_NO',[],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerName
+Data Type: Nullable<string>
+Database Column: 'CONTROLLER_NAME',[],15
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerType
+Data Type: TControllerType
+Database Column: 'CONTROLLER_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address
+Data Type: Nullable<string>
+Database Column: 'ADDRESS',[],64
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9Address
+Data Type: Nullable<string>
+Database Column: 'V9_ADDRESS',[],40
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

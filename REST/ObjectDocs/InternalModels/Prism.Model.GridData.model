@@ -1,0 +1,213 @@
+##########################################################################################################
+File Name: Prism.Model.GridData.pas
+##########################################################################################################
+Class Name: TGridData
+Base Class Name: TModelBase
+Database Table: GRID_DATA
+Associate Class: False
+Identified By: 'FGridDictionarySid,FTenantSid,FSbsSid,FStoreSid,FWorkstationSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','GridData.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','GridData.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','GridData.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','GridData.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','GridData.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','GridData.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','GridData.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','GridData.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','GridData.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','GridData.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GdDatatype
+Data Type: string
+Database Column: 'GD_DATATYPE',[cpRequired,cpNotNull],106
+Documentation: 'GdDatatype','GridData.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'toggles active','GridData.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResultsPerPage
+Data Type: Nullable<Int16>
+Database Column: 'RESULTS_PER_PAGE',[],5,0
+Documentation: 'number of records to display per page in UI','GridData.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GridColumn
+Data Type: IList<TGridColumn>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GridSearchBy
+Data Type: IList<TGridSearchBy>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'WorkstationSid','GridData.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSbsSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'StoreSid','GridData.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'SbsSid','GridData.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GridDictionarySid
+Data Type: Nullable<Int64>
+Database Column: 'GRID_DICTIONARY_SID',[],19,0
+Documentation: 'GridDictionarySid','GridData.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: string
+Database Column: NA
+Documentation: 'Name of resource','GridData.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Transid
+Data Type: string
+Database Column: NA
+Documentation: 'translation id of resource name','GridData.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','GridData.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'SbsNo','GridData.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','GridData.22'
+Legacy Column: NA
+
+------------------------------------------------------
+

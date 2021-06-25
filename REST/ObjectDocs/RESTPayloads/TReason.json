@@ -1,0 +1,31 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "reasontype" : 0,
+      "name" : null,
+      "description" : null,
+      "isactive" : false,
+      "isdefault" : false,
+      "shrinkflag" : null,
+      "checkinouttype" : null,
+      "checkinouteventtype" : null,
+      "checkinouttypepair" : null,
+      "iscustrequired" : false,
+      "reasonid" : 0,
+      "manual" : false,
+      "sbsno" : null
+    }
+  ]
+}
+

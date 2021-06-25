@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.SubResource.pas
+##########################################################################################################
+Class Name: TSubResource
+Base Class Name: TModelBase
+Database Table: REM_SUBSCR_RESOURCE
+Associate Class: False
+Identified By: 'FSubscriptionSid,FPrismResourceSid,FProcessOrder'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','SubResource.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','SubResource.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','SubResource.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','SubResource.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','SubResource.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','SubResource.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','SubResource.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','SubResource.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','SubResource.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','SubResource.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Filter
+Data Type: string
+Database Column: 'FILTER',[],2000
+Documentation: 'filter String for Resource','SubResource.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProcessOrder
+Data Type: Integer
+Database Column: 'PROCESS_ORDER',[],10,0
+Documentation: 'ProcessOrder','SubResource.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DeleteFlag
+Data Type: Boolean
+Database Column: 'DELETE_FLAG',[],1,0
+Documentation: 'internal use flag to mark records for delete','SubResource.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryFilter
+Data Type: Nullable<string>
+Database Column: 'PRIMARY_FILTER',[],1000
+Documentation: 'optional resouce filter used in TTK Web JTE First Time Setup for d2d','SubResource.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreFilter
+Data Type: Nullable<string>
+Database Column: 'STORE_FILTER',[],750
+Documentation: 'optional resouce filter used in TTK Web JTE First Time Setup for d2d','SubResource.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustomFilter
+Data Type: Nullable<string>
+Database Column: 'CUSTOM_FILTER',[],250
+Documentation: 'optional resouce filter used in TTK Web JTE First Time Setup for d2d','SubResource.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionSid
+Data Type: Int64
+Database Column: 'REM_SUBSCRIPTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to rem subscription','SubResource.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrismResourceSid
+Data Type: Int64
+Database Column: 'PRISM_RESOURCE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'refertnce to prism resource','SubResource.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'resource name','SubResource.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceType
+Data Type: TResourceType
+Database Column: NA
+Documentation: '0 - resource, 1 - CentralsResource, 2 - CoreResource, 3 - Action','SubResource.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Namespace
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Namespace','SubResource.18'
+Legacy Column: NA
+
+------------------------------------------------------
+

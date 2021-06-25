@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.PrismConfig.pas
+##########################################################################################################
+Class Name: TPrismConfig
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: ConfigName
+Data Type: string
+Database Column: 'ConfigName', [cpPrimaryKey], 80
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastModifiedDate
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConfigData
+Data Type: Ilist<TKeys>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

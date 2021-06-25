@@ -1,0 +1,549 @@
+##########################################################################################################
+File Name: Prism.Model.TOrdItem.pas
+##########################################################################################################
+Class Name: TTOrdItem
+Base Class Name: TModelBase
+Database Table: TORD_ITEM
+Associate Class: False
+Identified By: 'FTOSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TOrdItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TOrdItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TOrdItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TOrdItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TOrdItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TOrdItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TOrdItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TOrdItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TOrdItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TOrdItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToSid
+Data Type: Int64
+Database Column: 'TO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ToSid','TOrdItem.11'
+Legacy Column: 'TO_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'ItemPos','TOrdItem.12'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ItemSid','TOrdItem.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE',[],16,4
+Documentation: 'Price','TOrdItem.14'
+Legacy Column: 'PRICE'
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','TOrdItem.15'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: 'order quantity','TOrdItem.16'
+Legacy Column: 'ITEM_ORD_QTY'
+
+------------------------------------------------------
+
+Name: AssignQty
+Data Type: Nullable<Double>
+Database Column: 'ASSIGN_QTY',[],10,3
+Documentation: 'sum of positive ord_qty from tord_qty table for this item','TOrdItem.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SentQty
+Data Type: Nullable<Double>
+Database Column: 'SENT_QTY',[],10,3
+Documentation: 'sum of positive sent_qty from tord_qty table for this item','TOrdItem.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','TOrdItem.19'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','TOrdItem.20'
+Legacy Column: 'TAX_AREA_NAME2'
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'TaxCodeSid','TOrdItem.21'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxCode2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE2_SID',[],19,0
+Documentation: 'TaxCode2Sid','TOrdItem.22'
+Legacy Column: 'TAX_CODE2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2',[],16,4
+Documentation: 'TaxPerc2','TOrdItem.23'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: SrcSbsNo
+Data Type: Nullable<Int16>
+Database Column: 'SRC_SBS_NO',[],5,0
+Documentation: 'SrcSbsNo','TOrdItem.24'
+Legacy Column: 'SRC_SBS_NO'
+
+------------------------------------------------------
+
+Name: UdfValue1
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE1',[],50
+Documentation: 'UdfValue1','TOrdItem.25'
+Legacy Column: 'UDF_VALUE1'
+
+------------------------------------------------------
+
+Name: UdfValue2
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE2',[],50
+Documentation: 'UdfValue2','TOrdItem.26'
+Legacy Column: 'UDF_VALUE2'
+
+------------------------------------------------------
+
+Name: UdfValue3
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE3',[],50
+Documentation: 'UdfValue3','TOrdItem.27'
+Legacy Column: 'UDF_VALUE3'
+
+------------------------------------------------------
+
+Name: UdfValue4
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE4',[],50
+Documentation: 'UdfValue4','TOrdItem.28'
+Legacy Column: 'UDF_VALUE4'
+
+------------------------------------------------------
+
+Name: ItemNote1
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE1',[],350
+Documentation: 'ItemNote1','TOrdItem.29'
+Legacy Column: 'ITEM_NOTE1'
+
+------------------------------------------------------
+
+Name: ItemNote2
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE2',[],350
+Documentation: 'ItemNote2','TOrdItem.30'
+Legacy Column: 'ITEM_NOTE2'
+
+------------------------------------------------------
+
+Name: ItemNote3
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE3',[],350
+Documentation: 'ItemNote3','TOrdItem.31'
+Legacy Column: 'ITEM_NOTE3'
+
+------------------------------------------------------
+
+Name: ItemNote4
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE4',[],350
+Documentation: 'ItemNote4','TOrdItem.32'
+Legacy Column: 'ITEM_NOTE4'
+
+------------------------------------------------------
+
+Name: ItemNote5
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE5',[],350
+Documentation: 'ItemNote5','TOrdItem.33'
+Legacy Column: 'ITEM_NOTE5'
+
+------------------------------------------------------
+
+Name: ItemNote6
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE6',[],350
+Documentation: 'ItemNote6','TOrdItem.34'
+Legacy Column: 'ITEM_NOTE6'
+
+------------------------------------------------------
+
+Name: ItemNote7
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE7',[],350
+Documentation: 'ItemNote7','TOrdItem.35'
+Legacy Column: 'ITEM_NOTE7'
+
+------------------------------------------------------
+
+Name: ItemNote8
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE8',[],350
+Documentation: 'ItemNote8','TOrdItem.36'
+Legacy Column: 'ITEM_NOTE8'
+
+------------------------------------------------------
+
+Name: ItemNote9
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE9',[],350
+Documentation: 'ItemNote9','TOrdItem.37'
+Legacy Column: 'ITEM_NOTE9'
+
+------------------------------------------------------
+
+Name: ItemNote10
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE10',[],350
+Documentation: 'ItemNote10','TOrdItem.38'
+Legacy Column: 'ITEM_NOTE10'
+
+------------------------------------------------------
+
+Name: InvnSbsVendorSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_SBS_VENDOR_SID',[],19,0
+Documentation: 'sid of alternate vendor info','TOrdItem.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC',[],18,0
+Documentation: 'AltUpc','TOrdItem.40'
+Legacy Column: 'ALT_UPC'
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU',[],20
+Documentation: 'AltAlu','TOrdItem.41'
+Legacy Column: 'ALT_ALU'
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST',[],16,4
+Documentation: 'AltCost','TOrdItem.42'
+Legacy Column: 'ALT_COST'
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE',[],6
+Documentation: 'AltVendCode','TOrdItem.43'
+Legacy Column: 'ALT_VEND_CODE'
+
+------------------------------------------------------
+
+Name: InvnSbsItemQtySid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_SBS_ITEM_QTY_SID',[],1,0
+Documentation: 'InvnSbsItemQtySid','TOrdItem.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtOrdCost
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtOrdPrice
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrdQtyStatus
+Data Type: SmallInt
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TOrdQty
+Data Type: IList<TTOrdQty>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','TOrdItem.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','TOrdItem.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','TOrdItem.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DueQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description1','TOrdItem.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description2','TOrdItem.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attr
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Attribute','TOrdItem.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Size
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ItemSize','TOrdItem.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UPC
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Upc','TOrdItem.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ALU
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Alu','TOrdItem.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','TOrdItem.54'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'VendCode','TOrdItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DCSCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'DCSCode','TOrdItem.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'UseQtyDecimals','TOrdItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: NA
+Documentation: 'serial-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).0-None,1-Partial,2-Full.','TOrdItem.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'lot-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).','TOrdItem.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: NA
+Documentation: '0-NoEntry,1-Kit,2-Package,3-GiftCardStoredValue,4-GiftCardPrePaid,5-GiftCertificate,6-Fee,7-GiftCardCentral','TOrdItem.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltVendNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'VendNo','TOrdItem.61'
+Legacy Column: 'ALT_VEND_NO'
+
+------------------------------------------------------
+
+Name: SourceStoreOHQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'Qty','TOrdItem.62'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,30 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : null,
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : null,
+      "tenantsid" : null,
+      "drawer" : null,
+      "tillsid" : null,
+      "tillname" : null,
+      "storesid" : null,
+      "storename" : null,
+      "storeno" : null,
+      "storecode" : null,
+      "sbssid" : null,
+      "emplname" : null,
+      "username" : null,
+      "fullname" : null,
+      "firstname" : null,
+      "lastname" : null
+    }
+  ]
+}
+

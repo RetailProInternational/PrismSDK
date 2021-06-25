@@ -1,0 +1,23 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "tendersid" : "0",
+      "centralpaymentid" : null,
+      "centralactivationid" : null,
+      "centralcardnumber" : null,
+      "centralcreditbalance" : null,
+      "centralcommitstate" : null
+    }
+  ]
+}
+

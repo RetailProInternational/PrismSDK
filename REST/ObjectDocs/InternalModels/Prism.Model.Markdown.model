@@ -1,0 +1,301 @@
+##########################################################################################################
+File Name: Prism.Model.Markdown.pas
+##########################################################################################################
+Class Name: TMarkdown
+Base Class Name: TModelBase
+Database Table: MARKDOWN
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Markdown.1'
+Legacy Column: 'MARKDOWN_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Markdown.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Markdown.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Markdown.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Markdown.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Markdown.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Markdown.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Markdown.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Markdown.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Markdown.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record','Markdown.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'SEASON_SID',[],19,0
+Documentation: 'reference to season record','Markdown.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'PRICE_LVL_SID',[],19,0
+Documentation: 'price level to apply markdown to','Markdown.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownName
+Data Type: string
+Database Column: 'MARKDOWN_NAME',[cpRequired,cpNotNull],30
+Documentation: 'short identifying text for markdown','Markdown.14'
+Legacy Column: 'MARKDOWN_NAME'
+
+------------------------------------------------------
+
+Name: MarkdownType
+Data Type: Nullable<TMarkdownType>
+Database Column: 'MARKDOWN_TYPE',[],5,0
+Documentation: '0-Completed,1-Planned,2-Unknown,3-Pending','Markdown.15'
+Legacy Column: 'MARKDOWN_TYPE'
+
+------------------------------------------------------
+
+Name: MarkdownDestination
+Data Type: Nullable<TMarkdownDestination>
+Database Column: 'MARKDOWN_DESTINATION',[],5,0
+Documentation: '0-Price,1-Cost.','Markdown.16'
+Legacy Column: 'MARKDOWN_DEST'
+
+------------------------------------------------------
+
+Name: MarkdownDate
+Data Type: Nullable<TDateTime>
+Database Column: 'MARKDOWN_DATE',[
+Documentation: 'date markdown is applied','Markdown.17'
+Legacy Column: 'MARKDOWN_DATE'
+
+------------------------------------------------------
+
+Name: InverseDate
+Data Type: Nullable<TDateTime>
+Database Column: 'INVERSE_DATE',[
+Documentation: 'if specified, date markdown is reversed.','Markdown.18'
+Legacy Column: 'INVERSE_DATE'
+
+------------------------------------------------------
+
+Name: InProgress
+Data Type: Int16
+Database Column: 'IN_PROGRESS',[],1,0
+Documentation: 'Markdown is applying now (2 - Failed, 1 -In Progress, 0- Not in Progress)','Markdown.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AppliedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPLIED_DATE',[
+Documentation: 'Actual applied date','Markdown.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RestoredDate
+Data Type: Nullable<TDateTime>
+Database Column: 'RESTORED_DATE',[
+Documentation: 'Actual restored date','Markdown.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownOwner
+Data Type: Nullable<Int64>
+Database Column: 'MARKDOWN_OWNER',[],19,0
+Documentation: 'Markdown owner controller','Markdown.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RequestReverse
+Data Type: boolean
+Database Column: 'REQUEST_REVERSE',[],1
+Documentation: 'Request to reverse markdown','Markdown.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'active = 1 and inactive = 0','Markdown.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownAdj
+Data Type: IList<TMarkdownAdj>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownItem
+Data Type: IList<TMarkdownItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Reversed
+Data Type: boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemCount
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvl
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'level','Markdown.25'
+Legacy Column: 'PRICE_LVL'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Markdown.26'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season code','Markdown.27'
+Legacy Column: 'SEASON_CODE'
+
+------------------------------------------------------
+
+Name: PriceLvlName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'price level name','Markdown.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','Markdown.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season name','Markdown.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OwnerName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined database name','Markdown.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

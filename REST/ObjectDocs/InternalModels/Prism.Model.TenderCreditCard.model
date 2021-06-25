@@ -1,0 +1,461 @@
+##########################################################################################################
+File Name: Prism.Model.TenderCreditCard.pas
+##########################################################################################################
+Class Name: TTenderCreditCard
+Base Class Name: TModelBase
+Database Table: TENDER_CREDIT_CARD
+Associate Class: False
+Identified By: 'FTenderSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TenderCreditCard.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TenderCreditCard.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TenderCreditCard.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TenderCreditCard.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','TenderCreditCard.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TenderCreditCard.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','TenderCreditCard.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','TenderCreditCard.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TenderCreditCard.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderSid
+Data Type: Int64
+Database Column: 'TENDER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to document tender record','TenderCreditCard.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardNo
+Data Type: Nullable<string>
+Database Column: 'CARD_NO',[],30
+Documentation: 'credit card number','TenderCreditCard.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'CARD_TYPE_SID',[],19,0
+Documentation: 'reference to credit_card_type record','TenderCreditCard.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardHolderName
+Data Type: Nullable<string>
+Database Column: 'CARD_HOLDER_NAME',[],32
+Documentation: 'name on credit card','TenderCreditCard.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardExpMonth
+Data Type: Nullable<Int16>
+Database Column: 'CARD_EXP_MONTH',[],5,0
+Documentation: 'month portion of expiration date','TenderCreditCard.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardExpYear
+Data Type: Nullable<Integer>
+Database Column: 'CARD_EXP_YEAR',[],10,0
+Documentation: 'year portion of expiration date','TenderCreditCard.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsNormalSale
+Data Type: Boolean
+Database Column: 'IS_NORMAL_SALE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates this is a normal sale.  this value can be altered by plug-ins to reflect exceptions in processing tenders.','TenderCreditCard.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsPresent
+Data Type: Boolean
+Database Column: 'IS_PRESENT',[cpRequired,cpNotNull],1,0
+Documentation: 'was the card present or was the number communicated without the card?','TenderCreditCard.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardPostalCode
+Data Type: Nullable<string>
+Database Column: 'CARD_POSTAL_CODE',[],10
+Documentation: 'billing zip code.','TenderCreditCard.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AuthCode
+Data Type: Nullable<string>
+Database Column: 'AUTH_CODE',[],20
+Documentation: 'for eft tenders, this is the authorization value returned by the eft processor for successful authorizations.  included here for lookup purposes.','TenderCreditCard.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftTransactionId
+Data Type: Nullable<string>
+Database Column: 'EFT_TRANSACTION_ID',[],32
+Documentation: 'the record id returned from gate for eft transaction.','TenderCreditCard.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AvsResponseCode
+Data Type: Nullable<string>
+Database Column: 'AVS_RESPONSE_CODE',[],4
+Documentation: 'avs response code from processor','TenderCreditCard.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: L2ResultCode
+Data Type: Nullable<string>
+Database Column: 'L2_RESULT_CODE',[],1
+Documentation: 'result code for commercial card processing','TenderCreditCard.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FailureMessage
+Data Type: Nullable<string>
+Database Column: 'FAILURE_MESSAGE',[],64
+Documentation: 'error message returned for failed transactions.','TenderCreditCard.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata1
+Data Type: Nullable<string>
+Database Column: 'EFTDATA1',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata2
+Data Type: Nullable<string>
+Database Column: 'EFTDATA2',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata3
+Data Type: Nullable<string>
+Database Column: 'EFTDATA3',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata4
+Data Type: Nullable<string>
+Database Column: 'EFTDATA4',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata5
+Data Type: Nullable<string>
+Database Column: 'EFTDATA5',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata6
+Data Type: Nullable<string>
+Database Column: 'EFTDATA6',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata7
+Data Type: Nullable<string>
+Database Column: 'EFTDATA7',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata8
+Data Type: Nullable<string>
+Database Column: 'EFTDATA8',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata9
+Data Type: Nullable<string>
+Database Column: 'EFTDATA9',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata0
+Data Type: Nullable<string>
+Database Column: 'EFTDATA0',[],2001
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardProcessingFee
+Data Type: Nullable<Double>
+Database Column: 'CARD_PROCESSING_FEE',[],16,4
+Documentation: 'additional fee assessed by processor.','TenderCreditCard.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SignatureMap
+Data Type: Nullable<TMemoryStream>
+Database Column: 'SIGNATURE_MAP',[
+Documentation: 'point array information returned from sigcap device.  stored as an array of integer tuples.','TenderCreditCard.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TenderCreditCard.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EntryMethod
+Data Type: Nullable<TEntryMethod>
+Database Column: 'ENTRY_METHOD',[],1,0
+Documentation: 'the method the user wishes to run the card in, 0-EFT Device,1-Inline MSR,2-Keyed Entry','TenderCreditCard.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CardTypeName
+Data Type: Nullable<string>
+Database Column: 'CARD_TYPE_NAME',[],30
+Documentation: 'whether it is Visa, MasterCard, Discover, etc.','TenderCreditCard.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvAiAid
+Data Type: Nullable<string>
+Database Column: 'EMV_AI_AID',[],200
+Documentation: 'EmvAiAid','TenderCreditCard.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvAiApplabel
+Data Type: Nullable<string>
+Database Column: 'EMV_AI_APPLABEL',[],200
+Documentation: 'EmvAiApplabel','TenderCreditCard.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvCiCardexpirydate
+Data Type: Nullable<string>
+Database Column: 'EMV_CI_CARDEXPIRYDATE',[],200
+Documentation: 'EmvCiCardexpirydate','TenderCreditCard.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvCryptoCryptogramtype
+Data Type: Nullable<string>
+Database Column: 'EMV_CRYPTO_CRYPTOGRAMTYPE',[],200
+Documentation: 'EmvCryptoCryptogramtype','TenderCreditCard.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvCryptoCryptogram
+Data Type: Nullable<string>
+Database Column: 'EMV_CRYPTO_CRYPTOGRAM',[],200
+Documentation: 'EmvCryptoCryptogram','TenderCreditCard.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmvPinstatement
+Data Type: Nullable<string>
+Database Column: 'EMV_PINSTATEMENT',[],200
+Documentation: 'EmvPinstatement','TenderCreditCard.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata11
+Data Type: Nullable<string>
+Database Column: 'EFTDATA11',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata12
+Data Type: Nullable<string>
+Database Column: 'EFTDATA12',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata13
+Data Type: Nullable<string>
+Database Column: 'EFTDATA13',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata14
+Data Type: Nullable<string>
+Database Column: 'EFTDATA14',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata15
+Data Type: Nullable<string>
+Database Column: 'EFTDATA15',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata16
+Data Type: Nullable<string>
+Database Column: 'EFTDATA16',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata17
+Data Type: Nullable<string>
+Database Column: 'EFTDATA17',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata18
+Data Type: Nullable<string>
+Database Column: 'EFTDATA18',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata19
+Data Type: Nullable<string>
+Database Column: 'EFTDATA19',[],32
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata10
+Data Type: Nullable<string>
+Database Column: 'EFTDATA10',[],2001
+Documentation: 'additional data that is needed for printing on the invoice','TenderCreditCard.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftdataBSMer
+Data Type: Nullable<string>
+Database Column: 'EFTDATABSMER',[],2001
+Documentation: 'Merchant Receipt text','TenderCreditCard.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftdataBSCust
+Data Type: Nullable<string>
+Database Column: 'EFTDATABSCUST',[],2001
+Documentation: 'Customer Receipt text','TenderCreditCard.56'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.LtyLevel.Associate.pas
+##########################################################################################################
+Class Name: TLtyLevelAssociate
+Base Class Name: 
+Database Table: LTY_LEVEL
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyLvlName
+Data Type: Nullable<string>
+Database Column: 'LTY_LVL_NAME',[],50
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

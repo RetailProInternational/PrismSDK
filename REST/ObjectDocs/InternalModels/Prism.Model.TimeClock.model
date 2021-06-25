@@ -1,0 +1,221 @@
+##########################################################################################################
+File Name: Prism.Model.TimeClock.pas
+##########################################################################################################
+Class Name: TTimeClock
+Base Class Name: TModelBase
+Database Table: TIME_CLOCK
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TimeClock.1'
+Legacy Column: 'INVC_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TimeClock.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TimeClock.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TimeClock.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TimeClock.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TimeClock.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TimeClock.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TimeClock.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TimeClock.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TimeClock.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'SbsSid','TimeClock.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'StoreSid','TimeClock.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'WorkstationSid','TimeClock.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeSid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE_SID',[],19,0
+Documentation: 'EmployeeSid','TimeClock.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventType
+Data Type: Int16
+Database Column: 'EVENT_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: 'EventType','TimeClock.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventDatetime
+Data Type: TDateTime
+Database Column: 'EVENT_DATETIME',[cpRequired,cpNotNull
+Documentation: 'EventDatetime','TimeClock.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],500
+Documentation: 'Notes','TimeClock.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventClienttimeoffset
+Data Type: Int16
+Database Column: 'EVENT_CLIENTTIMEOFFSET',[cpRequired,cpNotNull],5,0
+Documentation: 'UTC offset in MINUTES in relation to the client','TimeClock.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventServertimeoffset
+Data Type: Int16
+Database Column: 'EVENT_SERVERTIMEOFFSET',[cpRequired,cpNotNull],5,0
+Documentation: 'UTC offset in MINUTES in relation to the server','TimeClock.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TimeClock.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNumber
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'Number','TimeClock.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'keeps the workstation number, can not be modified by the end user','TimeClock.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeId
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'EmplID','TimeClock.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','TimeClock.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TimeClock.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

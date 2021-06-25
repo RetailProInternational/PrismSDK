@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.SlipFee.pas
+##########################################################################################################
+Class Name: TSlipFee
+Base Class Name: TModelBase
+Database Table: SLIP_FEE
+Associate Class: False
+Identified By: 'FSlipSid,FTranFeeTypeSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','SlipFee.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','SlipFee.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','SlipFee.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','SlipFee.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','SlipFee.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','SlipFee.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','SlipFee.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','SlipFee.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','SlipFee.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','SlipFee.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSid
+Data Type: Int64
+Database Column: 'SLIP_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SlipSid','SlipFee.11'
+Legacy Column: 'SLIP_SID'
+
+------------------------------------------------------
+
+Name: Amt
+Data Type: Nullable<Double>
+Database Column: 'AMT',[],16,4
+Documentation: 'Amt','SlipFee.12'
+Legacy Column: 'AMT'
+
+------------------------------------------------------
+
+Name: TranFeeTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'TRAN_FEE_TYPE_SID',[],19,0
+Documentation: 'TranFeeTypeSid','SlipFee.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'FeeType','SlipFee.14'
+Legacy Column: 'FEE_TYPE'
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'FeeName','SlipFee.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

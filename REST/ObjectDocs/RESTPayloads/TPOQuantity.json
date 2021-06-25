@@ -1,0 +1,31 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "poitemsid" : "0",
+      "sbssid" : "0",
+      "storesid" : "0",
+      "ordqty" : null,
+      "rcvdqty" : null,
+      "archived" : null,
+      "storeminqty" : 0,
+      "storemaxqty" : 0,
+      "dueqty" : 0,
+      "sbsno" : null,
+      "storeno" : null,
+      "storecode" : null,
+      "storename" : null,
+      "invnitemsid" : null
+    }
+  ]
+}
+

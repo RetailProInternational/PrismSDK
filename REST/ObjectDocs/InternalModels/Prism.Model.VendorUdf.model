@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.VendorUdf.pas
+##########################################################################################################
+Class Name: TVendorUdf
+Base Class Name: TModelBase
+Database Table: VENDOR_UDF
+Associate Class: False
+Identified By: 'FUdfNo, FSbsSid'
+Legacy Identified By: 'UdfNo,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','VendorUdf.1'
+Legacy Column: 'UDF_ID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','VendorUdf.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','VendorUdf.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','VendorUdf.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','VendorUdf.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','VendorUdf.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','VendorUdf.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','VendorUdf.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','VendorUdf.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'SbsSid','VendorUdf.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','VendorUdf.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfNo
+Data Type: Int16
+Database Column: 'UDF_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'UdfNo','VendorUdf.12'
+Legacy Column: 'UDF_NO'
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'NAME',[],15
+Documentation: 'Name','VendorUdf.13'
+Legacy Column: 'UDF_NAME'
+
+------------------------------------------------------
+
+Name: Required
+Data Type: Boolean
+Database Column: 'REQUIRED',[],1,0
+Documentation: 'Required','VendorUdf.14'
+Legacy Column: 'REQUIRED'
+
+------------------------------------------------------
+
+Name: VendorUdfOption
+Data Type: IList<TVendorUdfOption>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','VendorUdf.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

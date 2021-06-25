@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.Biometrics.pas
+##########################################################################################################
+Class Name: TBiometrics
+Base Class Name: TModelBase
+Database Table: BIOMETRICS
+Associate Class: False
+Identified By: 'FUserName,FDescription,FBioType'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Biometrics.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Biometrics.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Biometrics.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Biometrics.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Biometrics.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','Biometrics.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','Biometrics.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','Biometrics.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Biometrics.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','Biometrics.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: '1 - active, 0 - inactive','Biometrics.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserName
+Data Type: Nullable<string>
+Database Column: 'USER_NAME',[cpRequired,cpNotNull],30
+Documentation: 'login username','Biometrics.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BioType
+Data Type: Nullable<TBioType>
+Database Column: 'BIO_TYPE',[],1,0
+Documentation: 'biometric type: 0=fingerprint, 1=face, 2=voice, 3=retina, 4=iris, 5=hand','Biometrics.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],50
+Documentation: 'display description of data sample (e.g. which finger was used for fingerprint)','Biometrics.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BioData
+Data Type: Nullable<string>
+Database Column: 'BIO_DATA',[],2001
+Documentation: 'fingerprint template data','Biometrics.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Password
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,317 @@
+##########################################################################################################
+File Name: Prism.Model.Dcs.pas
+##########################################################################################################
+Class Name: TDcs
+Base Class Name: TModelBase
+Database Table: DCS
+Associate Class: False
+Identified By: 'FDcsCode,FSbsSid'
+Legacy Identified By: 'DcsCode,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Dcs.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Dcs.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Dcs.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Dcs.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Dcs.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Dcs.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.this is the same value that will be used in licensing applications.','Dcs.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Dcs.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Dcs.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Dcs.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: string
+Database Column: 'DCS_CODE',[cpRequired,cpNotNull],9
+Documentation: 'DcsCode','Dcs.11'
+Legacy Column: 'DCS_CODE'
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','Dcs.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Int16
+Database Column: 'USE_QTY_DECIMALS',[cpRequired,cpNotNull],1,0
+Documentation: 'UseQtyDecimals','Dcs.13'
+Legacy Column: 'USE_QTY_DECIMALS'
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'References to tax_code','Dcs.14'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: MarginType
+Data Type: Nullable<TDCSMarginType>
+Database Column: 'MARGIN_TYPE',[],5,0
+Documentation: '0 = margin  1 = mark up  2 = pricing coefficient','Dcs.15'
+Legacy Column: 'MARGIN_TYPE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','Dcs.16'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: MarginValue
+Data Type: Nullable<Double>
+Database Column: 'MARGIN_VALUE',[],16,4
+Documentation: 'MarginValue','Dcs.17'
+Legacy Column: 'MARGIN_VALUE'
+
+------------------------------------------------------
+
+Name: PatternSid
+Data Type: Nullable<Int64>
+Database Column: 'PATTERN_SID',[],19,0
+Documentation: 'PatternSid','Dcs.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DName
+Data Type: Nullable<string>
+Database Column: 'D_NAME',[],20
+Documentation: 'DName','Dcs.19'
+Legacy Column: 'D_NAME'
+
+------------------------------------------------------
+
+Name: CName
+Data Type: Nullable<string>
+Database Column: 'C_NAME',[],20
+Documentation: 'CName','Dcs.20'
+Legacy Column: 'C_NAME'
+
+------------------------------------------------------
+
+Name: SName
+Data Type: Nullable<string>
+Database Column: 'S_NAME',[],20
+Documentation: 'SName','Dcs.21'
+Legacy Column: 'S_NAME'
+
+------------------------------------------------------
+
+Name: DLongName
+Data Type: Nullable<string>
+Database Column: 'D_LONG_NAME',[],60
+Documentation: 'DLongName','Dcs.22'
+Legacy Column: 'D_LONG_NAME'
+
+------------------------------------------------------
+
+Name: CLongName
+Data Type: Nullable<string>
+Database Column: 'C_LONG_NAME',[],60
+Documentation: 'CLongName','Dcs.23'
+Legacy Column: 'C_LONG_NAME'
+
+------------------------------------------------------
+
+Name: SLongName
+Data Type: Nullable<string>
+Database Column: 'S_LONG_NAME',[],60
+Documentation: 'SLongName','Dcs.24'
+Legacy Column: 'S_LONG_NAME'
+
+------------------------------------------------------
+
+Name: TagCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAG_CODE_SID',[],19,0
+Documentation: 'TagCodeSid','Dcs.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Regional
+Data Type: Boolean
+Database Column: 'REGIONAL',[],1,0
+Documentation: '1=regional 0=not regional','Dcs.26'
+Legacy Column: 'REGIONAL'
+
+------------------------------------------------------
+
+Name: Image
+Data Type: Nullable<TMemoryStream>
+Database Column: 'IMAGE',[
+Documentation: 'Image','Dcs.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[],1,0
+Documentation: '0=Published, 1=WIP, 2=ReadyToPublish','Dcs.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: D
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: C
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: S
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarginPctg
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkupPctg
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Coefficient
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','Dcs.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'TaxName','Dcs.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Dcs.30'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: PatternName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'Unique name of the pattern','Dcs.31'
+Legacy Column: 'PTRN_Name'
+
+------------------------------------------------------
+

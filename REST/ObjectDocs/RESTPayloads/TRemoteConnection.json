@@ -1,0 +1,32 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "active" : false,
+      "remotecontrollersid" : "0",
+      "remoteauthsession" : null,
+      "connectiontype" : 0,
+      "localcontrollersid" : "0",
+      "username" : null,
+      "password" : null,
+      "remconsubscription" : [
+      ],
+      "connectionname" : "Unknown",
+      "localaddress" : null,
+      "remoteaddress" : null,
+      "remotev9address" : null,
+      "localcontrollername" : null,
+      "remotecontrollername" : null
+    }
+  ]
+}
+

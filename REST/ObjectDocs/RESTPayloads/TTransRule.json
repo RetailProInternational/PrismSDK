@@ -1,0 +1,37 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : "0",
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "fromsbssid" : "0",
+      "fromstoresid" : "0",
+      "tosbssid" : "0",
+      "tostoresid" : "0",
+      "cost" : null,
+      "op1" : null,
+      "qty" : null,
+      "op2" : null,
+      "itemcnt" : null,
+      "action" : null,
+      "daysintrans" : null,
+      "fromsbsno" : null,
+      "fromstoreno" : null,
+      "tosbsno" : null,
+      "tostoreno" : null,
+      "fromstorename" : null,
+      "tostorename" : null,
+      "fromstorecode" : null,
+      "tostorecode" : null,
+      "fromsbsname" : null,
+      "tosbsname" : null
+    }
+  ]
+}
+

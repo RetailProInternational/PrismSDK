@@ -1,0 +1,245 @@
+##########################################################################################################
+File Name: Prism.Model.VendorAddress.pas
+##########################################################################################################
+Class Name: TVendorAddress
+Base Class Name: TModelBase
+Database Table: VENDOR_CONTACT_ADDRESS
+Associate Class: False
+Identified By: 'FVendSid,FSeqNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','VendorAddress.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','VendorAddress.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','VendorAddress.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','VendorAddress.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','VendorAddress.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','VendorAddress.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and9, respectively.  this is the same value that will be used in licensing applications.','VendorAddress.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same ascreated/modified datetime.','VendorAddress.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','VendorAddress.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','VendorAddress.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Int64
+Database Column: 'VEND_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'pointer to vendor record','VendorAddress.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryFlag
+Data Type: boolean
+Database Column: 'PRIMARY_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'true if this is the vendor? primary address','VendorAddress.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'true if this contact is currently in use','VendorAddress.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CompanyName
+Data Type: Nullable<string>
+Database Column: 'COMPANY_NAME',[],100
+Documentation: 'optional company name.','VendorAddress.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_1',[],40
+Documentation: 'first address line','VendorAddress.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_2',[],40
+Documentation: 'second address line','VendorAddress.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_3',[],40
+Documentation: 'third address line','VendorAddress.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_4',[],40
+Documentation: 'Extended address detail','VendorAddress.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_5',[],40
+Documentation: 'Extended address detail','VendorAddress.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address6
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_6',[],40
+Documentation: 'Extended address detail','VendorAddress.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: City
+Data Type: Nullable<string>
+Database Column: 'CITY',[],40
+Documentation: 'city','VendorAddress.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: Nullable<string>
+Database Column: 'STATE',[],40
+Documentation: 'state','VendorAddress.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCode
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE',[],10
+Documentation: 'postal code/zip code','VendorAddress.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCodeExtension
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE_EXTENSION',[],5
+Documentation: 'postal code extension (eg. zip+4)','VendorAddress.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'Reference to country record','VendorAddress.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Int16
+Database Column: 'SEQ_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SeqNo','VendorAddress.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'ADDRESS_TYPE_SID',[],19,0
+Documentation: 'AddressTypeSid','VendorAddress.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountryCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'country code','VendorAddress.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressTypeName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'address type name, eg. home2, work1 etc.','VendorAddress.29'
+Legacy Column: NA
+
+------------------------------------------------------
+

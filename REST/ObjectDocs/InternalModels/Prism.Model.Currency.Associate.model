@@ -1,0 +1,93 @@
+##########################################################################################################
+File Name: Prism.Model.Currency.Associate.pas
+##########################################################################################################
+Class Name: TCurrencyAssociate
+Base Class Name: 
+Database Table: CURRENCY
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: 'CURRENCY_NAME',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Discrepancy
+Data Type: Nullable<Double>
+Database Column: 'DISCREPANCY',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Rounding
+Data Type: Nullable<Double>
+Database Column: 'ROUNDING',[],6,2
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Decimals
+Data Type: Nullable<Int16>
+Database Column: 'DECIMALS',[cpRequired,cpNotNull],3,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlphabeticCode
+Data Type: Nullable<string>
+Database Column: 'ALPHABETIC_CODE',[cpRequired,cpNotNull],3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NumericCode
+Data Type: Nullable<Int16>
+Database Column: 'NUMERIC_CODE',[],3,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinorUnit
+Data Type: Nullable<Int16>
+Database Column: 'MINOR_UNIT',[],3,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Symbol
+Data Type: Nullable<string>
+Database Column: 'SYMBOL',[],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

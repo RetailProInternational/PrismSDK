@@ -1,0 +1,1133 @@
+##########################################################################################################
+File Name: Prism.Model.TransferSlip.pas
+##########################################################################################################
+Class Name: TTransferSlip
+Base Class Name: TModelBase
+Database Table: SLIP
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TransferSlip.1'
+Legacy Column: 'SLIP_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TransferSlip.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TransferSlip.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TransferSlip.4'
+Legacy Column: 'MODIFIEDBY_ID'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TransferSlip.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TransferSlip.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TransferSlip.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TransferSlip.8'
+Legacy Column: 'POST_DATE'
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TransferSlip.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TransferSlip.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutSbsSid
+Data Type: Int64
+Database Column: 'OUT_SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'subsidiary sid who is transferring the merchandise (source subsidiary)','TransferSlip.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreSid
+Data Type: Int64
+Database Column: 'OUT_STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'store sid who is transferring the merchandise (source store)','TransferSlip.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'IN_SBS_SID',[],19,0
+Documentation: 'subsidiary sid who is receiving the merchandise (target subsidiary)','TransferSlip.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'IN_STORE_SID',[],19,0
+Documentation: 'store sid who is receiving the merchandise (target store)','TransferSlip.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipNo
+Data Type: Nullable<Integer>
+Database Column: 'SLIP_NO',[],10,0
+Documentation: 'SlipNo','TransferSlip.15'
+Legacy Column: 'SLIP_NO'
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID',[],19,0
+Documentation: 'ClerkSid','TransferSlip.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EtaDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ETA_DATE',[
+Documentation: 'estimated time of arrival','TransferSlip.17'
+Legacy Column: 'ETA_DATE'
+
+------------------------------------------------------
+
+Name: RefSlipSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_SLIP_SID',[],19,0
+Documentation: 'sid of slip (used in reversal)','TransferSlip.18'
+Legacy Column: 'REF_SLIP_SID'
+
+------------------------------------------------------
+
+Name: ToNo
+Data Type: Nullable<string>
+Database Column: 'TO_NO',[],10
+Documentation: 'to# if slip is created from to','TransferSlip.19'
+Legacy Column: 'TO_NO'
+
+------------------------------------------------------
+
+Name: ToSid
+Data Type: Nullable<Int64>
+Database Column: 'TO_SID',[],19,0
+Documentation: 'sid of transfer order if slip is created from transfer order','TransferSlip.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSid
+Data Type: Nullable<Int64>
+Database Column: 'VOU_SID',[],19,0
+Documentation: 'sid of receiving transfer voucher (asn or voucher)','TransferSlip.21'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TDocumentStatus>
+Database Column: 'STATUS',[],10,0
+Documentation: 'transactional document status i.e. 1=changed, 2=cancelled, 3=normal (default), 4=finalized','TransferSlip.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProcStatus
+Data Type: Nullable<Integer>
+Database Column: 'PROC_STATUS',[],10,0
+Documentation: 'reversal process status (bitwise) i.e. 0=none, 16=reversed, 32=reversing','TransferSlip.23'
+Legacy Column: 'PROC_STATUS'
+
+------------------------------------------------------
+
+Name: ReversedFlag
+Data Type: Nullable<Integer>
+Database Column: 'REVERSED_FLAG',[],1,0
+Documentation: 'NULL or 0 - normal, 1 - reversed, 2 - reversal','TransferSlip.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseVat
+Data Type: Boolean
+Database Column: 'USE_VAT',[],1,0
+Documentation: 'UseVat','TransferSlip.25'
+Legacy Column: 'USE_VAT'
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','TransferSlip.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocPriceTotal
+Data Type: Nullable<Double>
+Database Column: 'DOC_PRICE_TOTAL',[],16,4
+Documentation: 'will hold sum of all items extended price (qty * price)','TransferSlip.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocCostTotal
+Data Type: Nullable<Double>
+Database Column: 'DOC_COST_TOTAL',[],16,4
+Documentation: 'will hold sum of all items extended cost (qty * (cost + all fees - discounts))','TransferSlip.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocCostSubTotal
+Data Type: Nullable<Double>
+Database Column: 'DOC_COST_SUBTOTAL',[],16,4
+Documentation: 'hold sum of all items ext_cost i.e. qty*cost','TransferSlip.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocSid
+Data Type: Nullable<Integer>
+Database Column: 'SUBLOC_SID',[],10,0
+Documentation: 'sid of a sublocation.','TransferSlip.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_STORE_SID',[],19,0
+Documentation: 'OrigStoreSid','TransferSlip.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStation
+Data Type: Nullable<string>
+Database Column: 'ORIG_STATION',[],1
+Documentation: 'OrigStation','TransferSlip.32'
+Legacy Column: 'ORIG_STATION'
+
+------------------------------------------------------
+
+Name: TrackingNo
+Data Type: Nullable<string>
+Database Column: 'TRACKING_NO',[],40
+Documentation: 'to be populated with asn shipment no from the out slip.','TransferSlip.33'
+Legacy Column: 'TRACKING_NO'
+
+------------------------------------------------------
+
+Name: ShipmentNo
+Data Type: Nullable<string>
+Database Column: 'SHIPMENT_NO',[],16
+Documentation: 'serves as a "pick list"  identifier to the person who receives the asn voucher.','TransferSlip.34'
+Legacy Column: 'SHIPMENT_NO'
+
+------------------------------------------------------
+
+Name: DaysInTran
+Data Type: Nullable<Integer>
+Database Column: 'DAYS_IN_TRAN',[],10,0
+Documentation: 'DaysInTran','TransferSlip.35'
+Legacy Column: 'DAYS_IN_TRAN'
+
+------------------------------------------------------
+
+Name: CustFld
+Data Type: Nullable<string>
+Database Column: 'CUST_FLD',[],15
+Documentation: 'CustFld','TransferSlip.36'
+Legacy Column: 'CUST_FLD'
+
+------------------------------------------------------
+
+Name: Station
+Data Type: Nullable<string>
+Database Column: 'STATION',[],1
+Documentation: 'Station','TransferSlip.37'
+Legacy Column: 'STATION'
+
+------------------------------------------------------
+
+Name: Workstation
+Data Type: Nullable<Int16>
+Database Column: 'WORKSTATION',[],5,0
+Documentation: 'Workstation','TransferSlip.38'
+Legacy Column: 'WORKSTATION'
+
+------------------------------------------------------
+
+Name: WsSeqNo
+Data Type: Nullable<Integer>
+Database Column: 'WS_SEQ_NO',[],10,0
+Documentation: 'WsSeqNo','TransferSlip.39'
+Legacy Column: 'WS_SEQ_NO'
+
+------------------------------------------------------
+
+Name: VerifyType
+Data Type: Nullable<Int16>
+Database Column: 'VERIFY_TYPE',[],5,0
+Documentation: 'VerifyType','TransferSlip.40'
+Legacy Column: 'VERIF_TYPE'
+
+------------------------------------------------------
+
+Name: VerifyDate
+Data Type: Nullable<TDateTime>
+Database Column: 'VERIFY_DATE',[
+Documentation: 'VerifyDate','TransferSlip.41'
+Legacy Column: 'VERIF_DATE'
+
+------------------------------------------------------
+
+Name: Verified
+Data Type: Boolean
+Database Column: 'VERIFIED',[],1,0
+Documentation: 'Verified','TransferSlip.42'
+Legacy Column: 'VERIFIED'
+
+------------------------------------------------------
+
+Name: ResolvebyId
+Data Type: Nullable<Integer>
+Database Column: 'RESOLVEBY_ID',[],10,0
+Documentation: 'ResolvebyId','TransferSlip.43'
+Legacy Column: 'RESOLVBY_ID'
+
+------------------------------------------------------
+
+Name: ResolveDate
+Data Type: Nullable<TDateTime>
+Database Column: 'RESOLVE_DATE',[
+Documentation: 'ResolveDate','TransferSlip.44'
+Legacy Column: 'RESOLV_DATE'
+
+------------------------------------------------------
+
+Name: ResolveMethod
+Data Type: Nullable<Int16>
+Database Column: 'RESOLVE_METHOD',[],5,0
+Documentation: 'ResolveMethod','2-Correct Sending,1-Correct Receiving,3-Adjust Sending,4-Adjust Receiving'
+Legacy Column: 'RESOLV_METHOD'
+
+------------------------------------------------------
+
+Name: ResolveStatus
+Data Type: Nullable<TResolveStatus>
+Database Column: 'RESOLVE_STATUS',[],1,0
+Documentation: 'flag to indicate transfer verification status. 0 or null - none, 1 - original doc, 2 - replacement doc','TransferSlip.46'
+Legacy Column: 'RESOLV_STATUS'
+
+------------------------------------------------------
+
+Name: ResolveSid
+Data Type: Nullable<Int64>
+Database Column: 'RESOLVE_SID',[],19,0
+Documentation: 'reference to original or replacement document (slip or voucher sid)','TransferSlip.47'
+Legacy Column: 'RESOLV_SID'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','TransferSlip.48'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: Controller
+Data Type: Nullable<Int16>
+Database Column: 'CONTROLLER',[],5,0
+Documentation: 'Controller','TransferSlip.49'
+Legacy Column: 'CONTROLLER'
+
+------------------------------------------------------
+
+Name: OrigController
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_CONTROLLER',[],5,0
+Documentation: 'OrigController','TransferSlip.50'
+Legacy Column: 'ORIG_CONTROLLER'
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID',[],19,0
+Documentation: 'CreatedbySid','TransferSlip.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID',[],19,0
+Documentation: 'ModifiedbySid','TransferSlip.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TransReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'TRANS_REASON_SID',[],19,0
+Documentation: 'TransReasonSid','TransferSlip.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'DOC_REASON_SID',[],19,0
+Documentation: 'DocReasonSid','TransferSlip.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Audited
+Data Type: Boolean
+Database Column: 'AUDITED',[],1,0
+Documentation: 'Audited','TransferSlip.55'
+Legacy Column: 'AUDITED'
+
+------------------------------------------------------
+
+Name: AuditedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'AUDITED_DATE',[
+Documentation: 'AuditedDate','TransferSlip.56'
+Legacy Column: 'AUDITED_DATE'
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS',[],1,0
+Documentation: 'Cms','TransferSlip.57'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: CmsPostDate
+Data Type: TDateTime
+Database Column: 'CMS_POST_DATE',[cpRequired,cpNotNull
+Documentation: 'CmsPostDate','TransferSlip.58'
+Legacy Column: 'CMS_POST_DATE'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','TransferSlip.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note
+Data Type: Nullable<string>
+Database Column: 'NOTE',[],255
+Documentation: 'Note','TransferSlip.60'
+Legacy Column: 'NOTE'
+
+------------------------------------------------------
+
+Name: Held
+Data Type: Boolean
+Database Column: 'HELD',[],1,0
+Documentation: 'When Held is 1 AND  STATUS  is 3, it indicates the document/slip is not active.It is used ONLY in conjunction with status=3.','TransferSlip.61'
+Legacy Column: 'HELD'
+
+------------------------------------------------------
+
+Name: Unverified
+Data Type: Boolean
+Database Column: 'UNVERIFIED',[],1,0
+Documentation: 'Used by TransVerification. 0 = verified slip, 1 = unverified slip (default)','TransferSlip.62'
+Legacy Column: 'UNVERIFIED'
+
+------------------------------------------------------
+
+Name: CarrierName
+Data Type: Nullable<string>
+Database Column: 'CARRIER_NAME',[],50
+Documentation: 'The party which is physically transferring the merchandise','TransferSlip.63'
+Legacy Column: 'CARRIER_NAME'
+
+------------------------------------------------------
+
+Name: TotalTransferQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItems
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TransferQtyDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemCostDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItemsDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotDiff
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvedBySid
+Data Type: Nullable<Int64>
+Database Column: 'RESOLVEDBY_SID',[],19,0
+Documentation: 'ResolvedBySid','TransferSlip.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DITStatus
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipItem
+Data Type: IList<TSlipItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipFee
+Data Type: IList<TSlipFee>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipComment
+Data Type: IList<TSlipComment>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TransferSlip.65'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: OutStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransferSlip.66'
+Legacy Column: 'OUT_STORE_NO'
+
+------------------------------------------------------
+
+Name: InSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TransferSlip.67'
+Legacy Column: 'IN_SBS_NO'
+
+------------------------------------------------------
+
+Name: InStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransferSlip.68'
+Legacy Column: 'IN_STORE_NO'
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','TransferSlip.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','TransferSlip.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','TransferSlip.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'Name','TransferSlip.72'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: OrigStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransferSlip.73'
+Legacy Column: 'ORIG_STORE_NO'
+
+------------------------------------------------------
+
+Name: OutStoreAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Address1','TransferSlip.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OurStore Address2','TransferSlip.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Address3','TransferSlip.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Address4','TransferSlip.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Out Store Address5','TransferSlip.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Name','TransferSlip.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'StoreCode','TransferSlip.80'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'StoreCode','TransferSlip.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Udf1String','TransferSlip.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Udf2String','TransferSlip.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Udf3String','TransferSlip.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Udf4String','TransferSlip.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Udf5String','TransferSlip.85'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','TransferSlip.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address1','TransferSlip.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address2','TransferSlip.110'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address3','TransferSlip.111'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address4','TransferSlip.112'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address5','TransferSlip.113'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreAddress6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Address6','TransferSlip.114'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','TransferSlip.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Udf1String','TransferSlip.115'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Udf2String','TransferSlip.116'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Udf3String','TransferSlip.117'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Udf4String','TransferSlip.118'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Udf5String','TransferSlip.119'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address1','TransferSlip.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address2','TransferSlip.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address3','TransferSlip.90'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address4','TransferSlip.91'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address5','TransferSlip.92'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Name','TransferSlip.93'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Udf1String','TransferSlip.94'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Udf2String','TransferSlip.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Udf3String','TransferSlip.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Udf4String','TransferSlip.97'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Udf5String','TransferSlip.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','TransferSlip.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferSlip.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferSlip.101'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferSlip.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvedByEmplName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','TransferSlip.103'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferSlip.104'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouPkgNo
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'PkgNo','TransferSlip.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouTrackingNo
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TrackingNo','TransferSlip.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStoreAddress6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Address6','TransferSlip.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStoreAddress6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Address6','TransferSlip.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouClass
+Data Type: Int16
+Database Column: NA
+Documentation: 'VouClass','TransferSlip.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Phone1','TransferSlip.120'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'InStore Phone2','TransferSlip.121'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Phone1','TransferSlip.122'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OrigStore Phone2','TransferSlip.123'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OutStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'OutStore Phone2','TransferSlip.125'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocationId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Id','TransferSlip.105'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

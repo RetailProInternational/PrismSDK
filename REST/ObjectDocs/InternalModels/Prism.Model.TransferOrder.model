@@ -1,0 +1,501 @@
+##########################################################################################################
+File Name: Prism.Model.TransferOrder.pas
+##########################################################################################################
+Class Name: TTransferOrder
+Base Class Name: TModelBase
+Database Table: TORD
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TransferOrder.1'
+Legacy Column: 'TO_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TransferOrder.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TransferOrder.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TransferOrder.4'
+Legacy Column: 'MODIFIEDBY_ID'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TransferOrder.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TransferOrder.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TransferOrder.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TransferOrder.8'
+Legacy Column: 'CMS_POST_DATE'
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TransferOrder.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TransferOrder.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','TransferOrder.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','TransferOrder.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToNo
+Data Type: Nullable<string>
+Database Column: 'TO_NO',[],8
+Documentation: 'ToNo','TransferOrder.13'
+Legacy Column: 'TO_NO'
+
+------------------------------------------------------
+
+Name: ToType
+Data Type: TTransferOrderType
+Database Column: 'TO_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-SingleSbs,1-MultiSbs','TransferOrder.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefDocSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_DOC_SID',[],20
+Documentation: 'SID of referenced document','TransferOrder.15'
+Legacy Column: 'REFDOCUMENTSID'
+
+------------------------------------------------------
+
+Name: RefDocType
+Data Type: Nullable<TDocumentType>
+Database Column: 'REF_DOC_TYPE',[],5,0
+Documentation: 'Referenced document type i.e. 1=Invoice,2=TO,3=PO,4=SO,5=Memo,6=Slip,7=Voucher,8=Inventory,9=MO,10=MN,11=DCS,12=Customer,13=ASN,14=Return','TransferOrder.16'
+Legacy Column: 'REF_DOC_TYPE'
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID',[],19,0
+Documentation: 'ClerkSid','TransferOrder.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','TransferOrder.18'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: UseVat
+Data Type: Boolean
+Database Column: 'USE_VAT',[],1,0
+Documentation: 'UseVat','TransferOrder.19'
+Legacy Column: 'USE_VAT'
+
+------------------------------------------------------
+
+Name: ActivateDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ACTIVATE_DATE',[
+Documentation: 'ActivateDate','TransferOrder.20'
+Legacy Column: 'ACTIVATE_DATE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','TransferOrder.21'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: Verified
+Data Type: Boolean
+Database Column: 'VERIFIED',[],1,0
+Documentation: 'Verified','TransferOrder.22'
+Legacy Column: 'VERIFIED'
+
+------------------------------------------------------
+
+Name: Held
+Data Type: Boolean
+Database Column: 'HELD',[],1,0
+Documentation: 'Held','TransferOrder.23'
+Legacy Column: 'HELD'
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS',[],1,0
+Documentation: 'Cms','TransferOrder.24'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: Controller
+Data Type: Nullable<Int16>
+Database Column: 'CONTROLLER',[],5,0
+Documentation: 'Controller','TransferOrder.25'
+Legacy Column: 'CONTROLLER'
+
+------------------------------------------------------
+
+Name: OrigController
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_CONTROLLER',[],5,0
+Documentation: 'OrigController','TransferOrder.26'
+Legacy Column: 'ORIG_CONTROLLER'
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID',[],19,0
+Documentation: 'ModifiedbySid','TransferOrder.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID',[],19,0
+Documentation: 'CreatedbySid','TransferOrder.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'DOC_REASON_SID',[],19,0
+Documentation: 'DocReasonSid','TransferOrder.29'
+Legacy Column: 'DOC_REASON_ID'
+
+------------------------------------------------------
+
+Name: TransReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'TRANS_REASON_SID',[],19,0
+Documentation: 'Reason SID for Slip, ASN and TO','TransferOrder.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalExtOrdCost
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_EXT_ORD_COST',[],16,4
+Documentation: 'will hold sum of all ordered qty"s multiplied by cost','TransferOrder.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalExtOrdPrice
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_EXT_ORD_PRICE',[],16,4
+Documentation: 'will hold sum of all ordered qty"s multiplied by price','TransferOrder.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalOrdQty
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_ORD_QTY',[],10,3
+Documentation: 'total ordered quantity for whole TO','TransferOrder.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalAssignQty
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_ASSIGN_QTY',[],10,3
+Documentation: 'total assigned quantity for whole TO','TransferOrder.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalSentQty
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_SENT_QTY',[],10,3
+Documentation: 'total sent quantity for whole TO','TransferOrder.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocStatus
+Data Type: Nullable<TDocumentStatus>
+Database Column: 'DOC_STATUS',[],1,0
+Documentation: 'planning document status i.e. 0-None,1-Changed,2-Cancelled,3-Normal,4-Completed','TransferOrder.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[],1,0
+Documentation: '0=Published, 1=WIP, 2=ReadyToPublish','TransferOrder.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Notes1
+Data Type: Nullable<string>
+Database Column: 'NOTES1',[],30
+Documentation: 'Notes1','TransferOrder.38'
+Legacy Column: 'NOTES1'
+
+------------------------------------------------------
+
+Name: Notes2
+Data Type: Nullable<string>
+Database Column: 'NOTES2',[],30
+Documentation: 'Notes2','TransferOrder.39'
+Legacy Column: 'NOTES2'
+
+------------------------------------------------------
+
+Name: Note
+Data Type: Nullable<string>
+Database Column: 'NOTE',[],255
+Documentation: 'Note','TransferOrder.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItems
+Data Type: Integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UnfilledPctg
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefDocNo
+Data Type: Nullable<string>
+Database Column: 'REF_DOC_NO',[],20
+Documentation: 'Referenced document number','TransferOrder.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TOrdItem
+Data Type: IList<TTOrdItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','TransferOrder.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DueQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TransferOrder.42'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransferOrder.43'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','TransferOrder.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplID
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'EmplID','TransferOrder.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplID
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'EmplID','TransferOrder.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocReasonType
+Data Type: Nullable<TReasonType>
+Database Column: NA
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','TransferOrder.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocReasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Reason definition','TransferOrder.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','TransferOrder.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'StoreCode','TransferOrder.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','TransferOrder.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferOrder.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','TransferOrder.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferOrder.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','TransferOrder.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','TransferOrder.56'
+Legacy Column: NA
+
+------------------------------------------------------
+

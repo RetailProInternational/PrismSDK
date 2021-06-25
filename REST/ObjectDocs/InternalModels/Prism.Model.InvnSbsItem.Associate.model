@@ -1,0 +1,445 @@
+##########################################################################################################
+File Name: Prism.Model.InvnSbsItem.Associate.pas
+##########################################################################################################
+Class Name: TInvnSbsItemAssociate
+Base Class Name: TAssociateBase
+Database Table: INVN_SBS_ITEM
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ALU
+Data Type: Nullable<string>
+Database Column: 'ALU',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION3',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION4',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownDate
+Data Type: Nullable<TDateTime>
+Database Column: 'MARKDOWN_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscontinuedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'DISCONTINUED_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Float
+Data Type: Nullable<Integer>
+Database Column: 'UDF1_FLOAT',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Float
+Data Type: Nullable<Integer>
+Database Column: 'UDF2_FLOAT',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3Float
+Data Type: Nullable<Integer>
+Database Column: 'UDF3_FLOAT',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF3_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstRcvdDate
+Data Type: Nullable<TDateTime>
+Database Column: 'FIRST_RCVD_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastRcvdDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_RCVD_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SellableDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SELLABLE_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderableDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ORDERABLE_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: QtyPerCase
+Data Type: Nullable<Double>
+Database Column: 'QTY_PER_CASE',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Upc
+Data Type: Nullable<Int64>
+Database Column: 'UPC',[],18,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxDiscPerc1
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC1',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxDiscPerc2
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC2',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemNo
+Data Type: Nullable<Integer>
+Database Column: 'ITEM_NO',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: 'SERIAL_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: 'LOT_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: 'KIT_TYPE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastRcvdCost
+Data Type: Nullable<Double>
+Database Column: 'LAST_RCVD_COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Orderable
+Data Type: boolean
+Database Column: 'ORDERABLE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPriceInPoints
+Data Type: Nullable<Double>
+Database Column: 'LTY_PRICE_IN_POINTS',[],24,8
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPointsEarned
+Data Type: Nullable<Double>
+Database Column: 'LTY_POINTS_EARNED',[],24,8
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemState
+Data Type: Nullable<Int16>
+Database Column: 'ITEM_STATE',[],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinOrdQty
+Data Type: Nullable<Double>
+Database Column: 'MIN_ORD_QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorListCost
+Data Type: Nullable<Double>
+Database Column: 'VENDOR_LIST_COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TradeDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'TRADE_DISC_PERC',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LongDescription
+Data Type: Nullable<string>
+Database Column: 'LONG_DESCRIPTION',[],2000
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text1
+Data Type: Nullable<string>
+Database Column: 'TEXT1',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text2
+Data Type: Nullable<string>
+Database Column: 'TEXT2',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text3
+Data Type: Nullable<string>
+Database Column: 'TEXT3',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text4
+Data Type: Nullable<string>
+Database Column: 'TEXT4',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text5
+Data Type: Nullable<string>
+Database Column: 'TEXT5',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text6
+Data Type: Nullable<string>
+Database Column: 'TEXT6',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text7
+Data Type: Nullable<string>
+Database Column: 'TEXT7',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text8
+Data Type: Nullable<string>
+Database Column: 'TEXT8',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text9
+Data Type: Nullable<string>
+Database Column: 'TEXT9',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Text10
+Data Type: Nullable<string>
+Database Column: 'TEXT10',[],255
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FstPrice
+Data Type: Nullable<Double>
+Database Column: 'FST_PRICE',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

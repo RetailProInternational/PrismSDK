@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.ShippingMethod.pas
+##########################################################################################################
+Class Name: TShippingMethod
+Base Class Name: TModelBase
+Database Table: SHIP_METHOD
+Associate Class: False
+Identified By: 'FMethod, FSbsSid'
+Legacy Identified By: 'Method, SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ShippingMethod.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','ShippingMethod.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ShippingMethod.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','ShippingMethod.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ShippingMethod.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','ShippingMethod.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','ShippingMethod.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','ShippingMethod.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ShippingMethod.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','ShippingMethod.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','ShippingMethod.11'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: ShipId
+Data Type: Nullable<Integer>
+Database Column: 'SHIP_ID',[],10,0
+Documentation: 'V9 identifies each shipment method uniquely with this Id','ShippingMethod.12'
+Legacy Column: 'SHIP_ID'
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'translate V9 sbs_no to corresponding sbs-sid','ShippingMethod.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Method
+Data Type: Nullable<string>
+Database Column: 'METHOD',[cpRequired,cpNotNull],10
+Documentation: 'Method of shipping','ShippingMethod.14'
+Legacy Column: 'SHIP_METHOD'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','ShippingMethod.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

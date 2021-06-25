@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.AllocationPattern.Associate.pas
+##########################################################################################################
+Class Name: TAllocationPatternAssociate
+Base Class Name: 
+Database Table: ALLOCATION_PATTERN
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PatternName
+Data Type: Nullable<string>
+Database Column: 'PATTERN_NAME',[],20,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

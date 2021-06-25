@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.MediaType.Associate.pas
+##########################################################################################################
+Class Name: TMediaTypeAssociate
+Base Class Name: 
+Database Table: MEDIA_TYPE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MediaType
+Data Type: string
+Database Column: 'MEDIA_TYPE',[cpRequired,cpNotNull],40
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

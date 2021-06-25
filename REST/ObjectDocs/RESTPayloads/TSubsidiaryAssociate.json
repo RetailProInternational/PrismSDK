@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "sbsno" : null,
+      "sbsname" : null,
+      "activepricelvlsid" : null,
+      "activeseasonsid" : null,
+      "ismaster" : false
+    }
+  ]
+}
+

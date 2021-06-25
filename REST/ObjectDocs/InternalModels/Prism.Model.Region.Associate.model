@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.Region.Associate.pas
+##########################################################################################################
+Class Name: TRegionAssociate
+Base Class Name: 
+Database Table: REGION
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'REGION_NAME',[],12
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionNo
+Data Type: Integer
+Database Column: 'REGION_NO',[cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

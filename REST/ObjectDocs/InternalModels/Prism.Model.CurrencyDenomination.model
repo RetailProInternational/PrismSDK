@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.CurrencyDenomination.pas
+##########################################################################################################
+Class Name: TCurrencyDenomination
+Base Class Name: TModelBase
+Database Table: CURRENCY_DENOMINATION
+Associate Class: False
+Identified By: 'FCurrencySid,FDenominationName,FMultiplier'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CurrencyDenomination.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CurrencyDenomination.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CurrencyDenomination.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CurrencyDenomination.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CurrencyDenomination.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CurrencyDenomination.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','CurrencyDenomination.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','CurrencyDenomination.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CurrencyDenomination.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CurrencyDenomination.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Int64
+Database Column: 'CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Currency to which this denomination belongs to','CurrencyDenomination.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DenominationName
+Data Type: string
+Database Column: 'DENOMINATION_NAME',[cpRequired,cpNotNull],15,0
+Documentation: 'The name of the denomination.For example, penny, nickel, dime, quarter','CurrencyDenomination.12'
+Legacy Column: 'DENOM_NAME'
+
+------------------------------------------------------
+
+Name: Multiplier
+Data Type: Double
+Database Column: 'MULTIPLIER',[cpRequired,cpNotNull],15,0
+Documentation: 'The multipler','CurrencyDenomination.13'
+Legacy Column: 'MULTIPLIER'
+
+------------------------------------------------------
+
+Name: ImageFile
+Data Type: Nullable<string>
+Database Column: 'IMAGE_FILE',[],80,0
+Documentation: 'Path to the image file used for the tender button image','CurrencyDenomination.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: '1= active, 0= inactive.','CurrencyDenomination.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DenomId
+Data Type: Int16
+Database Column: 'DENOM_ID',[],5,0
+Documentation: 'DenomId','CurrencyDenomination.16'
+Legacy Column: 'DENOM_ID'
+
+------------------------------------------------------
+

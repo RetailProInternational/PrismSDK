@@ -1,0 +1,245 @@
+##########################################################################################################
+File Name: Prism.Model.VendorContact.pas
+##########################################################################################################
+Class Name: TVendorContact
+Base Class Name: TModelBase
+Database Table: VENDOR_CONTACT
+Associate Class: False
+Identified By: 'FVendSid,FSeqNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','VendorContact.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','VendorContact.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','VendorContact.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','VendorContact.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','VendorContact.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','VendorContact.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','VendorContact.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','VendorContact.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','VendorContact.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','VendorContact.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Int64
+Database Column: 'VENDOR_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VendSid','VendorContact.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstName
+Data Type: Nullable<string>
+Database Column: 'FIRST_NAME',[],30
+Documentation: 'FirstName','VendorContact.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastName
+Data Type: Nullable<string>
+Database Column: 'LAST_NAME',[],30
+Documentation: 'LastName','VendorContact.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TitleSid
+Data Type: Nullable<Int64>
+Database Column: 'TITLE_SID',[],19,0
+Documentation: 'TitleSid','VendorContact.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ContactTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'CONTACT_TYPE_SID',[],19,0
+Documentation: 'ContactTypeSid','VendorContact.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryFlag
+Data Type: boolean
+Database Column: 'PRIMARY_FLAG',[],1,0
+Documentation: 'PrimaryFlag','VendorContact.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'EMAIL_TYPE_SID',[],19,0
+Documentation: 'EmailTypeSid','VendorContact.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailAddress
+Data Type: Nullable<string>
+Database Column: 'EMAIL_ADDRESS',[],100
+Documentation: 'EmailAddress','VendorContact.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Phone1TypeSid
+Data Type: Nullable<Int64>
+Database Column: 'PHONE1_TYPE_SID',[],19,0
+Documentation: 'Phone1TypeSid','VendorContact.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Phone1No
+Data Type: Nullable<string>
+Database Column: 'PHONE1_NO',[],30
+Documentation: 'Phone1No','VendorContact.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Phone2TypeSid
+Data Type: Nullable<Int64>
+Database Column: 'PHONE2_TYPE_SID',[],19,0
+Documentation: 'Phone2TypeSid','VendorContact.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Phone2No
+Data Type: Nullable<string>
+Database Column: 'PHONE2_NO',[],30
+Documentation: 'Phone2No','VendorContact.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','VendorContact.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Int16
+Database Column: 'SEQ_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SeqNo','VendorContact.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Title
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'person title, eg. mr., mrs., dr., etc.','VendorContact.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneType1
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'phone type name, eg. home2, work1, cell, etc.','VendorContact.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneType2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'phone type name, eg. home2, work1, cell, etc.','VendorContact.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EMailType
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'email type such as home, business, other.','VendorContact.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TitleId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'helps in identifying a title entry in V9. Used in prism to identify modifications','VendorContact.29'
+Legacy Column: NA
+
+------------------------------------------------------
+

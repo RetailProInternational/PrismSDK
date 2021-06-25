@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.TenderForeignCheck.pas
+##########################################################################################################
+Class Name: TTenderForeignCheck
+Base Class Name: TModelBase
+Database Table: TENDER_FOREIGN_CHECK
+Associate Class: False
+Identified By: 'FTenderSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TenderForeignCheck.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TenderForeignCheck.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TenderForeignCheck.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TenderForeignCheck.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','TenderForeignCheck.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TenderForeignCheck.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','TenderForeignCheck.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','TenderForeignCheck.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','TenderForeignCheck.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','TenderForeignCheck.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderSid
+Data Type: Int64
+Database Column: 'TENDER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to document tender record','TenderForeignCheck.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForeignCurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'FOREIGN_CURRENCY_SID',[],19,0
+Documentation: 'reference to currency record','TenderForeignCheck.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseTaken
+Data Type: Nullable<Double>
+Database Column: 'BASE_TAKEN',[],16,4
+Documentation: 'taken in base currency','TenderForeignCheck.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseGiven
+Data Type: Nullable<Double>
+Database Column: 'BASE_GIVEN',[],16,4
+Documentation: 'given in base currency','TenderForeignCheck.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CheckNo
+Data Type: Nullable<string>
+Database Column: 'CHECK_NO',[],30
+Documentation: 'foreign check number','TenderForeignCheck.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AuthCode
+Data Type: Nullable<string>
+Database Column: 'AUTH_CODE',[],20
+Documentation: 'processor authorization code','TenderForeignCheck.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TakeRate
+Data Type: Nullable<Double>
+Database Column: 'TAKE_RATE',[],20,8
+Documentation: 'Foreign Currency Take Exchange Rate','TenderForeignCheck.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiveRate
+Data Type: Nullable<Double>
+Database Column: 'GIVE_RATE',[],20,8
+Documentation: 'Foreign Currency Give Exchange Rate','TenderForeignCheck.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyAlphaCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','TenderForeignCheck.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyDictName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'CurrencyName','TenderForeignCheck.20'
+Legacy Column: NA
+
+------------------------------------------------------
+

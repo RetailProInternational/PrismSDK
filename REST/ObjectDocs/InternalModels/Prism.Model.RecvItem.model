@@ -1,0 +1,829 @@
+##########################################################################################################
+File Name: Prism.Model.RecvItem.pas
+##########################################################################################################
+Class Name: TRecvItem
+Base Class Name: TModelBase
+Database Table: VOU_ITEM
+Associate Class: False
+Identified By: 'FVouSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','RecvItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','RecvItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','RecvItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','RecvItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','RecvItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','RecvItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','RecvItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','RecvItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','RecvItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','RecvItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSid
+Data Type: Int64
+Database Column: 'VOU_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VouSid','RecvItem.11'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'ItemPos','RecvItem.12'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ItemSid','RecvItem.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','RecvItem.14'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: OrigQty
+Data Type: Nullable<Double>
+Database Column: 'ORIG_QTY',[],10,3
+Documentation: 'OrigQty','RecvItem.15'
+Legacy Column: 'ORIG_QTY'
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE',[],16,4
+Documentation: 'Price','RecvItem.16'
+Legacy Column: 'PRICE'
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','RecvItem.17'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: FcCost
+Data Type: Nullable<Double>
+Database Column: 'FC_COST',[],16,4
+Documentation: 'FcCost','RecvItem.18'
+Legacy Column: 'FC_COST'
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'CURRENCY_SID',[],19,0
+Documentation: 'CurrencySid','RecvItem.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'TaxCodeSid','RecvItem.20'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','RecvItem.21'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','RecvItem.22'
+Legacy Column: 'TAX2_AREA_NAME'
+
+------------------------------------------------------
+
+Name: TaxCode2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE2_SID',[],19,0
+Documentation: 'TaxCode2Sid','RecvItem.23'
+Legacy Column: 'TAX_CODE2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2',[],16,4
+Documentation: 'TaxPerc2','RecvItem.24'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: TaxAmtExcl
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMT_EXCL',[],17,5
+Documentation: 'TaxAmtExcl','RecvItem.25'
+Legacy Column: 'TAX_AMT_EXCL'
+
+------------------------------------------------------
+
+Name: TaxAmtIncl
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMT_INCL',[],17,5
+Documentation: 'TaxAmtIncl','RecvItem.26'
+Legacy Column: 'TAX_AMT_INCL'
+
+------------------------------------------------------
+
+Name: ShippingAmt
+Data Type: Nullable<Double>
+Database Column: 'SHIPPING_AMT',[],16,4
+Documentation: 'ShippingAmt','RecvItem.27'
+Legacy Column: 'SHIPPING_AMT'
+
+------------------------------------------------------
+
+Name: DiscAmt
+Data Type: Nullable<Double>
+Database Column: 'DISC_AMT',[],16,4
+Documentation: 'DiscAmt','RecvItem.28'
+Legacy Column: 'DISC_AMT'
+
+------------------------------------------------------
+
+Name: CartonNo
+Data Type: Nullable<string>
+Database Column: 'CARTON_NO',[],20
+Documentation: 'CartonNo','RecvItem.29'
+Legacy Column: 'CARTON_NO'
+
+------------------------------------------------------
+
+Name: CartonStatus
+Data Type: Nullable<Integer>
+Database Column: 'CARTON_STATUS',[],10,0
+Documentation: 'CartonStatus','RecvItem.30'
+Legacy Column: 'CARTON_STATUS'
+
+------------------------------------------------------
+
+Name: CustFld
+Data Type: Nullable<string>
+Database Column: 'CUST_FLD',[],4
+Documentation: 'CustFld','RecvItem.31'
+Legacy Column: 'CUST_FLD'
+
+------------------------------------------------------
+
+Name: ScanUpc
+Data Type: Nullable<Int64>
+Database Column: 'SCAN_UPC',[],18,0
+Documentation: 'ScanUpc','RecvItem.32'
+Legacy Column: 'SCAN_UPC'
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NO',[],50
+Documentation: 'SerialNo','RecvItem.33'
+Legacy Column: 'SERIAL_NO'
+
+------------------------------------------------------
+
+Name: LotNumber
+Data Type: Nullable<string>
+Database Column: 'LOT_NUMBER',[],25
+Documentation: 'LotNumber','RecvItem.34'
+Legacy Column: 'LOT_NUMBER'
+
+------------------------------------------------------
+
+Name: UdfValue1
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE1',[],50
+Documentation: 'UdfValue1','RecvItem.35'
+Legacy Column: 'UDF_VALUE1'
+
+------------------------------------------------------
+
+Name: UdfValue2
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE2',[],50
+Documentation: 'UdfValue2','RecvItem.36'
+Legacy Column: 'UDF_VALUE2'
+
+------------------------------------------------------
+
+Name: UdfValue3
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE3',[],50
+Documentation: 'UdfValue3','RecvItem.37'
+Legacy Column: 'UDF_VALUE3'
+
+------------------------------------------------------
+
+Name: UdfValue4
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE4',[],50
+Documentation: 'UdfValue4','RecvItem.38'
+Legacy Column: 'UDF_VALUE4'
+
+------------------------------------------------------
+
+Name: OrigCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_COST',[],16,4
+Documentation: 'OrigCost','RecvItem.39'
+Legacy Column: 'ORIG_COST'
+
+------------------------------------------------------
+
+Name: ItemNote1
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE1',[],350
+Documentation: 'ItemNote1','RecvItem.40'
+Legacy Column: 'ITEM_NOTE1'
+
+------------------------------------------------------
+
+Name: ItemNote2
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE2',[],350
+Documentation: 'ItemNote2','RecvItem.41'
+Legacy Column: 'ITEM_NOTE2'
+
+------------------------------------------------------
+
+Name: ItemNote3
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE3',[],350
+Documentation: 'ItemNote3','RecvItem.42'
+Legacy Column: 'ITEM_NOTE3'
+
+------------------------------------------------------
+
+Name: ItemNote4
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE4',[],350
+Documentation: 'ItemNote4','RecvItem.43'
+Legacy Column: 'ITEM_NOTE4'
+
+------------------------------------------------------
+
+Name: ItemNote5
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE5',[],350
+Documentation: 'ItemNote5','RecvItem.44'
+Legacy Column: 'ITEM_NOTE5'
+
+------------------------------------------------------
+
+Name: ItemNote6
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE6',[],350
+Documentation: 'ItemNote6','RecvItem.45'
+Legacy Column: 'ITEM_NOTE6'
+
+------------------------------------------------------
+
+Name: ItemNote7
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE7',[],350
+Documentation: 'ItemNote7','RecvItem.46'
+Legacy Column: 'ITEM_NOTE7'
+
+------------------------------------------------------
+
+Name: ItemNote8
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE8',[],350
+Documentation: 'ItemNote8','RecvItem.47'
+Legacy Column: 'ITEM_NOTE8'
+
+------------------------------------------------------
+
+Name: ItemNote9
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE9',[],350
+Documentation: 'ItemNote9','RecvItem.48'
+Legacy Column: 'ITEM_NOTE9'
+
+------------------------------------------------------
+
+Name: ItemNote10
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE10',[],350
+Documentation: 'ItemNote10','RecvItem.49'
+Legacy Column: 'ITEM_NOTE10'
+
+------------------------------------------------------
+
+Name: SpreadFeeAmt
+Data Type: Nullable<Double>
+Database Column: 'SPREAD_FEE_AMT',[],16,4
+Documentation: 'SpreadFeeAmt','RecvItem.50'
+Legacy Column: 'SPREAD_FEE_AMT'
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC',[],18,0
+Documentation: 'AltUpc','RecvItem.51'
+Legacy Column: 'ALT_UPC'
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU',[],20
+Documentation: 'AltAlu','RecvItem.52'
+Legacy Column: 'ALT_ALU'
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST',[],16,4
+Documentation: 'AltCost','RecvItem.53'
+Legacy Column: 'ALT_COST'
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE',[],6
+Documentation: 'AltVendCode','RecvItem.54'
+Legacy Column: 'ALT_VEND_CODE'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','RecvItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromAsn
+Data Type: Nullable<Int16>
+Database Column: 'FROM_ASN',[],1,0
+Documentation: 'FromAsn','RecvItem.56'
+Legacy Column: 'FROM_ASN'
+
+------------------------------------------------------
+
+Name: SublocSid
+Data Type: Nullable<Int64>
+Database Column: 'SUBLOC_SID',[],19,0
+Documentation: 'SublocSid','RecvItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SnQty
+Data Type: Nullable<Double>
+Database Column: 'SN_QTY',[],10,3
+Documentation: 'SnQty','RecvItem.58'
+Legacy Column: 'SN_QTY'
+
+------------------------------------------------------
+
+Name: SnActive
+Data Type: Boolean
+Database Column: 'SN_ACTIVE',[],1,0
+Documentation: 'SnActive','RecvItem.59'
+Legacy Column: 'SN_ACTIVE'
+
+------------------------------------------------------
+
+Name: SnReceived
+Data Type: Boolean
+Database Column: 'SN_RECEIVED',[],1,0
+Documentation: 'SnReceived','RecvItem.60'
+Legacy Column: 'SN_RECEIVED'
+
+------------------------------------------------------
+
+Name: SnSold
+Data Type: Boolean
+Database Column: 'SN_SOLD',[],1,0
+Documentation: 'SnSold','RecvItem.61'
+Legacy Column: 'SN_SOLD'
+
+------------------------------------------------------
+
+Name: SnTransferred
+Data Type: Boolean
+Database Column: 'SN_TRANSFERRED',[],1,0
+Documentation: 'SnTransferred','RecvItem.62'
+Legacy Column: 'SN_TRANSFERRED'
+
+------------------------------------------------------
+
+Name: SnSoReserved
+Data Type: Boolean
+Database Column: 'SN_SO_RESERVED',[],1,0
+Documentation: 'SnSoReserved','RecvItem.63'
+Legacy Column: 'SN_SO_RESERVED'
+
+------------------------------------------------------
+
+Name: SnReturned
+Data Type: Boolean
+Database Column: 'SN_RETURNED',[],1,0
+Documentation: 'SnReturned','RecvItem.64'
+Legacy Column: 'SN_RETURNED'
+
+------------------------------------------------------
+
+Name: SnReturnedToVnd
+Data Type: Boolean
+Database Column: 'SN_RETURNED_TO_VND',[],1,0
+Documentation: 'SnReturnedToVnd','RecvItem.65'
+Legacy Column: 'SN_RETURNED_TO_VND'
+
+------------------------------------------------------
+
+Name: SnAdjusted
+Data Type: Boolean
+Database Column: 'SN_ADJUSTED',[],1,0
+Documentation: 'SnAdjusted','RecvItem.66'
+Legacy Column: 'SN_ADJUSTED'
+
+------------------------------------------------------
+
+Name: InvnSbsVendorSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_SBS_VENDOR_SID',[],19,0
+Documentation: 'SID of alternate vendor info','RecvItem.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','RecvItem.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','RecvItem.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','RecvItem.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtCost
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtPrice
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscPctg
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastSoldDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreOHQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotExipyDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue8
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue7
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'CName','RecvItem.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'DName','RecvItem.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'SName','RecvItem.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendorName','RecvItem.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description1','RecvItem.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description2','RecvItem.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attr
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Attribute','RecvItem.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Size
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ItemSize','RecvItem.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UPC
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Upc','RecvItem.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'reference to vendor','RecvItem.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyAlphaCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','RecvItem.77'
+Legacy Column: 'CURRENCY_ID'
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','RecvItem.78'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'VendCode','RecvItem.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DCSCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'DCSCode','RecvItem.80'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'UseQtyDecimals','RecvItem.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: NA
+Documentation: 'serial-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).0-None,1-Partial,2-Full.','RecvItem.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'lot-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).','RecvItem.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: NA
+Documentation: '0-NoEntry,1-Kit,2-Package,3-GiftCardStoredValue,4-GiftCardPrePaid,5-GiftCertificate,6-Fee,7-GiftCardCentral','RecvItem.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ALU
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Alu','RecvItem.85'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastRcvdDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

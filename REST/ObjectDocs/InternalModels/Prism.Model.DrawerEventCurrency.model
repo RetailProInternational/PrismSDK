@@ -1,0 +1,189 @@
+##########################################################################################################
+File Name: Prism.Model.DrawerEventCurrency.pas
+##########################################################################################################
+Class Name: TDrawerEventCurrency
+Base Class Name: TModelBase
+Database Table: DRAWER_EVENT_CURRENCY
+Associate Class: False
+Identified By: 'FDrawerEventSid,FCurrencySid,DENOMINATION_SID'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DrawerEventCurrency.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DrawerEventCurrency.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATETIME',[
+Documentation: 'datetime row was created','DrawerEventCurrency.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DrawerEventCurrency.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DrawerEventCurrency.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DrawerEventCurrency.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','DrawerEventCurrency.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DrawerEventCurrency.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DrawerEventCurrency.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','DrawerEventCurrency.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerEventSid
+Data Type: Int64
+Database Column: 'DRAWER_EVENT_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to cash drawer event record.','DrawerEventCurrency.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Int64
+Database Column: 'CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to currency description','DrawerEventCurrency.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DenominationSid
+Data Type: Nullable<Int64>
+Database Column: 'DENOMINATION_SID',[],19,0
+Documentation: 'reference to currency denomination description','DrawerEventCurrency.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyCount
+Data Type: Integer
+Database Column: 'CURRENCY_COUNT',[cpRequired,cpNotNull],10,0
+Documentation: 'the physical number of this currency in the drawer at the time of the event','DrawerEventCurrency.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Amount
+Data Type: Double
+Database Column: 'AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: 'the value of the currency in the drawer at the time of the event','DrawerEventCurrency.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderType
+Data Type: TDocTenderType
+Database Column: 'TENDER_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-Cash,1-Check,2-CreditCard,3-COD,4-Charge,5-StoreCredit,6-Split,7-Deposit,8-Payments,9-GiftCertificate,10-GiftCard,11-DebitCard,12-ForeignCurrency,13-TravelerCheck,14-ForeignCheck,15-CentralGiftCard,16-CentralGiftCertificate,17-CentralCustomerCredit,18-C','DrawerEventCurrency.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyEventType
+Data Type: TCurrencyEventType
+Database Column: 'CURRENCY_EVENT_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0=openamount, 1=leaveamount, 2=counts, 3=Override,4=Close','DrawerEventCurrency.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigAmount
+Data Type: Double
+Database Column: 'ORIG_AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: 'the value of the currency in the drawer at the time of the event without conversion','DrawerEventCurrency.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlphabeticCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','DrawerEventCurrency.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'CurrencyName','DrawerEventCurrency.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DenominationName
+Data Type: string
+Database Column: NA
+Documentation: 'The name of the denomination.For example, penny, nickel, dime, quarter','DrawerEventCurrency.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Multiplier
+Data Type: double
+Database Column: NA
+Documentation: 'The multipler','DrawerEventCurrency.22'
+Legacy Column: NA
+
+------------------------------------------------------
+

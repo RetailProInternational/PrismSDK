@@ -1,0 +1,645 @@
+##########################################################################################################
+File Name: Prism.Model.SlipItem.pas
+##########################################################################################################
+Class Name: TSlipItem
+Base Class Name: TModelBase
+Database Table: SLIP_ITEM
+Associate Class: False
+Identified By: 'FSlipSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','SlipItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','SlipItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','SlipItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','SlipItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','SlipItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','SlipItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','SlipItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','SlipItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','SlipItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','SlipItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSid
+Data Type: Int64
+Database Column: 'SLIP_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SlipSid','SlipItem.11'
+Legacy Column: 'SLIP_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'ItemPos','SlipItem.12'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ItemSid','SlipItem.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','SlipItem.14'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE',[],16,4
+Documentation: 'Price','SlipItem.15'
+Legacy Column: 'PRICE'
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','SlipItem.16'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: OrigCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_COST',[],16,4
+Documentation: 'OrigCost','SlipItem.17'
+Legacy Column: 'ORIG_COST'
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'TaxCodeSid','SlipItem.18'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','SlipItem.19'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','SlipItem.20'
+Legacy Column: 'TAX_AREA_NAME2'
+
+------------------------------------------------------
+
+Name: TaxCode2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE2_SID',[],19,0
+Documentation: 'TaxCode2Sid','SlipItem.21'
+Legacy Column: 'TAX_CODE2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2',[],16,4
+Documentation: 'TaxPerc2','SlipItem.22'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: ScanUpc
+Data Type: Nullable<Int64>
+Database Column: 'SCAN_UPC',[],18,0
+Documentation: 'ScanUpc','SlipItem.23'
+Legacy Column: 'SCAN_UPC'
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NO',[],50
+Documentation: 'SerialNo','SlipItem.24'
+Legacy Column: 'SERIAL_NO'
+
+------------------------------------------------------
+
+Name: LotNumber
+Data Type: Nullable<string>
+Database Column: 'LOT_NUMBER',[],25
+Documentation: 'LotNumber','SlipItem.25'
+Legacy Column: 'LOT_NUMBER'
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC',[],18,0
+Documentation: 'AltUpc','SlipItem.26'
+Legacy Column: 'ALT_UPC'
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU',[],20
+Documentation: 'AltAlu','SlipItem.27'
+Legacy Column: 'ALT_ALU'
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST',[],16,4
+Documentation: 'AltCost','SlipItem.28'
+Legacy Column: 'ALT_COST'
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE',[],6
+Documentation: 'AltVendCode','SlipItem.29'
+Legacy Column: 'ALT_VEND_CODE'
+
+------------------------------------------------------
+
+Name: SublocSid
+Data Type: Nullable<Int64>
+Database Column: 'SUBLOC_SID',[],19,0
+Documentation: 'SublocSid','SlipItem.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SnQty
+Data Type: Nullable<Double>
+Database Column: 'SN_QTY',[],10,3
+Documentation: 'SnQty','SlipItem.31'
+Legacy Column: 'SN_QTY'
+
+------------------------------------------------------
+
+Name: SnActive
+Data Type: Boolean
+Database Column: 'SN_ACTIVE',[],1,0
+Documentation: 'SnActive','SlipItem.32'
+Legacy Column: 'SN_ACTIVE'
+
+------------------------------------------------------
+
+Name: SnReceived
+Data Type: Boolean
+Database Column: 'SN_RECEIVED',[],1,0
+Documentation: 'SnReceived','SlipItem.33'
+Legacy Column: 'SN_RECEIVED'
+
+------------------------------------------------------
+
+Name: SnSold
+Data Type: Boolean
+Database Column: 'SN_SOLD',[],1,0
+Documentation: 'SnSold','SlipItem.34'
+Legacy Column: 'SN_SOLD'
+
+------------------------------------------------------
+
+Name: SnTransferred
+Data Type: Boolean
+Database Column: 'SN_TRANSFERRED',[],1,0
+Documentation: 'SnTransferred','SlipItem.35'
+Legacy Column: 'SN_TRANSFERRED'
+
+------------------------------------------------------
+
+Name: SnSoReserved
+Data Type: Boolean
+Database Column: 'SN_SO_RESERVED',[],1,0
+Documentation: 'SnSoReserved','SlipItem.36'
+Legacy Column: 'SN_SO_RESERVED'
+
+------------------------------------------------------
+
+Name: SnReturned
+Data Type: Boolean
+Database Column: 'SN_RETURNED',[],1,0
+Documentation: 'SnReturned','SlipItem.37'
+Legacy Column: 'SN_RETURNED'
+
+------------------------------------------------------
+
+Name: SnReturnedToVnd
+Data Type: Boolean
+Database Column: 'SN_RETURNED_TO_VND',[],1,0
+Documentation: 'SnReturnedToVnd','SlipItem.38'
+Legacy Column: 'SN_RETURNED_TO_VND'
+
+------------------------------------------------------
+
+Name: SnAdjusted
+Data Type: Boolean
+Database Column: 'SN_ADJUSTED',[],1,0
+Documentation: 'SnAdjusted','SlipItem.39'
+Legacy Column: 'SN_ADJUSTED'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','SlipItem.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue1
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE1',[],50
+Documentation: 'UdfValue1','SlipItem.41'
+Legacy Column: 'UDF_VALUE1'
+
+------------------------------------------------------
+
+Name: UdfValue2
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE2',[],50
+Documentation: 'UdfValue2','SlipItem.42'
+Legacy Column: 'UDF_VALUE2'
+
+------------------------------------------------------
+
+Name: UdfValue3
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE3',[],50
+Documentation: 'UdfValue3','SlipItem.43'
+Legacy Column: 'UDF_VALUE3'
+
+------------------------------------------------------
+
+Name: UdfValue4
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE4',[],50
+Documentation: 'UdfValue4','SlipItem.44'
+Legacy Column: 'UDF_VALUE4'
+
+------------------------------------------------------
+
+Name: ItemNote1
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE1',[],350
+Documentation: 'ItemNote1','SlipItem.45'
+Legacy Column: 'ITEM_NOTE1'
+
+------------------------------------------------------
+
+Name: ItemNote2
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE2',[],350
+Documentation: 'ItemNote2','SlipItem.46'
+Legacy Column: 'ITEM_NOTE2'
+
+------------------------------------------------------
+
+Name: ItemNote3
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE3',[],350
+Documentation: 'ItemNote3','SlipItem.47'
+Legacy Column: 'ITEM_NOTE3'
+
+------------------------------------------------------
+
+Name: ItemNote4
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE4',[],350
+Documentation: 'ItemNote4','SlipItem.48'
+Legacy Column: 'ITEM_NOTE4'
+
+------------------------------------------------------
+
+Name: ItemNote5
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE5',[],350
+Documentation: 'ItemNote5','SlipItem.49'
+Legacy Column: 'ITEM_NOTE5'
+
+------------------------------------------------------
+
+Name: ItemNote6
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE6',[],350
+Documentation: 'ItemNote6','SlipItem.50'
+Legacy Column: 'ITEM_NOTE6'
+
+------------------------------------------------------
+
+Name: ItemNote7
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE7',[],350
+Documentation: 'ItemNote7','SlipItem.51'
+Legacy Column: 'ITEM_NOTE7'
+
+------------------------------------------------------
+
+Name: ItemNote8
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE8',[],350
+Documentation: 'ItemNote8','SlipItem.52'
+Legacy Column: 'ITEM_NOTE8'
+
+------------------------------------------------------
+
+Name: ItemNote9
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE9',[],350
+Documentation: 'ItemNote9','SlipItem.53'
+Legacy Column: 'ITEM_NOTE9'
+
+------------------------------------------------------
+
+Name: ItemNote10
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE10',[],350
+Documentation: 'ItemNote10','SlipItem.54'
+Legacy Column: 'ITEM_NOTE10'
+
+------------------------------------------------------
+
+Name: InvnSbsVendorSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_SBS_VENDOR_SID',[],19,0
+Documentation: 'SID of alternate vendor info','SlipItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','SlipItem.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','SlipItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','SlipItem.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtCost
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtPrice
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description1','SlipItem.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description2','SlipItem.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description3','SlipItem.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description4','SlipItem.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attr
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Attribute','SlipItem.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Size
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ItemSize','SlipItem.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UPC
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Upc','SlipItem.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'reference to vendor','SlipItem.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','SlipItem.67'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'VendCode','SlipItem.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DCSCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'DCSCode','SlipItem.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'UseQtyDecimals','SlipItem.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: NA
+Documentation: 'serial-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).0-None,1-Partial,2-Full.','SlipItem.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'lot-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).','SlipItem.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: NA
+Documentation: '0-NoEntry,1-Kit,2-Package,3-GiftCardStoredValue,4-GiftCardPrePaid,5-GiftCertificate,6-Fee,7-GiftCardCentral','SlipItem.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SublocId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'ID','SlipItem.74'
+Legacy Column: 'SUBLOC_ID'
+
+------------------------------------------------------
+
+Name: ALU
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'alternate lookup code','SlipItem.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FCCost
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'cost of last order of item in foreign currency','SlipItem.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'VendName','SlipItem.77'
+Legacy Column: NA
+
+------------------------------------------------------
+

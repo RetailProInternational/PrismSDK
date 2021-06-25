@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.PromotionsConfig.pas
+##########################################################################################################
+Class Name: TPluginData
+Base Class Name: 
+Database Table: PLUGIN_DATA
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: PluginId
+Data Type: Integer
+Database Column: 'PLUGIN_ID',[cpPrimaryKey,cpRequired,cpNotNull],10,0
+Documentation: 'Unique identifying value, 1=RProPromo','PluginData.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PluginAreaId
+Data Type: Nullable<Integer>
+Database Column: 'PLUGIN_AREA_ID',[],10,0
+Documentation: 'Id of plugin area. For RProPromo (plugin_id=1) it has next values - 0=Options, 1=Customer Pricing, 2=Promos, 3=Qty Disc, 4=Pricing, 5=BOGOs.','PluginData.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PluginAreaName
+Data Type: Nullable<string>
+Database Column: 'PLUGIN_AREA_NAME',[],255
+Documentation: 'Name of plugin area. For RProPromo (plugin_id=1) it has next values - for plugin_area_id=0 - "Options", for plugin_area_id=1 - "Customer Pricing", etc...','PluginData.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Data
+Data Type: Nullable<string>
+Database Column: 'DATA_TEXT',[
+Documentation: 'Data','PluginData.4'
+Legacy Column: NA
+
+------------------------------------------------------
+

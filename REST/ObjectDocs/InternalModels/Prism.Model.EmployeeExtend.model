@@ -1,0 +1,221 @@
+##########################################################################################################
+File Name: Prism.Model.EmployeeExtend.pas
+##########################################################################################################
+Class Name: TEmployeeExtend
+Base Class Name: TModelBase
+Database Table: EMPLOYEE_EXTEND
+Associate Class: False
+Identified By: 'FEmployeeSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','EmployeeExtend.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','EmployeeExtend.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','EmployeeExtend.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','EmployeeExtend.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','EmployeeExtend.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','EmployeeExtend.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','EmployeeExtend.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','EmployeeExtend.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','EmployeeExtend.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','EmployeeExtend.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeSid
+Data Type: Int64
+Database Column: 'EMPLOYEE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'EmployeeSid','EmployeeExtend.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'Udf6String','EmployeeExtend.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'Udf7String','EmployeeExtend.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'Udf8String','EmployeeExtend.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'Udf9String','EmployeeExtend.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'Udf10String','EmployeeExtend.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf11String
+Data Type: Nullable<string>
+Database Column: 'UDF11_STRING',[],50
+Documentation: 'Udf11String','EmployeeExtend.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf12String
+Data Type: Nullable<string>
+Database Column: 'UDF12_STRING',[],50
+Documentation: 'Udf12String','EmployeeExtend.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf13String
+Data Type: Nullable<string>
+Database Column: 'UDF13_STRING',[],50
+Documentation: 'Udf13String','EmployeeExtend.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf14String
+Data Type: Nullable<string>
+Database Column: 'UDF14_STRING',[],50
+Documentation: 'Udf14String','EmployeeExtend.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf15String
+Data Type: Nullable<string>
+Database Column: 'UDF15_STRING',[],50
+Documentation: 'Udf15String','EmployeeExtend.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf16String
+Data Type: Nullable<string>
+Database Column: 'UDF16_STRING',[],50
+Documentation: 'Udf16String','EmployeeExtend.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf17String
+Data Type: Nullable<string>
+Database Column: 'UDF17_STRING',[],50
+Documentation: 'Udf17String','EmployeeExtend.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf18String
+Data Type: Nullable<string>
+Database Column: 'UDF18_STRING',[],50
+Documentation: 'Udf18String','EmployeeExtend.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF1_LARGE_STRING',[],2000
+Documentation: 'Udf1LargeString','EmployeeExtend.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF2_LARGE_STRING',[],2000
+Documentation: 'Udf2LargeString','EmployeeExtend.26'
+Legacy Column: NA
+
+------------------------------------------------------
+

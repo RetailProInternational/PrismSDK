@@ -1,0 +1,93 @@
+##########################################################################################################
+File Name: Prism.Model.RemConSubscription.Associate.pas
+##########################################################################################################
+Class Name: TRemConSubscriptionAssociate
+Base Class Name: TAssociateBase
+Database Table: REM_CONNECTION_SUBSCR
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemoteConnectionSid
+Data Type: Nullable<Int64>
+Database Column: 'REMOTE_CONNECTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionSid
+Data Type: Nullable<Int64>
+Database Column: 'SUBSCRIPTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionType
+Data Type: TServerMode
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LocalAddress
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemoteAddress
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9Address
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionActive
+Data Type: Boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionActive
+Data Type: Boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GlobalFilter
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

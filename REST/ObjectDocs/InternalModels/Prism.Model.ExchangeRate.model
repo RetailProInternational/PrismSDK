@@ -1,0 +1,197 @@
+##########################################################################################################
+File Name: Prism.Model.ExchangeRate.pas
+##########################################################################################################
+Class Name: TExchangeRate
+Base Class Name: TModelBase
+Database Table: EXCHANGE_RATE
+Associate Class: False
+Identified By: 'FBaseCurrencySid,FCurrencySid,FEffectiveDate'
+Legacy Identified By: 'CurrencyAbbreviation,BaseCurrencyAbbreviation,EffectiveDate'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ExchangeRate.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','ExchangeRate.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ExchangeRate.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','ExchangeRate.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ExchangeRate.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','ExchangeRate.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','ExchangeRate.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','ExchangeRate.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ExchangeRate.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','ExchangeRate.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Int64
+Database Column: 'CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to currency record','ExchangeRate.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseCurrencySid
+Data Type: Int64
+Database Column: 'BASE_CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to currency record for base currency','ExchangeRate.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EffectiveDate
+Data Type: TDateTime
+Database Column: 'EFFECTIVE_DATE',[cpRequired,cpNotNull
+Documentation: 'date exchange rate goes into effect','ExchangeRate.13'
+Legacy Column: 'RATE_DATE'
+
+------------------------------------------------------
+
+Name: TakeRate
+Data Type: Double
+Database Column: 'TAKE_RATE',[cpRequired,cpNotNull],16,4
+Documentation: 'exchange rate applied when taking money as tender','ExchangeRate.14'
+Legacy Column: 'TAKE_RATE'
+
+------------------------------------------------------
+
+Name: GiveRate
+Data Type: Double
+Database Column: 'GIVE_RATE',[cpRequired,cpNotNull],16,4
+Documentation: 'exchange rate applied when giving money as change','ExchangeRate.15'
+Legacy Column: 'GIVE_RATE'
+
+------------------------------------------------------
+
+Name: CostRate
+Data Type: Nullable<Double>
+Database Column: 'COST_RATE',[],16,4
+Documentation: '[need comment]','ExchangeRate.16'
+Legacy Column: 'COST_RATE'
+
+------------------------------------------------------
+
+Name: OfficialRate
+Data Type: Nullable<Double>
+Database Column: 'OFFICIAL_RATE',[],16,4
+Documentation: 'exchange rate according to money markets','ExchangeRate.17'
+Legacy Column: 'OFFICIAL_RATE'
+
+------------------------------------------------------
+
+Name: CurrencyAbbreviation
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','ExchangeRate.18'
+Legacy Column: 'currency_abbr', 'c'
+
+------------------------------------------------------
+
+Name: BaseCurrencyAbbreviation
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','ExchangeRate.19'
+Legacy Column: 'currency_abbr', 'bc'
+
+------------------------------------------------------
+
+Name: CostForeignRate
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiveForeignRate
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TakeForeignRate
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

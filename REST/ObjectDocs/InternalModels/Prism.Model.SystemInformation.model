@@ -1,0 +1,197 @@
+##########################################################################################################
+File Name: Prism.Model.SystemInformation.pas
+##########################################################################################################
+Class Name: TSystemInformation
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: MachineName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OSArchitecture
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OS
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OSPath
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OSVersion
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OSPlatform
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OSDetail
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPUName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPURevision
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPUCount
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPUIdentifier
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPUSpeed
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CPUArchitecture
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MemoryTotal
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MemoryUsage
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MemoryAvailable
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HDType
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HDVolumeName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HDFileSysType
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HDTotalSpace
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HDAvailableSpace
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Host
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SysInfoModule
+Data Type: IList<TSysInfoModule>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

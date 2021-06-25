@@ -1,0 +1,229 @@
+##########################################################################################################
+File Name: Prism.Model.TOrdQty.pas
+##########################################################################################################
+Class Name: TTOrdQty
+Base Class Name: TModelBase
+Database Table: TORD_QTY
+Associate Class: False
+Identified By: 'FStoreSid, FTOrdItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','TOrdQty.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','TOrdQty.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','TOrdQty.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','TOrdQty.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TOrdQty.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TOrdQty.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TOrdQty.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TOrdQty.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TOrdQty.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TOrdQty.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TOrdItemSid
+Data Type: Int64
+Database Column: 'TORD_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'TOrdItemSid','TOrdQty.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','TOrdQty.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','TOrdQty.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: 'positive value = assigned qty for this store and negative value = ordered qty of this item','TOrdQty.14'
+Legacy Column: 'ORD_QTY'
+
+------------------------------------------------------
+
+Name: SentQty
+Data Type: Nullable<Double>
+Database Column: 'SENT_QTY',[],10,3
+Documentation: 'positive value = qty sent to this store and negative value = qty sent for this item','TOrdQty.15'
+Legacy Column: 'SENT_QTY'
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','TOrdQty.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','TOrdQty.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','TOrdQty.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','TOrdQty.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','TOrdQty.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','TOrdQty.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Zip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','TOrdQty.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TOrdQty.23'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TOrdQty.24'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: ItemOrdQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'order quantity','TOrdQty.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSentQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'sum of positive sent_qty from tord_qty table for this item','TOrdQty.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemAssignQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'sum of positive ord_qty from tord_qty table for this item','TOrdQty.27'
+Legacy Column: NA
+
+------------------------------------------------------
+

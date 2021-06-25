@@ -1,0 +1,957 @@
+##########################################################################################################
+File Name: Prism.Model.Customer.pas
+##########################################################################################################
+Class Name: TCustomer
+Base Class Name: TModelBase
+Database Table: CUSTOMER
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpNotNull,cpPrimaryKey],19,0
+Documentation: 'unique identifying value','Customer.1'
+Legacy Column: 'CUST_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Customer.2'
+Legacy Column: 'CREATEDBY_NAME'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Customer.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Customer.4'
+Legacy Column: 'MODIFIEDBY_NAME'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Customer.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Customer.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Customer.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Customer.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Customer.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to customers home subsidiary','Customer.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionSid
+Data Type: Nullable<Int64>
+Database Column: 'REGION_SID',[],19,0
+Documentation: 'reference to customers home region','Customer.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Customer.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DistrictSid
+Data Type: Nullable<Int64>
+Database Column: 'DISTRICT_SID',[],19,0
+Documentation: 'reference to customers home district','Customer.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'reference to customers home store','Customer.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CompanySid
+Data Type: Nullable<Int64>
+Database Column: 'COMPANY_SID',[],19,0
+Documentation: 'reference to company customer works for','Customer.15'
+Legacy Column: 'COMPANY_NAME'
+
+------------------------------------------------------
+
+Name: CustId
+Data Type: Nullable<Integer>
+Database Column: 'CUST_ID',[],10,0
+Documentation: 'CustId','Customer.16', 'STRING'
+Legacy Column: 'CUST_ID'
+
+------------------------------------------------------
+
+Name: ShareType
+Data Type: TCustomerShareType
+Database Column: 'SHARE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'Indicates how this customer record is shared; 0 = local, 1 = global, 2 = regional, 3 = non-share.  Defaults to global','Customer.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastName
+Data Type: Nullable<string>
+Database Column: 'LAST_NAME',[],30
+Documentation: 'customers last name','Customer.18'
+Legacy Column: 'LAST_NAME'
+
+------------------------------------------------------
+
+Name: FirstName
+Data Type: Nullable<string>
+Database Column: 'FIRST_NAME',[],30
+Documentation: 'customers first name','Customer.19'
+Legacy Column: 'FIRST_NAME'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates whether customer record is active','Customer.20'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: MarketingFlag
+Data Type: Nullable<Integer>
+Database Column: 'MARKETING_FLAG',[],10,0
+Documentation: '[comment needed]','Customer.21'
+Legacy Column: 'MARKETING_FLAG'
+
+------------------------------------------------------
+
+Name: BirthDay
+Data Type: Nullable<Int16>
+Database Column: 'BIRTH_DAY',[],5,0
+Documentation: 'day of customers birth','Customer.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BirthMonth
+Data Type: Nullable<Int16>
+Database Column: 'BIRTH_MONTH',[],5,0
+Documentation: 'month of customers birth','Customer.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BirthYear
+Data Type: Nullable<Integer>
+Database Column: 'BIRTH_YEAR',[],10,0
+Documentation: 'year of customers birth','Customer.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustType
+Data Type: Nullable<TCustomerType>
+Database Column: 'CUST_TYPE',[],5,0
+Documentation: 'indicates type of customer,0-CustomerOnly and 1-Employee','Customer.25'
+Legacy Column: 'CUST_TYPE'
+
+------------------------------------------------------
+
+Name: CustClassSid
+Data Type: Nullable<Int64>
+Database Column: 'CUST_CLASS_SID',[],19,0
+Documentation: 'reference to customer class description record','Customer.26'
+Legacy Column: 'CUST_CLASS_NAME'
+
+------------------------------------------------------
+
+Name: TitleSid
+Data Type: Nullable<Int64>
+Database Column: 'TITLE_SID',[],19,0
+Documentation: 'reference to person title record','Customer.27'
+Legacy Column: 'TITLE'
+
+------------------------------------------------------
+
+Name: SuffixSid
+Data Type: Nullable<Int64>
+Database Column: 'SUFFIX_SID',[],19,0
+Documentation: 'reference to person suffix record, eg. jr., phd., etc.','Customer.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Gender
+Data Type: Nullable<TCustomerGender>
+Database Column: 'GENDER',[],1,0
+Documentation: '0=male, 1=female','Customer.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'PRICE_LVL_SID',[],19,0
+Documentation: 'if populated, overrides subsidiary/store price level','Customer.30'
+Legacy Column: 'PRICELEVEL'
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'reference to tax area record','Customer.31'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'reference to tax area record','Customer.32'
+Legacy Column: 'TAX_AREA2_NAME'
+
+------------------------------------------------------
+
+Name: CentralCredit
+Data Type: Nullable<Double>
+Database Column: 'CENTRAL_CREDIT',[],16,4
+Documentation: 'offline central credit value','Customer.110'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreditLimit
+Data Type: Nullable<Double>
+Database Column: 'CREDIT_LIMIT',[],16,4
+Documentation: 'maximum credit level','Customer.33'
+Legacy Column: 'CREDIT_LIMIT'
+
+------------------------------------------------------
+
+Name: CreditUsed
+Data Type: Nullable<Double>
+Database Column: 'CREDIT_USED',[],16,4
+Documentation: 'credit balance customer owes','Customer.34'
+Legacy Column: 'CREDIT_USED'
+
+------------------------------------------------------
+
+Name: StoreCredit
+Data Type: Nullable<Double>
+Database Column: 'STORE_CREDIT',[],16,4
+Documentation: 'credit balance owed to customer','Customer.35'
+Legacy Column: 'STORE_CREDIT'
+
+------------------------------------------------------
+
+Name: AcceptChecks
+Data Type: Boolean
+Database Column: 'ACCEPT_CHECKS',[],1,0
+Documentation: 'true is customer can tender using personal checks','Customer.36'
+Legacy Column: 'ACCEPT_CHECKS'
+
+------------------------------------------------------
+
+Name: CheckLimit
+Data Type: Nullable<Double>
+Database Column: 'CHECK_LIMIT',[],16,4
+Documentation: 'maximum amount than can be accepted from customer in personal checks.  null=unlimited','Customer.37'
+Legacy Column: 'CHECK_LIMIT'
+
+------------------------------------------------------
+
+Name: Detax
+Data Type: Boolean
+Database Column: 'DETAX',[],1,0
+Documentation: '[comment needed]','Customer.38'
+Legacy Column: 'DETAX'
+
+------------------------------------------------------
+
+Name: SuggestedDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'SUGGESTED_DISC_PERC',[],16,4
+Documentation: 'suggested discount available to this customer','Customer.39'
+Legacy Column: 'MAX_DISC_PERC'
+
+------------------------------------------------------
+
+Name: MaxDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC',[],16,4
+Documentation: 'maximum percentage that a customers purchase can be discounted','Customer.40'
+Legacy Column: 'DISC_PERC_UPPER_LIMIT'
+
+------------------------------------------------------
+
+Name: HouseholdCode
+Data Type: Nullable<Integer>
+Database Column: 'HOUSEHOLD_CODE',[],10,0
+Documentation: 'additional filter used for lookups','Customer.41'
+Legacy Column: 'HOUSEHOLD_CODE'
+
+------------------------------------------------------
+
+Name: Mark1
+Data Type: Nullable<string>
+Database Column: 'MARK1',[],4
+Documentation: 'accounting system flag','Customer.42'
+Legacy Column: 'MARK1'
+
+------------------------------------------------------
+
+Name: Mark2
+Data Type: Nullable<string>
+Database Column: 'MARK2',[],4
+Documentation: 'accounting system flag','Customer.43'
+Legacy Column: 'MARK2'
+
+------------------------------------------------------
+
+Name: SecurityLvl
+Data Type: Nullable<Int16>
+Database Column: 'SECURITY_LVL',[],5,0
+Documentation: '[comment needed]','Customer.44'
+Legacy Column: 'SEC_LVL'
+
+------------------------------------------------------
+
+Name: ArFlag
+Data Type: Nullable<TCustomerARFlag>
+Database Column: 'AR_FLAG',[],1,0
+Documentation: 'indicates status of last attempt to process customer information into accounting system1-Yes, 2-No, 3-Export','Customer.45'
+Legacy Column: 'AR_FLAG'
+
+------------------------------------------------------
+
+Name: RelatedCustSid
+Data Type: Nullable<Int64>
+Database Column: 'RELATED_CUST_SID',[],19,0
+Documentation: 'reference to associated customer record','Customer.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShippingPriority
+Data Type: Nullable<Int16>
+Database Column: 'SHIPPING_PRIORITY',[],5,0
+Documentation: 'shipping priority','Customer.47'
+Legacy Column: 'SHIPPING_PRIORITY'
+
+------------------------------------------------------
+
+Name: PrimaryClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'PRIMARY_CLERK_SID',[],19,0
+Documentation: 'reference to employee record','Customer.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstSaleDate
+Data Type: Nullable<TDateTime>
+Database Column: 'FIRST_SALE_DATE',[
+Documentation: 'date of first purchase','Customer.49'
+Legacy Column: 'FST_SALE_DATE'
+
+------------------------------------------------------
+
+Name: LastSaleDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_SALE_DATE',[
+Documentation: 'date of last purchase','Customer.50'
+Legacy Column: 'LST_SALE_DATE'
+
+------------------------------------------------------
+
+Name: LastSaleAmt
+Data Type: Nullable<Double>
+Database Column: 'LAST_SALE_AMT',[],16,4
+Documentation: 'amount of last purchase','Customer.51'
+Legacy Column: 'LST_SALE_AMT'
+
+------------------------------------------------------
+
+Name: WscUsername
+Data Type: Nullable<string>
+Database Column: 'WSC_USERNAME',[],20
+Documentation: 'encrypted username value for authenticating webstoreconnect login','Customer.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WscPassword
+Data Type: Nullable<string>
+Database Column: 'WSC_PASSWORD',[],20
+Documentation: 'encrypted password value for authenticating webstoreconnect login','Customer.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PaymentTermsSid
+Data Type: Nullable<Int64>
+Database Column: 'PAYMENT_TERMS_SID',[],19,0
+Documentation: 'reference to payment terms description','Customer.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AccountingSystemId
+Data Type: Nullable<string>
+Database Column: 'ACCOUNTING_SYSTEM_ID',[],40
+Documentation: 'string tag identifying this customer within the accounting system','Customer.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],50
+Documentation: 'user defined field','Customer.56'
+Legacy Column: 'UDFFIELD01'
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],50
+Documentation: 'user defined field','Customer.57'
+Legacy Column: 'UDFFIELD02'
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],50
+Documentation: 'user defined field','Customer.58'
+Legacy Column: 'UDFFIELD03'
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],50
+Documentation: 'user defined field','Customer.59'
+Legacy Column: 'UDFFIELD04'
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],50
+Documentation: 'user defined field','Customer.60'
+Legacy Column: 'UDFFIELD05'
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: 'Udf1Date','Customer.61'
+Legacy Column: 'UDF1_DATE'
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: 'Udf2Date','Customer.62'
+Legacy Column: 'UDF2_DATE'
+
+------------------------------------------------------
+
+Name: Email
+Data Type: Nullable<string>
+Database Column: 'EMAIL',[],100
+Documentation: 'Used to keep the customer primary email','Customer.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Clob
+Data Type: Nullable<string>
+Database Column: 'UDF1_CLOB',[],2001
+Documentation: 'user defined field','Customer.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Clob
+Data Type: Nullable<string>
+Database Column: 'UDF2_CLOB',[],2001
+Documentation: 'user defined field','Customer.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],2001
+Documentation: 'free text','Customer.66'
+Legacy Column: 'NOTES'
+
+------------------------------------------------------
+
+Name: Image
+Data Type: Nullable<TMemoryStream>
+Database Column: 'IMAGE',[
+Documentation: 'customers image','Customer.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Info1
+Data Type: Nullable<string>
+Database Column: 'INFO1',[],20
+Documentation: 'Legacey data entry field','Customer.68'
+Legacy Column: 'INFO1'
+
+------------------------------------------------------
+
+Name: Info2
+Data Type: Nullable<string>
+Database Column: 'INFO2',[],20
+Documentation: 'Legacey data entry field','Customer.69'
+Legacy Column: 'INFO2'
+
+------------------------------------------------------
+
+Name: QbLink
+Data Type: Boolean
+Database Column: 'QB_LINK',[],1,0
+Documentation: 'Indicates if a customer record is being exported to QB via QBLink','Customer.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Nullable<Int16>
+Database Column: 'CMS',[],1,0
+Documentation: 'Used to determine where the customer may have been created 8 series, 9 series or Aruba system','Customer.71'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: LastReturnDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_RETURN_DATE',[
+Documentation: 'The last date in which an item on any given transaction was marked as a return item for the given customer','Customer.72'
+Legacy Column: 'LST_RETURN_DATE'
+
+------------------------------------------------------
+
+Name: TotalTransactions
+Data Type: Nullable<Integer>
+Database Column: 'TOTAL_TRANSACTIONS',[],10,0
+Documentation: 'A sum of transactions against a given customer SID regardless of the types of items placed on that transaction.','Customer.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SaleItemCount
+Data Type: Nullable<Integer>
+Database Column: 'SALE_ITEM_COUNT',[],10,0
+Documentation: 'A count of all items on a transaction that are marked as sale items.      (Note - this will exclude any sale items that were voided as their qty should be 0)','Customer.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnItemCount
+Data Type: Nullable<Integer>
+Database Column: 'RETURN_ITEM_COUNT',[],10,0
+Documentation: 'A count of all items on a transaction that are marked as return items','Customer.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Segmented
+Data Type: Boolean
+Database Column: 'SEGMENTED',[],1,0
+Documentation: '1 - segment rules completed0 - segment rules not completed','Customer.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeAsCustomer
+Data Type: Boolean
+Database Column: 'EMPLOYEE_AS_CUSTOMER',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates employee is customer or not to determine if an employee can be used as a customer at POS.','Customer.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastOrderDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_ORDER_DATE',[
+Documentation: 'Last order date','Customer.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderItemCount
+Data Type: Nullable<Integer>
+Database Column: 'ORDER_ITEM_COUNT',[],10,0
+Documentation: 'A count of all items on a transaction that are marked as order items','Customer.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Station
+Data Type: Nullable<string>
+Database Column: 'STATION',[],1
+Documentation: 'Station code','Customer.80'
+Legacy Column: 'STATION'
+
+------------------------------------------------------
+
+Name: YtdSale
+Data Type: Nullable<Double>
+Database Column: 'YTD_SALE',[],16,4
+Documentation: 'Year to date sale. This total will be calculated at the time the document is committed and stored on the customer record','Customer.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AllowedTenders
+Data Type: Nullable<string>
+Database Column: 'ALLOWED_TENDERS',[],15
+Documentation: 'array of t/f flags used to indicate the tender types this customer is allowed to tender with.','Customer.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'CountrySid','Customer.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoCustlistname
+Data Type: Nullable<string>
+Database Column: 'PROMO_CUSTLISTNAME',[],255
+Documentation: 'Promotions: Customer Pricing List Name','Customer.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlternateId1
+Data Type: Nullable<string>
+Database Column: 'ALTERNATE_ID1',[],20
+Documentation: 'AlternateId1','Customer.85'
+Legacy Column: 'ALTERNATE_ID1'
+
+------------------------------------------------------
+
+Name: AlternateId2
+Data Type: Nullable<string>
+Database Column: 'ALTERNATE_ID2',[],20
+Documentation: 'AlternateId2','Customer.86'
+Legacy Column: 'ALTERNATE_ID2'
+
+------------------------------------------------------
+
+Name: LtyOptIn
+Data Type: Boolean
+Database Column: 'LTY_OPT_IN',[],1,0
+Documentation: '0=Customer opts out of the Customer Loyalty program, 1=Customer opts in for the Customer Loyalty program.','Customer.87'
+Legacy Column: 'LTY_OPT_IN'
+
+------------------------------------------------------
+
+Name: LtyEnrollDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_ENROLL_DATE',[
+Documentation: 'The date the customer enrolls in the Custom Loyalty program.','Customer.88'
+Legacy Column: 'LTY_ENROLL_DATE'
+
+------------------------------------------------------
+
+Name: LtyBalance
+Data Type: Nullable<Double>
+Database Column: 'LTY_BALANCE',[],24,8
+Documentation: 'The balance the customer has on the Custom Loyalty program as updated by the Central server.','Customer.89'
+Legacy Column: 'LTY_BALANCE'
+
+------------------------------------------------------
+
+Name: LtyAccumulated
+Data Type: Nullable<Double>
+Database Column: 'LTY_ACCUMULATED',[],24,8
+Documentation: 'The accumulated points accrued for either YTD from the enroll date or total lifetime.','Customer.90'
+Legacy Column: 'LTY_ACCUMULATED'
+
+------------------------------------------------------
+
+Name: LtyLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'LTY_LVL_SID',[],19,0
+Documentation: 'Unique identifier of the Customer Loyatly Levels.','Customer.91'
+Legacy Column: 'LTY_LVL_SID'
+
+------------------------------------------------------
+
+Name: LtyLvlLocked
+Data Type: Boolean
+Database Column: 'LTY_LVL_LOCKED',[],1,0
+Documentation: 'To indicate whether the Loyalty Level for the customer can be changed or not. 0 or null = Unlocked, 1= Loyalty Level locked for this customer.','Customer.92'
+Legacy Column: 'LTY_LVL_LOCKED'
+
+------------------------------------------------------
+
+Name: LtyOptInManual
+Data Type: boolean
+Database Column: 'LTY_OPT_IN_MANUAL',[],1,0
+Documentation: 'LtyOptInManual','Customer.93'
+Legacy Column: 'LTY_OPT_IN_MANUAL'
+
+------------------------------------------------------
+
+Name: CustAddress
+Data Type: IList<TCustAddress>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustEmail
+Data Type: IList<TCustEmail>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustPhone
+Data Type: IList<TCustPhone>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustExtend
+Data Type: IList<TCustExtend>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Title
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'person title, eg. mr., mrs., dr., etc.','Customer.94'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Region
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Corporate Region name','Customer.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Customer.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','Customer.97'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLevel
+Data Type: TNullableInteger
+Database Column: NA
+Documentation: 'price level','Customer.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Company
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Company name','Customer.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FullName
+Data Type: String
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustImage
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','Customer.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Customer.101'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','Customer.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Customer.103'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: CustClass
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'short descriptive name for customer class','Customer.104'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryClerk
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','Customer.105'
+Legacy Column: 'EMPL_NAME'
+
+------------------------------------------------------
+
+Name: LtyLvlName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Customer Loyalty level description i.e. Gold, Silver or Bronze.','Customer.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ImagePath
+Data Type: TNullableString
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'StoreCode','Customer.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','Customer.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLevelName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'price level name','Customer.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

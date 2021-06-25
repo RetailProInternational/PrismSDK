@@ -1,0 +1,253 @@
+##########################################################################################################
+File Name: Prism.Model.TransRule.pas
+##########################################################################################################
+Class Name: TTransRule
+Base Class Name: TModelBase
+Database Table: TRANS_RULE
+Associate Class: False
+Identified By: 'FFromSbsSid,FFromStoreSid,FToSbsSid,FToStoreSid'
+Legacy Identified By: 'FFromSbsNo,FFromStoreNo,FToSbsNo,FToStoreNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TransRule.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: Int64
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],19,0
+Documentation: 'employee id of row creator using application ui','TransRule.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TransRule.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIED_BY',[],19,0
+Documentation: 'employee id of last modifier using application ui','TransRule.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified with time zone','TransRule.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TransRule.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','TransRule.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Int16
+Database Column: NA
+Documentation: 'optimistic locking value','TransRule.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','TransRule.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromSbsSid
+Data Type: Int64
+Database Column: 'FROM_SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Source subsidiary sid','TransRule.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromStoreSid
+Data Type: Int64
+Database Column: 'FROM_STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Source store sid','TransRule.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToSbsSid
+Data Type: Int64
+Database Column: 'TO_SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Destination subsidiary sid','TransRule.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToStoreSid
+Data Type: Int64
+Database Column: 'TO_STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Destination store sid','TransRule.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','TransRule.14'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: Op1
+Data Type: Nullable<Int16>
+Database Column: 'OP1',[],5,0
+Documentation: 'Op1','TransRule.15'
+Legacy Column: 'OP1'
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','TransRule.16'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: Op2
+Data Type: Nullable<Int16>
+Database Column: 'OP2',[],5,0
+Documentation: 'Op2','TransRule.17'
+Legacy Column: 'OP2'
+
+------------------------------------------------------
+
+Name: ItemCnt
+Data Type: Nullable<Int16>
+Database Column: 'ITEM_CNT',[],10,0
+Documentation: 'ItemCnt','TransRule.18'
+Legacy Column: 'ITEM_CNT'
+
+------------------------------------------------------
+
+Name: Action
+Data Type: Nullable<Int16>
+Database Column: 'ACTION',[],5,0
+Documentation: 'Action','2-Correct Sending,1-Correct Receiving,3-Adjust Sending,4-Adjust Receiving'
+Legacy Column: 'ACTION'
+
+------------------------------------------------------
+
+Name: DaysInTrans
+Data Type: Nullable<Integer>
+Database Column: 'DAYS_IN_TRANS',[],10,0
+Documentation: 'Days in transit','TransRule.20'
+Legacy Column: 'DAYS_IN_TRANS'
+
+------------------------------------------------------
+
+Name: FromSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TransRule.21'
+Legacy Column: 'FROM_SBS_NO'
+
+------------------------------------------------------
+
+Name: FromStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransRule.22'
+Legacy Column: 'FROM_STORE_NO'
+
+------------------------------------------------------
+
+Name: ToSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TransRule.23'
+Legacy Column: 'TO_SBS_NO'
+
+------------------------------------------------------
+
+Name: ToStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','TransRule.24'
+Legacy Column: 'TO_STORE_NO'
+
+------------------------------------------------------
+
+Name: FromStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','TransRule.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','TransRule.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromStoreCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'StoreCode','TransRule.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToStoreCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'StoreCode','TransRule.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromSbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','TransRule.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ToSbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','TransRule.30'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.AdjSerial.pas
+##########################################################################################################
+Class Name: TAdjSerial
+Base Class Name: TModelBase
+Database Table: ADJ_SERIAL
+Associate Class: False
+Identified By: 'FAdjItemSid, FSerialNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','AdjSerial.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','AdjSerial.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','AdjSerial.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','AdjSerial.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','AdjSerial.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','AdjSerial.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','AdjSerial.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','AdjSerial.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','AdjSerial.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','AdjSerial.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjItemSid
+Data Type: Int64
+Database Column: 'ADJ_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'AdjItemSid','AdjSerial.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: string
+Database Column: 'SERIAL_NO',[cpRequired,cpNotNull],50
+Documentation: 'SerialNo','AdjSerial.12'
+Legacy Column: 'SERIAL_NO'
+
+------------------------------------------------------
+
+Name: OrigQty
+Data Type: Nullable<Double>
+Database Column: 'ORIG_QTY',[],10,3
+Documentation: 'OrigQty','AdjSerial.13'
+Legacy Column: 'ORIG_QTY'
+
+------------------------------------------------------
+
+Name: AdjQty
+Data Type: Nullable<Double>
+Database Column: 'ADJ_QTY',[],10,3
+Documentation: 'AdjQty','AdjSerial.14'
+Legacy Column: 'ADJ_QTY'
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],255
+Documentation: '0-None,1-Insert,2-Remove','AdjSerial.15'
+Legacy Column: 'NOTES'
+
+------------------------------------------------------
+
+Name: ActionType
+Data Type: TAdjSerialActionType
+Database Column: NA
+Documentation: 'Used to mark a serial number for insertion or deletion. Allowed values are 0=None, 1=Insert, 2=Deactivate', ''
+Legacy Column: NA
+
+------------------------------------------------------
+

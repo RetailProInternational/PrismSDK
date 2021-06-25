@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.AllocationPatternQty.pas
+##########################################################################################################
+Class Name: TAllocationPatternQty
+Base Class Name: TModelBase
+Database Table: ALLOCATION_PATTERN_QTY
+Associate Class: False
+Identified By: 'FPatternSid,FStoreSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','AllocationPatternQty.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','AllocationPatternQty.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','AllocationPatternQty.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','AllocationPatternQty.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','AllocationPatternQty.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','AllocationPatternQty.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value tht will be used in licensing applications.','AllocationPatternQty.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','AllocationPatternQty.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','AllocationPatternQty.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','AllocationPatternQty.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PatternSid
+Data Type: Int64
+Database Column: 'PATTERN_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to Allocation_pattern table','AllocationPatternQty.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Allocate merchandise to stores','AllocationPatternQty.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderedQty
+Data Type: Nullable<Double>
+Database Column: 'ORDERED_QTY',[],10,3
+Documentation: 'Quantity ordered or transferred to each store','AllocationPatternQty.13'
+Legacy Column: 'ORD_QTY'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','AllocationPatternQty.14'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreActive
+Data Type: boolean
+Database Column: NA
+Documentation: 'Active','AllocationPatternQty.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

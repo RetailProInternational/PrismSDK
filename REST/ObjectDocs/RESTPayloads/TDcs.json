@@ -1,0 +1,45 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "dcscode" : null,
+      "sbssid" : "0",
+      "useqtydecimals" : 0,
+      "taxcodesid" : null,
+      "margintype" : null,
+      "active" : false,
+      "marginvalue" : null,
+      "patternsid" : null,
+      "dname" : null,
+      "cname" : null,
+      "sname" : null,
+      "dlongname" : null,
+      "clongname" : null,
+      "slongname" : null,
+      "tagcodesid" : null,
+      "regional" : false,
+      "image" : null,
+      "publishstatus" : 0,
+      "d" : null,
+      "c" : null,
+      "s" : null,
+      "marginpctg" : null,
+      "markuppctg" : null,
+      "coefficient" : null,
+      "taxcode" : null,
+      "sbsno" : null,
+      "patternname" : null,
+      "taxname" : null
+    }
+  ]
+}
+

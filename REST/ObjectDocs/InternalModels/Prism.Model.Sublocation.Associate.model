@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.Sublocation.Associate.pas
+##########################################################################################################
+Class Name: TSublocationAssociate
+Base Class Name: 
+Database Table: SUBLOCATION
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Id
+Data Type: Nullable<Integer>
+Database Column: 'SUBLOC_ID',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,109 @@
+##########################################################################################################
+File Name: Prism.Model.InventoryStyleList.pas
+##########################################################################################################
+Class Name: TInventoryStyleList
+Base Class Name: TModelBase
+Database Table: INVENTORY_STYLE_LIST_V
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','InventoryStyleList.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'One of style item sid','InventoryStyleList.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Subsidiary the style is created in','InventoryStyleList.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION1',[],30
+Documentation: 'Description1','InventoryStyleList.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION2',[],30
+Documentation: 'Description2','InventoryStyleList.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsSid
+Data Type: Int64
+Database Column: 'DCS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to department','InventoryStyleList.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: 'VEND_SID',[],19,0
+Documentation: 'reference to vendor','InventoryStyleList.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: string
+Database Column: 'DCS_CODE',[cpRequired,cpNotNull],9
+Documentation: 'DcsCode','InventoryStyleList.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: string
+Database Column: 'VEND_CODE',[cpRequired,cpNotNull],6
+Documentation: 'VendCode','InventoryStyleList.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<string>
+Database Column: 'VEND_NAME',[],25
+Documentation: 'name of the vendor business','InventoryStyleList.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Int16
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'uniquely identifying subsidiary number','InventoryStyleList.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'At least one of style items is active','InventoryStyleList.12'
+Legacy Column: NA
+
+------------------------------------------------------
+

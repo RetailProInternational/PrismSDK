@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.InvnMedia.pas
+##########################################################################################################
+Class Name: TInvnMedia
+Base Class Name: TModelBase
+Database Table: INVN_MEDIA
+Associate Class: False
+Identified By: 'FInvnSbsItemSid,FSbsSid,FMediaName'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','InvnMedia.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','InvnMedia.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','InvnMedia.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','InvnMedia.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','InvnMedia.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','InvnMedia.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','InvnMedia.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','InvnMedia.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','InvnMedia.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','InvnMedia.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnItemUid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_ITEM_UID',[],19,0
+Documentation: 'reference to invn_item item.sid','InvnMedia.11'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary.sid','InvnMedia.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MediaName
+Data Type: string
+Database Column: 'MEDIA_NAME',[cpRequired,cpNotNull],40
+Documentation: 'descriptive name of media record','InvnMedia.13'
+Legacy Column: 'MEDIA_NAME'
+
+------------------------------------------------------
+
+Name: MediaTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'MEDIA_TYPE_SID',[],19,0
+Documentation: 'reference to media_type record','InvnMedia.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EffectiveDate
+Data Type: Nullable<TDateTime>
+Database Column: 'EFFECTIVE_DATE',[
+Documentation: 'EffectiveDate','InvnMedia.15'
+Legacy Column: 'EFFECTIVE_DATE'
+
+------------------------------------------------------
+
+Name: ExpirationDate
+Data Type: Nullable<TDateTime>
+Database Column: 'EXPIRATION_DATE',[
+Documentation: 'ExpirationDate','InvnMedia.16'
+Legacy Column: 'EXPIRATION_DATE'
+
+------------------------------------------------------
+
+Name: MediaText
+Data Type: Nullable<string>
+Database Column: 'MEDIA_TEXT',[],2001
+Documentation: 'MediaText','InvnMedia.17'
+Legacy Column: 'MEDIA_TEXT'
+
+------------------------------------------------------
+
+Name: MediaImage
+Data Type: Nullable<TMemoryStream>
+Database Column: 'MEDIA_IMAGE',[
+Documentation: 'MediaImage','InvnMedia.18'
+Legacy Column: 'MEDIA_IMAGE'
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'used by api to navigate to invn_sbs_item resource','InvnMedia.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MediaType
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'record media type descriptions such as coupon, warranty, rebate, etc.','InvnMedia.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','InvnMedia.21'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

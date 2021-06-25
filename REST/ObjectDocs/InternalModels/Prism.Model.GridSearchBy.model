@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.GridSearchBy.pas
+##########################################################################################################
+Class Name: TGridSearchBy
+Base Class Name: TModelBase
+Database Table: GRID_SEARCH_BY
+Associate Class: False
+Identified By: 'FGridDataSid,FAttributeName'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','GridSearchBy.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','GridSearchBy.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','GridSearchBy.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','GridSearchBy.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','GridSearchBy.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','GridSearchBy.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','GridSearchBy.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','GridSearchBy.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','GridSearchBy.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','GridSearchBy.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GridDataSid
+Data Type: Int64
+Database Column: 'GRID_DATA_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'GridDataSid','GridSearchBy.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AttributeName
+Data Type: string
+Database Column: 'ATTRIBUTE_NAME',[cpRequired,cpNotNull],30
+Documentation: 'Name of the attribute','GridSearchBy.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GdDatatype
+Data Type: string
+Database Column: 'GD_DATATYPE',[cpRequired,cpNotNull],106
+Documentation: 'GdDatatype','GridSearchBy.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Transid
+Data Type: string
+Database Column: 'TRANSID',[cpRequired,cpNotNull],25
+Documentation: 'translation id of attribute name','GridSearchBy.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Orderindex
+Data Type: Int16
+Database Column: 'ORDERINDEX',[cpRequired,cpNotNull],5,0
+Documentation: 'order in which this column will display','GridSearchBy.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultSearchBy
+Data Type: Boolean
+Database Column: 'DEFAULT_SEARCH_BY',[],1,0
+Documentation: 'default_search_by 0=false 1=true,Indicates that this record is used by default when displaying search options','GridSearchBy.16'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,1541 @@
+##########################################################################################################
+File Name: Prism.Model.PurchaseOrder.pas
+##########################################################################################################
+Class Name: TPurchaseOrder
+Base Class Name: TModelBase
+Database Table: PO
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PurchaseOrder.1'
+Legacy Column: 'PO_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PurchaseOrder.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PurchaseOrder.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PurchaseOrder.4'
+Legacy Column: 'MODIFIEDBY_ID'
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PurchaseOrder.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PurchaseOrder.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PurchaseOrder.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PurchaseOrder.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PurchaseOrder.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PurchaseOrder.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','PurchaseOrder.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'StoreSid','PurchaseOrder.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'BILLTO_STORE_SID',[],19,0
+Documentation: 'BillToStoreSid','PurchaseOrder.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'SHIPTO_STORE_SID',[],19,0
+Documentation: 'ShipToStoreSid','PurchaseOrder.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedForStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'MARKEDFOR_STORE_SID',[],19,0
+Documentation: 'MarkedForStoreSid','PurchaseOrder.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PoNo
+Data Type: Nullable<string>
+Database Column: 'PO_NO',[],20
+Documentation: 'PoNo','PurchaseOrder.16'
+Legacy Column: 'PO_NO'
+
+------------------------------------------------------
+
+Name: PoType
+Data Type: Nullable<TPOType>
+Database Column: 'PO_TYPE',[],5,0
+Documentation: '0-DropShipPO,1-MarkedForPO,2-MultiSbsDropShipPO,3-MultiSbsMarkedForPO','PurchaseOrder.17'
+Legacy Column: 'PO_TYPE'
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID',[],19,0
+Documentation: 'ClerkSid','PurchaseOrder.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorSid
+Data Type: Nullable<Int64>
+Database Column: 'VENDOR_SID',[],19,0
+Documentation: 'VendorSid','PurchaseOrder.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendAcctNo
+Data Type: Nullable<string>
+Database Column: 'VEND_ACCT_NO',[],200
+Documentation: 'VendAcctNo','PurchaseOrder.20'
+Legacy Column: 'VEND_ACCT_NO'
+
+------------------------------------------------------
+
+Name: Station
+Data Type: Nullable<string>
+Database Column: 'STATION',[],1
+Documentation: 'Station','PurchaseOrder.21'
+Legacy Column: 'STATION'
+
+------------------------------------------------------
+
+Name: DiscAmt
+Data Type: Nullable<Double>
+Database Column: 'DISC_AMT',[],16,4
+Documentation: 'DiscAmt','PurchaseOrder.22'
+Legacy Column: 'DISC_AMT'
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'DiscPerc','PurchaseOrder.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscType
+Data Type: Nullable<TCalcDiscType>
+Database Column: 'DISC_TYPE',[],1,0
+Documentation: '0-UsePctg,1-UseAmt','PurchaseOrder.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TPurchaseOrderStatus>
+Database Column: 'STATUS',[],5,0
+Documentation: '0-Pending,1-Completed','PurchaseOrder.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromSo
+Data Type: Boolean
+Database Column: 'FROM_SO',[],1,0
+Documentation: 'FromSo','PurchaseOrder.26'
+Legacy Column: 'FROM_SO'
+
+------------------------------------------------------
+
+Name: SoSid
+Data Type: Nullable<Int64>
+Database Column: 'SO_SID',[],19,0
+Documentation: 'SoSid','PurchaseOrder.27'
+Legacy Column: 'SO_SID'
+
+------------------------------------------------------
+
+Name: CreatedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATE',[
+Documentation: 'CreatedDate','PurchaseOrder.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATE',[
+Documentation: 'ModifiedDate','PurchaseOrder.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShippingDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SHIPPING_DATE',[
+Documentation: 'ShippingDate','PurchaseOrder.30'
+Legacy Column: 'SHIPPING_DATE'
+
+------------------------------------------------------
+
+Name: CancelDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CANCEL_DATE',[
+Documentation: 'CancelDate','PurchaseOrder.31'
+Legacy Column: 'CANCEL_DATE'
+
+------------------------------------------------------
+
+Name: LstActivityDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LST_ACTIVITY_DATE',[
+Documentation: 'LstActivityDate','PurchaseOrder.32'
+Legacy Column: 'LST_ACTIVITY_DATE'
+
+------------------------------------------------------
+
+Name: SentDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SENT_DATE',[
+Documentation: 'SentDate','PurchaseOrder.33'
+Legacy Column: 'SENT_DATE'
+
+------------------------------------------------------
+
+Name: CustFld
+Data Type: Nullable<string>
+Database Column: 'CUST_FLD',[],47
+Documentation: 'CustFld','PurchaseOrder.34'
+Legacy Column: 'CUST_FLD'
+
+------------------------------------------------------
+
+Name: SeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'SEASON_SID',[],19,0
+Documentation: 'SeasonSid','PurchaseOrder.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','PurchaseOrder.36'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: UseVat
+Data Type: Boolean
+Database Column: 'USE_VAT',[],1,0
+Documentation: 'UseVat','PurchaseOrder.37'
+Legacy Column: 'USE_VAT'
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Boolean
+Database Column: 'CMS',[],1,0
+Documentation: 'Cms','PurchaseOrder.38'
+Legacy Column: 'CMS'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','PurchaseOrder.39'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: Verified
+Data Type: Boolean
+Database Column: 'VERIFIED',[],1,0
+Documentation: 'Verified','PurchaseOrder.40'
+Legacy Column: 'VERIFIED'
+
+------------------------------------------------------
+
+Name: Held
+Data Type: Boolean
+Database Column: 'HELD',[],1,0
+Documentation: 'Held','PurchaseOrder.41'
+Legacy Column: 'HELD'
+
+------------------------------------------------------
+
+Name: CmsPostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CMS_POST_DATE',[
+Documentation: 'CmsPostDate','PurchaseOrder.42'
+Legacy Column: 'CMS_POST_DATE'
+
+------------------------------------------------------
+
+Name: EdiFlag
+Data Type: Nullable<Int16>
+Database Column: 'EDI_FLAG',[],5,0
+Documentation: 'EdiFlag','PurchaseOrder.43'
+Legacy Column: 'EDI_FLAG'
+
+------------------------------------------------------
+
+Name: EdiDate
+Data Type: Nullable<TDateTime>
+Database Column: 'EDI_DATE',[
+Documentation: 'EdiDate','PurchaseOrder.44'
+Legacy Column: 'EDI_DATE'
+
+------------------------------------------------------
+
+Name: ApprovbySid
+Data Type: Nullable<Int64>
+Database Column: 'APPROVBY_SID',[],19,0
+Documentation: 'ApprovbySid','PurchaseOrder.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPROV_DATE',[
+Documentation: 'ApprovDate','PurchaseOrder.46'
+Legacy Column: 'APPROV_DATE'
+
+------------------------------------------------------
+
+Name: Unverified
+Data Type: Boolean
+Database Column: 'UNVERIFIED',[],1,0
+Documentation: 'Unverified','PurchaseOrder.47'
+Legacy Column: 'UNVERIFIED'
+
+------------------------------------------------------
+
+Name: Rate
+Data Type: Nullable<Double>
+Database Column: 'RATE',[],20,8
+Documentation: 'Rate','PurchaseOrder.48'
+Legacy Column: 'RATE'
+
+------------------------------------------------------
+
+Name: Instruction1
+Data Type: Nullable<string>
+Database Column: 'INSTRUCTION1',[],60
+Documentation: 'Instruction1','PurchaseOrder.49'
+Legacy Column: 'INSTRUCTION1'
+
+------------------------------------------------------
+
+Name: Instruction2
+Data Type: Nullable<string>
+Database Column: 'INSTRUCTION2',[],60
+Documentation: 'Instruction2','PurchaseOrder.50'
+Legacy Column: 'INSTRUCTION2'
+
+------------------------------------------------------
+
+Name: Instruction3
+Data Type: Nullable<string>
+Database Column: 'INSTRUCTION3',[],60
+Documentation: 'Instruction3','PurchaseOrder.51'
+Legacy Column: 'INSTRUCTION3'
+
+------------------------------------------------------
+
+Name: Instruction4
+Data Type: Nullable<string>
+Database Column: 'INSTRUCTION4',[],60
+Documentation: 'Instruction4','PurchaseOrder.52'
+Legacy Column: 'INSTRUCTION4'
+
+------------------------------------------------------
+
+Name: Instruction5
+Data Type: Nullable<string>
+Database Column: 'INSTRUCTION5',[],60
+Documentation: 'Instruction5','PurchaseOrder.53'
+Legacy Column: 'INSTRUCTION5'
+
+------------------------------------------------------
+
+Name: SubmittedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SUBMITTED_DATE',[
+Documentation: 'SubmittedDate','PurchaseOrder.54'
+Legacy Column: 'SUBMITTED_DATE'
+
+------------------------------------------------------
+
+Name: Controller
+Data Type: Nullable<Int16>
+Database Column: 'CONTROLLER',[],5,0
+Documentation: 'Controller','PurchaseOrder.55'
+Legacy Column: 'CONTROLLER'
+
+------------------------------------------------------
+
+Name: OrigController
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_CONTROLLER',[],5,0
+Documentation: 'OrigController','PurchaseOrder.56'
+Legacy Column: 'ORIG_CONTROLLER'
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID',[],19,0
+Documentation: 'ModifiedbySid','PurchaseOrder.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID',[],19,0
+Documentation: 'CreatedbySid','PurchaseOrder.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefPoSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_PO_SID',[],19,0
+Documentation: 'RefPoSid','PurchaseOrder.59'
+Legacy Column: 'REF_PO_SID'
+
+------------------------------------------------------
+
+Name: DocRefNo
+Data Type: Nullable<Integer>
+Database Column: 'DOC_REF_NO',[],10,0
+Documentation: 'DocRefNo','PurchaseOrder.60'
+Legacy Column: 'DOC_REF_NO'
+
+------------------------------------------------------
+
+Name: PendingPo
+Data Type: Boolean
+Database Column: 'PENDING_PO',[],1,0
+Documentation: 'PO pending status can be 0=not pending 1=Pending','PurchaseOrder.61'
+Legacy Column: 'PENDING_PO'
+
+------------------------------------------------------
+
+Name: ApprovNotes
+Data Type: Nullable<string>
+Database Column: 'APPROV_NOTES',[],255
+Documentation: 'ApprovNotes','PurchaseOrder.62'
+Legacy Column: 'APPROV_NOTES'
+
+------------------------------------------------------
+
+Name: ApprovStatus
+Data Type: Nullable<Int16>
+Database Column: 'APPROV_STATUS',[],5,0
+Documentation: 'ApprovStatus','PurchaseOrder.63'
+Legacy Column: 'APPROV_STATUS'
+
+------------------------------------------------------
+
+Name: PendingOverride
+Data Type: Boolean
+Database Column: 'PENDING_OVERRIDE',[],1,0
+Documentation: 'PendingOverride','PurchaseOrder.64'
+Legacy Column: 'PENDING_OVERRIDE'
+
+------------------------------------------------------
+
+Name: Diagnose
+Data Type: Nullable<string>
+Database Column: 'DIAGNOSE',[],60
+Documentation: 'Diagnose','PurchaseOrder.65'
+Legacy Column: 'DIAGNOSE'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','PurchaseOrder.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'PO_REASON_SID',[],19,0
+Documentation: 'points to a row in pref-reason table','PurchaseOrder.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note
+Data Type: Nullable<string>
+Database Column: 'NOTE',[],255
+Documentation: 'Note','PurchaseOrder.68'
+Legacy Column: 'NOTE'
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: 'total ordered quantity for whole PO','PurchaseOrder.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RcvdQty
+Data Type: Nullable<Double>
+Database Column: 'RCVD_QTY',[],10,3
+Documentation: 'total received quantity for whole PO','PurchaseOrder.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POSubtotal
+Data Type: Nullable<Double>
+Database Column: 'PO_SUBTOTAL',[],16,4
+Documentation: 'will hold sum of all qty"s multiplied by cost','PurchaseOrder.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POTotal
+Data Type: Nullable<Double>
+Database Column: 'PO_TOTAL',[],16,4
+Documentation: 'will hold po_subtotal plus all fees','PurchaseOrder.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotExtPriceWTax
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_EXT_PRICE_W_TAX',[],16,4
+Documentation: 'TotExtPriceWTax','PurchaseOrder.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotExtPriceWOTax
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_EXT_PRICE_WO_TAX',[],16,4
+Documentation: 'TotExtPriceWOTax','PurchaseOrder.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POItem
+Data Type: IList<TPOItem>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POFee
+Data Type: IList<TPOFee>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POTerm
+Data Type: IList<TPOTerm>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POApproval
+Data Type: IList<TPOApproval>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','PurchaseOrder.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmployee
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'EmplID','PurchaseOrder.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DueQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UnfilledPerc
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LineItems
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStoreAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStoreAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforStoreAddress
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POTermInfo
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorCity
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorState
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorPostalCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorPostalCodeExtension
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContactFirstName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContactEmailAddress
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContactLastName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContactPhone2No
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContactPhone1No
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','PurchaseOrder.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','PurchaseOrder.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','PurchaseOrder.79'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','PurchaseOrder.80'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','PurchaseOrder.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','PurchaseOrder.82'
+Legacy Column: 'BILLTO_STORE_NO'
+
+------------------------------------------------------
+
+Name: VendorCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','PurchaseOrder.83'
+Legacy Column: 'VEND_CODE'
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','PurchaseOrder.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','PurchaseOrder.85'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','PurchaseOrder.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','PurchaseOrder.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','PurchaseOrder.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Zip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','PurchaseOrder.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','PurchaseOrder.90'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','PurchaseOrder.91'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','PurchaseOrder.92'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','PurchaseOrder.93'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','PurchaseOrder.94'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','PurchaseOrder.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','PurchaseOrder.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','PurchaseOrder.97'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','PurchaseOrder.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','PurchaseOrder.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','PurchaseOrder.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','PurchaseOrder.101'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','PurchaseOrder.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','PurchaseOrder.103'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShiptoStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','PurchaseOrder.104'
+Legacy Column: 'SHIPTO_STORE_NO'
+
+------------------------------------------------------
+
+Name: MarkedforStoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','PurchaseOrder.105'
+Legacy Column: 'MARKEDFOR_STORE_NO'
+
+------------------------------------------------------
+
+Name: MarkedforStoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','PurchaseOrder.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforAddress1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address1','PurchaseOrder.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforAddress2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address2','PurchaseOrder.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforAddress3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address3','PurchaseOrder.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforAddress4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address4','PurchaseOrder.110'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforAddress5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Address5','PurchaseOrder.111'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforZip
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Zip','PurchaseOrder.112'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Clerk
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'EmplID','PurchaseOrder.113'
+Legacy Column: 'CLERK_ID'
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season code','PurchaseOrder.114'
+Legacy Column: 'SEASON_CODE'
+
+------------------------------------------------------
+
+Name: SeasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season name','PurchaseOrder.115'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: Nullable<TReasonType>
+Database Column: NA
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','PurchaseOrder.116'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Reason definition','PurchaseOrder.117'
+Legacy Column: 'DOC_REASON_NAME'
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','PurchaseOrder.118'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','PurchaseOrder.119'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','PurchaseOrder.120'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','PurchaseOrder.121'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','PurchaseOrder.122'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','PurchaseOrder.123'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','PurchaseOrder.124'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','PurchaseOrder.125'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','PurchaseOrder.126'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','PurchaseOrder.127'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','PurchaseOrder.128'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','PurchaseOrder.129'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','PurchaseOrder.130'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','PurchaseOrder.131'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','PurchaseOrder.132'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedforUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','PurchaseOrder.133'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'name of the vendor business','PurchaseOrder.134'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','PurchaseOrder.135'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','PurchaseOrder.136'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','PurchaseOrder.137'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','PurchaseOrder.138'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'BillTo Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'BillTo Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedForStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'MarkedFor Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedForStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'MarkedFor Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ShipTo Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ShipTo Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StorePhone1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Phone1',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StorePhone2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Phone2',''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf1Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'user defined date value','PurchaseOrder.139'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.140'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf2Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: 'user defined date value','PurchaseOrder.141'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.142'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.143'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.144'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.145'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorUdf6String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined string value','PurchaseOrder.146'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','PurchaseOrder.147'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'BillTo Store Code','PurchaseOrder.154'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkedForStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'MarkedFor Store Code','PurchaseOrder.156'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipToStoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ShipTo Store Code','PurchaseOrder.155'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Store Code','PurchaseOrder.153'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToUdf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf1String','PurchaseOrder.148'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToUdf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf2String','PurchaseOrder.149'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToUdf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf3String','PurchaseOrder.150'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToUdf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf4String','PurchaseOrder.151'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillToUdf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Udf5String','PurchaseOrder.152'
+Legacy Column: NA
+
+------------------------------------------------------
+

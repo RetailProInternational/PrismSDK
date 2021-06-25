@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.EMailType.Associate.pas
+##########################################################################################################
+Class Name: TEMailTypeAssociate
+Base Class Name: 
+Database Table: EMAIL_TYPE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EMailType
+Data Type: Nullable<string>
+Database Column: 'EMAIL_TYPE',[cpRequired,cpNotNull],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

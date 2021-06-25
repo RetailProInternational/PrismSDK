@@ -1,0 +1,213 @@
+##########################################################################################################
+File Name: Prism.Model.InvnSerialQty.pas
+##########################################################################################################
+Class Name: TInvnSerialQty
+Base Class Name: TModelBase
+Database Table: INVN_SBS_ITEM_SN_QTY
+Associate Class: False
+Identified By: 'FSerialNo,FInvnSbsItemSNSid,FSbsSid,FStoreSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','InvnSerialQty.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','InvnSerialQty.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','InvnSerialQty.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','InvnSerialQty.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','InvnSerialQty.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','InvnSerialQty.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','InvnSerialQty.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','InvnSerialQty.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','InvnSerialQty.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','InvnSerialQty.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemSNSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SN_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'InvnSbsItemSNSid','InvnSerialQty.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','InvnSerialQty.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','InvnSerialQty.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Integer>
+Database Column: 'QTY',[],7,0
+Documentation: 'Qty','InvnSerialQty.14'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','InvnSerialQty.15'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: Received
+Data Type: Boolean
+Database Column: 'RECEIVED',[],1,0
+Documentation: 'Received','InvnSerialQty.16'
+Legacy Column: 'RECEIVED'
+
+------------------------------------------------------
+
+Name: Sold
+Data Type: Boolean
+Database Column: 'SOLD',[],1,0
+Documentation: 'Sold','InvnSerialQty.17'
+Legacy Column: 'SOLD'
+
+------------------------------------------------------
+
+Name: Transferred
+Data Type: Boolean
+Database Column: 'TRANSFERRED',[],1,0
+Documentation: 'Transferred','InvnSerialQty.18'
+Legacy Column: 'TRANSFERRED'
+
+------------------------------------------------------
+
+Name: SoReserved
+Data Type: Boolean
+Database Column: 'SO_RESERVED',[],1,0
+Documentation: 'SoReserved','InvnSerialQty.19'
+Legacy Column: 'SO_RESERVED'
+
+------------------------------------------------------
+
+Name: Returned
+Data Type: Boolean
+Database Column: 'RETURNED',[],1,0
+Documentation: 'Returned','InvnSerialQty.20'
+Legacy Column: 'RETURNED'
+
+------------------------------------------------------
+
+Name: ReturnedToVnd
+Data Type: Boolean
+Database Column: 'RETURNED_TO_VND',[],1,0
+Documentation: 'ReturnedToVnd','InvnSerialQty.21'
+Legacy Column: 'RETURNED_TO_VND'
+
+------------------------------------------------------
+
+Name: Adjusted
+Data Type: Boolean
+Database Column: 'ADJUSTED',[],1,0
+Documentation: 'Adjusted','InvnSerialQty.22'
+Legacy Column: 'ADJUSTED'
+
+------------------------------------------------------
+
+Name: ExternalStatus
+Data Type: Int16
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','InvnSerialQty.23'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','InvnSerialQty.24'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+

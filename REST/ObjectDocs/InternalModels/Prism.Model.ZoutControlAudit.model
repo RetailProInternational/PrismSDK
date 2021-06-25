@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.ZoutControlAudit.pas
+##########################################################################################################
+Class Name: TZoutControlAudit
+Base Class Name: TModelBase
+Database Table: ZOUT_CONTROL_AUDIT
+Associate Class: False
+Identified By: 'FAuditNo,FZoutControlSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATETIME',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ZoutControlSid
+Data Type: Int64
+Database Column: 'ZOUT_CONTROL_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderTotalOpen
+Data Type: Double
+Database Column: 'TENDER_TOTAL_OPEN',[cpRequired,cpNotNull],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderTotalClose
+Data Type: Double
+Database Column: 'TENDER_TOTAL_CLOSE',[cpRequired,cpNotNull],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OverShortAmt
+Data Type: Double
+Database Column: 'OVER_SHORT_AMT',[cpRequired,cpNotNull],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerLeaveAmount
+Data Type: Double
+Database Column: 'DRAWER_LEAVE_AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DepositAmount
+Data Type: Double
+Database Column: 'DEPOSIT_AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReportXml
+Data Type: Nullable<string>
+Database Column: 'REPORT_XML',[],2001
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyEventSid
+Data Type: Nullable<Int64>
+Database Column: 'CURRENCY_EVENT_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalSales
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_SALES',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AuditNo
+Data Type: Int16
+Database Column: 'AUDIT_NO',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

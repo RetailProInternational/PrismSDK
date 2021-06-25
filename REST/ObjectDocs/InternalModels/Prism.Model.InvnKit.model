@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.InvnKit.pas
+##########################################################################################################
+Class Name: TInvnKit
+Base Class Name: TModelBase
+Database Table: INVN_SBS_KIT
+Associate Class: False
+Identified By: 'FCmpntInvnSbsItemSid,FInvnSbsItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','InvnKit.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','InvnKit.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','InvnKit.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','InvnKit.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','InvnKit.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','InvnKit.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8and 9, respectively.  this is the same value that will be used in licensing applications.','InvnKit.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same ascreated/modified datetime.','InvnKit.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','InvnKit.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','InvnKit.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CmpntInvnSbsItemSid
+Data Type: Int64
+Database Column: 'CMPNT_INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to invn_item item.sid','InvnKit.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Double
+Database Column: 'QTY',[cpRequired,cpNotNull],10,3
+Documentation: 'number of component items in a kit','InvnKit.12'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: KitOption
+Data Type: Nullable<Integer>
+Database Column: 'KIT_OPTION',[],10,0
+Documentation: 'KitOption','InvnKit.13'
+Legacy Column: 'KIT_OPTION'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates kit is currently available for sale/order','InvnKit.14'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'used by api to navigate to invn_sbs_item resource','InvnKit.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitCmpntSid
+Data Type: Nullable<Int64>
+Database Column: 'KIT_CMPNT_SID',[],19,0
+Documentation: 'KitCmpntSid','InvnKit.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ComponentItemUID
+Data Type: Int64
+Database Column: NA
+Documentation: 'ItemUID','InvnKit.17'
+Legacy Column: 'CMPNT_ITEM_SID'
+
+------------------------------------------------------
+
+Name: ComponentName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'name of component used in creating an inventory kit','InvnKit.18'
+Legacy Column: 'CMPNT_NAME'
+
+------------------------------------------------------
+

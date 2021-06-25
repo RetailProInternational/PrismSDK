@@ -1,0 +1,17 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "invnitemuid" : null,
+      "invnsbsitemsid" : null,
+      "vendsid" : null,
+      "upc" : null,
+      "alu" : null,
+      "lastrcvdcost" : null,
+      "scaleno" : null,
+      "vendno" : null,
+      "vendcode" : null
+    }
+  ]
+}
+

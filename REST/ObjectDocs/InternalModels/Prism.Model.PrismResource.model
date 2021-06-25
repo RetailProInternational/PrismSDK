@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.PrismResource.pas
+##########################################################################################################
+Class Name: TPrismResource
+Base Class Name: TModelBase
+Database Table: PRISM_RESOURCE
+Associate Class: False
+Identified By: 'FNamespace,FResourceName'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','PrismResource.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','PrismResource.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','PrismResource.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','PrismResource.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','PrismResource.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','PrismResource.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','PrismResource.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','PrismResource.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','PrismResource.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','PrismResource.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: string
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: 'resource name','PrismResource.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ParentSid
+Data Type: Nullable<int64>
+Database Column: 'PARENT_SID',[],19,0
+Documentation: 'parent resource name, if blank then this is a top level resource','PrismResource.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrismD2d
+Data Type: boolean
+Database Column: 'PRISM_D2D_FLG',[cpRequired,cpNotNull],1,0
+Documentation: 'PrismD2d','PrismResource.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9D2d
+Data Type: boolean
+Database Column: 'V9_D2D_FLG',[cpRequired,cpNotNull],1,0
+Documentation: 'V9D2d','PrismResource.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Namespace
+Data Type: string
+Database Column: 'NAMESPACE',[cpRequired,cpNotNull],20
+Documentation: 'Namespace','PrismResource.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DeleteFlag
+Data Type: boolean
+Database Column: 'DELETE_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'DeleteFlag','PrismResource.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RPSEntityName
+Data Type: Nullable<string>
+Database Column: 'RPS_ENTITY_NAME',[],50
+Documentation: 'entity name in RPS module','PrismResource.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceType
+Data Type: TResourceType
+Database Column: 'RESOURCE_TYPE',[],1,0
+Documentation: '0 - resource, 1 - CentralsResource, 2 - CoreResource, 3 - Action','PrismResource.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProcessOrder
+Data Type: Integer
+Database Column: 'PROCESS_ORDER',[],10,0
+Documentation: 'ProcessOrder','PrismResource.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ChildResource
+Data Type: IList<TPrismResource>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

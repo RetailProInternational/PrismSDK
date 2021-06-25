@@ -1,0 +1,26 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "rowversion" : 0,
+      "postdate" : null,
+      "tenantsid" : null,
+      "startrundatetime" : null,
+      "endrundatetime" : null,
+      "runresultmessage" : null,
+      "status" : 0,
+      "scheduledtasksid" : "0",
+      "runresponsepayload" : null,
+      "runurl" : null,
+      "runrequestpayload" : null,
+      "workstation" : null
+    }
+  ]
+}
+

@@ -1,0 +1,717 @@
+##########################################################################################################
+File Name: Prism.Model.POItem.pas
+##########################################################################################################
+Class Name: TPOItem
+Base Class Name: TModelBase
+Database Table: PO_ITEM
+Associate Class: False
+Identified By: 'FPoSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','POItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','POItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','POItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','POItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','POItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','POItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','POItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','POItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','POItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','POItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PoSid
+Data Type: Int64
+Database Column: 'PO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PoSid','POItem.11'
+Legacy Column: 'PO_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'ItemPos','POItem.12'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ItemSid','POItem.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE',[],16,4
+Documentation: 'Price','POItem.14'
+Legacy Column: 'PRICE'
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','POItem.15'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: OrigCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_COST',[],16,4
+Documentation: 'OrigCost','POItem.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CostDisc
+Data Type: Nullable<Double>
+Database Column: 'COST_DISC',[],16,4
+Documentation: 'CostDisc','POItem.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CostDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'COST_DISC_PERC',[],16,4
+Documentation: 'CostDiscPerc','POItem.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FcCost
+Data Type: Nullable<Double>
+Database Column: 'FC_COST',[],16,4
+Documentation: 'FcCost','POItem.16'
+Legacy Column: 'FC_COST'
+
+------------------------------------------------------
+
+Name: OrigFcCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_FC_COST',[],16,4
+Documentation: 'OrigFcCost','POItem.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FcCostDisc
+Data Type: Nullable<Double>
+Database Column: 'FC_COST_DISC',[],16,4
+Documentation: 'FcCostDisc','POItem.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'CURRENCY_SID',[],19,0
+Documentation: 'CurrencySid','POItem.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','POItem.18'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','POItem.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'TaxCodeSid','POItem.20'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxCode2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE2_SID',[],19,0
+Documentation: 'TaxCode2Sid','POItem.21'
+Legacy Column: 'TAX_CODE2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2',[],16,4
+Documentation: 'TaxPerc2','POItem.22'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: TaxAmount
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMOUNT',[],17,5
+Documentation: 'TaxAmount','POItem.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SrcSbsNo
+Data Type: Nullable<Int16>
+Database Column: 'SRC_SBS_NO',[],5,0
+Documentation: 'SrcSbsNo','POItem.24'
+Legacy Column: 'SRC_SBS_NO'
+
+------------------------------------------------------
+
+Name: UdfValue1
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE1',[],50
+Documentation: 'UdfValue1','POItem.25'
+Legacy Column: 'UDF_VALUE1'
+
+------------------------------------------------------
+
+Name: UdfValue2
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE2',[],50
+Documentation: 'UdfValue2','POItem.26'
+Legacy Column: 'UDF_VALUE2'
+
+------------------------------------------------------
+
+Name: UdfValue3
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE3',[],50
+Documentation: 'UdfValue3','POItem.27'
+Legacy Column: 'UDF_VALUE3'
+
+------------------------------------------------------
+
+Name: UdfValue4
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE4',[],50
+Documentation: 'UdfValue4','POItem.28'
+Legacy Column: 'UDF_VALUE4'
+
+------------------------------------------------------
+
+Name: ItemNote1
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE1',[],350
+Documentation: 'ItemNote1','POItem.29'
+Legacy Column: 'ITEM_NOTE1'
+
+------------------------------------------------------
+
+Name: ItemNote2
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE2',[],350
+Documentation: 'ItemNote2','POItem.30'
+Legacy Column: 'ITEM_NOTE2'
+
+------------------------------------------------------
+
+Name: ItemNote3
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE3',[],350
+Documentation: 'ItemNote3','POItem.31'
+Legacy Column: 'ITEM_NOTE3'
+
+------------------------------------------------------
+
+Name: ItemNote4
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE4',[],350
+Documentation: 'ItemNote4','POItem.32'
+Legacy Column: 'ITEM_NOTE4'
+
+------------------------------------------------------
+
+Name: ItemNote5
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE5',[],350
+Documentation: 'ItemNote5','POItem.33'
+Legacy Column: 'ITEM_NOTE5'
+
+------------------------------------------------------
+
+Name: ItemNote6
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE6',[],350
+Documentation: 'ItemNote6','POItem.34'
+Legacy Column: 'ITEM_NOTE6'
+
+------------------------------------------------------
+
+Name: ItemNote7
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE7',[],350
+Documentation: 'ItemNote7','POItem.35'
+Legacy Column: 'ITEM_NOTE7'
+
+------------------------------------------------------
+
+Name: ItemNote8
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE8',[],350
+Documentation: 'ItemNote8','POItem.36'
+Legacy Column: 'ITEM_NOTE8'
+
+------------------------------------------------------
+
+Name: ItemNote9
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE9',[],350
+Documentation: 'ItemNote9','POItem.37'
+Legacy Column: 'ITEM_NOTE9'
+
+------------------------------------------------------
+
+Name: ItemNote10
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE10',[],350
+Documentation: 'ItemNote10','POItem.38'
+Legacy Column: 'ITEM_NOTE10'
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC',[],18,0
+Documentation: 'AltUpc','POItem.39'
+Legacy Column: 'ALT_UPC'
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU',[],20
+Documentation: 'AltAlu','POItem.40'
+Legacy Column: 'ALT_ALU'
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST',[],16,4
+Documentation: 'AltCost','POItem.41'
+Legacy Column: 'ALT_COST'
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE',[],6
+Documentation: 'AltVendCode','POItem.42'
+Legacy Column: 'ALT_VEND_CODE'
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: 'will hold sum of all ord quantities for all stores','POItem.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RcvdQty
+Data Type: Nullable<Double>
+Database Column: 'RCVD_QTY',[],10,3
+Documentation: 'combined rcvd_qty value from po_qty table for that po_item','POItem.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','POItem.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsVendorSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_SBS_VENDOR_SID',[],19,0
+Documentation: 'SID of alternate vendor info','POItem.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AllocationPatternSid
+Data Type: Nullable<Int64>
+Database Column: 'ALLOCATION_PATTERN_SID',[],19,0
+Documentation: 'unique identifier uses to identify record from allocation_pattern table','POItem.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POQuantity
+Data Type: IList<TPOQuantity>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','POItem.48'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','POItem.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','POItem.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DueQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtPrice
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtFCCost
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ExtCost
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrdCaseQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'Ordered Case Quantity','POItem.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue6
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue7
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue5
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfValue8
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attribute
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Attribute','POItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description1','POItem.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description2','POItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description3','POItem.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description4','POItem.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSize
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ItemSize','POItem.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Upc
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Upc','POItem.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'DcsCode','POItem.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','POItem.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','POItem.64'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: CurrencyCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','POItem.65'
+Legacy Column: 'CURRENCY_ID'
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'UseQtyDecimals','POItem.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StyleSID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'reference to invn_style.sid','POItem.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PatternName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Unique name of the pattern','POItem.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Alu
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Alu','POItem.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TradeDiscPercent
+Data Type: Nullable<double>
+Database Column: NA
+Documentation: 'disc percent for an item when ordering using trade discount','POItem.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorListCost
+Data Type: Nullable<double>
+Database Column: NA
+Documentation: 'cost for order item using trade discount','POItem.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinOrdQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'Minimum Order Quantity','POItem.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'CName','POItem.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'DName','POItem.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'SName','POItem.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendorName','POItem.78'
+Legacy Column: NA
+
+------------------------------------------------------
+

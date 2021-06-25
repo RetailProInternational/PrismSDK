@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.AllocationPattern.pas
+##########################################################################################################
+Class Name: TAllocationPattern
+Base Class Name: TModelBase
+Database Table: ALLOCATION_PATTERN
+Associate Class: False
+Identified By: 'FPatternName,FSbsSid'
+Legacy Identified By: 'PatternName,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','AllocationPattern.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','AllocationPattern.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','AllocationPattern.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','AllocationPattern.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','AllocationPattern.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','AllocationPattern.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','AllocationPattern.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','AllocationPattern.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','AllocationPattern.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','AllocationPattern.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to Subsidiary, the pattern belongs to','AllocationPattern.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PatternId
+Data Type: Integer
+Database Column: 'PATTERN_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'Sequential pattern number','AllocationPattern.12'
+Legacy Column: 'PTRN_ID'
+
+------------------------------------------------------
+
+Name: PatternName
+Data Type: string
+Database Column: 'PATTERN_NAME',[cpRequired,cpNotNull],20
+Documentation: 'Unique name of the pattern','AllocationPattern.13'
+Legacy Column: 'PTRN_NAME'
+
+------------------------------------------------------
+
+Name: AllocationPatternQty
+Data Type: IList<TAllocationPatternQty>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Int16
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','AllocationPattern.14'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

@@ -1,0 +1,117 @@
+##########################################################################################################
+File Name: Prism.Model.CustomSchema.pas
+##########################################################################################################
+Class Name: TCustomSchema
+Base Class Name: TModelBase
+Database Table: CUSTOM_SCHEMA
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CustomSchema.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CustomSchema.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CustomSchema.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CustomSchema.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustomSchema.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CustomSchema.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','CustomSchema.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','CustomSchema.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustomSchema.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CustomSchema.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SchemaName
+Data Type: string
+Database Column: 'SCHEMA_NAME',[cpRequired,cpNotNull],50
+Documentation: 'Name of the custom schema that can be displayed by a GUI component.','CustomSchema.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SchemaFields
+Data Type: Nullable<string>
+Database Column: 'SCHEMA_FIELDS',[],2001
+Documentation: 'The field definitions for custom schema','CustomSchema.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserdefinedFlag
+Data Type: Int16
+Database Column: 'USERDEFINED_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: '1 indicates is defined by enduser','CustomSchema.13'
+Legacy Column: NA
+
+------------------------------------------------------
+

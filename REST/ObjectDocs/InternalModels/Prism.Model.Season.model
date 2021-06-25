@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.Season.pas
+##########################################################################################################
+Class Name: TSeason
+Base Class Name: TModelBase
+Database Table: SEASON
+Associate Class: False
+Identified By: 'FSeasonCode'
+Legacy Identified By: 'SeasonCode'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Season.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Season.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Season.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Season.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Season.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Season.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','Season.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Season.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Season.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Season.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: string
+Database Column: 'SEASON_CODE',[cpRequired,cpNotNull],5
+Documentation: 'season code','Season.11'
+Legacy Column: 'SEASON_CODE'
+
+------------------------------------------------------
+
+Name: SeasonName
+Data Type: Nullable<string>
+Database Column: 'SEASON_NAME',[],30
+Documentation: 'season name','Season.12'
+Legacy Column: 'SEASON_NAME'
+
+------------------------------------------------------
+
+Name: BeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'BEGIN_DATE',[
+Documentation: 'time of year that season begins.  only the month and day are used.','Season.13'
+Legacy Column: 'BEGIN_DATE'
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'time of year that season end.  only the month and day are used.','Season.14'
+Legacy Column: 'END_DATE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates whether the season record is active','Season.15'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: SeasonId
+Data Type: Integer
+Database Column: 'SEASON_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'helps in identifying a reason in V9. Used in prism to identify modifications','Season.16'
+Legacy Column: 'SEASON_ID'
+
+------------------------------------------------------
+

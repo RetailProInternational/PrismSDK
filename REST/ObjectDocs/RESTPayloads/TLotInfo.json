@@ -1,0 +1,14 @@
+{
+  "data" : [
+    {
+      "lnsid" : "0",
+      "lotno" : null,
+      "lotnote" : null,
+      "lotexpirydate" : null,
+      "lnqtysid" : null,
+      "lnqty" : null,
+      "lnactive" : null
+    }
+  ]
+}
+

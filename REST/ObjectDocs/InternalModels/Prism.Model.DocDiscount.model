@@ -1,0 +1,205 @@
+##########################################################################################################
+File Name: Prism.Model.DocDiscount.pas
+##########################################################################################################
+Class Name: TDocDiscount
+Base Class Name: TModelBase
+Database Table: DOCUMENT_DISC
+Associate Class: False
+Identified By: 'FDocSid,FDiscCategory,FDiscSource,FDiscPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DocDiscount.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DocDiscount.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','DocDiscount.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DocDiscount.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DocDiscount.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DocDiscount.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','DocDiscount.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DocDiscount.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DocDiscount.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','DocDiscount.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Reference to document','DocDiscount.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscCategory
+Data Type: TItemCategory
+Database Column: 'DISC_CATEGORY',[cpRequired,cpNotNull],5,0
+Documentation: '0-AnyPOS,1-Sale,2-Order,3-Other','DocDiscount.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscSource
+Data Type: Int16
+Database Column: 'DISC_SOURCE',[cpRequired,cpNotNull],5,0
+Documentation: '30-Manual, 40-Promotion','DocDiscount.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscPos
+Data Type: Int16
+Database Column: 'DISC_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'position among similar discounts','DocDiscount.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscType
+Data Type: TDiscountType
+Database Column: 'DISC_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-Price,1-DiscPerc,2-DiscAmt,3-ForcePrice','DocDiscount.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscValue
+Data Type: Double
+Database Column: 'DISC_VALUE',[cpRequired,cpNotNull],16,4
+Documentation: 'DiscValue','DocDiscount.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscReason
+Data Type: Nullable<string>
+Database Column: 'DISC_REASON',[],80
+Documentation: 'DiscReason','DocDiscount.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrevSubtotalWDisc
+Data Type: Double
+Database Column: 'PREV_SUBTOTAL_W_DISC',[cpRequired,cpNotNull],16,4
+Documentation: 'PrevSubtotalWDisc','DocDiscount.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NewSubtotalWDisc
+Data Type: Nullable<Double>
+Database Column: 'NEW_SUBTOTAL_W_DISC',[],16,4
+Documentation: 'NewSubtotalWDisc','DocDiscount.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NewDiscAmt
+Data Type: Nullable<Double>
+Database Column: 'NEW_DISC_AMT',[],16,4
+Documentation: 'NewDiscAmt','DocDiscount.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NewDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'NEW_DISC_PERC',[],16,4
+Documentation: 'NewDiscPerc','DocDiscount.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscOrigValue
+Data Type: Double
+Database Column: 'DISC_ORIG_VALUE',[cpRequired,cpNotNull],16,4
+Documentation: 'Uncapped value entered originally','DocDiscount.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscPromoName
+Data Type: Nullable<string>
+Database Column: 'DISC_PROMO_NAME',[],50
+Documentation: 'DiscPromoName','DocDiscount.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscPromoGroup
+Data Type: Nullable<string>
+Database Column: 'DISC_PROMO_GROUP',[],50
+Documentation: 'DiscPromoName','DocDiscount.24'
+Legacy Column: NA
+
+------------------------------------------------------
+

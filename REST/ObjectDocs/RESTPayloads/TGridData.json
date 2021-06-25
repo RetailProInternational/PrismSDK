@@ -1,0 +1,34 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "gddatatype" : null,
+      "active" : false,
+      "resultsperpage" : null,
+      "gridcolumn" : [
+      ],
+      "gridsearchby" : [
+      ],
+      "workstationsid" : null,
+      "storesbssid" : null,
+      "storesid" : null,
+      "sbssid" : null,
+      "griddictionarysid" : null,
+      "resourcename" : null,
+      "transid" : null,
+      "sbsno" : null,
+      "storesbsno" : null,
+      "storeno" : null
+    }
+  ]
+}
+

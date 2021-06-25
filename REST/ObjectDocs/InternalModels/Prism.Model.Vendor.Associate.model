@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.Vendor.Associate.pas
+##########################################################################################################
+Class Name: TVendorAssociate
+Base Class Name: 
+Database Table: VENDOR
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<String>
+Database Column: 'VEND_CODE',[cpRequired,cpNotNull],6
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<string>
+Database Column: 'VEND_NAME',[],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendId
+Data Type: Nullable<Integer>
+Database Column: 'VEND_ID',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TermType
+Data Type: Nullable<TTermKind>
+Database Column: 'TERM_TYPE',[],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],100
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Regional
+Data Type: Boolean
+Database Column: 'REGIONAL',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

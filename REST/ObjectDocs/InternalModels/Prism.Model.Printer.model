@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.Printer.pas
+##########################################################################################################
+Class Name: TPrinter
+Base Class Name: TModelBase
+Database Table: PRINTER
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Printer.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Printer.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Printer.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Printer.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Printer.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Printer.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value tht will be used in licensing applications.','Printer.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Printer.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Printer.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','Printer.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrinterName
+Data Type: Nullable<string>
+Database Column: 'PRINTER_NAME',[],200
+Documentation: 'Printer Name','Printer.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Int64
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'WorkstationSid','Printer.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommunicationInterface
+Data Type: Nullable<Int64>
+Database Column: 'INTERFACE',[],2,0
+Documentation: 'The method of communicating with the printer 0=Windows, 1=Wifi, 2=Bluetooth','Printer.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KickCode
+Data Type: Nullable<string>
+Database Column: 'KICK_CODE',[],20
+Documentation: 'Control code string to open its connected cash drawer','Printer.14'
+Legacy Column: NA
+
+------------------------------------------------------
+

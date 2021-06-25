@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.UserGroup.Associate.pas
+##########################################################################################################
+Class Name: TUserGroupAssociate
+Base Class Name: 
+Database Table: USER_GROUP
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupName
+Data Type: Nullable<string>
+Database Column: 'USER_GROUP_NAME',[],70
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupId
+Data Type: Nullable<Integer>
+Database Column: 'USER_GROUP_ID',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

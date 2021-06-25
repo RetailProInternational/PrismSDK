@@ -1,0 +1,261 @@
+##########################################################################################################
+File Name: Prism.Model.TaxRule.pas
+##########################################################################################################
+Class Name: TTaxRule
+Base Class Name: TModelBase
+Database Table: TAX_CODE_RULE
+Associate Class: False
+Identified By: 'FSbsSid,FTaxAreaSid,FAltTaxName'
+Legacy Identified By: 'SbsNo,TaxRuleCode,TaxAreaName'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TaxRule.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TaxRule.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TaxRule.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TaxRule.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','TaxRule.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','TaxRule.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','TaxRule.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TaxRule.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TaxRule.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TaxRule.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','TaxRule.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Int64
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','TaxRule.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltTaxName
+Data Type: Nullable<string>
+Database Column: 'ALT_TAX_NAME',[],12
+Documentation: 'AltTaxName','TaxRule.13'
+Legacy Column: 'ALT_TAX_NAME'
+
+------------------------------------------------------
+
+Name: Luxury
+Data Type: Boolean
+Database Column: 'LUXURY',[cpRequired,cpNotNull],1,0
+Documentation: 'Luxury','TaxRule.14'
+Legacy Column: 'LUXURY'
+
+------------------------------------------------------
+
+Name: Rebate
+Data Type: Boolean
+Database Column: 'REBATE',[cpRequired,cpNotNull],1,0
+Documentation: 'Rebate','TaxRule.15'
+Legacy Column: 'REBATE'
+
+------------------------------------------------------
+
+Name: LevelType
+Data Type: Nullable<Int16>
+Database Column: 'LEVEL_TYPE',[],5,0
+Documentation: 'LevelType','TaxRule.16'
+Legacy Column: 'LEVEL_TYPE'
+
+------------------------------------------------------
+
+Name: Level1
+Data Type: Nullable<Double>
+Database Column: 'LEVEL1',[],16,4
+Documentation: 'Level1','TaxRule.17'
+Legacy Column: 'LEVEL1'
+
+------------------------------------------------------
+
+Name: TaxPerc1
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC1',[],16,4
+Documentation: 'TaxPerc1','TaxRule.18'
+Legacy Column: 'TAX_PERC1'
+
+------------------------------------------------------
+
+Name: Level2
+Data Type: Nullable<Double>
+Database Column: 'LEVEL2',[],16,4
+Documentation: 'Level2','TaxRule.19'
+Legacy Column: 'LEVEL2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2',[],16,4
+Documentation: 'TaxPerc2','TaxRule.20'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: Level3
+Data Type: Nullable<Double>
+Database Column: 'LEVEL3',[],16,4
+Documentation: 'Level3','TaxRule.21'
+Legacy Column: 'LEVEL3'
+
+------------------------------------------------------
+
+Name: TaxPerc3
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC3',[],16,4
+Documentation: 'TaxPerc3','TaxRule.22'
+Legacy Column: 'TAX_PERC3'
+
+------------------------------------------------------
+
+Name: Reference
+Data Type: Nullable<string>
+Database Column: 'REFERENCE',[],1
+Documentation: 'Reference','TaxRule.23'
+Legacy Column: 'REFERENCE'
+
+------------------------------------------------------
+
+Name: Legend
+Data Type: Nullable<string>
+Database Column: 'LEGEND',[],30
+Documentation: 'Legend','TaxRule.24'
+Legacy Column: 'LEGEND'
+
+------------------------------------------------------
+
+Name: TaxRuleCode
+Data Type: Int16
+Database Column: 'TAX_RULE_CODE',[cpRequired,cpNotNull],5,0
+Documentation: 'TaxRuleCode','TaxRule.25'
+Legacy Column: 'ALT_TAX_CODE'
+
+------------------------------------------------------
+
+Name: VATMargin
+Data Type: Boolean
+Database Column: 'VAT_MARGIN',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates whether tax amount is based on margin or price with tax','TaxRule.26'
+Legacy Column: 'VAT_MARGIN'
+
+------------------------------------------------------
+
+Name: Tax
+Data Type: IList<TTax>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaCeilingAmt
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'allows tax rule to be applied up to a ceiling amount.','TaxRule.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Name','TaxRule.28'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','TaxRule.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','TaxRule.30'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

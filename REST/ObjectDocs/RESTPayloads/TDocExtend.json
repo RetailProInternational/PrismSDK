@@ -1,0 +1,35 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "docsid" : "0",
+      "udf6string" : null,
+      "udf7string" : null,
+      "udf8string" : null,
+      "udf9string" : null,
+      "udf10string" : null,
+      "udf6float" : null,
+      "udf7float" : null,
+      "udf8float" : null,
+      "udf9float" : null,
+      "udf10float" : null,
+      "udf4date" : null,
+      "udf5date" : null,
+      "udf6date" : null,
+      "udf2clob" : null,
+      "note1" : null,
+      "note2" : null,
+      "note3" : null
+    }
+  ]
+}
+

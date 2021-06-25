@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.PcpRewardFilterElement.pas
+##########################################################################################################
+Class Name: TPcpRewardFilterElement
+Base Class Name: TModelBase
+Database Table: PCP_REWARD_FILTER_ELEMENT
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PcpRewardFilterElement.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PcpRewardFilterElement.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PcpRewardFilterElement.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PcpRewardFilterElement.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PcpRewardFilterElement.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PcpRewardFilterElement.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PcpRewardFilterElement.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PcpRewardFilterElement.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PcpRewardFilterElement.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PcpRewardFilterElement.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RuleSid
+Data Type: Int64
+Database Column: 'RULE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'RuleSid','PcpRewardFilterElement.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Pos
+Data Type: Int16
+Database Column: 'POS',[cpRequired,cpNotNull],5,0
+Documentation: 'Pos','PcpRewardFilterElement.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Field
+Data Type: Nullable<string>
+Database Column: 'FIELD',[],50
+Documentation: 'Field','PcpRewardFilterElement.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Operator
+Data Type: Nullable<TPromoOperatorType>
+Database Column: 'OPERATOR',[],2,0
+Documentation: '0-Equal,1-NotEqual,2-Contains,3-DoesNotContains','PcpRewardFilterElement.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Operand
+Data Type: Nullable<string>
+Database Column: 'OPERAND',[],100
+Documentation: 'Operand','PcpRewardFilterElement.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JoinOperator
+Data Type: Nullable<TPromoJoinOperatorType>
+Database Column: 'JOIN_OPERATOR',[],2,0
+Documentation: '0-AND,1-OR','PcpRewardFilterElement.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StyleSid
+Data Type: Nullable<Int64>
+Database Column: 'STYLE_SID',[],19,0
+Documentation: 'StyleSid','PcpRewardFilterElement.17'
+Legacy Column: NA
+
+------------------------------------------------------
+

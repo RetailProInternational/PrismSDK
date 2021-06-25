@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.Subscription.pas
+##########################################################################################################
+Class Name: TSubscription
+Base Class Name: TModelBase
+Database Table: REM_SUBSCRIPTION
+Associate Class: False
+Identified By: 'FSubscriptionName,FSubscriptionType'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Subscription.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Subscription.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Subscription.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Subscription.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Subscription.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Subscription.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','Subscription.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','Subscription.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Subscription.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','Subscription.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: '0 = suspended, 1 = active.','Subscription.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionName
+Data Type: string
+Database Column: 'SUBSCRIPTION_NAME',[cpRequired,cpNotNull],40
+Documentation: 'name given to this subscription','Subscription.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionType
+Data Type: TSubscriptionType
+Database Column: 'SUBSCRIPTION_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: '0 = replication, 1 = v9replication, 2 = centrals','Subscription.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InternalFlag
+Data Type: boolean
+Database Column: 'INTERNAL_FLAG',[cpRequired, cpNotNull],1,0
+Documentation: 'Is this subscription internally generated, 0 = false, 1 = true','Subscription.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OwnerControllerSid
+Data Type: Nullable<Int64>
+Database Column: 'OWNER_CONTROLLER_SID',[],19,0
+Documentation: 'On which system was this subscription created, All subscriptions that have a valid controller value are considered shared and will be replicated to all systems. If this value is null then this is not a shared subscription','Subscription.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GlobalFilter
+Data Type: Nullable<string>
+Database Column: 'GLOBAL_FILTER',[],1024
+Documentation: 'Global Filter for this subscription','Subscription.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubConnection
+Data Type: IList<TSubConnection>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubResource
+Data Type: IList<TSubResource>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsCentralsSubscription
+Data Type: boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IncludesCoreResources
+Data Type: boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

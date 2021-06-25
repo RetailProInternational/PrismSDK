@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.CouponSetCoupon.pas
+##########################################################################################################
+Class Name: TCouponSetCoupon
+Base Class Name: TModelBase
+Database Table: COUPON_SET_COUPON
+Associate Class: False
+Identified By: 'FSbsSid,FCouponCode'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CouponSetCoupon.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CouponSetCoupon.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CouponSetCoupon.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CouponSetCoupon.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CouponSetCoupon.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','CouponSetCoupon.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','CouponSetCoupon.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','CouponSetCoupon.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CouponSetCoupon.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','CouponSetCoupon.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','CouponSetCoupon.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CouponSetSid
+Data Type: Int64
+Database Column: 'COUPON_SET_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'coupon set SID','CouponSetCoupon.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CouponCode
+Data Type: string
+Database Column: 'COUPON_CODE',[],75
+Documentation: 'coupon code','CouponSetCoupon.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IssuedStatus
+Data Type: Int16
+Database Column: 'ISSUED_STATUS',[],1,0
+Documentation: 'status of issued for this coupon (0-New, 1-Issued)','CouponSetCoupon.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedQty
+Data Type: Int16
+Database Column: 'USED_QTY',[],5,0
+Documentation: 'quantity of used for this coupon','CouponSetCoupon.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartDate
+Data Type: Nullable<TDateTime>
+Database Column: 'START_DATE',[
+Documentation: 'start date of activate for this coupon','CouponSetCoupon.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'end date for this coupon','CouponSetCoupon.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','CouponSetCoupon.18'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.TOrdItem.Associate.pas
+##########################################################################################################
+Class Name: TTOrdItemAssociate
+Base Class Name: 
+Database Table: TORD_ITEM
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AssignQty
+Data Type: Nullable<Double>
+Database Column: 'ASSIGN_QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SentQty
+Data Type: Nullable<Double>
+Database Column: 'SENT_QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

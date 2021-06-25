@@ -1,0 +1,21 @@
+{
+  "data" : [
+    {
+      "name" : null,
+      "internalname" : null,
+      "filename" : null,
+      "originalfilename" : null,
+      "description" : null,
+      "productversion" : null,
+      "fileversion" : null,
+      "buildinfo" : null,
+      "builddate" : null,
+      "product" : null,
+      "company" : null,
+      "copyright" : null,
+      "trademark" : null,
+      "comments" : null
+    }
+  ]
+}
+

@@ -1,0 +1,205 @@
+##########################################################################################################
+File Name: Prism.Model.DocDeposit.pas
+##########################################################################################################
+Class Name: TDocDeposit
+Base Class Name: TModelBase
+Database Table: DOCUMENT_DEPOSIT
+Associate Class: False
+Identified By: 'FSid')] // Probably should be FDocSid and maybe FCoupounCode (No Unique Index)
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','DocDeposit.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','DocDeposit.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','DocDeposit.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','DocDeposit.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','DocDeposit.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','DocDeposit.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','DocDeposit.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','DocDeposit.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','DocDeposit.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','DocDeposit.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigDocSid
+Data Type: Int64
+Database Column: 'ORIG_DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'the document the deposit was added','DocDeposit.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvoiceDocSid
+Data Type: Int64
+Database Column: 'INVOICE_DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'the document the deposit or part of the deposit was used','DocDeposit.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedDepositAmnt
+Data Type: Nullable<Double>
+Database Column: 'USED_DEPOSIT_AMNT',[],16,4
+Documentation: 'the amount of the deposit used','DocDeposit.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocDepositFlag
+Data Type: Boolean
+Database Column: 'DOC_DEPOSIT_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'flags that this is a document that affects the deposit balance(if = 1) and not the document that simply affects so items(if = 0)','DocDeposit.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocDepositTaken
+Data Type: Boolean
+Database Column: 'DOC_DEPOSIT_TAKEN',[cpRequired,cpNotNull],1,0
+Documentation: 'flags that the deposit amount on the document was increased (if = 1) or decreased(if = 0)','DocDeposit.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedSubtotal
+Data Type: Nullable<Double>
+Database Column: 'USED_SUBTOTAL',[],16,4
+Documentation: 'stores the used subtotal amount','DocDeposit.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedTaxAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_TAX_AMT',[],17,5
+Documentation: 'stores used tax amount','DocDeposit.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedDiscAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_DISC_AMT',[],16,4
+Documentation: 'stores used discount amount','DocDeposit.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedTransDiscAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_TRANS_DISC_AMT',[],16,4
+Documentation: 'stores used transfer discount amount','DocDeposit.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedFeeAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_FEE_AMT',[],16,4
+Documentation: 'stores used fee amount','DocDeposit.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedFeeTaxAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_FEE_TAX_AMT',[],16,4
+Documentation: 'stores used fee tax amount','DocDeposit.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedShippingAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_SHIPPING_AMT',[],16,4
+Documentation: 'stores used shipping fee amount','DocDeposit.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedShippingTaxAmt
+Data Type: Nullable<Double>
+Database Column: 'USED_SHIPPING_TAX_AMT',[],16,4
+Documentation: 'stores used shipping tax amount','DocDeposit.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TakenDepositAmt
+Data Type: Nullable<Double>
+Database Column: 'TAKEN_DEPOSIT_AMT',[],16,4
+Documentation: 'TakenDepositAmt','DocDeposit.24'
+Legacy Column: NA
+
+------------------------------------------------------
+

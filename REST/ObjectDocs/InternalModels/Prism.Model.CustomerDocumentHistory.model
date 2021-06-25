@@ -1,0 +1,229 @@
+##########################################################################################################
+File Name: Prism.Model.CustomerDocumentHistory.pas
+##########################################################################################################
+Class Name: TCustomerDocumentHistory
+Base Class Name: TModelBase
+Database Table: CUSTOMER_DOCUMENT_HISTORY
+Associate Class: False
+Identified By: 'FCustomerSid,FDocSid,FDocItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CustomerDocumentHistory.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],40
+Documentation: 'employee id of row creator using application ui','CustomerDocumentHistory.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],40
+Documentation: 'employee id of last modifier using application ui','CustomerDocumentHistory.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustomerDocumentHistory.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','CustomerDocumentHistory.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[],40
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','CustomerDocumentHistory.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustomerDocumentHistory.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: TDateTime
+Database Column: 'POST_DATE',[cpRequired,cpNotNull
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','CustomerDocumentHistory.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','CustomerDocumentHistory.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'Date cust_document_history record inserted.','CustomerDocumentHistory.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Foreign key to the original document - Used to retrieved document but may not be needed since we have DOC_ITEM_SID. TBD','CustomerDocumentHistory.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocInvnSbsItemSid
+Data Type: Int64
+Database Column: 'DOC_INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Inventory item sid - can be used to lookup inventory item columns for cust history display','CustomerDocumentHistory.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemDescription1
+Data Type: Nullable<string>
+Database Column: 'ITEM_DESCRIPTION1',[],30
+Documentation: 'Added in case item is not in local inventory. May obviate need for remote DB call or if remote DB not available user will have meaningful cust hist display','CustomerDocumentHistory.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemQty
+Data Type: Nullable<Double>
+Database Column: 'DOC_ITEM_QTY',[],10,3
+Documentation: 'In case item is not in local inventory may obviate need for remote DB or if remote DB not available','CustomerDocumentHistory.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemType
+Data Type: TCustHistItemType
+Database Column: 'DOC_ITEM_TYPE',[],1,0
+Documentation: '1=Sale,2=Return,3=Order,4=ExchangeSale, Return, Exchange - Used for filtering and searching','CustomerDocumentHistory.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemPrice
+Data Type: Nullable<Double>
+Database Column: 'DOC_ITEM_PRICE',[],16,4
+Documentation: 'Added in case item is not in local inventory may obviate need for remote DB call or if remote DB not available','CustomerDocumentHistory.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemPriceWTax
+Data Type: Nullable<Double>
+Database Column: 'DOC_ITEM_PRICE_W_TAX',[],16,4
+Documentation: 'Added in case item is not in local inventory may obviate need for remote DB call or if remote DB not available user will have meaningful display','CustomerDocumentHistory.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustomerSid
+Data Type: Int64
+Database Column: 'CUSTOMER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Bill to customer sid - foreign key to customer table','CustomerDocumentHistory.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: 'STORE_NO',[],5,0
+Documentation: 'Show which store item was purchased at','CustomerDocumentHistory.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: 'CURRENCY_NAME',[],20
+Documentation: 'Get this from document table or lookup this value with subsidiary base_currency_sid','CustomerDocumentHistory.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemAttribute
+Data Type: Nullable<string>
+Database Column: 'ITEM_ATTRIBUTE',[],8
+Documentation: 'If item is not in local inventory may obviate need for remote DB call or if remote DB not available','CustomerDocumentHistory.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSize
+Data Type: Nullable<string>
+Database Column: 'ITEM_SIZE',[],8
+Documentation: 'If item is not in local inventory may obviate need for remote DB call or if remote DB not available','CustomerDocumentHistory.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemSid
+Data Type: Int64
+Database Column: 'DOC_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Foreign key to the item detail on the original document. Also used to lookup Document_SID','CustomerDocumentHistory.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: 'SBS_NO',[],5,0
+Documentation: 'SbsNo','CustomerDocumentHistory.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemDescription2
+Data Type: Nullable<string>
+Database Column: 'ITEM_DESCRIPTION2',[],30
+Documentation: 'ItemDescription2','CustomerDocumentHistory.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocCreatedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'DOC_CREATED_DATETIME',[
+Documentation: 'Date document item was created','CustomerDocumentHistory.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocNo
+Data Type: Nullable<Integer>
+Database Column: 'DOC_NO',[],10,0
+Documentation: 'Document reference to the original document','CustomerDocumentHistory.27'
+Legacy Column: NA
+
+------------------------------------------------------
+

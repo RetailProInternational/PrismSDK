@@ -1,0 +1,45 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "seasonsid" : null,
+      "pricelvlsid" : null,
+      "markdownname" : null,
+      "markdowntype" : null,
+      "markdowndestination" : null,
+      "markdowndate" : null,
+      "inversedate" : null,
+      "inprogress" : 0,
+      "applieddate" : null,
+      "restoreddate" : null,
+      "markdownowner" : null,
+      "requestreverse" : false,
+      "active" : false,
+      "markdownadj" : [
+      ],
+      "markdownitem" : [
+      ],
+      "reversed" : false,
+      "itemcount" : 0,
+      "pricelvl" : null,
+      "sbsno" : null,
+      "seasoncode" : null,
+      "pricelvlname" : null,
+      "sbsname" : null,
+      "seasonname" : null,
+      "origintimezone" : "-07:00",
+      "ownername" : null
+    }
+  ]
+}
+

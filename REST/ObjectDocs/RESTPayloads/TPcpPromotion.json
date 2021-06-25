@@ -1,0 +1,98 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "generalactive" : null,
+      "generalpromoname" : null,
+      "generaldescription" : null,
+      "generaldiscreason" : null,
+      "generalpromogroup" : null,
+      "generalpromotype" : null,
+      "generalpos" : null,
+      "activationstartdate" : null,
+      "activationstarttime" : null,
+      "activationenddate" : null,
+      "activationendtime" : null,
+      "activationsbssid" : "0",
+      "activationusestores" : null,
+      "activationuseregions" : null,
+      "activationusedistricts" : null,
+      "activationstorefilter" : null,
+      "activationusepricelevels" : null,
+      "activationcanbecombined" : null,
+      "activationcombinedgroups" : false,
+      "activationapplycount" : null,
+      "validationuseitems" : null,
+      "validationusesubtotal" : null,
+      "validationsubtotal" : null,
+      "validationusecoupons" : null,
+      "validationcoupontype" : false,
+      "validationcouponsetid" : null,
+      "validationusecustomers" : null,
+      "validationcustomerfilter" : null,
+      "validationsortorder" : null,
+      "rewardvalidationitems" : null,
+      "rewardvalidationmode" : null,
+      "rewardvalidationdisctype" : null,
+      "rewardvalidationdiscvalue" : null,
+      "rewardvalidationplsid" : null,
+      "rewardadditionaldisctype" : null,
+      "rewardadditionaldiscvalue" : null,
+      "rewardotheritems" : null,
+      "rewardgd" : null,
+      "rewardgdmode" : null,
+      "rewardgddisctype" : null,
+      "rewardgddiscvalue" : null,
+      "rewardcouponcode" : null,
+      "rewardcoupontype" : false,
+      "rewardcouponsetid" : null,
+      "rewardsortorder" : null,
+      "spreaddiscbogo" : false,
+      "promotionslistsid" : "0",
+      "generalsaved" : null,
+      "customerfilterui" : null,
+      "storefilterui" : null,
+      "applymanualdiscounteditems" : false,
+      "validationcouponcount" : null,
+      "rewardgiftitem" : false,
+      "rewardgiftitemsid" : null,
+      "publisheddatetime" : null,
+      "overridecustomerpricelevel" : false,
+      "allowpriceincrease" : false,
+      "pcpvalidationcoupon" : [
+      ],
+      "pcprewarditemdisctier" : [
+      ],
+      "pcprewardgddisctier" : [
+      ],
+      "pcppromotionstore" : [
+      ],
+      "pcppromotiondistrict" : [
+      ],
+      "pcppromotionpricelevel" : [
+      ],
+      "pcppromotionbusinessunit" : [
+      ],
+      "pcpvalidationitemrule" : [
+      ],
+      "pcprewardotheritemrule" : [
+      ],
+      "pcppromotiongroups" : [
+      ],
+      "sbsno" : null,
+      "invnsbsitemuid" : null,
+      "rewardvalidationpl" : null,
+      "origintimezone" : "-07:00"
+    }
+  ]
+}
+

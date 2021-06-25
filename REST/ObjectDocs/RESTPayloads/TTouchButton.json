@@ -1,0 +1,31 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "buttonseq" : null,
+      "buttonpos" : null,
+      "menusid" : "0",
+      "invnitemsid" : null,
+      "invnstylesid" : null,
+      "buttontext" : null,
+      "buttonstyle" : null,
+      "pageno" : null,
+      "targetmenusid" : null,
+      "buttonimageenabled" : false,
+      "buttonimageindex" : null,
+      "itemuid" : null,
+      "itemactive" : false,
+      "imagepath" : "inventory\\0000\\0000\\0000\\0000\\"
+    }
+  ]
+}
+

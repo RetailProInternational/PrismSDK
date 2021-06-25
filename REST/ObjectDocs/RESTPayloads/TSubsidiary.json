@@ -1,0 +1,43 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbsno" : 0,
+      "sbsname" : null,
+      "styledef" : null,
+      "basecurrencysid" : null,
+      "foreigncurrencysid" : null,
+      "activepricelvlsid" : null,
+      "activeseasonsid" : null,
+      "docnoprefix" : null,
+      "calendarsid" : null,
+      "status" : null,
+      "master" : false,
+      "dimunits" : null,
+      "weightunits" : null,
+      "languagesid" : null,
+      "countrysid" : null,
+      "preferences" : null,
+      "active" : false,
+      "autoseason" : false,
+      "seasonapplieddatetime" : null,
+      "pricelevel" : null,
+      "seasoncode" : null,
+      "calendarname" : null,
+      "currencycode" : null,
+      "languagename" : null,
+      "countrycode" : null,
+      "foreigncurrencycode" : null
+    }
+  ]
+}
+

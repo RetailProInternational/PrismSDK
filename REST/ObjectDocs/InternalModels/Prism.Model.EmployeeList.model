@@ -1,0 +1,677 @@
+##########################################################################################################
+File Name: Prism.Model.EmployeeList.pas
+##########################################################################################################
+Class Name: TEmployeeList
+Base Class Name: TModelBase
+Database Table: EMPLOYEE_LIST_V
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','EmployeeList.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','EmployeeList.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','EmployeeList.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','EmployeeList.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','EmployeeList.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','EmployeeList.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','EmployeeList.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','EmployeeList.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','EmployeeList.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','EmployeeList.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','EmployeeList.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplNo1
+Data Type: Nullable<string>
+Database Column: 'EMPL_NO1',[],15
+Documentation: 'EmplNo1','EmployeeList.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplNo2
+Data Type: Nullable<string>
+Database Column: 'EMPL_NO2',[],15
+Documentation: 'EmplNo2','EmployeeList.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: Nullable<string>
+Database Column: 'EMPL_NAME',[],8
+Documentation: 'EmplName','EmployeeList.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','EmployeeList.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FullName
+Data Type: Nullable<string>
+Database Column: 'FULL_NAME',[],60
+Documentation: 'FullName','EmployeeList.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommLvl
+Data Type: Nullable<string>
+Database Column: 'COMM_LVL',[],1
+Documentation: 'CommLvl','EmployeeList.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Drawer
+Data Type: Nullable<Int16>
+Database Column: 'DRAWER',[],5,0
+Documentation: 'Drawer','EmployeeList.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TimeShiftNo
+Data Type: Nullable<Int16>
+Database Column: 'TIME_SHIFT_NO',[],5,0
+Documentation: 'TimeShiftNo','EmployeeList.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC',[],16,4
+Documentation: 'MaxDiscPerc','EmployeeList.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobSid
+Data Type: Nullable<Int64>
+Database Column: 'JOB_SID',[],19,0
+Documentation: 'JobSid','EmployeeList.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Nullable<Int64>
+Database Column: 'CUST_SID',[],19,0
+Documentation: 'CustSid','EmployeeList.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],200
+Documentation: 'Description','EmployeeList.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HireDate
+Data Type: Nullable<TDateTime>
+Database Column: 'HIRE_DATE',[
+Documentation: 'HireDate','EmployeeList.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Exempt
+Data Type: boolean
+Database Column: 'EXEMPT',[cpRequired,cpNotNull],1,0
+Documentation: 'Exempt','EmployeeList.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSid
+Data Type: Nullable<Int64>
+Database Column: 'TILL_SID',[],19,0
+Documentation: 'TillSid','EmployeeList.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_SBS_SID',[],19,0
+Documentation: 'OrigSbsSid','EmployeeList.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'BASE_STORE_SID',[],19,0
+Documentation: 'BaseStoreSid','EmployeeList.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RequiredPassword
+Data Type: boolean
+Database Column: 'REQUIRED_PASSWORD',[cpNotNull],1,0
+Documentation: 'RequiredPassword','EmployeeList.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplId
+Data Type: Nullable<Integer>
+Database Column: 'EMPL_ID',[],10,0
+Documentation: 'EmplId','EmployeeList.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TEmployeeStatus>
+Database Column: 'STATUS',[],1,0
+Documentation: 'Status','EmployeeList.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstName
+Data Type: Nullable<string>
+Database Column: 'FIRST_NAME',[],30
+Documentation: 'FirstName','EmployeeList.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastName
+Data Type: Nullable<string>
+Database Column: 'LAST_NAME',[],30
+Documentation: 'LastName','EmployeeList.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],50
+Documentation: 'Udf1String','EmployeeList.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],50
+Documentation: 'Udf2String','EmployeeList.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],50
+Documentation: 'Udf3String','EmployeeList.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],50
+Documentation: 'Udf4String','EmployeeList.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],50
+Documentation: 'Udf5String','EmployeeList.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: 'Udf1Date','EmployeeList.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: 'Udf2Date','EmployeeList.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Email
+Data Type: Nullable<string>
+Database Column: 'EMAIL',[],100
+Documentation: 'Email','EmployeeList.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_1',[],40
+Documentation: 'Address1','EmployeeList.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_2',[],40
+Documentation: 'Address2','EmployeeList.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_3',[],40
+Documentation: 'Address3','EmployeeList.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_4',[],40
+Documentation: 'Address4','EmployeeList.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_5',[],40
+Documentation: 'Address5','EmployeeList.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address6
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_6',[],40
+Documentation: 'Address6','EmployeeList.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCode
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE',[],10
+Documentation: 'PostalCode','EmployeeList.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: City
+Data Type: Nullable<string>
+Database Column: 'CITY',[],40
+Documentation: 'City','EmployeeList.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: Nullable<string>
+Database Column: 'STATE',[],5
+Documentation: 'State','EmployeeList.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneNo
+Data Type: Nullable<string>
+Database Column: 'PHONE_NO',[],30
+Documentation: 'PhoneNo','EmployeeList.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'Udf6String','EmployeeList.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'Udf7String','EmployeeList.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'Udf8String','EmployeeList.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'Udf9String','EmployeeList.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'Udf10String','EmployeeList.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf11String
+Data Type: Nullable<string>
+Database Column: 'UDF11_STRING',[],50
+Documentation: 'Udf11String','EmployeeList.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf12String
+Data Type: Nullable<string>
+Database Column: 'UDF12_STRING',[],50
+Documentation: 'Udf12String','EmployeeList.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf13String
+Data Type: Nullable<string>
+Database Column: 'UDF13_STRING',[],50
+Documentation: 'Udf13String','EmployeeList.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf14String
+Data Type: Nullable<string>
+Database Column: 'UDF14_STRING',[],50
+Documentation: 'Udf14String','EmployeeList.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf15String
+Data Type: Nullable<string>
+Database Column: 'UDF15_STRING',[],50
+Documentation: 'Udf15String','EmployeeList.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf16String
+Data Type: Nullable<string>
+Database Column: 'UDF16_STRING',[],50
+Documentation: 'Udf16String','EmployeeList.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf17String
+Data Type: Nullable<string>
+Database Column: 'UDF17_STRING',[],50
+Documentation: 'Udf17String','EmployeeList.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf18String
+Data Type: Nullable<string>
+Database Column: 'UDF18_STRING',[],50
+Documentation: 'Udf18String','EmployeeList.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobName
+Data Type: Nullable<string>
+Database Column: 'JOB_NAME',[],30
+Documentation: 'JobName','EmployeeList.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobDescription
+Data Type: Nullable<string>
+Database Column: 'JOB_DESCRIPTION',[],120
+Documentation: 'JobDescription','EmployeeList.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Enabled
+Data Type: boolean
+Database Column: 'ENABLED',[cpNotNull],1,0
+Documentation: 'Enabled','EmployeeList.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Internal
+Data Type: boolean
+Database Column: 'INTERNAL',[cpNotNull],1,0
+Documentation: 'Internal','EmployeeList.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Admin
+Data Type: boolean
+Database Column: 'ADMIN',[cpNotNull],1,0
+Documentation: 'Admin','EmployeeList.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserName
+Data Type: Nullable<string>
+Database Column: 'USER_NAME',[],30
+Documentation: 'UserName','EmployeeList.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: 'STORE_NO',[],5,0
+Documentation: 'StoreNo','EmployeeList.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: 'STORE_NAME',[],40
+Documentation: 'StoreName','EmployeeList.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: 'STORE_CODE',[],5
+Documentation: 'StoreCode','EmployeeList.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigSbsNo
+Data Type: Nullable<Int16>
+Database Column: 'ORIG_SBS_NO',[],5,0
+Documentation: 'OrigSbsNo','EmployeeList.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigSbsName
+Data Type: Nullable<string>
+Database Column: 'ORIG_SBS_NAME',[],15
+Documentation: 'OrigSbsName','EmployeeList.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressType
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_TYPE',[],30
+Documentation: 'AddressType','EmployeeList.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneType
+Data Type: Nullable<string>
+Database Column: 'PHONE_TYPE',[],20
+Documentation: 'PhoneType','EmployeeList.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillName
+Data Type: Nullable<string>
+Database Column: 'TILL_NAME',[],40
+Documentation: 'TillName','EmployeeList.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillId
+Data Type: Nullable<Integer>
+Database Column: 'TILL_ID',[],10,0
+Documentation: 'TillId','EmployeeList.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Locked
+Data Type: boolean
+Database Column: 'LOCKED',[],10,0
+Documentation: 'Locked','EmployeeList.80'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LockedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LOCKED_DATE',[
+Documentation: 'LockedDate','EmployeeList.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FailureAttempts
+Data Type: Nullable<Integer>
+Database Column: 'FAILURE_ATTEMPTS',[],4,0
+Documentation: 'FailureAttempts','EmployeeList.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupUserList
+Data Type: IList<TUserGroupUserList>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

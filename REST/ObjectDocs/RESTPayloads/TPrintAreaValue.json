@@ -1,0 +1,38 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "printareasid" : null,
+      "sbssid" : null,
+      "storesid" : null,
+      "workstationsid" : null,
+      "overrideflag" : false,
+      "defaultaction" : 0,
+      "showprintbutton" : false,
+      "showemailbutton" : false,
+      "showprintemailbutton" : false,
+      "showpreviewbutton" : false,
+      "showprinterselection" : false,
+      "showdesignselection" : false,
+      "shownumbercopies" : false,
+      "defaultprintertypesid" : null,
+      "defaultprintdesignsid" : null,
+      "emaildesignsid" : null,
+      "emailpreviewflag" : false,
+      "showemaildesignselection" : false,
+      "defaultcopies" : null,
+      "printertypesetting" : [
+      ]
+    }
+  ]
+}
+

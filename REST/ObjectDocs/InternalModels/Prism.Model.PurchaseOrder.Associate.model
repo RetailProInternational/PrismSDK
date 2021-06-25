@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.PurchaseOrder.Associate.pas
+##########################################################################################################
+Class Name: TPurchaseOrderAssociate
+Base Class Name: 
+Database Table: PO
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PONo
+Data Type: Nullable<string>
+Database Column: 'PO_NO',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CancelDate
+Data Type: Nullable<TDateTime>
+Database Column: 'CANCEL_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

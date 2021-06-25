@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.PurchFeeType.pas
+##########################################################################################################
+Class Name: TPurchFeeType
+Base Class Name: TModelBase
+Database Table: PURCH_FEE_TYPE
+Associate Class: False
+Identified By: 'FSbsSid,FFeeType'
+Legacy Identified By: 'SbsNo,FeeType'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PurchFeeType.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PurchFeeType.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PurchFeeType.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PurchFeeType.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PurchFeeType.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PurchFeeType.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PurchFeeType.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PurchFeeType.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PurchFeeType.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PurchFeeType.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','PurchFeeType.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Int16
+Database Column: 'FEE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'FeeType','PurchFeeType.12'
+Legacy Column: 'FEE_TYPE'
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: 'FEE_NAME',[],6
+Documentation: 'FeeName','PurchFeeType.13'
+Legacy Column: 'FEE_NAME'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','PurchFeeType.14'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','PurchFeeType.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

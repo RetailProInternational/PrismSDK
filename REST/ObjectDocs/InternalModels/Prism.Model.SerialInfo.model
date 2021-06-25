@@ -1,0 +1,61 @@
+##########################################################################################################
+File Name: Prism.Model.SerialInfo.pas
+##########################################################################################################
+Class Name: TSerialInfo
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: SNSid
+Data Type: Int64
+Database Column: 'SID',[cpPrimaryKey],19,0
+Documentation: 'SNSid','SerialInfo.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialNote
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SNQtySid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SNQty
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SNActive
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

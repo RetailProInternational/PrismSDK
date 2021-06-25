@@ -1,0 +1,397 @@
+##########################################################################################################
+File Name: Prism.Model.DrawerEvent.pas
+##########################################################################################################
+Class Name: TDrawerEvent
+Base Class Name: TModelBase
+Database Table: DRAWER_EVENT
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: 'Sid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DrawerEvent.1'
+Legacy Column: 'INVC_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DrawerEvent.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATETIME',[
+Documentation: 'datetime row was created','DrawerEvent.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DrawerEvent.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DrawerEvent.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DrawerEvent.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','DrawerEvent.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DrawerEvent.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventType
+Data Type: TDrawerEventType
+Database Column: 'EVENT_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'Event type code, 1=open 2=close 3=cash drop, 4=disbursement, 5=cash in, 6=cash out','DrawerEvent.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record','DrawerEvent.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record','DrawerEvent.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierSid
+Data Type: Nullable<Int64>
+Database Column: 'CASHIER_SID',[],19,0
+Documentation: 'reference to employee record','DrawerEvent.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'reference to workstation record','DrawerEvent.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerNumber
+Data Type: Nullable<Int16>
+Database Column: 'DRAWER_NUMBER',[],1,0
+Documentation: 'drawer number, either 1 or 2','DrawerEvent.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSbsSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSid
+Data Type: Nullable<Int64>
+Database Column: 'TILL_SID',[],19,0
+Documentation: 'reference to till record','DrawerEvent.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: TDrawerEventStatus
+Database Column: 'STATUS',[cpRequired,cpNotNull],5,0
+Documentation: 'status indicates the stage of data entry for this drawer event, where 0-Inactive,1-Processing,2-Open,3-Closed','DrawerEvent.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EventDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'EVENT_DATETIME',[
+Documentation: 'date and time open was performed','DrawerEvent.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DrawerEvent.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','DrawerEvent.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReferenceEvent
+Data Type: Nullable<Int64>
+Database Column: 'REFERENCE_EVENT',[],19,0
+Documentation: 'event that this event is paired with, eg. an open event and a close event.','DrawerEvent.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonSid
+Data Type: Nullable<Int64>
+Database Column: 'REASON_SID',[],19,0
+Documentation: 'This is the Reason assosiated with the drawer event','DrawerEvent.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],255
+Documentation: 'This is the Reason assosiated with the drawer event','DrawerEvent.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Recounted
+Data Type: Boolean
+Database Column: 'RECOUNTED',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates drawer has been recounted and is no longer active','DrawerEvent.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecountedBy
+Data Type: Nullable<string>
+Database Column: 'RECOUNTED_BY',[],30
+Documentation: 'Indicates who recounted drawer','DrawerEvent.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReferenceDocument
+Data Type: Nullable<Int64>
+Database Column: 'REFERENCE_DOCUMENT',[],19,0
+Documentation: 'Indicates the new active drawer event','DrawerEvent.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates whether a Register is Active given the current filter setting(s).     TENANT_SID, SBS_SID, STORE_SID are required and set from Session data. CASHIER_SID, WORKSTATION_SID, TILL_SID and DRAWER_NUMBER are optional depending on the RegisterDefinitio','DrawerEvent.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClosedBy
+Data Type: Nullable<string>
+Database Column: 'CLOSED_BY',[],30
+Documentation: 'ClosedBy','DrawerEvent.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BlindAttempts
+Data Type: Nullable<Int16>
+Database Column: 'BLIND_ATTEMPTS',[],5,0
+Documentation: 'counts the number of blind attempts made when closing a drawer, the max attempts possible is controlled by the struct_zout_blind_close_attempts preference','DrawerEvent.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyTotal
+Data Type: Nullable<Double>
+Database Column: 'CURRENCY_TOTAL',[],16,4
+Documentation: 'total value of the currencies for the current drawer event','DrawerEvent.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SequenceNo
+Data Type: Nullable<Integer>
+Database Column: 'SEQUENCE_NO',[],10,0
+Documentation: 'sequence assigned if drawer_event.event_type (cashdrop=3;popdrawer=4;paidin=5;paidout=6)','DrawerEvent.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Finalized
+Data Type: Boolean
+Database Column: 'FINALIZED',[],1,0
+Documentation: 'This field is used to trigger finalization code of the server: Default = 0 and 1 indicate the record is finalized','DrawerEvent.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<integer>
+Database Column: 'WORKSTATION_NO', [], 5
+Documentation: 'Workstation number that created this record','DrawerEvent.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationName
+Data Type: Nullable<string>
+Database Column: 'WORKSTATION_NAME', [], 20
+Documentation: 'Name of the workstation that created this record','DrawerEvent.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerEventCurrency
+Data Type: IList<TDrawerEventCurrency>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierId
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'EmplID','DrawerEvent.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','DrawerEvent.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNumber
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'Number','DrawerEvent.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerNo
+Data Type: Nullable<int32>
+Database Column: NA
+Documentation: 'user defined database number','DrawerEvent.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Reason definition','DrawerEvent.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: Nullable<TReasonType>
+Database Column: NA
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','DrawerEvent.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Unique name of the till.  Till name is unique within the scope of the controller.','DrawerEvent.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','DrawerEvent.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DrawerEvent.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'SbsNo','DrawerEvent.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'StoreNo','DrawerEvent.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

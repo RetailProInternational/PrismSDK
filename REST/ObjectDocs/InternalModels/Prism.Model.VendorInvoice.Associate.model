@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.VendorInvoice.Associate.pas
+##########################################################################################################
+Class Name: TVendorInvoiceAssociate
+Base Class Name: TModelBase
+Database Table: VENDOR_INVOICE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcId
+Data Type: Nullable<Integer>
+Database Column: 'VEND_INVC_ID',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcNo
+Data Type: Nullable<string>
+Database Column: 'VEND_INVC_NO',[],15
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcDate
+Data Type: Nullable<TDateTime>
+Database Column: 'VEND_INVC_DATE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

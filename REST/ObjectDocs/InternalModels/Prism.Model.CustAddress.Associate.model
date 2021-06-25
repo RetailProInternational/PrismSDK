@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.CustAddress.Associate.pas
+##########################################################################################################
+Class Name: TCustAddressAssociate
+Base Class Name: 
+Database Table: CUSTOMER_ADDRESS
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpNotNull,cpPrimaryKey],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Nullable<Int16>
+Database Column: 'SEQ_NO',[],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

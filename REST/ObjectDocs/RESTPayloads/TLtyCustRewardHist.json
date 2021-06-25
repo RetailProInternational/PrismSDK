@@ -1,0 +1,30 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "reverse" : false,
+      "custsid" : "0",
+      "ltypgmsid" : "0",
+      "docsid" : "0",
+      "itempos" : 0,
+      "invnitemuid" : "0",
+      "sbsno" : 0,
+      "action" : 0,
+      "doccreatedate" : null,
+      "docno" : 0,
+      "doctotal" : 0,
+      "storecode" : null,
+      "emplname" : null
+    }
+  ]
+}
+

@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.AddressType.Associate.pas
+##########################################################################################################
+Class Name: TAddressTypeAssociate
+Base Class Name: 
+Database Table: ADDRESS_TYPE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'TYPE_NAME',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

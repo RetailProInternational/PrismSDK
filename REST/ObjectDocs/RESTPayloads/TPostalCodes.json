@@ -1,0 +1,33 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : "0",
+      "countrycode" : null,
+      "zipcode" : null,
+      "zipcodetype" : null,
+      "cityname" : null,
+      "citynametype" : null,
+      "countyname" : null,
+      "countyfips" : null,
+      "statename" : null,
+      "statecode" : null,
+      "statefips" : null,
+      "areacode" : null,
+      "timezone" : null,
+      "utcoffset" : null,
+      "dstflag" : false,
+      "latitude" : null,
+      "longitude" : null
+    }
+  ]
+}
+

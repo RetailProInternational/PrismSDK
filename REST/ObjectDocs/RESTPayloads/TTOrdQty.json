@@ -1,0 +1,34 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "torditemsid" : "0",
+      "sbssid" : "0",
+      "storesid" : "0",
+      "ordqty" : null,
+      "sentqty" : null,
+      "address1" : null,
+      "address2" : null,
+      "address3" : null,
+      "address4" : null,
+      "address5" : null,
+      "storename" : null,
+      "zip" : null,
+      "sbsno" : null,
+      "storeno" : null,
+      "itemordqty" : null,
+      "itemsentqty" : null,
+      "itemassignqty" : null
+    }
+  ]
+}
+

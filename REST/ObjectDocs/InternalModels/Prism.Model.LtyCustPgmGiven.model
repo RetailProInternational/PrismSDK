@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.LtyCustPgmGiven.pas
+##########################################################################################################
+Class Name: TLtyCustPgmGiven
+Base Class Name: TModelBase
+Database Table: LTY_CUST_PGM_GIVEN
+Associate Class: False
+Identified By: 'FLtyCustCentralSid,FLtyPgmSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','LtyCustPgmGiven.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','LtyCustPgmGiven.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','LtyCustPgmGiven.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','LtyCustPgmGiven.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','LtyCustPgmGiven.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','LtyCustPgmGiven.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','LtyCustPgmGiven.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','LtyCustPgmGiven.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','LtyCustPgmGiven.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','LtyCustPgmGiven.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPgmSid
+Data Type: Int64
+Database Column: 'LTY_PGM_SID',[],19,0
+Documentation: 'LtyPgmSid','LtyCustPgmGiven.11'
+Legacy Column: 'LTY_PGM_SID'
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[],19,0
+Documentation: 'SID of the customer whose items are given as a gift against the Loyalty program.','LtyCustPgmGiven.12'
+Legacy Column: 'CUST_SID'
+
+------------------------------------------------------
+
+Name: LtyCustCentralSid
+Data Type: Int64
+Database Column: 'LTY_CUST_CENTRAL_SID',[],19,0
+Documentation: 'LtyCustCentralSid','LtyCustPgmGiven.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Nullable<Int64>
+Database Column: 'DOC_SID',[],19,0
+Documentation: 'DOC_SID and ITEM_POS define doc-item against which the item is given, for reporting purposes.','LtyCustPgmGiven.14'
+Legacy Column: 'INVC_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Nullable<Int16>
+Database Column: 'ITEM_POS',[],5,0
+Documentation: 'DOC_SID and ITEM_POS define doc-item against which the item is given, for reporting purposes.','LtyCustPgmGiven.15'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: InvnItemUid
+Data Type: Int64
+Database Column: 'INVN_ITEM_UID',[cpRequired,cpNotNull],19,0
+Documentation: 'INVN_SBS_ITEM.invn_item_uid (aka v9 item identifier) of a given item.','LtyCustPgmGiven.16'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'Subsidiary number.','LtyCustPgmGiven.17'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates this item was given to the customer as a loyalty reward.','LtyCustPgmGiven.18'
+Legacy Column: NA
+
+------------------------------------------------------
+

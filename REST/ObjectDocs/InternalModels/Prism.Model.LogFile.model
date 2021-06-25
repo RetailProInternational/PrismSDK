@@ -1,0 +1,69 @@
+##########################################################################################################
+File Name: Prism.Model.LogFile.pas
+##########################################################################################################
+Class Name: TLogFile
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: LogFileName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LogFileType
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LogFileDate
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LogFileSize
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ErrorCount
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LogFilePath
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LogFileEndpoint
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

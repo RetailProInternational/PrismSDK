@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.GridColumn.pas
+##########################################################################################################
+Class Name: TGridColumn
+Base Class Name: TModelBase
+Database Table: GRID_COLUMN
+Associate Class: False
+Identified By: 'FGridDataSid,FAttributeName'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','GridColumn.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','GridColumn.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','GridColumn.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','GridColumn.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','GridColumn.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','GridColumn.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','GridColumn.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','GridColumn.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','GridColumn.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','GridColumn.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GridDataSid
+Data Type: Int64
+Database Column: 'GRID_DATA_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'GridDataSid','GridColumn.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AttributeName
+Data Type: string
+Database Column: 'ATTRIBUTE_NAME',[cpRequired,cpNotNull],30
+Documentation: 'Name of the attribute','GridColumn.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GdDatatype
+Data Type: string
+Database Column: 'GD_DATATYPE',[cpRequired,cpNotNull],106
+Documentation: 'GdDatatype','GridColumn.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Transid
+Data Type: string
+Database Column: 'TRANSID',[cpRequired,cpNotNull],25
+Documentation: 'translation id of attribute name','GridColumn.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Sortable
+Data Type: Boolean
+Database Column: 'SORTABLE',[],1,0
+Documentation: 'whether or not the column is sortable','GridColumn.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Visible
+Data Type: Boolean
+Database Column: 'VISIBLE',[],1,0
+Documentation: 'whether or not the column is visible by default','GridColumn.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Orderindex
+Data Type: Int16
+Database Column: 'ORDERINDEX',[cpRequired,cpNotNull],5,0
+Documentation: 'order in which this column will display','GridColumn.17'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.PriceLevel.Associate.pas
+##########################################################################################################
+Class Name: TPriceLevelAssociate
+Base Class Name: 
+Database Table: PRICE_LEVEL
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Level
+Data Type: Nullable<Integer>
+Database Column: 'PRICE_LVL',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlName
+Data Type: Nullable<string>
+Database Column: 'PRICE_LVL_NAME',[],6
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

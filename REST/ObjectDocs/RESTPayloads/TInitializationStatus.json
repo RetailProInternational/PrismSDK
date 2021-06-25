@@ -1,0 +1,29 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "loadstarttime" : null,
+      "currentresourcewip" : null,
+      "totalrowsprocessedsofar" : null,
+      "lastupdatedatetime" : null,
+      "completeflag" : false,
+      "totalrowsexpected" : null,
+      "remsubscriptionsid" : "0",
+      "initstatusresource" : [
+      ],
+      "initstatusconnection" : [
+      ],
+      "subscriptionname" : null
+    }
+  ]
+}
+

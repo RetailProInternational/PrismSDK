@@ -1,0 +1,253 @@
+##########################################################################################################
+File Name: Prism.Model.PrintAreaValue.pas
+##########################################################################################################
+Class Name: TPrintAreaValue
+Base Class Name: TModelBase
+Database Table: PRINT_AREA_VALUE
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PrintAreaValue.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PrintAreaValue.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PrintAreaValue.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PrintAreaValue.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PrintAreaValue.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PrintAreaValue.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PrintAreaValue.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PrintAreaValue.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PrintAreaValue.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PrintAreaValue.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrintAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'PRINT_AREA_SID',[],19,0
+Documentation: 'Points to the corresponding Print Area record in Print Area table','PrintAreaValue.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: 'SbsSid','PrintAreaValue.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'reference to store record','PrintAreaValue.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'reference to workstation record','PrintAreaValue.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OverrideFlag
+Data Type: Boolean
+Database Column: 'OVERRIDE_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'Flag indicating that children area settings are ignored','PrintAreaValue.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultAction
+Data Type: TPrintDefaultAction
+Database Column: 'DEFAULT_ACTION',[cpRequired,cpNotNull],1,0
+Documentation: 'The default action when printing this area 0=PrintDialog|1=Print|2=Print+EMail|4=EMail','PrintAreaValue.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowPrintButton
+Data Type: Boolean
+Database Column: 'SHOW_PRINT_BUTTON',[],1,0
+Documentation: 'Flag indicating if the print button is shown in the print dialog for this area','PrintAreaValue.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowEmailButton
+Data Type: Boolean
+Database Column: 'SHOW_EMAIL_BUTTON',[],1,0
+Documentation: 'Flag indicating if the email button is shown in the print dialog for this area','PrintAreaValue.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowPrintEmailButton
+Data Type: Boolean
+Database Column: 'SHOW_PRINT_EMAIL_BUTTON',[],1,0
+Documentation: 'Flag indicating if the combination print email button is shown in the print dialog for this area','PrintAreaValue.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowPreviewButton
+Data Type: Boolean
+Database Column: 'SHOW_PREVIEW_BUTTON',[],1,0
+Documentation: 'Flag indicating if the preview button is shown in the print dialog for this area','PrintAreaValue.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowPrinterSelection
+Data Type: Boolean
+Database Column: 'SHOW_PRINTER_SELECTION',[],1,0
+Documentation: 'Flag indicating if the printer se3lection combo is shown in the print dialog for this area','PrintAreaValue.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowDesignSelection
+Data Type: Boolean
+Database Column: 'SHOW_DESIGN_SELECTION',[],1,0
+Documentation: 'Flag indicating if the printer design combo is shown in the print dialog for this area','PrintAreaValue.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowNumberCopies
+Data Type: Boolean
+Database Column: 'SHOW_NUMBER_COPIES',[],1,0
+Documentation: 'Flag indicating if the number of copies controls are shown in the print dialog for this area','PrintAreaValue.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultPrinterTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'DEFAULT_PRINTER_TYPE_SID',[],19,0
+Documentation: 'Reference to the default printer definition','PrintAreaValue.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultPrintDesignSid
+Data Type: Nullable<Int64>
+Database Column: 'DEFAULT_PRINT_DESIGN_SID',[],19,0
+Documentation: 'Reference to the default design definition','PrintAreaValue.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailDesignSid
+Data Type: Nullable<Int64>
+Database Column: 'EMAIL_DESIGN_SID',[],19,0
+Documentation: 'Reference to the design definition for email','PrintAreaValue.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailPreviewFlag
+Data Type: Boolean
+Database Column: 'EMAIL_PREVIEW_FLAG',[],1,0
+Documentation: 'Flag indicating email will be previewed before printing','PrintAreaValue.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShowEmailDesignSelection
+Data Type: Boolean
+Database Column: 'SHOW_EMAIL_DESIGN_SELECTION',[cpRequired,cpNotNull],1,0
+Documentation: 'Displays email design options. 1 is True and 0 is False','PrintAreaValue.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultCopies
+Data Type: Nullable<Integer>
+Database Column: 'DEFAULT_COPIES',[],2,0
+Documentation: 'No of copies. Default is 1','PrintAreaValue.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrinterTypeSetting
+Data Type: IList<TPrinterTypeSetting>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

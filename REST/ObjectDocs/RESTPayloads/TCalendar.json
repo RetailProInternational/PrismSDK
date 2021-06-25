@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "caltype" : 0,
+      "calname" : null,
+      "frequency" : 0,
+      "anchordate" : null,
+      "begindate" : null,
+      "enddate" : null,
+      "planyear" : null,
+      "calid" : 0
+    }
+  ]
+}
+

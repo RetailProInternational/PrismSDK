@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.InvnSerial.pas
+##########################################################################################################
+Class Name: TInvnSerial
+Base Class Name: TModelBase
+Database Table: INVN_SBS_ITEM_SN
+Associate Class: False
+Identified By: 'FSerialNo,FInvnSbsItemSid,FSbsSid'
+Legacy Identified By: 'SerialNo,InvnSbsItemSid,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','InvnSerial.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','InvnSerial.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','InvnSerial.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','InvnSerial.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','InvnSerial.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','InvnSerial.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','InvnSerial.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','InvnSerial.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','InvnSerial.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','InvnSerial.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','InvnSerial.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'InvnSbsItemSid','InvnSerial.12'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NO',[],50
+Documentation: 'SerialNo','InvnSerial.13'
+Legacy Column: 'SERIAL_NO'
+
+------------------------------------------------------
+
+Name: SerialNote
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NOTE',[],255
+Documentation: 'SerialNote','InvnSerial.14'
+Legacy Column: 'SERIAL_NOTE'
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[],1,0
+Documentation: 'PublishStatus','InvnSerial.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSerialQty
+Data Type: IList<TInvnSerialQty>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','InvnSerial.16'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','InvnSerial.17'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+

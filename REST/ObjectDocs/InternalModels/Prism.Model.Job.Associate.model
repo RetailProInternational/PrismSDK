@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.Job.Associate.pas
+##########################################################################################################
+Class Name: TJobAssociate
+Base Class Name: TAssociateBase
+Database Table: JOB
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobName
+Data Type: Nullable<string>
+Database Column: 'JOB_NAME',[cpRequired,cpNotNull],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobDescription
+Data Type: Nullable<string>
+Database Column: 'JOB_DESCRIPTION',[],120
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

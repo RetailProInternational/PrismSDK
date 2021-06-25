@@ -1,0 +1,333 @@
+##########################################################################################################
+File Name: Prism.Model.VendorInvoice.pas
+##########################################################################################################
+Class Name: TVendorInvoice
+Base Class Name: TModelBase
+Database Table: VENDOR_INVOICE
+Associate Class: False
+Identified By: 'FVendInvcId'
+Legacy Identified By: 'VendInvcId'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','VendorInvoice.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','VendorInvoice.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','VendorInvoice.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','VendorInvoice.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','VendorInvoice.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','VendorInvoice.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','VendorInvoice.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','VendorInvoice.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','VendorInvoice.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','VendorInvoice.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcId
+Data Type: Integer
+Database Column: 'VEND_INVC_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'VendInvcId','VendorInvoice.11'
+Legacy Column: 'VEND_INVC_ID'
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','VendorInvoice.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Int64
+Database Column: 'VEND_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VendSid','VendorInvoice.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendInvcNo
+Data Type: string
+Database Column: 'VEND_INVC_NO',[cpRequired,cpNotNull],15
+Documentation: 'VendInvcNo','VendorInvoice.14'
+Legacy Column: 'VEND_INVC_NO'
+
+------------------------------------------------------
+
+Name: VendInvcDate
+Data Type: Nullable<TDateTime>
+Database Column: 'VEND_INVC_DATE',[
+Documentation: 'VendInvcDate','VendorInvoice.15'
+Legacy Column: 'VEND_INVC_DATE'
+
+------------------------------------------------------
+
+Name: VendInvcAmt
+Data Type: Nullable<Double>
+Database Column: 'VEND_INVC_AMT',[],16,4
+Documentation: 'VendInvcAmt','VendorInvoice.16'
+Legacy Column: 'VEND_INVC_AMT'
+
+------------------------------------------------------
+
+Name: PONo
+Data Type: Nullable<string>
+Database Column: 'PO_NO',[],20
+Documentation: 'PONo','VendorInvoice.17'
+Legacy Column: 'PO_NO'
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],384
+Documentation: 'Notes','VendorInvoice.18'
+Legacy Column: 'NOTES'
+
+------------------------------------------------------
+
+Name: EmployeeSid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE_SID',[],19,0
+Documentation: 'EmployeeSid','VendorInvoice.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvebySid
+Data Type: Nullable<Int64>
+Database Column: 'RESOLVEBY_SID',[],19,0
+Documentation: 'ResolvebySid','VendorInvoice.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolveDate
+Data Type: Nullable<TDateTime>
+Database Column: 'RESOLVE_DATE',[
+Documentation: 'ResolveDate','VendorInvoice.21'
+Legacy Column: 'RESOLV_DATE'
+
+------------------------------------------------------
+
+Name: ApprovebySid
+Data Type: Nullable<Int64>
+Database Column: 'APPROVEBY_SID',[],19,0
+Documentation: 'ApprovebySid','VendorInvoice.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApproveDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPROVE_DATE',[
+Documentation: 'ApproveDate','VendorInvoice.23'
+Legacy Column: 'APPROV_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedbySid
+Data Type: Nullable<Int64>
+Database Column: 'MODIFIEDBY_SID',[],19,0
+Documentation: 'ModifiedbySid','VendorInvoice.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedbySid
+Data Type: Nullable<Int64>
+Database Column: 'CREATEDBY_SID',[],19,0
+Documentation: 'CreatedbySid','VendorInvoice.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[cpRequired],1,0
+Documentation: '0=Published, 1=WIP, 2=ReadyToPublish','VendorInvoice.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: '1=active, 0=inactive','VendorInvoice.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VoucherTotal
+Data Type: double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','VendorInvoice.28'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','VendorInvoice.29'
+Legacy Column: 'VEND_CODE'
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','VendorInvoice.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvedByName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','VendorInvoice.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','VendorInvoice.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','VendorInvoice.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','VendorInvoice.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','VendorInvoice.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','VendorInvoice.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','VendorInvoice.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','VendorInvoice.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResolvedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','VendorInvoice.39'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,205 @@
+##########################################################################################################
+File Name: Prism.Model.TouchButton.pas
+##########################################################################################################
+Class Name: TTouchButton
+Base Class Name: TModelBase
+Database Table: TOUCH_BUTTON
+Associate Class: False
+Identified By: 'FMenuSid,FButtonSeq'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TouchButton.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TouchButton.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TouchButton.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TouchButton.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','TouchButton.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TouchButton.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','TouchButton.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TouchButton.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','TouchButton.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','TouchButton.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonSeq
+Data Type: Nullable<Int16>
+Database Column: 'BUTTON_SEQ',[],5,0
+Documentation: 'ButtonSeq','TouchButton.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonPos
+Data Type: Nullable<Int16>
+Database Column: 'BUTTON_POS',[],5,0
+Documentation: 'Position of the button in menu','TouchButton.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MenuSid
+Data Type: Int64
+Database Column: 'MENU_SID',[],19,0
+Documentation: 'menu sid.','TouchButton.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnItemSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_ITEM_SID',[],19,0
+Documentation: 'item sid.','TouchButton.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnStyleSid
+Data Type: Nullable<Int64>
+Database Column: 'INVN_STYLE_SID',[],19,0
+Documentation: 'invn_style sid.','TouchButton.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonText
+Data Type: Nullable<string>
+Database Column: 'BUTTON_TEXT',[],50
+Documentation: 'text displayed for the button.','TouchButton.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonStyle
+Data Type: Nullable<string>
+Database Column: 'BUTTON_STYLE',[],1024
+Documentation: 'ButtonStyle','TouchButton.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PageNo
+Data Type: Nullable<Int16>
+Database Column: 'PAGE_NO',[],5,0
+Documentation: 'page number','TouchButton.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TargetMenuSid
+Data Type: Nullable<Int64>
+Database Column: 'TARGET_MENU_SID',[],19,0
+Documentation: 'reference to another menu the button links to, when there is no item sid','TouchButton.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonImageEnabled
+Data Type: boolean
+Database Column: 'BUTTON_IMAGE_ENABLED',[],1,0
+Documentation: '0=false 1=true,Indicates whether touch menu button should use images','TouchButton.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ButtonImageIndex
+Data Type: Nullable<Int16>
+Database Column: 'BUTTON_IMAGE_INDEX',[],1,0
+Documentation: 'Stores the index of the image to be displayed','TouchButton.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','TouchButton.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemActive
+Data Type: Boolean
+Database Column: NA
+Documentation: 'Active','TouchButton.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ImagePath
+Data Type: TNullableString
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

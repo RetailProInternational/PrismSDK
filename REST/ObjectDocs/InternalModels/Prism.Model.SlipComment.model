@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.SlipComment.pas
+##########################################################################################################
+Class Name: TSlipComment
+Base Class Name: TModelBase
+Database Table: SLIP_COMMENT
+Associate Class: False
+Identified By: 'FSlipSid,FCommentNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','SlipComment.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','SlipComment.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','SlipComment.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','SlipComment.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','SlipComment.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','SlipComment.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','SlipComment.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','SlipComment.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','SlipComment.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','SlipComment.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SlipSid
+Data Type: Int64
+Database Column: 'SLIP_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SlipSid','SlipComment.11'
+Legacy Column: 'SLIP_SID'
+
+------------------------------------------------------
+
+Name: CommentNo
+Data Type: Int16
+Database Column: 'COMMENT_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'CommentNo','SlipComment.12'
+Legacy Column: 'COMMENT_NO'
+
+------------------------------------------------------
+
+Name: Comments
+Data Type: Nullable<string>
+Database Column: 'COMMENTS',[],60
+Documentation: 'Comments','SlipComment.13'
+Legacy Column: 'COMMENTS'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

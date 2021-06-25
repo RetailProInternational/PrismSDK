@@ -1,0 +1,43 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "rowversion" : 0,
+      "postdate" : null,
+      "tenantsid" : null,
+      "startdate" : null,
+      "enddate" : null,
+      "starttime" : null,
+      "endtime" : null,
+      "daysofweek" : null,
+      "frequency" : 0,
+      "allowduplicates" : false,
+      "actionurl" : null,
+      "actionpayload" : null,
+      "active" : false,
+      "publicflg" : false,
+      "daysofrunhistory" : null,
+      "taskname" : null,
+      "taskdescription" : null,
+      "recurevery" : 0,
+      "repeatevery" : null,
+      "defaulttimeout" : null,
+      "workstation" : null,
+      "tasksbslist" : null,
+      "maxretries" : null,
+      "internalflag" : 0,
+      "tasktypecd" : null,
+      "allowmultiple" : 0,
+      "status" : 0,
+      "scheduledtaskrun" : [
+      ]
+    }
+  ]
+}
+

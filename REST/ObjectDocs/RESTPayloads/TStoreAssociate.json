@@ -1,0 +1,27 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "active" : false,
+      "number" : null,
+      "storecode" : null,
+      "name" : null,
+      "address1" : null,
+      "address2" : null,
+      "address3" : null,
+      "address4" : null,
+      "address5" : null,
+      "address6" : null,
+      "zip" : null,
+      "phone1" : null,
+      "phone2" : null,
+      "udf1string" : null,
+      "udf2string" : null,
+      "udf3string" : null,
+      "udf4string" : null,
+      "udf5string" : null,
+      "sbsno" : null
+    }
+  ]
+}
+

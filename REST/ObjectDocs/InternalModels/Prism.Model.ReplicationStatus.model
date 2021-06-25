@@ -1,0 +1,213 @@
+##########################################################################################################
+File Name: Prism.Model.ReplicationStatus.pas
+##########################################################################################################
+Class Name: TReplicationStatus
+Base Class Name: TModelBase
+Database Table: REPLICATION_STATUS
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ReplicationStatus.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','ReplicationStatus.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ReplicationStatus.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','ReplicationStatus.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ReplicationStatus.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','ReplicationStatus.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','ReplicationStatus.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','ReplicationStatus.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ReplicationStatus.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','ReplicationStatus.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SessionType
+Data Type: Int16
+Database Column: 'SESSION_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: '0 = v9 initialization session, 1 = v9 day to day session, 2 = Prism Initialization Session, 3 = Prism Day to Day Session','ReplicationStatus.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemoteConnectionSid
+Data Type: Nullable<Int64>
+Database Column: 'REMOTE_CONNECTION_SID',[],19,0
+Documentation: 'connection_sid for this session, if set to null then the connection does not exist or was deleted','ReplicationStatus.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MessagesExpected
+Data Type: Int64
+Database Column: 'MESSAGES_EXPECTED',[cpRequired,cpNotNull],30,0
+Documentation: 'how many total messages expected for this session. applies to initialization only.','ReplicationStatus.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MessagesReceived
+Data Type: Int64
+Database Column: 'MESSAGES_RECEIVED',[cpRequired,cpNotNull],30,0
+Documentation: 'how many messages received since the session was started','ReplicationStatus.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MessagesSent
+Data Type: Int64
+Database Column: 'MESSAGES_SENT',[cpRequired,cpNotNull],30,0
+Documentation: 'how many messages sent since the session was started, applies to day to day only','ReplicationStatus.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastUpdateResource
+Data Type: Nullable<string>
+Database Column: 'LAST_UPDATE_RESOURCE',[],50
+Documentation: 'the last resource to update this session. for initialization it is synonymous with the current resource being processed, for day to day it is just the last resource that this session has seen.','ReplicationStatus.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RepStatusResource
+Data Type: IList<TRepStatusResource>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: TReplicationState
+Database Column: 'STATE',[cpRequired,cpNotNull],1,0
+Documentation: '0 = inactive/cancelled, 1 = in progress, 2= complete','ReplicationStatus.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartDatetime
+Data Type: TDateTime
+Database Column: 'START_DATETIME',[
+Documentation: 'datetime this replication session was started','ReplicationStatus.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastUpdateDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_UPDATE_DATETIME',[
+Documentation: 'datetime last updated','ReplicationStatus.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MessagesFailed
+Data Type: Int64
+Database Column: 'MESSAGES_FAILED',[cpRequired,cpNotNull],30,0
+Documentation: 'how many messages failed since the session was started','ReplicationStatus.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InitStatus
+Data Type: Nullable<integer>
+Database Column: 'INIT_STATUS',[],1,0
+Documentation: '1 if End of Init message processed','ReplicationStatus.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ConnectionType
+Data Type: TServerMode
+Database Column: NA
+Documentation: '0 - Prism, 1 - V9','ReplicationStatus.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemoteAddress
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'RemoteAddress','ReplicationStatus.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9Address
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'V9Address','ReplicationStatus.23'
+Legacy Column: NA
+
+------------------------------------------------------
+

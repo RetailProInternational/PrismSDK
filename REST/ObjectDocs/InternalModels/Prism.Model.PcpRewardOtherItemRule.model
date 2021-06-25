@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.PcpRewardOtherItemRule.pas
+##########################################################################################################
+Class Name: TPcpRewardOtherItemRule
+Base Class Name: TModelBase
+Database Table: PCP_REWARD_OTHER_ITEM_RULE
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PcpRewardOtherItemRule.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PcpRewardOtherItemRule.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PcpRewardOtherItemRule.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PcpRewardOtherItemRule.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PcpRewardOtherItemRule.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PcpRewardOtherItemRule.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PcpRewardOtherItemRule.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PcpRewardOtherItemRule.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PcpRewardOtherItemRule.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PcpRewardOtherItemRule.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoSid
+Data Type: Int64
+Database Column: 'PROMO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PromoSid','PcpRewardOtherItemRule.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Pos
+Data Type: Int16
+Database Column: 'POS',[cpRequired,cpNotNull],5,0
+Documentation: 'Pos','PcpRewardOtherItemRule.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','PcpRewardOtherItemRule.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscType
+Data Type: Nullable<TPromoDiscType>
+Database Column: 'DISC_TYPE',[],2,0
+Documentation: 'DiscType','PcpRewardOtherItemRule.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscValue
+Data Type: Nullable<Double>
+Database Column: 'DISC_VALUE',[],16,4
+Documentation: 'DiscValue','PcpRewardOtherItemRule.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationPLSid
+Data Type: Nullable<Int64>
+Database Column: 'REWARD_VALIDATION_PL_SID',[],19,0
+Documentation: 'Price level for price level reward type','PcpRewardOtherItemRule.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdditionalDiscType
+Data Type: Nullable<TPromoDiscType>
+Database Column: 'ADDITIONAL_DISC_TYPE',[],2,0
+Documentation: 'AdditionalDiscType 0-Price,1-Percent,2-Amount,3-PackPrice','PcpRewardOtherItemRule.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdditionalDiscValue
+Data Type: Nullable<Double>
+Database Column: 'ADDITIONAL_DISC_VALUE',[],16,4
+Documentation: 'AdditionalDiscValue','PcpRewardOtherItemRule.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpRewardFilterElement
+Data Type: IList<TPcpRewardFilterElement>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationPL
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Level','PcpPromotion.65'
+Legacy Column: NA
+
+------------------------------------------------------
+

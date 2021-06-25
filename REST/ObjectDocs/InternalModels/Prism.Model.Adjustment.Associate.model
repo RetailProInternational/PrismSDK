@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.Adjustment.Associate.pas
+##########################################################################################################
+Class Name: TAdjustmentAssociate
+Base Class Name: 
+Database Table: ADJUSTMENT
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjType
+Data Type: Nullable<TAdjustmentMemoType>
+Database Column: 'ADJ_TYPE', [], 5, 0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

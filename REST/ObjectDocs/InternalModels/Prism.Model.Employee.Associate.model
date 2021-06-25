@@ -1,0 +1,77 @@
+##########################################################################################################
+File Name: Prism.Model.Employee.Associate.pas
+##########################################################################################################
+Class Name: TEmployeeAssociate
+Base Class Name: 
+Database Table: EMPLOYEE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: Nullable<string>
+Database Column: 'EMPL_NAME',[],8
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplId
+Data Type: Nullable<integer>
+Database Column: 'EMPL_ID', [], 10
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserName
+Data Type: Nullable<String>
+Database Column: 'USER_NAME',[cpRequired,cpNotNull],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: USerActive
+Data Type: boolean
+Database Column: 'USER_ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Locked
+Data Type: boolean
+Database Column: 'LOCKED',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

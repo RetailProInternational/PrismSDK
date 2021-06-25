@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.TenderCentralStoreCredit.pas
+##########################################################################################################
+Class Name: TTenderCentralStoreCredit
+Base Class Name: TModelBase
+Database Table: TENDER_CENTRAL_STORE_CREDIT
+Associate Class: False
+Identified By: 'FTenderSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TenderCentralStoreCredit.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TenderCentralStoreCredit.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TenderCentralStoreCredit.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TenderCentralStoreCredit.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','TenderCentralStoreCredit.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TenderCentralStoreCredit.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','TenderCentralStoreCredit.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','TenderCentralStoreCredit.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','TenderCentralStoreCredit.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','TenderCentralStoreCredit.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderSid
+Data Type: Int64
+Database Column: 'TENDER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'TenderSid','TenderCentralStoreCredit.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralPaymentId
+Data Type: Nullable<string>
+Database Column: 'CENTRAL_PAYMENT_ID',[],30
+Documentation: 'Central transaction ID','TenderCentralStoreCredit.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralCreditBalance
+Data Type: Nullable<Double>
+Database Column: 'CENTRAL_CREDIT_BALANCE',[],16,4
+Documentation: 'Store Credit balance remaining','TenderCentralStoreCredit.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralCommitState
+Data Type: Nullable<Int16>
+Database Column: 'CENTRAL_COMMIT_STATE',[],1,0
+Documentation: 'Used to indicate that the transaction was performed offline and that it will need to be committed after it is transmitted. 0= false, anything else is true','TenderCentralStoreCredit.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RedeemCreditId
+Data Type: Nullable<string>
+Database Column: 'REDEEM_CREDIT_ID',[],30
+Documentation: 'id of credit redeemed by id','TenderCentralStoreCredit.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NewCreditId
+Data Type: Nullable<string>
+Database Column: 'NEW_CREDIT_ID',[],30
+Documentation: 'id of credit created in during this operation','TenderCentralStoreCredit.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: NewCreditValue
+Data Type: Nullable<Double>
+Database Column: 'NEW_CREDIT_VALUE',[],16,4
+Documentation: 'value of credit created in during this operation','TenderCentralStoreCredit.17'
+Legacy Column: NA
+
+------------------------------------------------------
+

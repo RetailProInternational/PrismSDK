@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.ScalePattern.Associate.pas
+##########################################################################################################
+Class Name: TScalePatternAssociate
+Base Class Name: 
+Database Table: SCALE_PATTERN
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScaleSid
+Data Type: Nullable<Int64>
+Database Column: 'SCALE_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PatternName
+Data Type: Nullable<string>
+Database Column: 'PATTERN_NAME',[],12
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

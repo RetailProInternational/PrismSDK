@@ -1,0 +1,661 @@
+##########################################################################################################
+File Name: Prism.Model.PcpPromotion.pas
+##########################################################################################################
+Class Name: TPcpPromotion
+Base Class Name: TModelBase
+Database Table: PCP_PROMOTION
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PcpPromotion.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PcpPromotion.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PcpPromotion.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PcpPromotion.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PcpPromotion.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PcpPromotion.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PcpPromotion.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PcpPromotion.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PcpPromotion.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PcpPromotion.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralActive
+Data Type: Nullable<Int16>
+Database Column: 'GENERAL_ACTIVE',[],1,0
+Documentation: 'GeneralActive','PcpPromotion.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralPromoName
+Data Type: Nullable<string>
+Database Column: 'GENERAL_PROMO_NAME',[],50
+Documentation: 'GeneralPromoName','PcpPromotion.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralDescription
+Data Type: Nullable<string>
+Database Column: 'GENERAL_DESCRIPTION',[
+Documentation: 'GeneralDescription','PcpPromotion.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralDiscReason
+Data Type: Nullable<string>
+Database Column: 'GENERAL_DISC_REASON',[],6
+Documentation: 'GeneralDiscReason','PcpPromotion.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralPromoGroup
+Data Type: Nullable<string>
+Database Column: 'GENERAL_PROMO_GROUP',[],50
+Documentation: 'GeneralPromoGroup','PcpPromotion.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralPromoType
+Data Type: Nullable<TPromoGeneralType>
+Database Column: 'GENERAL_PROMO_TYPE',[],2,0
+Documentation: '0-Custom,1-Item,2-Quantity,3-Tiered,4-Rolling,5-Pack,6-BOGO,7-Transaction,8-Coupon','PcpPromotion.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralPos
+Data Type: Nullable<Int16>
+Database Column: 'GENERAL_POS',[],5,0
+Documentation: 'GeneralPos','PcpPromotion.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationStartDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ACTIVATION_START_DATE',[
+Documentation: 'ActivationStartDate','PcpPromotion.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationStartTime
+Data Type: Nullable<Double>
+Database Column: 'ACTIVATION_START_TIME',[],10,9
+Documentation: 'ActivationStartTime','PcpPromotion.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationEndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ACTIVATION_END_DATE',[
+Documentation: 'ActivationEndDate','PcpPromotion.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationEndTime
+Data Type: Nullable<Double>
+Database Column: 'ACTIVATION_END_TIME',[],10,9
+Documentation: 'ActivationEndTime','PcpPromotion.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationSbsSid
+Data Type: Int64
+Database Column: 'ACTIVATION_SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ActivationSbsSid','PcpPromotion.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationUseStores
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_USE_STORES',[],1,0
+Documentation: 'ActivationUseStores','PcpPromotion.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationUseRegions
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_USE_REGIONS',[],1,0
+Documentation: 'ActivationUseRegions','PcpPromotion.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationUseDistricts
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_USE_DISTRICTS',[],1,0
+Documentation: 'ActivationUseDistricts','PcpPromotion.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationStoreFilter
+Data Type: Nullable<string>
+Database Column: 'ACTIVATION_STORE_FILTER',[
+Documentation: 'ActivationStoreFilter','PcpPromotion.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationUsePriceLevels
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_USE_PRICE_LEVELS',[],1,0
+Documentation: 'ActivationUsePriceLevels','PcpPromotion.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationCanBeCombined
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_CAN_BE_COMBINED',[],1,0
+Documentation: 'ActivationCanBeCombined','PcpPromotion.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationCombinedGroups
+Data Type: Boolean
+Database Column: 'ACTIVATION_COMBINED_GROUPS',[],1,0
+Documentation: 'Combined groups of promotions. 1-Enabled, 0-Disabled','PcpPromotion.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationApplyCount
+Data Type: Nullable<Int16>
+Database Column: 'ACTIVATION_APPLY_COUNT',[],5,0
+Documentation: 'ActivationApplyCount','PcpPromotion.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationUseItems
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_USE_ITEMS',[],1,0
+Documentation: 'ValidationUseItems','PcpPromotion.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationUseSubtotal
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_USE_SUBTOTAL',[],1,0
+Documentation: 'ValidationUseSubtotal','PcpPromotion.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationSubtotal
+Data Type: Nullable<Double>
+Database Column: 'VALIDATION_SUBTOTAL',[],16,4
+Documentation: 'ValidationSubtotal','PcpPromotion.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationUseCoupons
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_USE_COUPONS',[],1,0
+Documentation: 'ValidationUseCoupons','PcpPromotion.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationCouponType
+Data Type: Boolean
+Database Column: 'VALIDATION_COUPON_TYPE',[],1,0
+Documentation: 'Coupon type (0 - Normal coupon, 1 - Serialized coupon)','PcpPromotion.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationCouponSetID
+Data Type: Nullable<Int64>
+Database Column: 'VALIDATION_COUPON_SETID',[],19,0
+Documentation: 'Serilized coupon set ID for validation promotion','PcpPromotion.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationUseCustomers
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_USE_CUSTOMERS',[],1,0
+Documentation: 'ValidationUseCustomers','PcpPromotion.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationCustomerFilter
+Data Type: Nullable<string>
+Database Column: 'VALIDATION_CUSTOMER_FILTER',[
+Documentation: 'ValidationCustomerFilter','PcpPromotion.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationSortOrder
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_SORT_ORDER',[],1,0
+Documentation: '0 - Highest, 1 - Lowest','PcpPromotion.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationItems
+Data Type: Nullable<Int16>
+Database Column: 'REWARD_VALIDATION_ITEMS',[],1,0
+Documentation: 'RewardValidationItems','PcpPromotion.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationMode
+Data Type: Nullable<TPromoDiscMode>
+Database Column: 'REWARD_VALIDATION_MODE',[],2,0
+Documentation: '0-Normal,1-Tiered,2-Rolling','PcpPromotion.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationDiscType
+Data Type: Nullable<TPromoDiscType>
+Database Column: 'REWARD_VALIDATION_DISC_TYPE',[],2,0
+Documentation: '0-Price,1-Percent,2-Amount,3-PackPrice','PcpPromotion.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationDiscValue
+Data Type: Nullable<Double>
+Database Column: 'REWARD_VALIDATION_DISC_VALUE',[],16,4
+Documentation: 'RewardValidationDiscValue','PcpPromotion.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationPLSid
+Data Type: Nullable<Int64>
+Database Column: 'REWARD_VALIDATION_PL_SID',[],19,0
+Documentation: 'Price level for price level reward type','PcpPromotion.431'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardAdditionalDiscType
+Data Type: Nullable<TPromoDiscType>
+Database Column: 'REWARD_ADDITIONAL_DISC_TYPE',[],2,0
+Documentation: 'RewardAdditionalDiscType 0-Price,1-Percent','PcpPromotion.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardAdditionalDiscValue
+Data Type: Nullable<Double>
+Database Column: 'REWARD_ADDITIONAL_DISC_VALUE',[],16,4
+Documentation: 'RewardAdditionalDiscValue','PcpPromotion.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardOtherItems
+Data Type: Nullable<Int16>
+Database Column: 'REWARD_OTHER_ITEMS',[],1,0
+Documentation: 'RewardOtherItems','PcpPromotion.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGd
+Data Type: Nullable<Int16>
+Database Column: 'REWARD_GD',[],1,0
+Documentation: 'RewardGd','PcpPromotion.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGdMode
+Data Type: Nullable<TPromoDiscMode>
+Database Column: 'REWARD_GD_MODE',[],2,0
+Documentation: '0-Normal,1-Tiered,2-Rolling','PcpPromotion.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGdDiscType
+Data Type: Nullable<TPromoDiscType>
+Database Column: 'REWARD_GD_DISC_TYPE',[],2,0
+Documentation: '0-Price,1-Percent,2-Amount,3-PackPrice','PcpPromotion.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGdDiscValue
+Data Type: Nullable<Double>
+Database Column: 'REWARD_GD_DISC_VALUE',[],16,4
+Documentation: 'RewardGdDiscValue','PcpPromotion.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardCouponCode
+Data Type: Nullable<string>
+Database Column: 'REWARD_COUPON_CODE',[],75
+Documentation: 'RewardCouponCode','PcpPromotion.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardCouponType
+Data Type: Boolean
+Database Column: 'REWARD_COUPON_TYPE',[],1,0
+Documentation: 'Coupon type (0 - Normal coupon, 1 - Serialized coupon)','PcpPromotion.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardCouponSetID
+Data Type: Nullable<Int64>
+Database Column: 'REWARD_COUPON_SETID',[],19,0
+Documentation: 'Serilized coupon set ID for rewarding promotion','PcpPromotion.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardSortOrder
+Data Type: Nullable<Int16>
+Database Column: 'REWARD_SORT_ORDER',[],1,0
+Documentation: '0 - Optimized, 1 - Highest, 2 - Lowest','PcpPromotion.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SpreadDiscBOGO
+Data Type: Boolean
+Database Column: 'SPREADDISCBOGO',[],1,0
+Documentation: '0 - Disable, 1 - Enable  (Spread discount to all BOGO items)','PcpPromotion.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromotionsListSid
+Data Type: Int64
+Database Column: 'PROMOTIONS_LIST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PromotionsListSid','PcpPromotion.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GeneralSaved
+Data Type: Nullable<Int16>
+Database Column: 'GENERAL_SAVED',[],1,0
+Documentation: '0 = cancelled indicating partially entered and abandoned (default value), 1 is fully entered and saved','PcpPromotion.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustomerFilterUi
+Data Type: Nullable<string>
+Database Column: 'CUSTOMER_FILTER_UI',[
+Documentation: 'CustomerFilterUi','PcpPromotion.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreFilterUi
+Data Type: Nullable<string>
+Database Column: 'STORE_FILTER_UI',[
+Documentation: 'StoreFilterUi','PcpPromotion.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApplyManualDiscountedItems
+Data Type: Boolean
+Database Column: 'APPLY_MANUAL_DISCOUNTED_ITEMS',[
+Documentation: 'Apply to manually discounted items (1 -Apply, 0- Do not apply)','PcpPromotion.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationCouponCount
+Data Type: Nullable<Int16>
+Database Column: 'VALIDATION_COUPON_COUNT',[],5,0
+Documentation: 'Apply coupon counts (0 - Unlimited, 1 - Once, x - Count)','PcpPromotion.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGiftItem
+Data Type: Boolean
+Database Column: 'REWARD_GIFTITEM',[],1,0
+Documentation: 'Reward is gift item','PcpPromotion.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardGiftItemSid
+Data Type: Nullable<Int64>
+Database Column: 'REWARD_GIFTITEM_SID',[],19,0
+Documentation: 'Reward gift item sid','PcpPromotion.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'PUBLISHED_DATETIME',[
+Documentation: 'PublishedDatetime','PcpPromotion.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OverrideCustomerPriceLevel
+Data Type: Boolean
+Database Column: 'OVERRIDE_CUSTOMER_PRICE_LEVEL',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AllowPriceIncrease
+Data Type: Boolean
+Database Column: 'ALLOW_PRICE_INCREASE',[
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpValidationCoupon
+Data Type: IList<TPcpValidationCoupon>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpRewardItemDiscTier
+Data Type: IList<TPcpRewardItemDiscTier>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpRewardGdDiscTier
+Data Type: IList<TPcpRewardGdDiscTier>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpPromotionStore
+Data Type: IList<TPcpPromotionStore>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpPromotionDistrict
+Data Type: IList<TPcpPromotionDistrict>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpPromotionPriceLevel
+Data Type: IList<TPcpPromotionPriceLevel>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpPromotionBusinessUnit
+Data Type: IList<TPcpPromotionBusinessUnit>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpValidationItemRule
+Data Type: IList<TPcpValidationItemRule>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpRewardOtherItemRule
+Data Type: IList<TPcpRewardOtherItemRule>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PcpPromotionGroups
+Data Type: IList<TPcpPromotionGroups>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','PcpPromotion.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','PcpPromotion.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RewardValidationPL
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Level','PcpPromotion.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.PcpValidationFilterElement.pas
+##########################################################################################################
+Class Name: TPcpValidationFilterElement
+Base Class Name: TModelBase
+Database Table: PCP_VALIDATION_FILTER_ELEMENT
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PcpValidationFilterElement.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PcpValidationFilterElement.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PcpValidationFilterElement.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PcpValidationFilterElement.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PcpValidationFilterElement.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PcpValidationFilterElement.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PcpValidationFilterElement.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PcpValidationFilterElement.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PcpValidationFilterElement.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PcpValidationFilterElement.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RuleSid
+Data Type: Int64
+Database Column: 'RULE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'RuleSid','PcpValidationFilterElement.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Pos
+Data Type: Int16
+Database Column: 'POS',[cpRequired,cpNotNull],5,0
+Documentation: 'Pos','PcpValidationFilterElement.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Field
+Data Type: Nullable<string>
+Database Column: 'FIELD',[],50
+Documentation: 'Field','PcpValidationFilterElement.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Operator
+Data Type: Nullable<TPromoOperatorType>
+Database Column: 'OPERATOR',[],2,0
+Documentation: 'Operator','PcpValidationFilterElement.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Operand
+Data Type: Nullable<string>
+Database Column: 'OPERAND',[],100
+Documentation: 'Operand','PcpValidationFilterElement.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JoinOperator
+Data Type: Nullable<TPromoJoinOperatorType>
+Database Column: 'JOIN_OPERATOR',[],2,0
+Documentation: 'JoinOperator','PcpValidationFilterElement.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StyleSid
+Data Type: Nullable<Int64>
+Database Column: 'STYLE_SID',[],19,0
+Documentation: 'StyleSid','PcpValidationFilterElement.17'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.InventoryList.pas
+##########################################################################################################
+Class Name: TInventoryList
+Base Class Name: TModelBase
+Database Table: INVENTORY_LIST_V
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION1',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION2',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Nullable<Int64>
+Database Column: 'VEND_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<string>
+Database Column: 'VEND_CODE',[],6
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<string>
+Database Column: 'VEND_NAME',[],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Upc
+Data Type: Nullable<Int64>
+Database Column: 'UPC',[],18,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Alu
+Data Type: Nullable<string>
+Database Column: 'ALU',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemNo
+Data Type: Nullable<Integer>
+Database Column: 'ITEM_NO',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltVendSid
+Data Type: Nullable<Int64>
+Database Column: 'ALT_VEND_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE',[],6
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltVendName
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_NAME',[],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC',[],18,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

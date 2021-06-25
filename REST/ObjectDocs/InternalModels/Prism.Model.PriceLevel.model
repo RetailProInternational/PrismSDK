@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.PriceLevel.pas
+##########################################################################################################
+Class Name: TPriceLevel
+Base Class Name: TModelBase
+Database Table: PRICE_LEVEL
+Associate Class: False
+Identified By: 'FPriceLvl,FSbsSid'
+Legacy Identified By: 'PriceLvl,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','PriceLevel.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','PriceLevel.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','PriceLevel.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','PriceLevel.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','PriceLevel.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','PriceLevel.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','PriceLevel.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','PriceLevel.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','PriceLevel.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','PriceLevel.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record','PriceLevel.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvl
+Data Type: Int16
+Database Column: 'PRICE_LVL',[cpRequired,cpNotNull],5,0
+Documentation: 'price level','PriceLevel.12'
+Legacy Column: 'PRICE_LVL'
+
+------------------------------------------------------
+
+Name: PriceLvlName
+Data Type: Nullable<string>
+Database Column: 'PRICE_LVL_NAME',[],6
+Documentation: 'price level name','PriceLevel.13'
+Legacy Column: 'PRICE_LVL_NAME'
+
+------------------------------------------------------
+
+Name: Secured
+Data Type: Boolean
+Database Column: 'SECURED',[cpRequired,cpNotNull],1,0
+Documentation: 'Securing a price level allows user to protect from others and access to those with the correct permissions','PriceLevel.14'
+Legacy Column: 'SECURED'
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'Default discount % to use with this price level','PriceLevel.15'
+Legacy Column: 'DISC_PERC'
+
+------------------------------------------------------
+
+Name: UseDiscPerc
+Data Type: Boolean
+Database Column: 'USE_DISC_PERC',[cpRequired,cpNotNull],1,0
+Documentation: 'true=use discount_percent as a percentage','PriceLevel.16'
+Legacy Column: 'USE_DISC_PERC'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates this price level is active within this subsidiary.','PriceLevel.17'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: PriceLvlDescription
+Data Type: Nullable<string>
+Database Column: 'PRICE_LVL_DESCRIPTION',[],150
+Documentation: 'Descriptive price level name','PriceLevel.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivePriceLvl
+Data Type: boolean
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','PriceLevel.19'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

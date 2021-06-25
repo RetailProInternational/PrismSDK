@@ -1,0 +1,437 @@
+##########################################################################################################
+File Name: Prism.Model.Store.pas
+##########################################################################################################
+Class Name: TStore
+Base Class Name: TModelBase
+Database Table: STORE
+Associate Class: False
+Identified By: 'FStoreNo,FSbsSid'
+Legacy Identified By: 'SbsNo,StoreNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Store.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Store.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Store.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Store.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Store.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Store.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.this is the same value that will be used in licensing applications.','Store.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Store.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Store.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Store.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record','Store.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Int16
+Database Column: 'STORE_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'StoreNo','Store.12'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: string
+Database Column: 'STORE_CODE',[cpRequired,cpNotNull],5
+Documentation: 'StoreCode','Store.13'
+Legacy Column: 'STORE_CODE'
+
+------------------------------------------------------
+
+Name: GlobalStoreCode
+Data Type: Nullable<string>
+Database Column: 'GLOBAL_STORE_CODE',[],10
+Documentation: 'GlobalStoreCode','Store.14'
+Legacy Column: 'GLOB_STORE_CODE'
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: 'STORE_NAME',[],40
+Documentation: 'store name','Store.15'
+Legacy Column: 'STORE_NAME'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates this store is active within this subsidiary.','Store.16'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: ActivationDate
+Data Type: Nullable<TDateTime>
+Database Column: 'ACTIVATION_DATE',[
+Documentation: 'date and time store was activated.  used by licensing when adjusting store count.','Store.17'
+Legacy Column: 'ACTIVATION_DATE'
+
+------------------------------------------------------
+
+Name: StoreTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_TYPE_SID',[],19,0
+Documentation: 'StoreTypeSid','Store.18'
+Legacy Column: 'STORE_TYPE_NAME'
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS1',[],40
+Documentation: 'Address1','Store.19'
+Legacy Column: 'ADDRESS1'
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: 'ADDRESS2',[],40
+Documentation: 'Address2','Store.20'
+Legacy Column: 'ADDRESS2'
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: 'ADDRESS3',[],40
+Documentation: 'Address3','Store.21'
+Legacy Column: 'ADDRESS3'
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: 'ADDRESS4',[],40
+Documentation: 'Address4','Store.22'
+Legacy Column: 'ADDRESS4'
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: 'ADDRESS5',[],40
+Documentation: 'Address5','Store.23'
+Legacy Column: 'ADDRESS5'
+
+------------------------------------------------------
+
+Name: Address6
+Data Type: Nullable<string>
+Database Column: 'ADDRESS6',[],40
+Documentation: 'Address6','Store.24'
+Legacy Column: 'ADDRESS6'
+
+------------------------------------------------------
+
+Name: Zip
+Data Type: Nullable<string>
+Database Column: 'ZIP',[],10
+Documentation: 'Zip','Store.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Phone1
+Data Type: Nullable<string>
+Database Column: 'PHONE1',[],30
+Documentation: 'Phone1','Store.26'
+Legacy Column: 'PHONE1'
+
+------------------------------------------------------
+
+Name: Phone2
+Data Type: Nullable<string>
+Database Column: 'PHONE2',[],30
+Documentation: 'Phone2','Store.27'
+Legacy Column: 'PHONE2'
+
+------------------------------------------------------
+
+Name: ActivePriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_PRICE_LVL_SID',[],19,0
+Documentation: 'pointer to a price level record.  if store-based price levels are enabled,this is used as the active price level for inventory within the store','Store.28'
+Legacy Column: 'PRICE_LVL'
+
+------------------------------------------------------
+
+Name: TotalSurface
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_SURFACE',[],16,4
+Documentation: 'TotalSurface','Store.29'
+Legacy Column: 'TOTAL_SURFACE'
+
+------------------------------------------------------
+
+Name: DisplaySurface
+Data Type: Nullable<Double>
+Database Column: 'DISPLAY_SURFACE',[],16,4
+Documentation: 'DisplaySurface','Store.30'
+Legacy Column: 'DISPLAY_SURFACE'
+
+------------------------------------------------------
+
+Name: Windows
+Data Type: Nullable<Double>
+Database Column: 'WINDOWS',[],16,4
+Documentation: 'Windows','Store.31'
+Legacy Column: 'WINDOWS'
+
+------------------------------------------------------
+
+Name: Floors
+Data Type: Nullable<Int16>
+Database Column: 'FLOORS',[],5,0
+Documentation: 'Floors','Store.32'
+Legacy Column: 'FLOORS'
+
+------------------------------------------------------
+
+Name: FullTimeEmpl
+Data Type: Nullable<Integer>
+Database Column: 'FULL_TIME_EMPL',[],10,0
+Documentation: 'count total full time employees with in a store','Store.33'
+Legacy Column: 'FULL_TIME_EMPL'
+
+------------------------------------------------------
+
+Name: PartTimeEmpl
+Data Type: Nullable<Integer>
+Database Column: 'PART_TIME_EMPL',[],10,0
+Documentation: 'count total part time employees with in a store','Store.34'
+Legacy Column: 'PART_TIME_EMPL'
+
+------------------------------------------------------
+
+Name: SeasonalEmpl
+Data Type: Nullable<Integer>
+Database Column: 'SEASONAL_EMPL',[],10,0
+Documentation: 'count total seasonal employees with in a store','Store.35'
+Legacy Column: 'SEASON_EMPL'
+
+------------------------------------------------------
+
+Name: SalesTargetPerc
+Data Type: Nullable<Double>
+Database Column: 'SALES_TARGET_PERC',[],16,4
+Documentation: 'SalesTargetPerc','Store.36'
+Legacy Column: 'SALES_TARGET_PERC'
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],50
+Documentation: 'Udf1String','Store.37'
+Legacy Column: 'UDF1_VALUE'
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],50
+Documentation: 'Udf2String','Store.38'
+Legacy Column: 'UDF2_VALUE'
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],50
+Documentation: 'Udf3String','Store.39'
+Legacy Column: 'UDF3_VALUE'
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],50
+Documentation: 'Udf4String','Store.40'
+Legacy Column: 'UDF4_VALUE'
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],50
+Documentation: 'Udf5String','Store.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsEcommerceCatalog
+Data Type: Boolean
+Database Column: 'IS_ECOMMERCE_CATALOG',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates that the store will be included in the ecommerce catalog.','Store.42'
+Legacy Column: 'CAT_INCL_FLAG'
+
+------------------------------------------------------
+
+Name: IsWebstoreCatalog
+Data Type: Boolean
+Database Column: 'IS_WEBSTORE_CATALOG',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates that the store will be included in the webstore catalog.','Store.43'
+Legacy Column: 'WEB_STORE'
+
+------------------------------------------------------
+
+Name: Preferences
+Data Type: Nullable<string>
+Database Column: 'PREFERENCES',[],2001
+Documentation: 'Default Preferences at store level','Store.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','Store.45'
+Legacy Column: 'TAXAREANAME'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','Store.46'
+Legacy Column: 'TAXAREANAME2'
+
+------------------------------------------------------
+
+Name: ServerAddress
+Data Type: Nullable<string>
+Database Column: 'SERVER_ADDRESS',[],100
+Documentation: 'ip address or url, with optional port, for stores host machine.','Store.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FiscalCode
+Data Type: Nullable<string>
+Database Column: 'FISCAL_CODE',[],11
+Documentation: 'Fiscal code','Store.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLevel
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'price level','Store.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreType
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store type name','Store.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Name','Store.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Name','Store.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Store.53'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

@@ -1,0 +1,31 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "createddatetime" : null,
+      "postdate" : null,
+      "origdocsid" : "0",
+      "invoicedocsid" : "0",
+      "useddepositamnt" : null,
+      "docdepositflag" : false,
+      "docdeposittaken" : false,
+      "usedsubtotal" : null,
+      "usedtaxamt" : null,
+      "useddiscamt" : null,
+      "usedtransdiscamt" : null,
+      "usedfeeamt" : null,
+      "usedfeetaxamt" : null,
+      "usedshippingamt" : null,
+      "usedshippingtaxamt" : null,
+      "takendepositamt" : null
+    }
+  ]
+}
+

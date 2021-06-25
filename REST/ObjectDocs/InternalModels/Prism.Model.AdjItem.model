@@ -1,0 +1,613 @@
+##########################################################################################################
+File Name: Prism.Model.AdjItem.pas
+##########################################################################################################
+Class Name: TAdjItem
+Base Class Name: TModelBase
+Database Table: ADJ_ITEM
+Associate Class: False
+Identified By: 'FAdjSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID', [cpRequired, cpPrimaryKey, cpNotNull], 19, 0
+Documentation: 'Sid','AdjItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY', [cpRequired, cpNotNull], 20
+Documentation: 'CreatedBy','AdjItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME', [cpRequired, cpNotNull
+Documentation: 'CreatedDatetime','AdjItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY', [], 20
+Documentation: 'ModifiedBy','AdjItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME', [
+Documentation: 'ModifiedDatetime','AdjItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'ControllerSid','AdjItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION', [cpRequired, cpNotNull], 20
+Documentation: 'OriginApplication','AdjItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE', [
+Documentation: 'PostDate','AdjItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','AdjItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID', [], 19, 0
+Documentation: 'TenantSid','AdjItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjSid
+Data Type: Int64
+Database Column: 'ADJ_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'AdjSid','AdjItem.11'
+Legacy Column: 'ADJ_SID'
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS', [cpRequired, cpNotNull], 5, 0
+Documentation: 'ItemPos','AdjItem.12'
+Legacy Column: 'ITEM_POS'
+
+------------------------------------------------------
+
+Name: ItemSid
+Data Type: Int64
+Database Column: 'ITEM_SID', [cpRequired, cpNotNull], 19, 0
+Documentation: 'Item SID (unique identifier)','AdjItem.13'
+Legacy Column: 'ITEM_SID'
+
+------------------------------------------------------
+
+Name: OrigValue
+Data Type: Nullable<Double>
+Database Column: 'ORIG_VALUE', [], 16, 4
+Documentation: 'OrigValue','AdjItem.14'
+Legacy Column: 'ORIG_VALUE'
+
+------------------------------------------------------
+
+Name: AdjValue
+Data Type: Nullable<Double>
+Database Column: 'ADJ_VALUE', [], 16, 4
+Documentation: 'AdjValue','AdjItem.15'
+Legacy Column: 'ADJ_VALUE'
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST', [], 16, 4
+Documentation: 'Cost','AdjItem.16'
+Legacy Column: 'COST'
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE', [], 16, 4
+Documentation: 'Price','AdjItem.17'
+Legacy Column: 'PRICE'
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC', [], 16, 4
+Documentation: 'TaxPerc','AdjItem.18'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','AdjItem.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'TaxCodeSid','AdjItem.20'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxCode2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE2_SID',[],19,0
+Documentation: 'TaxCode2Sid','AdjItem.21'
+Legacy Column: 'TAX_CODE2'
+
+------------------------------------------------------
+
+Name: TaxPerc2
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC2', [], 16, 4
+Documentation: 'TaxPerc2','AdjItem.22'
+Legacy Column: 'TAX_PERC2'
+
+------------------------------------------------------
+
+Name: ScanUpc
+Data Type: Nullable<Int64>
+Database Column: 'SCAN_UPC', [], 18, 0
+Documentation: 'ScanUpc','AdjItem.23'
+Legacy Column: 'SCAN_UPC'
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NO', [], 50
+Documentation: 'This column is obsolete and has been replaced by ADJ_SERIAL.','AdjItem.24'
+Legacy Column: 'SERIAL_NO'
+
+------------------------------------------------------
+
+Name: UdfValue1
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE1', [], 50
+Documentation: 'Used to record a UDF value that existed at the time the document was created.  This field does not necessarily correspond to inventory UDF number 1.Extended with more char spaces to hold proper translation when necessary','AdjItem.25'
+Legacy Column: 'UDF_VALUE1'
+
+------------------------------------------------------
+
+Name: UdfValue2
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE2', [], 50
+Documentation: 'Used to record a UDF value that existed at the time the document was created.  This field does not necessarily correspond to inventory UDF number 2.Extended with more char spaces to hold proper translation when necessary','AdjItem.26'
+Legacy Column: 'UDF_VALUE2'
+
+------------------------------------------------------
+
+Name: UdfValue3
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE3', [], 50
+Documentation: 'Used to record a UDF value that existed at the time the document was created.  This field does not necessarily correspond to inventory UDF number 3.Extended with more char spaces to hold proper translation when necessary','AdjItem.27'
+Legacy Column: 'UDF_VALUE3'
+
+------------------------------------------------------
+
+Name: UdfValue4
+Data Type: Nullable<string>
+Database Column: 'UDF_VALUE4', [], 50
+Documentation: 'Used to record a UDF value that existed at the time the document was created.  This field does not necessarily correspond to inventory UDF number 4.Extended with more char spaces to hold proper translation when necessary','AdjItem.28'
+Legacy Column: 'UDF_VALUE4'
+
+------------------------------------------------------
+
+Name: OrigCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_COST', [], 16, 4
+Documentation: 'Corresponds to base item cost in v8.  Stock Ledger combines cost and quantity adjustments on qty adj memos in v8.  When the qty adj memo is brought into v9 the cost adj info was being lost.  Orig_Cost is used to capture the base item cost from v8.','AdjItem.29'
+Legacy Column: 'ORIG_COST'
+
+------------------------------------------------------
+
+Name: ItemNote1
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE1', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.30'
+Legacy Column: 'ITEM_NOTE1'
+
+------------------------------------------------------
+
+Name: ItemNote2
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE2', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.31'
+Legacy Column: 'ITEM_NOTE2'
+
+------------------------------------------------------
+
+Name: ItemNote3
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE3', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.32'
+Legacy Column: 'ITEM_NOTE3'
+
+------------------------------------------------------
+
+Name: ItemNote4
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE4', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.33'
+Legacy Column: 'ITEM_NOTE4'
+
+------------------------------------------------------
+
+Name: ItemNote5
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE5', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.34'
+Legacy Column: 'ITEM_NOTE5'
+
+------------------------------------------------------
+
+Name: ItemNote6
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE6', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.35'
+Legacy Column: 'ITEM_NOTE6'
+
+------------------------------------------------------
+
+Name: ItemNote7
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE7', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.36'
+Legacy Column: 'ITEM_NOTE7'
+
+------------------------------------------------------
+
+Name: ItemNote8
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE8', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.37'
+Legacy Column: 'ITEM_NOTE8'
+
+------------------------------------------------------
+
+Name: ItemNote9
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE9', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.38'
+Legacy Column: 'ITEM_NOTE9'
+
+------------------------------------------------------
+
+Name: ItemNote10
+Data Type: Nullable<string>
+Database Column: 'ITEM_NOTE10', [], 350
+Documentation: 'If we ever need more than 10 notes then break notes out into their own table.','AdjItem.39'
+Legacy Column: 'ITEM_NOTE10'
+
+------------------------------------------------------
+
+Name: AltUpc
+Data Type: Nullable<Int64>
+Database Column: 'ALT_UPC', [], 18, 0
+Documentation: 'Alternate vendor information','AdjItem.40'
+Legacy Column: 'ALT_UPC'
+
+------------------------------------------------------
+
+Name: AltAlu
+Data Type: Nullable<string>
+Database Column: 'ALT_ALU', [], 20
+Documentation: 'Alternate vendor information','AdjItem.41'
+Legacy Column: 'ALT_ALU'
+
+------------------------------------------------------
+
+Name: AltCost
+Data Type: Nullable<Double>
+Database Column: 'ALT_COST', [], 16, 4
+Documentation: 'Alternate vendor information','AdjItem.42'
+Legacy Column: 'ALT_COST'
+
+------------------------------------------------------
+
+Name: AltVendCode
+Data Type: Nullable<string>
+Database Column: 'ALT_VEND_CODE', [], 6
+Documentation: 'Alternate vendor information','AdjItem.43'
+Legacy Column: 'ALT_VEND_CODE'
+
+------------------------------------------------------
+
+Name: SublocMoveType
+Data Type: Nullable<TSublocMoveType>
+Database Column: 'SUBLOC_MOVE_TYPE', [], 1, 0
+Documentation: 'Used to identify Sub Location quantities related adjustments. 0=None, 1=Movement Only, 2=Movement/Adjustment.','AdjItem.44'
+Legacy Column: 'SUBLOC_MOVE_TYPE'
+
+------------------------------------------------------
+
+Name: CMPQty
+Data Type: Nullable<Double>
+Database Column: 'CMP_QTY', [], 10, 3
+Documentation: 'CMPQty','AdjItem.45'
+Legacy Column: 'CMP_QTY'
+
+------------------------------------------------------
+
+Name: AdjQty
+Data Type: IList<TAdjQty>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjSerial
+Data Type: IList<TAdjSerial>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjLotQty
+Data Type: IList<TAdjLotQty>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjGiftCard
+Data Type: IList<TAdjGiftCard>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','AdjItem.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','AdjItem.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiffValue
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigTax
+Data Type: Nullable<Double>
+Database Column: 'ORIG_TAX', [], 17, 5
+Documentation: 'tax amount calculated for original value','AdjItem.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjTax
+Data Type: Nullable<Double>
+Database Column: 'ADJ_TAX', [], 17, 5
+Documentation: 'tax amount calculated for adjusted value','AdjItem.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceWTax
+Data Type: double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceWOTax
+Data Type: double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjPriceWTax
+Data Type: double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjPriceWOTax
+Data Type: double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description1','AdjItem.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Description2','AdjItem.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attr
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Attribute','AdjItem.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Size
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'ItemSize','AdjItem.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','AdjItem.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'DcsCode','AdjItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Upc
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'Upc','AdjItem.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Alu
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Alu','AdjItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','AdjItem.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','AdjItem.59'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: UseQtyDecimals
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'UseQtyDecimals','AdjItem.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjustmentType
+Data Type: Nullable<TAdjustmentMemoType>
+Database Column: NA
+Documentation: '0-Qty,1-Price,2-Cost','AdjItem.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxName','AdjItem.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxName2
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxName','AdjItem.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: NA
+Documentation: 'serial-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).0-None,1-Partial,2-Full.','AdjItem.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'lot-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).','AdjItem.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitType
+Data Type: Nullable<TItemKitType>
+Database Column: NA
+Documentation: '0-NoEntry,1-Kit,2-Package,3-GiftCardStoredValue,4-GiftCardPrePaid,5-GiftCertificate,6-Fee,7-GiftCardCentral','AdjItem.66'
+Legacy Column: NA
+
+------------------------------------------------------
+

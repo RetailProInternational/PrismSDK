@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.InitStatusResource.pas
+##########################################################################################################
+Class Name: TInitStatusResource
+Base Class Name: TModelBase
+Database Table: INITIALIZATION_STATUS_DETAIL
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Unique ID for this initialization session','InitStatusResource.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','InitStatusResource.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','InitStatusResource.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','InitStatusResource.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','InitStatusResource.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','InitStatusResource.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','InitStatusResource.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','InitStatusResource.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','InitStatusResource.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','InitStatusResource.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: string
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: 'name of the resource that is currently being processed','InitStatusResource.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceRowsProcessedSofar
+Data Type: Nullable<Int64>
+Database Column: 'RESOURCE_ROWS_PROCESSED_SOFAR',[],30,0
+Documentation: 'total rows processed so far for this resource','InitStatusResource.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastUpdateDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_UPDATE_DATETIME',[
+Documentation: 'date time this record was last updated','InitStatusResource.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HeaderSid
+Data Type: Int64
+Database Column: 'HEADER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'link to the initialization_status_header associated with this detail record','InitStatusResource.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalRowsExpected
+Data Type: Nullable<Int64>
+Database Column: 'TOTAL_ROWS_EXPECTED',[],30,0
+Documentation: 'total records expected for this resource','InitStatusResource.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProcessOrder
+Data Type: Int16
+Database Column: 'PROCESS_ORDER',[cpRequired,cpNotNull],5,0
+Documentation: 'the order in the process order for this resource','InitStatusResource.16'
+Legacy Column: NA
+
+------------------------------------------------------
+

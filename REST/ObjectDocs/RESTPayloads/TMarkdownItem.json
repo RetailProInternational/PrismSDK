@@ -1,0 +1,24 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "markdownsid" : "0",
+      "invnsbsitemsid" : "0",
+      "markdownvalue" : null,
+      "origvalue" : null,
+      "invnitemuid" : null,
+      "taxcodesid" : null,
+      "cost" : null
+    }
+  ]
+}
+

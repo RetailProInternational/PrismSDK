@@ -1,0 +1,189 @@
+##########################################################################################################
+File Name: Prism.Model.Currency.pas
+##########################################################################################################
+Class Name: TCurrency
+Base Class Name: TModelBase
+Database Table: CURRENCY
+Associate Class: False
+Identified By: 'FAlphabeticCode'
+Legacy Identified By: 'AlphabeticCode'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Currency.1'
+Legacy Column: 'CURRENCY_ID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Currency.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Currency.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Currency.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Currency.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Currency.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Currency.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Currency.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Currency.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Currency.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: 'CURRENCY_NAME',[],30
+Documentation: 'CurrencyName','Currency.11'
+Legacy Column: 'CURRENCY_NAME'
+
+------------------------------------------------------
+
+Name: Discrepancy
+Data Type: Nullable<Double>
+Database Column: 'DISCREPANCY',[],16,4
+Documentation: '[need comment]','Currency.12'
+Legacy Column: 'DISCREPANCY'
+
+------------------------------------------------------
+
+Name: Rounding
+Data Type: Nullable<Double>
+Database Column: 'ROUNDING',[],6,2
+Documentation: '[need comment]','Currency.13'
+Legacy Column: 'ROUNDING'
+
+------------------------------------------------------
+
+Name: Decimals
+Data Type: Int16
+Database Column: 'DECIMALS',[cpRequired,cpNotNull],3,0
+Documentation: 'number of decimals places to restrict values to and to round values to.','Currency.14'
+Legacy Column: 'DECIMALS'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates whether the currency record is active','Currency.15'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: AlphabeticCode
+Data Type: string
+Database Column: 'ALPHABETIC_CODE',[cpRequired,cpNotNull],3
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','Currency.16'
+Legacy Column: 'CURRENCY_ABBR'
+
+------------------------------------------------------
+
+Name: NumericCode
+Data Type: Nullable<Int16>
+Database Column: 'NUMERIC_CODE',[],3,0
+Documentation: '3 letter numeric currency code as defined by ISO 4217','Currency.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinorUnit
+Data Type: Nullable<Int16>
+Database Column: 'MINOR_UNIT',[],3,0
+Documentation: 'number of digits after decimal seperator, as defined in ISO 4217','Currency.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Symbol
+Data Type: Nullable<string>
+Database Column: 'SYMBOL',[],25
+Documentation: 'currency symbol in unicode','Currency.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyRate
+Data Type: Nullable<Double>
+Database Column: 'LTY_RATE',[],16,4
+Documentation: 'Rate used to calculate the value of Customer Loyalty points against Currency, [currency / points].','Currency.21'
+Legacy Column: 'LTY_RATE'
+
+------------------------------------------------------
+
+Name: InternalFlag
+Data Type: Boolean
+Database Column: 'INTERNAL_FLAG',[],1,0
+Documentation: 'ISO standard or custom currency. 1 - ISO standard currency, 0 - No ISO and custom currency','Currency.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyDenomination
+Data Type: IList<TCurrencyDenomination>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

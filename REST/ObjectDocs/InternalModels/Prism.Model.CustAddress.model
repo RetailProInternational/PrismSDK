@@ -1,0 +1,365 @@
+##########################################################################################################
+File Name: Prism.Model.CustAddress.pas
+##########################################################################################################
+Class Name: TCustAddress
+Base Class Name: TModelBase
+Database Table: CUSTOMER_ADDRESS
+Associate Class: False
+Identified By: 'FCustSid,FSeqNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpNotNull,cpPrimaryKey],19,0
+Documentation: 'unique identifying value','CustAddress.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CustAddress.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CustAddress.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CustAddress.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustAddress.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CustAddress.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','CustAddress.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','CustAddress.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustAddress.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CustAddress.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to customer record.','CustAddress.11'
+Legacy Column: 'CUST_SID'
+
+------------------------------------------------------
+
+Name: PrimaryFlag
+Data Type: boolean
+Database Column: 'PRIMARY_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates that this is the customers primary address','CustAddress.12'
+Legacy Column: 'DEFAULT_ADDR'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates this address can be used in work flow.','CustAddress.13'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: AddressName
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_NAME',[],30
+Documentation: 'descriptive name of address as it relates to the customer.','CustAddress.14'
+Legacy Column: 'ADDR_NAME'
+
+------------------------------------------------------
+
+Name: CompanyName
+Data Type: Nullable<string>
+Database Column: 'COMPANY_NAME',[],100
+Documentation: 'optional name of company at this address.','CustAddress.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_1',[],40
+Documentation: 'address line 1 - number and street','CustAddress.16'
+Legacy Column: 'ADDRESS1'
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_2',[],40
+Documentation: 'address line 2 - suite','CustAddress.17'
+Legacy Column: 'ADDRESS2'
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_3',[],40
+Documentation: 'address line 3 - c/o','CustAddress.18'
+Legacy Column: 'ADDRESS3'
+
+------------------------------------------------------
+
+Name: City
+Data Type: Nullable<string>
+Database Column: 'CITY',[],40
+Documentation: 'address city','CustAddress.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: Nullable<string>
+Database Column: 'STATE',[],5
+Documentation: 'address state or province','CustAddress.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCode
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE',[],10
+Documentation: 'postal (zip) code','CustAddress.21'
+Legacy Column: 'ZIP'
+
+------------------------------------------------------
+
+Name: PostalCodeExtension
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE_EXTENSION',[],5
+Documentation: 'postal code extension (zip+4)','CustAddress.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'reference to country record.','CustAddress.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'BEGIN_DATE',[
+Documentation: 'date customer began using or living at this address.','CustAddress.24'
+Legacy Column: 'BEGIN_DATE'
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'date customer stopped using or living at this address.','CustAddress.25'
+Legacy Column: 'END_DATE'
+
+------------------------------------------------------
+
+Name: SeasonalBeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SEASONAL_BEGIN_DATE',[
+Documentation: 'if the customer uses this address seasonally, month and day (year is ignored) that customerbegins using this address.','CustAddress.26'
+Legacy Column: 'SEASON_START_DATE'
+
+------------------------------------------------------
+
+Name: SeasonalEndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'SEASONAL_END_DATE',[
+Documentation: 'if the customer uses this address seasonally, month and day (year is ignored) that customer stopsusing this address.','CustAddress.27'
+Legacy Column: 'SEASON_END_DATE'
+
+------------------------------------------------------
+
+Name: AddressTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'ADDRESS_TYPE_SID',[],19,0
+Documentation: 'reference to address type record.','CustAddress.28'
+Legacy Column: 'TYPE_NAME'
+
+------------------------------------------------------
+
+Name: AddressCode
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_CODE',[],10
+Documentation: 'short descriptive code for this address, eg. home, work, etc.','CustAddress.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BillShip
+Data Type: Nullable<Int16>
+Database Column: 'BILL_SHIP',[],1,0
+Documentation: '0-Billing and 1-Shipping','CustAddress.30'
+Legacy Column: 'SHIPPING'
+
+------------------------------------------------------
+
+Name: PhoneSid
+Data Type: Nullable<Int64>
+Database Column: 'PHONE_SID',[],19,0
+Documentation: 'reference to phone record. phone number at location','CustAddress.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltPhoneSid
+Data Type: Nullable<Int64>
+Database Column: 'ALT_PHONE_SID',[],19,0
+Documentation: 'reference to phone record. alternate phone number','CustAddress.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressAllowContact
+Data Type: Boolean
+Database Column: 'ADDRESS_ALLOW_CONTACT',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates customer has opted out of being contacted at this address.','CustAddress.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_4',[],40
+Documentation: 'Extended address detail','CustAddress.34'
+Legacy Column: 'ADDRESS4'
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_5',[],40
+Documentation: 'Extended address detail','CustAddress.35'
+Legacy Column: 'ADDRESS5'
+
+------------------------------------------------------
+
+Name: Address6
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_6',[],40
+Documentation: 'Extended address detail','CustAddress.36'
+Legacy Column: 'ADDRESS6'
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'Each address that is created can have a specific tax area associated with it.','CustAddress.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'Each address that is created can have a specific tax area associated with it.','CustAddress.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressLine1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_LINE1',[],40
+Documentation: 'AddressLine1','CustAddress.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Int16
+Database Column: 'SEQ_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SeqNo','CustAddress.40'
+Legacy Column: 'ADDR_NO'
+
+------------------------------------------------------
+
+Name: TaxArea
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','CustAddress.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Name','CustAddress.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressType
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'address type name, eg. home2, work1 etc.','CustAddress.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountryCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'country code','CustAddress.44'
+Legacy Column: 'COUNTRY_CODE'
+
+------------------------------------------------------
+

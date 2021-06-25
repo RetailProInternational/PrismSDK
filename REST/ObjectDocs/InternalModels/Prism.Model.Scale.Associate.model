@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.Scale.Associate.pas
+##########################################################################################################
+Class Name: TScaleAssociate
+Base Class Name: 
+Database Table: SCALE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScaleName
+Data Type: Nullable<string>
+Database Column: 'SCALE_NAME',[],12
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScaleNo
+Data Type: Nullable<Integer>
+Database Column: 'SCALE_NO',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

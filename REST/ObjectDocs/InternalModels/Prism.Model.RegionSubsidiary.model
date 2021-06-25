@@ -1,0 +1,149 @@
+##########################################################################################################
+File Name: Prism.Model.RegionSubsidiary.pas
+##########################################################################################################
+Class Name: TRegionSubsidiary
+Base Class Name: TModelBase
+Database Table: REGION_SUBSIDIARY
+Associate Class: False
+Identified By: 'FRegionSID,FSbsSID'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','RegionSubsidiary.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','RegionSubsidiary.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','RegionSubsidiary.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','RegionSubsidiary.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','RegionSubsidiary.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','RegionSubsidiary.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','RegionSubsidiary.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','RegionSubsidiary.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','RegionSubsidiary.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','RegionSubsidiary.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','RegionSubsidiary.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionSid
+Data Type: Int64
+Database Column: 'REGION_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'RegionSid','RegionSubsidiary.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','RegionSubsidiary.15'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'subsidiary name','RegionSubsidiary.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsMasterSbs
+Data Type: Boolean
+Database Column: NA
+Documentation: 'True if its a master subsidiary','RegionSubsidiary.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Region name','RegionSubsidiary.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionNo
+Data Type: Integer
+Database Column: NA
+Documentation: 'Region ID','RegionSubsidiary.14'
+Legacy Column: NA
+
+------------------------------------------------------
+

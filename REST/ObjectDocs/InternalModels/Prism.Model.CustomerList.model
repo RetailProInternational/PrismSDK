@@ -1,0 +1,981 @@
+##########################################################################################################
+File Name: Prism.Model.CustomerList.pas
+##########################################################################################################
+Class Name: TCustomerList
+Base Class Name: TModelBase
+Database Table: CUSTOMER_LIST_V
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','CustomerList.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstName
+Data Type: Nullable<string>
+Database Column: 'FIRST_NAME',[],30
+Documentation: 'FirstName','CustomerList.2', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastName
+Data Type: Nullable<string>
+Database Column: 'LAST_NAME',[],30
+Documentation: 'LastName','CustomerList.3', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],50
+Documentation: 'Udf1String','CustomerList.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],50
+Documentation: 'Udf2String','CustomerList.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],50
+Documentation: 'Udf3String','CustomerList.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],50
+Documentation: 'Udf4String','CustomerList.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],50
+Documentation: 'Udf5String','CustomerList.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: 'Udf1Date','CustomerList.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: 'Udf2Date','CustomerList.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','CustomerList.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','CustomerList.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','CustomerList.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','CustomerList.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','CustomerList.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','CustomerList.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','CustomerList.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','CustomerList.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','CustomerList.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','CustomerList.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','CustomerList.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FullName
+Data Type: Nullable<string>
+Database Column: 'FULL_NAME',[],61
+Documentation: 'FullName','CustomerList.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AcceptChecks
+Data Type: boolean
+Database Column: 'ACCEPT_CHECKS',[],1,0
+Documentation: 'AcceptChecks','CustomerList.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AccountingSystemId
+Data Type: Nullable<string>
+Database Column: 'ACCOUNTING_SYSTEM_ID',[],40
+Documentation: 'AccountingSystemId','CustomerList.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AllowedTenders
+Data Type: Nullable<string>
+Database Column: 'ALLOWED_TENDERS',[],20
+Documentation: 'AllowedTenders','CustomerList.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlternateId1
+Data Type: Nullable<string>
+Database Column: 'ALTERNATE_ID1',[],20
+Documentation: 'AlternateId1','CustomerList.27', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AlternateId2
+Data Type: Nullable<string>
+Database Column: 'ALTERNATE_ID2',[],20
+Documentation: 'AlternateId2','CustomerList.28', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ArFlag
+Data Type: Nullable<TCustomerARFlag>
+Database Column: 'AR_FLAG',[],1,0
+Documentation: 'indicates status of last attempt to process customer information into accounting system1-Yes, 2-No, 3-Export','CustomerList.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BirthDay
+Data Type: Nullable<Int16>
+Database Column: 'BIRTH_DAY',[],5,0
+Documentation: 'BirthDay','CustomerList.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BirthMonth
+Data Type: Nullable<Int16>
+Database Column: 'BIRTH_MONTH',[],5,0
+Documentation: 'BirthMonth','CustomerList.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BirthYear
+Data Type: Nullable<Integer>
+Database Column: 'BIRTH_YEAR',[],10,0
+Documentation: 'BirthYear','CustomerList.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralCredit
+Data Type: Nullable<Double>
+Database Column: 'CENTRAL_CREDIT',[],16,4
+Documentation: 'CentralCredit','CustomerList.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cms
+Data Type: Nullable<Int16>
+Database Column: 'CMS',[],1,0
+Documentation: 'Cms','CustomerList.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CompanySid
+Data Type: Nullable<Int64>
+Database Column: 'COMPANY_SID',[],19,0
+Documentation: 'CompanySid','CustomerList.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'CountrySid','CustomerList.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreditLimit
+Data Type: Nullable<Double>
+Database Column: 'CREDIT_LIMIT',[],16,4
+Documentation: 'CreditLimit','CustomerList.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreditUsed
+Data Type: Nullable<Double>
+Database Column: 'CREDIT_USED',[],16,4
+Documentation: 'CreditUsed','CustomerList.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustClassSid
+Data Type: Nullable<Int64>
+Database Column: 'CUST_CLASS_SID',[],19,0
+Documentation: 'CustClassSid','CustomerList.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustId
+Data Type: Nullable<Integer>
+Database Column: 'CUST_ID',[],10,0
+Documentation: 'CustId','CustomerList.40','STRING', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustType
+Data Type: Nullable<TCustomerType>
+Database Column: 'CUST_TYPE',[],5,0
+Documentation: 'indicates type of customer,0-CustomerOnly and 1-Employee','CustomerList.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Detax
+Data Type: boolean
+Database Column: 'DETAX',[],1,0
+Documentation: 'Detax','CustomerList.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DistrictSid
+Data Type: Nullable<Int64>
+Database Column: 'DISTRICT_SID',[],19,0
+Documentation: 'DistrictSid','CustomerList.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeAsCustomer
+Data Type: boolean
+Database Column: 'EMPLOYEE_AS_CUSTOMER',[cpRequired,cpNotNull],1,0
+Documentation: 'EmployeeAsCustomer','CustomerList.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstSaleDate
+Data Type: Nullable<TDateTime>
+Database Column: 'FIRST_SALE_DATE',[
+Documentation: 'FirstSaleDate','CustomerList.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Gender
+Data Type: Nullable<TCustomerGender>
+Database Column: 'GENDER',[],1,0
+Documentation: '0=male, 1=female','CustomerList.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HouseholdCode
+Data Type: Nullable<Integer>
+Database Column: 'HOUSEHOLD_CODE',[],10,0
+Documentation: 'HouseholdCode','CustomerList.47', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Info1
+Data Type: Nullable<string>
+Database Column: 'INFO1',[],20
+Documentation: 'Info1','CustomerList.48', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Info2
+Data Type: Nullable<string>
+Database Column: 'INFO2',[],20
+Documentation: 'Info2','CustomerList.49', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastOrderDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_ORDER_DATE',[
+Documentation: 'LastOrderDate','CustomerList.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastReturnDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_RETURN_DATE',[
+Documentation: 'LastReturnDate','CustomerList.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastSaleDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_SALE_DATE',[
+Documentation: 'LastSaleDate','CustomerList.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastSaleAmt
+Data Type: Nullable<Double>
+Database Column: 'LAST_SALE_AMT',[],16,4
+Documentation: 'LastSaleAmt','CustomerList.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyAccumulated
+Data Type: Nullable<Double>
+Database Column: 'LTY_ACCUMULATED',[],24,8
+Documentation: 'LtyAccumulated','CustomerList.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyBalance
+Data Type: Nullable<Double>
+Database Column: 'LTY_BALANCE',[],24,8
+Documentation: 'LtyBalance','CustomerList.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyEnrollDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_ENROLL_DATE',[
+Documentation: 'LtyEnrollDate','CustomerList.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyLvlLocked
+Data Type: boolean
+Database Column: 'LTY_LVL_LOCKED',[],1,0
+Documentation: 'LtyLvlLocked','CustomerList.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'LTY_LVL_SID',[],19,0
+Documentation: 'LtyLvlSid','CustomerList.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyOptIn
+Data Type: boolean
+Database Column: 'LTY_OPT_IN',[],1,0
+Documentation: 'LtyOptIn','CustomerList.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyOptInManual
+Data Type: boolean
+Database Column: 'LTY_OPT_IN_MANUAL',[],1,0
+Documentation: 'LtyOptInManual','CustomerList.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Mark1
+Data Type: Nullable<string>
+Database Column: 'MARK1',[],4
+Documentation: 'Mark1','CustomerList.61', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Mark2
+Data Type: Nullable<string>
+Database Column: 'MARK2',[],4
+Documentation: 'Mark2','CustomerList.62', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarketingFlag
+Data Type: Nullable<Integer>
+Database Column: 'MARKETING_FLAG',[],10,0
+Documentation: 'MarketingFlag','CustomerList.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC',[],16,4
+Documentation: 'MaxDiscPerc','CustomerList.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderItemCount
+Data Type: Nullable<Integer>
+Database Column: 'ORDER_ITEM_COUNT',[],10,0
+Documentation: 'OrderItemCount','CustomerList.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PaymentTermsSid
+Data Type: Nullable<Int64>
+Database Column: 'PAYMENT_TERMS_SID',[],19,0
+Documentation: 'PaymentTermsSid','CustomerList.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'PRICE_LVL_SID',[],19,0
+Documentation: 'PriceLvlSid','CustomerList.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoCustlistname
+Data Type: Nullable<string>
+Database Column: 'PROMO_CUSTLISTNAME',[],255
+Documentation: 'PromoCustlistname','CustomerList.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: QbLink
+Data Type: boolean
+Database Column: 'QB_LINK',[],1,0
+Documentation: 'QbLink','CustomerList.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RegionSid
+Data Type: Nullable<Int64>
+Database Column: 'REGION_SID',[],19,0
+Documentation: 'RegionSid','CustomerList.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RelatedCustSid
+Data Type: Nullable<Int64>
+Database Column: 'RELATED_CUST_SID',[],19,0
+Documentation: 'RelatedCustSid','CustomerList.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnItemCount
+Data Type: Nullable<Integer>
+Database Column: 'RETURN_ITEM_COUNT',[],10,0
+Documentation: 'ReturnItemCount','CustomerList.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SaleItemCount
+Data Type: Nullable<Integer>
+Database Column: 'SALE_ITEM_COUNT',[],10,0
+Documentation: 'SaleItemCount','CustomerList.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SecurityLvl
+Data Type: Nullable<Int16>
+Database Column: 'SECURITY_LVL',[],5,0
+Documentation: 'SecurityLvl','CustomerList.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Segmented
+Data Type: boolean
+Database Column: 'SEGMENTED',[],1,0
+Documentation: 'Segmented','CustomerList.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShareType
+Data Type: TCustomerShareType
+Database Column: 'SHARE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'Indicates how this customer record is shared; 0 = local, 1 = global, 2 = regional, 3 = non-share.  Defaults to global','CustomerList.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShippingPriority
+Data Type: Nullable<Int16>
+Database Column: 'SHIPPING_PRIORITY',[],5,0
+Documentation: 'ShippingPriority','CustomerList.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Station
+Data Type: Nullable<string>
+Database Column: 'STATION',[],1
+Documentation: 'Station','CustomerList.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCredit
+Data Type: Nullable<Double>
+Database Column: 'STORE_CREDIT',[],16,4
+Documentation: 'StoreCredit','CustomerList.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'StoreSid','CustomerList.80'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SuffixSid
+Data Type: Nullable<Int64>
+Database Column: 'SUFFIX_SID',[],19,0
+Documentation: 'SuffixSid','CustomerList.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SuggestedDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'SUGGESTED_DISC_PERC',[],16,4
+Documentation: 'SuggestedDiscPerc','CustomerList.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'TaxAreaSid','CustomerList.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA2_SID',[],19,0
+Documentation: 'TaxArea2Sid','CustomerList.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TitleSid
+Data Type: Nullable<Int64>
+Database Column: 'TITLE_SID',[],19,0
+Documentation: 'TitleSid','CustomerList.85', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalTransactions
+Data Type: Nullable<Integer>
+Database Column: 'TOTAL_TRANSACTIONS',[],10,0
+Documentation: 'TotalTransactions','CustomerList.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: YtdSale
+Data Type: Nullable<Double>
+Database Column: 'YTD_SALE',[],16,4
+Documentation: 'YtdSale','CustomerList.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address1
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_1',[],40
+Documentation: 'Address1','CustomerList.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address2
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_2',[],40
+Documentation: 'Address2','CustomerList.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address3
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_3',[],40
+Documentation: 'Address3','CustomerList.90'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address4
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_4',[],40
+Documentation: 'Address4','CustomerList.91'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address5
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_5',[],40
+Documentation: 'Address5','CustomerList.92'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address6
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_6',[],40
+Documentation: 'Address6','CustomerList.93'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCode
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE',[],10
+Documentation: 'PostalCode','CustomerList.94', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: City
+Data Type: Nullable<string>
+Database Column: 'CITY',[],40
+Documentation: 'City','CustomerList.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: Nullable<string>
+Database Column: 'STATE',[],5
+Documentation: 'State','CustomerList.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneNo
+Data Type: Nullable<string>
+Database Column: 'PHONE_NO',[],30
+Documentation: 'PhoneNo','CustomerList.97', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'Udf6String','CustomerList.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'Udf7String','CustomerList.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'Udf8String','CustomerList.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'Udf9String','CustomerList.101'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'Udf10String','CustomerList.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf11String
+Data Type: Nullable<string>
+Database Column: 'UDF11_STRING',[],50
+Documentation: 'Udf11String','CustomerList.103'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf12String
+Data Type: Nullable<string>
+Database Column: 'UDF12_STRING',[],50
+Documentation: 'Udf12String','CustomerList.104'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf13String
+Data Type: Nullable<string>
+Database Column: 'UDF13_STRING',[],50
+Documentation: 'Udf13String','CustomerList.105'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf14String
+Data Type: Nullable<string>
+Database Column: 'UDF14_STRING',[],50
+Documentation: 'Udf14String','CustomerList.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf15String
+Data Type: Nullable<string>
+Database Column: 'UDF15_STRING',[],50
+Documentation: 'Udf15String','CustomerList.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf16String
+Data Type: Nullable<string>
+Database Column: 'UDF16_STRING',[],50
+Documentation: 'Udf16String','CustomerList.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf17String
+Data Type: Nullable<string>
+Database Column: 'UDF17_STRING',[],50
+Documentation: 'Udf17String','CustomerList.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf18String
+Data Type: Nullable<string>
+Database Column: 'UDF18_STRING',[],50
+Documentation: 'Udf18String','CustomerList.110'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Title
+Data Type: Nullable<string>
+Database Column: 'TITLE',[],15
+Documentation: 'Title','CustomerList.111'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: 'STORE_NO',[],5,0
+Documentation: 'StoreNo','CustomerList.112'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: 'STORE_NAME',[],40
+Documentation: 'StoreName','CustomerList.113'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: 'STORE_CODE',[],5
+Documentation: 'StoreCode','CustomerList.114'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AddressType
+Data Type: Nullable<string>
+Database Column: 'ADDRESS_TYPE',[],30
+Documentation: 'AddressType','CustomerList.115'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneType
+Data Type: Nullable<string>
+Database Column: 'PHONE_TYPE',[],20
+Documentation: 'PhoneType','CustomerList.116'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailAddress
+Data Type: Nullable<string>
+Database Column: 'EMAIL_ADDRESS',[],100
+Documentation: 'EmailAddress','CustomerList.119'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailType
+Data Type: Nullable<string>
+Database Column: 'EMAIL_TYPE',[],20
+Documentation: 'EmailType','CustomerList.120'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Int16
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SbsNo','CustomerList.117', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: 'SBS_NAME',[],15
+Documentation: 'SbsName','CustomerList.118'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Company
+Data Type: Nullable<string>
+Database Column: 'COMPANY',[],70
+Documentation: 'Company','CustomerList.121', '', true
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FromCentrals
+Data Type: boolean
+Database Column: NA
+Documentation: 'From Centrals','CustomerList.122'
+Legacy Column: NA
+
+------------------------------------------------------
+

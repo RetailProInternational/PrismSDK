@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.InitializationStatus.pas
+##########################################################################################################
+Class Name: TInitializationStatus
+Base Class Name: TModelBase
+Database Table: INITIALIZATION_STATUS_HEADER
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Unique ID for this initialization session','InitializationStatus.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','InitializationStatus.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','InitializationStatus.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','InitializationStatus.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','InitializationStatus.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','InitializationStatus.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','InitializationStatus.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','InitializationStatus.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','InitializationStatus.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','InitializationStatus.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LoadStarttime
+Data Type: Nullable<TDateTime>
+Database Column: 'LOAD_STARTTIME',[
+Documentation: 'time when the initial start was started','InitializationStatus.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrentResourceWip
+Data Type: Nullable<string>
+Database Column: 'CURRENT_RESOURCE_WIP',[],50
+Documentation: 'name of the resource that is currently being processed','InitializationStatus.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalRowsProcessedSofar
+Data Type: Nullable<Int64>
+Database Column: 'TOTAL_ROWS_PROCESSED_SOFAR',[],30,0
+Documentation: 'total number of rows processed for all resurces so far','InitializationStatus.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastUpdateDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_UPDATE_DATETIME',[
+Documentation: 'date time this record was last updated','InitializationStatus.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CompleteFlag
+Data Type: Boolean
+Database Column: 'COMPLETE_FLAG',[],1,0
+Documentation: '0 = init load not complete, 1 = init load complete','InitializationStatus.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalRowsExpected
+Data Type: Nullable<Int64>
+Database Column: 'TOTAL_ROWS_EXPECTED',[],30,0
+Documentation: 'total number of rows expected for all resources for this Initialization session','InitializationStatus.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RemSubscriptionSid
+Data Type: Int64
+Database Column: 'REM_SUBSCRIPTION_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Link to Subscription used for this Initialization','InitializationStatus.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InitStatusResource
+Data Type: IList<TInitStatusResource>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InitStatusConnection
+Data Type: IList<TInitStatusConnection>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'name given to this subscription','InitializationStatus.18'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.CustomerClass.Associate.pas
+##########################################################################################################
+Class Name: TCustomerClassAssociate
+Base Class Name: 
+Database Table: CUSTOMER_CLASS
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'CUST_CLASS_NAME',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "vousid" : "0",
+      "termtype" : 0,
+      "termno" : 0,
+      "days" : null,
+      "discpmtperc" : null,
+      "termdate" : null,
+      "amt" : null,
+      "archived" : null
+    }
+  ]
+}
+

@@ -1,0 +1,62 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "vendcode" : null,
+      "active" : false,
+      "vendname" : null,
+      "info1" : null,
+      "info2" : null,
+      "termtype" : null,
+      "accountno" : null,
+      "tradediscperc" : null,
+      "vendleadtime" : null,
+      "apflag" : null,
+      "currencysid" : null,
+      "regional" : false,
+      "countrysid" : null,
+      "qbid" : null,
+      "udf1string" : null,
+      "udf2string" : null,
+      "udf3string" : null,
+      "udf4string" : null,
+      "udf5string" : null,
+      "udf6string" : null,
+      "udf1date" : null,
+      "udf2date" : null,
+      "notes" : null,
+      "image" : null,
+      "vendid" : null,
+      "sbssid" : "0",
+      "languagesid" : null,
+      "publishstatus" : 0,
+      "mincost" : null,
+      "minqty" : null,
+      "vendorterm" : [
+      ],
+      "vendoraddress" : [
+      ],
+      "vendorcontact" : [
+      ],
+      "primarycontactfirstname" : null,
+      "primarycontactlastname" : null,
+      "primarycontactphone1" : null,
+      "primarycontactphone2" : null,
+      "primarycontactemail" : null,
+      "sbsno" : null,
+      "countrycode" : null,
+      "currencycode" : null,
+      "languagename" : null
+    }
+  ]
+}
+

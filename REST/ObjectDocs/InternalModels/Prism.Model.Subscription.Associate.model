@@ -1,0 +1,53 @@
+##########################################################################################################
+File Name: Prism.Model.Subscription.Associate.pas
+##########################################################################################################
+Class Name: TSubscriptionAssociate
+Base Class Name: TAssociateBase
+Database Table: REM_SUBSCRIPTION
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionName
+Data Type: Nullable<string>
+Database Column: 'SUBSCRIPTION_NAME',[cpRequired,cpNotNull],40
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SubscriptionType
+Data Type: Nullable<TSubscriptionType>
+Database Column: 'SUBSCRIPTION_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GlobalFilter
+Data Type: Nullable<string>
+Database Column: 'GLOBAL_FILTER',[],1024
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

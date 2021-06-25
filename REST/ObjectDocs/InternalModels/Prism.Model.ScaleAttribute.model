@@ -1,0 +1,117 @@
+##########################################################################################################
+File Name: Prism.Model.ScaleAttribute.pas
+##########################################################################################################
+Class Name: TScaleAttribute
+Base Class Name: TModelBase
+Database Table: SCALE_ATTRIBUTE
+Associate Class: False
+Identified By: 'FScaleSid,FAttribute'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ScaleAttribute.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','ScaleAttribute.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ScaleAttribute.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','ScaleAttribute.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ScaleAttribute.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','ScaleAttribute.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','ScaleAttribute.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','ScaleAttribute.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ScaleAttribute.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','ScaleAttribute.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScaleSid
+Data Type: Int64
+Database Column: 'SCALE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ScaleSid','ScaleAttribute.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attribute
+Data Type: string
+Database Column: 'ATTRIBUTE',[cpRequired,cpNotNull],8
+Documentation: 'Attribute','ScaleAttribute.12'
+Legacy Column: 'ATTR'
+
+------------------------------------------------------
+
+Name: AttributeOrder
+Data Type: Int16
+Database Column: 'ATTRIBUTE_ORDER',[cpRequired,cpNotNull],5,0
+Documentation: 'AttributeOrder','ScaleAttribute.13'
+Legacy Column: 'ORD'
+
+------------------------------------------------------
+

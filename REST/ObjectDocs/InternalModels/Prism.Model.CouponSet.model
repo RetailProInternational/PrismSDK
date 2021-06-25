@@ -1,0 +1,269 @@
+##########################################################################################################
+File Name: Prism.Model.CouponSet.pas
+##########################################################################################################
+Class Name: TCouponSet
+Base Class Name: TModelBase
+Database Table: COUPON_SET
+Associate Class: False
+Identified By: 'FSbsSid,FSetID'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CouponSet.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CouponSet.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CouponSet.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CouponSet.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CouponSet.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','CouponSet.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','CouponSet.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','CouponSet.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CouponSet.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','CouponSet.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','CouponSet.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SetID
+Data Type: Int64
+Database Column: 'SET_ID',[],10,0
+Documentation: 'coupon set ID.','CouponSet.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SetName
+Data Type: string
+Database Column: 'SET_NAME',[],50
+Documentation: 'coupon set name.','CouponSet.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CodePrefix
+Data Type: Nullable<string>
+Database Column: 'CODE_PREFIX',[],20
+Documentation: 'coupon code prefix for this coupon set','CouponSet.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CodeLength
+Data Type: Int16
+Database Column: 'CODE_LENGTH',[],2,0
+Documentation: 'total length of coupon code for this coupon set. including code prefix','CouponSet.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DateType
+Data Type: TCouponSetDateType
+Database Column: 'DATE_TYPE',[],1,0
+Documentation: 'type of date for coupons (0-take start date,1-Add days on current date)','CouponSet.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartDate
+Data Type: Nullable<TDateTime>
+Database Column: 'START_DATE',[
+Documentation: 'start date of activate for this coupon set','CouponSet.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartDateDays
+Data Type: Nullable<Int16>
+Database Column: 'START_DATE_DAYS',[],2,0
+Documentation: 'days for add on current date for coupons','CouponSet.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'end date of activate for this coupon set','CouponSet.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDateDays
+Data Type: Nullable<Int16>
+Database Column: 'END_DATE_DAYS',[],2,0
+Documentation: 'days for add on current date for coupons','CouponSet.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AutoGenerate
+Data Type: Boolean
+Database Column: 'AUTO_GENERATE',[],1,0
+Documentation: 'auto generate new coupon when unavailable on this coupon set  (0-No, 1-Auto)','CouponSet.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ValidationCount
+Data Type: Int16
+Database Column: 'VALIDATION_COUNT',[],1,0
+Documentation: 'validate on running promotion (0-Unlimited,1-Once,x-Count)','CouponSet.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalCount
+Data Type: Nullable<Int16>
+Database Column: 'TOTAL_COUNT',[],5,0
+Documentation: 'total counts for generated for coupons','CouponSet.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IssuedCount
+Data Type: Nullable<Int16>
+Database Column: 'ISSUED_COUNT',[],5,0
+Documentation: 'total counts for issued for coupons','CouponSet.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UsedCount
+Data Type: Nullable<Int16>
+Database Column: 'USED_COUNT',[],5,0
+Documentation: 'total counts for used for coupons','CouponSet.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Boolean
+Database Column: 'STATUS',[],1,0
+Documentation: 'status of coupon set (0-New, 1-Generated)','CouponSet.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: '0 - Inactive, 1 - Active','CouponSet.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CalcIssuedCount
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CalcUsedCount
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AvailableIssue
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AvailableUse
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','CouponSet.28'
+Legacy Column: NA
+
+------------------------------------------------------
+

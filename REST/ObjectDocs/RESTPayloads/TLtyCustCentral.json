@@ -1,0 +1,30 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "custsid" : "0",
+      "ltyoptin" : false,
+      "ltyoptindate" : null,
+      "ltyenrolldate" : null,
+      "ltybalance" : null,
+      "ltyaccumulated" : null,
+      "ltylvlsid" : null,
+      "ltylvllocked" : false,
+      "ltyoptinmanual" : false,
+      "ltylvlsiddate" : null,
+      "ltylvllockeddate" : null,
+      "ltycustpgmgiven" : [
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.CustPhone.pas
+##########################################################################################################
+Class Name: TCustPhone
+Base Class Name: TModelBase
+Database Table: CUSTOMER_PHONE
+Associate Class: False
+Identified By: 'FCustSid,FSeqNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CustPhone.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CustPhone.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CustPhone.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CustPhone.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustPhone.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CustPhone.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','CustPhone.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','CustPhone.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustPhone.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CustPhone.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to customer record.','CustPhone.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneNo
+Data Type: string
+Database Column: 'PHONE_NO',[cpRequired,cpNotNull],30
+Documentation: 'phone number','CustPhone.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Extension
+Data Type: Nullable<string>
+Database Column: 'EXTENSION',[],10
+Documentation: 'extension','CustPhone.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],60
+Documentation: 'short text description of phone number as it relates to customer.','CustPhone.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneAllowContact
+Data Type: Boolean
+Database Column: 'PHONE_ALLOW_CONTACT',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates customer has opted out of being contacted at this phone.','CustPhone.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'BEGIN_DATE',[
+Documentation: 'date customer began using this phone number.','CustPhone.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'date customer stopped using this phone number.','CustPhone.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryFlag
+Data Type: boolean
+Database Column: 'PRIMARY_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates that this is the vendors primary phone number','CustPhone.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Int16
+Database Column: 'SEQ_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SeqNo','CustPhone.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'PHONE_TYPE_SID',[],19,0
+Documentation: 'reference to phone type record.','CustPhone.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhoneType
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'phone type name, eg. home2, work1, cell, etc.','CustPhone.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

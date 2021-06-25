@@ -1,0 +1,28 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "invnitemuid" : null,
+      "sbssid" : "0",
+      "vendsid" : null,
+      "upc" : null,
+      "alu" : null,
+      "scaleno" : null,
+      "vendno" : 0,
+      "lastrcvdcost" : null,
+      "invnsbsitemsid" : "0",
+      "sbsno" : null,
+      "vendorcode" : null
+    }
+  ]
+}
+

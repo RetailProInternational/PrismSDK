@@ -1,0 +1,16 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "connectionname" : "Unknown",
+      "active" : null,
+      "remotecontrollersid" : null,
+      "connectiontype" : 0,
+      "localcontrollersid" : null,
+      "localaddress" : null,
+      "remoteaddress" : null,
+      "v9address" : null
+    }
+  ]
+}
+

@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.TaxRule.Associate.pas
+##########################################################################################################
+Class Name: TTaxRuleAssociate
+Base Class Name: TModelBase
+Database Table: TAX_CODE_RULE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AltTaxName
+Data Type: Nullable<string>
+Database Column: 'ALT_TAX_NAME',[],12
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxRuleCode
+Data Type: Nullable<Int16>
+Database Column: 'TAX_RULE_CODE',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

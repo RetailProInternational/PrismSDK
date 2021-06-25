@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.EmployeeSubsidiary.pas
+##########################################################################################################
+Class Name: TEmployeeSubsidiary
+Base Class Name: TModelBase
+Database Table: EMPLOYEE_SUBSIDIARY
+Associate Class: False
+Identified By: 'FEmplSid,FSbsSid'
+Legacy Identified By: 'EmplId,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','EmployeeSubsidiary.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee_subsidiary id of row creator using application ui','EmployeeSubsidiary.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','EmployeeSubsidiary.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee_subsidiary id of last modifier using application ui','EmployeeSubsidiary.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','EmployeeSubsidiary.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record for database where that owns row.','EmployeeSubsidiary.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','EmployeeSubsidiary.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','EmployeeSubsidiary.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value.','EmployeeSubsidiary.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','EmployeeSubsidiary.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplSid
+Data Type: Int64
+Database Column: 'EMPL_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to employee record.','EmployeeSubsidiary.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record.','EmployeeSubsidiary.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AccessAllStores
+Data Type: Boolean
+Database Column: 'ACCESS_ALL_STORES',[
+Documentation: 'flag indicates employee work in all stores and access all stores data.','EmployeeSubsidiary.13'
+Legacy Column: 'ACCESS_ALL'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','EmployeeSubsidiary.14'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: EmplId
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','EmployeeSubsidiary.15'
+Legacy Column: 'EMPL_ID'
+
+------------------------------------------------------
+

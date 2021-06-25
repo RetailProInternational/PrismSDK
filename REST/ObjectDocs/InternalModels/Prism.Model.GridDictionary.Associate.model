@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.GridDictionary.Associate.pas
+##########################################################################################################
+Class Name: TGridDictionaryAssociate
+Base Class Name: 
+Database Table: GRID_DICTIONARY
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: ResourceName
+Data Type: string
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Transid
+Data Type: string
+Database Column: 'TRANSID',[cpRequired,cpNotNull],25
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

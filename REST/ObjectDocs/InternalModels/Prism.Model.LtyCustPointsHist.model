@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.LtyCustPointsHist.pas
+##########################################################################################################
+Class Name: TLtyCustPointsHist
+Base Class Name: TModelBase
+Database Table: LTY_CUST_POINTS_HIST
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','LtyCustPointsHist.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','LtyCustPointsHist.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','LtyCustPointsHist.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','LtyCustPointsHist.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','LtyCustPointsHist.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','LtyCustPointsHist.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','LtyCustPointsHist.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','LtyCustPointsHist.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','LtyCustPointsHist.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','LtyCustPointsHist.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Reverse
+Data Type: Boolean
+Database Column: 'REVERSE',[],1,0
+Documentation: '0 - direct modification, 1 - reversal modification.','LtyCustPointsHist.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Unique identifier of the customer.','LtyCustPointsHist.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartBalance
+Data Type: Double
+Database Column: 'START_BALANCE',[cpRequired,cpNotNull],24,8
+Documentation: 'Customer loyalty balance before operation.','LtyCustPointsHist.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndBalance
+Data Type: Double
+Database Column: 'END_BALANCE',[cpRequired,cpNotNull],24,8
+Documentation: 'Customer loyalty balance after operation.','LtyCustPointsHist.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Nullable<Int64>
+Database Column: 'DOC_SID',[],19,0
+Documentation: 'Unique identifier of the document.','LtyCustPointsHist.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocCreateDate
+Data Type: TDateTime
+Database Column: 'DOC_CREATE_DATE',[cpRequired,cpNotNull
+Documentation: 'Create date of the document.','LtyCustPointsHist.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocNo
+Data Type: Nullable<Integer>
+Database Column: 'DOC_NO',[],10,0
+Documentation: 'Document number.','LtyCustPointsHist.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocTotal
+Data Type: Nullable<Double>
+Database Column: 'DOC_TOTAL',[],16,4
+Documentation: 'Document total.','LtyCustPointsHist.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<string>
+Database Column: 'STORE_CODE',[],5
+Documentation: 'Store code.','LtyCustPointsHist.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: string
+Database Column: 'EMPL_NAME',[cpRequired,cpNotNull],8
+Documentation: 'Employee name.','LtyCustPointsHist.20'
+Legacy Column: NA
+
+------------------------------------------------------
+

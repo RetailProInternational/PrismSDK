@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "couponsetsid" : "0",
+      "couponcode" : null,
+      "issuedstatus" : 0,
+      "usedqty" : 0,
+      "startdate" : null,
+      "enddate" : null,
+      "sbsno" : null
+    }
+  ]
+}
+

@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.TaxCode.Associate.pas
+##########################################################################################################
+Class Name: TTaxCodeAssociate
+Base Class Name: 
+Database Table: TAX_CODE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: 'TAX_CODE',[cpRequired,cpNotNull],5
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxName
+Data Type: Nullable<string>
+Database Column: 'TAX_NAME',[],12
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

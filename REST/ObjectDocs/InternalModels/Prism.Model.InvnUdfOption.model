@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.InvnUdfOption.pas
+##########################################################################################################
+Class Name: TInvnUdfOption
+Base Class Name: TModelBase
+Database Table: INVN_UDF_OPTION
+Associate Class: False
+Identified By: 'FUdfOption, FUdfSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','InvnUdfOption.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','InvnUdfOption.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','InvnUdfOption.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','InvnUdfOption.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','InvnUdfOption.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','InvnUdfOption.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','InvnUdfOption.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','InvnUdfOption.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','InvnUdfOption.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','InvnUdfOption.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FlagId
+Data Type: Nullable<Int16>
+Database Column: 'FLAG_ID',[cpRequired,cpNotNull],5,0
+Documentation: 'FlagId','InvnUdfOption.11'
+Legacy Column: 'UDF_VAL_ID'
+
+------------------------------------------------------
+
+Name: UdfOption
+Data Type: Nullable<string>
+Database Column: 'UDF_OPTION',[cpRequired,cpNotNull],50
+Documentation: 'UdfOption','InvnUdfOption.12'
+Legacy Column: 'UDF_VALUE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','InvnUdfOption.13'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: DefaultFlag
+Data Type: boolean
+Database Column: 'DEFAULT_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates that this is the inventory item default UDF','InvnUdfOption.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfSid
+Data Type: Int64
+Database Column: 'UDF_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'UdfSid','InvnUdfOption.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

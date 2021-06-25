@@ -1,0 +1,333 @@
+##########################################################################################################
+File Name: Prism.Model.DocTender.pas
+##########################################################################################################
+Class Name: TDocTender
+Base Class Name: TModelBase
+Database Table: TENDER
+Associate Class: False
+Identified By: 'FDocSid,FTenderType,FTenderPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DocTender.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DocTender.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','DocTender.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DocTender.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DocTender.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DocTender.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','DocTender.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DocTender.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DocTender.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','DocTender.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to document record','DocTender.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderType
+Data Type: TDocTenderType
+Database Column: 'TENDER_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'type of tender, as defined in v9.0-Cash,1-Check,2-CreditCard,3-COD,4-Charge,5-StoreCredit,6-Split,7-Deposit,8-Payments,9-GiftCertificate,10-GiftCard,11-DebitCard,12-ForeignCurrency,13-TravelerCheck,14-ForeignCheck,15-CentralGiftCard,16-CentralGiftCertific','DocTender.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderPos
+Data Type: Int16
+Database Column: 'TENDER_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'position within this tender type','DocTender.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Amount
+Data Type: Double
+Database Column: 'AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: 'amount of this tender ?must be difference of taken and given','DocTender.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Taken
+Data Type: Double
+Database Column: 'TAKEN',[cpRequired,cpNotNull],16,4
+Documentation: 'amount taken from customer','DocTender.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Given
+Data Type: Double
+Database Column: 'GIVEN',[cpRequired,cpNotNull],16,4
+Documentation: 'amount given back to customer as change','DocTender.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Matched
+Data Type: Boolean
+Database Column: 'MATCHED',[cpRequired,cpNotNull],1,0
+Documentation: 'used by the xzout application to mark an invoice tender record as being matched to tender in the workstation/drawer being counted.','DocTender.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftResTenderState
+Data Type: Nullable<Int16>
+Database Column: 'EFT_RES_TENDER_STATE',[],5,0
+Documentation: 'contains the current state of each tender in relation to eft resiliency. it will be populated with one of the following values.0 = tender processed online normal1 = manual offline pending processing2 = auto offline pending processing3 = performing process','DocTender.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ManualName
+Data Type: Nullable<string>
+Database Column: 'MANUAL_NAME',[],80
+Documentation: 'can be used to store customization text','DocTender.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ManualRemark
+Data Type: Nullable<string>
+Database Column: 'MANUAL_REMARK',[],40
+Documentation: 'override comment.  also used to store customization free text.','DocTender.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Int64
+Database Column: 'CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Base currency. Reference to currency record','DocTender.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyName
+Data Type: Nullable<string>
+Database Column: 'CURRENCY_NAME',[],30
+Documentation: 'Used for historical purposes only. Records original currency name of the currency_sid at the time the record was created.','DocTender.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderName
+Data Type: Nullable<string>
+Database Column: 'TENDER_NAME',[],25
+Documentation: 'keeps the tender name, can not be modified by the end user','DocTender.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TakeRate
+Data Type: Nullable<Double>
+Database Column: 'TAKE_RATE',[],20,8
+Documentation: 'Foreign Currency Take Exchange Rate','DocTender.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiveRate
+Data Type: Nullable<Double>
+Database Column: 'GIVE_RATE',[],20,8
+Documentation: 'Foreign Currency Give Exchange Rate','DocTender.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderCentralGiftCard
+Data Type: IList<TTenderCentralGiftCard>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderCentralStoreCredit
+Data Type: IList<TTenderCentralStoreCredit>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderCharge
+Data Type: IList<TTenderCharge>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderCheck
+Data Type: IList<TTenderCheck>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderCreditCard
+Data Type: IList<TTenderCreditCard>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderDebitCard
+Data Type: IList<TTenderDebitCard>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderForeignCheck
+Data Type: IList<TTenderForeignCheck>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderForeignCurrency
+Data Type: IList<TTenderForeignCurrency>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderGiftCard
+Data Type: IList<TTenderGiftCard>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderGiftCertificate
+Data Type: IList<TTenderGiftCertificate>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderStoreCredit
+Data Type: IList<TTenderStoreCredit>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderPayments
+Data Type: IList<TTenderPayments>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderTravelerCheck
+Data Type: IList<TTenderTravelerCheck>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyAlphaCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','DocTender.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyDictName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'CurrencyName','DocTender.27'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.Tax.pas
+##########################################################################################################
+Class Name: TTax
+Base Class Name: TModelBase
+Database Table: TAX
+Associate Class: False
+Identified By: 'FSbsSid,FTaxAreaSid,FTaxCodeSid'
+Legacy Identified By: 'SbsNo,TaxAreaName,TaxCode'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Tax.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Tax.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Tax.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Tax.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Tax.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Tax.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.this is the same value that will be used in licensing applications.','Tax.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Tax.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Tax.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Tax.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary','Tax.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_AREA_SID',[],19,0
+Documentation: 'reference to tax_area','Tax.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_SID',[],19,0
+Documentation: 'reference to tax_code','Tax.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeRuleSid
+Data Type: Int64
+Database Column: 'TAX_CODE_RULE_SID',[],19,0
+Documentation: 'Reference to tax_code_rule','Tax.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxCode','Tax.15'
+Legacy Column: 'TAX_CODE'
+
+------------------------------------------------------
+
+Name: TaxRuleName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'AltTaxName','Tax.16'
+Legacy Column: 'ALT_TAX_NAME'
+
+------------------------------------------------------
+
+Name: TaxRuleCode
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'TaxRuleCode','Tax.17'
+Legacy Column: 'ALT_TAX_CODE'
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','Tax.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Tax.19'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: TaxAreaName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Name','Tax.20'
+Legacy Column: 'TAX_AREA_NAME'
+
+------------------------------------------------------
+
+Name: TaxName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'TaxName','Tax.21'
+Legacy Column: 'TAX_NAME'
+
+------------------------------------------------------
+

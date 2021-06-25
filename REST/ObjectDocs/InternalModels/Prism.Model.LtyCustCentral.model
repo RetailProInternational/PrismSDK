@@ -1,0 +1,189 @@
+##########################################################################################################
+File Name: Prism.Model.LtyCustCentral.pas
+##########################################################################################################
+Class Name: TLtyCustCentral
+Base Class Name: TModelBase
+Database Table: LTY_CUST_CENTRAL
+Associate Class: False
+Identified By: 'FCustSid'
+Legacy Identified By: 'CustSid'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','LtyCustCentral.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','LtyCustCentral.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','LtyCustCentral.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','LtyCustCentral.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','LtyCustCentral.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','LtyCustCentral.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','LtyCustCentral.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','LtyCustCentral.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','LtyCustCentral.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','LtyCustCentral.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'CustSid','LtyCustCentral.11'
+Legacy Column: 'CUST_SID'
+
+------------------------------------------------------
+
+Name: LtyOptIn
+Data Type: Boolean
+Database Column: 'LTY_OPT_IN',[],1,0
+Documentation: '0=Customer opts out of the Customer Loyalty program, 1=Customer opts in for the Customer Loyalty program.','LtyCustCentral.12'
+Legacy Column: 'LTY_OPT_IN'
+
+------------------------------------------------------
+
+Name: LtyOptInDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_OPT_IN_DATE',[
+Documentation: 'Date/time when LTY_OPT_IN was modified.','LtyCustCentral.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyEnrollDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_ENROLL_DATE',[
+Documentation: 'The date the customer enrolls in the Custom Loyalty program.','LtyCustCentral.14'
+Legacy Column: 'LTY_ENROLL_DATE'
+
+------------------------------------------------------
+
+Name: LtyBalance
+Data Type: Nullable<Double>
+Database Column: 'LTY_BALANCE',[],24,8
+Documentation: 'The balance the customer has on the Custom Loyalty program as updated by the Central server.','LtyCustCentral.15'
+Legacy Column: 'LTY_BALANCE'
+
+------------------------------------------------------
+
+Name: LtyAccumulated
+Data Type: Nullable<Double>
+Database Column: 'LTY_ACCUMULATED',[],24,8
+Documentation: 'The accumulated points accrued for either YTD from the enroll date or total lifetime.','LtyCustCentral.16'
+Legacy Column: 'LTY_ACCUMULATED'
+
+------------------------------------------------------
+
+Name: LtyLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'LTY_LVL_SID',[],19,0
+Documentation: 'Unique identifier of the Customer Loyatly Level for this customer.','LtyCustCentral.17'
+Legacy Column: 'LTY_LVL_SID'
+
+------------------------------------------------------
+
+Name: LtyLvlLocked
+Data Type: Boolean
+Database Column: 'LTY_LVL_LOCKED',[],1,0
+Documentation: 'To indicate whether the Loyalty Level for the customer can be changed or not. 0=Unlocked, 1= Loyalty Level locked for this customer.','LtyCustCentral.18'
+Legacy Column: 'LTY_LVL_LOCKED'
+
+------------------------------------------------------
+
+Name: LtyOptInManual
+Data Type: Boolean
+Database Column: 'LTY_OPT_IN_MANUAL',[],1,0
+Documentation: 'LtyOptInManual','LtyCustCentral.19'
+Legacy Column: 'LTY_OPT_IN_MANUAL'
+
+------------------------------------------------------
+
+Name: LtyLvlSidDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_LVL_SID_DATE',[
+Documentation: 'Date/time when LTY_LVL_SID was modified.','LtyCustCentral.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyLvlLockedDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LTY_LVL_LOCKED_DATE',[
+Documentation: 'Date/time when LTY_LVL_LOCKED was modified.','LtyCustCentral.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyCustPgmGiven
+Data Type: IList<TLtyCustPgmGiven>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

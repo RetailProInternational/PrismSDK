@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.Season.Associate.pas
+##########################################################################################################
+Class Name: TSeasonAssociate
+Base Class Name: 
+Database Table: SEASON
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: 'SEASON_CODE',[cpRequired,cpNotNull],5
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonName
+Data Type: Nullable<string>
+Database Column: 'SEASON_NAME',[],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

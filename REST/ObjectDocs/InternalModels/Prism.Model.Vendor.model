@@ -1,0 +1,429 @@
+##########################################################################################################
+File Name: Prism.Model.Vendor.pas
+##########################################################################################################
+Class Name: TVendor
+Base Class Name: TModelBase
+Database Table: VENDOR
+Associate Class: False
+Identified By: 'FSbsSid,FVendCode'
+Legacy Identified By: 'VendCode,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Vendor.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Vendor.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Vendor.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Vendor.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Vendor.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Vendor.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','Vendor.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Vendor.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Vendor.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Vendor.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: string
+Database Column: 'VEND_CODE',[cpRequired,cpNotNull],6
+Documentation: 'VendCode','Vendor.11'
+Legacy Column: 'VEND_CODE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','Vendor.12'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: VendName
+Data Type: Nullable<string>
+Database Column: 'VEND_NAME',[],25
+Documentation: 'name of the vendor business','Vendor.13'
+Legacy Column: 'VEND_NAME'
+
+------------------------------------------------------
+
+Name: Info1
+Data Type: Nullable<string>
+Database Column: 'INFO1',[],20
+Documentation: 'Free form data entry field','Vendor.14'
+Legacy Column: 'INFO1'
+
+------------------------------------------------------
+
+Name: Info2
+Data Type: Nullable<string>
+Database Column: 'INFO2',[],20
+Documentation: 'Free form data entry field','Vendor.15'
+Legacy Column: 'INFO2'
+
+------------------------------------------------------
+
+Name: TermType
+Data Type: Nullable<TTermKind>
+Database Column: 'TERM_TYPE',[],5,0
+Documentation: '0-term_days,1-term_cod,2-term_credit,3-term_replace,4-term_prepaid,5-term_due,6-term_pays,7-term_eom','Vendor.16'
+Legacy Column: 'TERM_TYPE'
+
+------------------------------------------------------
+
+Name: AccountNo
+Data Type: Nullable<string>
+Database Column: 'ACCOUNT_NO',[],200
+Documentation: 'account number with vendor','Vendor.17'
+Legacy Column: 'ACCT_NO'
+
+------------------------------------------------------
+
+Name: TradeDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'TRADE_DISC_PERC',[],16,4
+Documentation: 'A discount given by a vendor','Vendor.18'
+Legacy Column: 'TRADE_DISC_PERC'
+
+------------------------------------------------------
+
+Name: VendLeadTime
+Data Type: Nullable<Int16>
+Database Column: 'VEND_LEAD_TIME',[],5,0
+Documentation: 'days of lead time required to fill order.','Vendor.19'
+Legacy Column: 'VEND_LEAD_TIME'
+
+------------------------------------------------------
+
+Name: ApFlag
+Data Type: Nullable<TAPFlagType>
+Database Column: 'AP_FLAG',[],10,0
+Documentation: 'Accounts payable flag. Derivation and purpose are dependent upon the account system link implementation.Vales 3 - Export, 2 - Yes, 1 - No','Vendor.20'
+Legacy Column: 'AP_FLAG'
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'CURRENCY_SID',[],19,0
+Documentation: 'reference to currency record.','Vendor.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Regional
+Data Type: Boolean
+Database Column: 'REGIONAL',[],1,0
+Documentation: '1=regional0=not regional. indicates whether the vendor serves an entire region','Vendor.22'
+Legacy Column: 'REGIONAL'
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'reference to country record.','Vendor.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: QbId
+Data Type: Nullable<string>
+Database Column: 'QB_ID',[],40
+Documentation: 'quickbooks id number','Vendor.24'
+Legacy Column: 'QB_ID'
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],100
+Documentation: 'user defined string value','Vendor.25'
+Legacy Column: 'UDF01_STRING'
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],100
+Documentation: 'user defined string value','Vendor.26'
+Legacy Column: 'UDF02_STRING'
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],100
+Documentation: 'user defined string value','Vendor.27'
+Legacy Column: 'UDF03_STRING'
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],100
+Documentation: 'user defined string value','Vendor.28'
+Legacy Column: 'UDF04_STRING'
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],100
+Documentation: 'user defined string value','Vendor.29'
+Legacy Column: 'UDF05_STRING'
+
+------------------------------------------------------
+
+Name: Udf6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],100
+Documentation: 'user defined string value','Vendor.30'
+Legacy Column: 'UDF06_STRING'
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: 'user defined date value','Vendor.31'
+Legacy Column: 'UDF1_DATE'
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF2_DATE',[
+Documentation: 'user defined date value','Vendor.32'
+Legacy Column: 'UDF2_DATE'
+
+------------------------------------------------------
+
+Name: Notes
+Data Type: Nullable<string>
+Database Column: 'NOTES',[],2001)] {2001 tells Marshmallow that this is a CLOB}
+Documentation: 'Notes','Vendor.33'
+Legacy Column: 'NOTES'
+
+------------------------------------------------------
+
+Name: Image
+Data Type: Nullable<TMemoryStream>
+Database Column: 'IMAGE',[
+Documentation: 'vendor image, probably the business logo','Vendor.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendId
+Data Type: Nullable<Integer>
+Database Column: 'VEND_ID',[],10,0
+Documentation: 'legacy information will be stamped with a vendor ID','Vendor.35', 'STRING'
+Legacy Column: 'VEND_ID'
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Subsidiary the vendor is created in','Vendor.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LanguageSid
+Data Type: Nullable<Int64>
+Database Column: 'LANGUAGE_SID',[],19,0
+Documentation: 'Reference to Language record. Default value from the subsidiary from which vendor was created.','Vendor.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublishStatus
+Data Type: TModelPublishStatus
+Database Column: 'PUBLISH_STATUS',[cpRequired,cpNotNull],1,0
+Documentation: '0=Published, 1=WIP, 2=ReadyToPublish','Vendor.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MinCost
+Data Type: Nullable<Double>
+Database Column: 'MIN_COST',[],16,4
+Documentation: 'minimum ordered cost','Vendor.39'
+Legacy Column: 'MIN_COST'
+
+------------------------------------------------------
+
+Name: MinQty
+Data Type: Nullable<Double>
+Database Column: 'MIN_QTY',[],10,3
+Documentation: 'minimum ordered qty','Vendor.40'
+Legacy Column: 'MIN_QTY'
+
+------------------------------------------------------
+
+Name: VendorTerm
+Data Type: IList<TVendorTerm>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorAddress
+Data Type: IList<TVendorAddress>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorContact
+Data Type: IList<TVendorContact>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryContactFirstName
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryContactLastName
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryContactPhone1
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryContactPhone2
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryContactEmail
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Vendor.41'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: CountryCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'country code','Vendor.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencyCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','Vendor.43'
+Legacy Column: 'CURRENCY_ABBR'
+
+------------------------------------------------------
+
+Name: LanguageName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Language name','Vendor.44'
+Legacy Column: NA
+
+------------------------------------------------------
+

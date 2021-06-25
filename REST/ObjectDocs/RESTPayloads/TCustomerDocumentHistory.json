@@ -1,0 +1,34 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "rowversion" : 0,
+      "postdate" : null,
+      "tenantsid" : null,
+      "createddatetime" : null,
+      "docsid" : "0",
+      "docinvnsbsitemsid" : "0",
+      "itemdescription1" : null,
+      "docitemqty" : null,
+      "docitemtype" : 0,
+      "docitemprice" : null,
+      "docitempricewtax" : null,
+      "customersid" : "0",
+      "storeno" : null,
+      "currencyname" : null,
+      "itemattribute" : null,
+      "itemsize" : null,
+      "docitemsid" : "0",
+      "sbsno" : null,
+      "itemdescription2" : null,
+      "doccreateddatetime" : null,
+      "docno" : null
+    }
+  ]
+}
+

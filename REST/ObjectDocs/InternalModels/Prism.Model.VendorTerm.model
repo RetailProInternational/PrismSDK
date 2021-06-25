@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.VendorTerm.pas
+##########################################################################################################
+Class Name: TVendorTerm
+Base Class Name: TModelBase
+Database Table: VENDOR_TERM
+Associate Class: False
+Identified By: 'FTermNo,FVendSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','VendorTerm.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','VendorTerm.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','VendorTerm.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','VendorTerm.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','VendorTerm.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','VendorTerm.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','VendorTerm.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','VendorTerm.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','VendorTerm.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','VendorTerm.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendSid
+Data Type: Int64
+Database Column: 'VEND_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VendSid','VendorTerm.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TermNo
+Data Type: Int16
+Database Column: 'TERM_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'TermNo','VendorTerm.12'
+Legacy Column: 'TERM_NO'
+
+------------------------------------------------------
+
+Name: Days
+Data Type: Nullable<Integer>
+Database Column: 'DAYS',[],10,0
+Documentation: 'If payment is received within a certain number of days, a disocunt can be applied','VendorTerm.13'
+Legacy Column: 'DAYS'
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'The % value used with term type is set to days or payments','VendorTerm.14'
+Legacy Column: 'DISC_PERC'
+
+------------------------------------------------------
+
+Name: TermType
+Data Type: Nullable<TTermKind>
+Database Column: NA
+Documentation: '0-term_days,1-term_cod,2-term_credit,3-term_replace,4-term_prepaid,5-term_due,6-term_pays,7-term_eom','VendorTerm.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

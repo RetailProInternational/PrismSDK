@@ -1,0 +1,39 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "taxareasid" : "0",
+      "alttaxname" : null,
+      "luxury" : false,
+      "rebate" : false,
+      "leveltype" : null,
+      "level1" : null,
+      "taxperc1" : null,
+      "level2" : null,
+      "taxperc2" : null,
+      "level3" : null,
+      "taxperc3" : null,
+      "reference" : null,
+      "legend" : null,
+      "taxrulecode" : 0,
+      "vatmargin" : false,
+      "tax" : [
+      ],
+      "taxareaceilingamt" : null,
+      "taxareaname" : null,
+      "sbsname" : null,
+      "sbsno" : null
+    }
+  ]
+}
+

@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.CustEmail.pas
+##########################################################################################################
+Class Name: TCustEmail
+Base Class Name: TModelBase
+Database Table: CUSTOMER_EMAIL
+Associate Class: False
+Identified By: 'FCustSid,FSeqNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','CustEmail.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','CustEmail.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','CustEmail.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','CustEmail.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','CustEmail.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','CustEmail.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','CustEmail.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','CustEmail.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','CustEmail.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','CustEmail.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Int64
+Database Column: 'CUST_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to customer record.','CustEmail.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailAddress
+Data Type: string
+Database Column: 'EMAIL_ADDRESS',[cpRequired,cpNotNull],100
+Documentation: 'email address','CustEmail.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],60
+Documentation: 'short text description of email number as it relates to customer.','CustEmail.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailAllowContact
+Data Type: Boolean
+Database Column: 'EMAIL_ALLOW_CONTACT',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates customer has opted out of being contacted at this email address.','CustEmail.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'BEGIN_DATE',[
+Documentation: 'date customer began using this email address.','CustEmail.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'date customer stopped using this email address.','CustEmail.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Extension
+Data Type: Nullable<string>
+Database Column: 'EXTENSION',[],20
+Documentation: 'extension may include information such as .com, .net, .org etc.','CustEmail.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrimaryFlag
+Data Type: boolean
+Database Column: 'PRIMARY_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates that this is the customers primary email address','CustEmail.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeqNo
+Data Type: Int16
+Database Column: 'SEQ_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SeqNo','CustEmail.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'EMAIL_TYPE_SID',[],19,0
+Documentation: 'reference to email_type record','CustEmail.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailType
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'EmailType','CustEmail.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

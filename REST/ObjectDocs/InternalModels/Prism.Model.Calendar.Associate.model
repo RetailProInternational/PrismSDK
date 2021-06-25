@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.Calendar.Associate.pas
+##########################################################################################################
+Class Name: TCalendarAssociate
+Base Class Name: 
+Database Table: CALENDAR
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CalType
+Data Type: Nullable<TCalendarType>
+Database Column: 'CAL_TYPE',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

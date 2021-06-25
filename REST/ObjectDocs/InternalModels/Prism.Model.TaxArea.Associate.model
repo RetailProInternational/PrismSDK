@@ -1,0 +1,37 @@
+##########################################################################################################
+File Name: Prism.Model.TaxArea.Associate.pas
+##########################################################################################################
+Class Name: TTaxAreaAssociate
+Base Class Name: 
+Database Table: TAX_AREA
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'TAX_AREA_NAME',[],11
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CeilingAmt
+Data Type: Nullable<Double>
+Database Column: 'CEILING_AMT',[],16,4
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

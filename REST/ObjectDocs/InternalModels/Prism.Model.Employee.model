@@ -1,0 +1,589 @@
+##########################################################################################################
+File Name: Prism.Model.Employee.pas
+##########################################################################################################
+Class Name: TEmployee
+Base Class Name: TModelBase
+Database Table: EMPLOYEE
+Associate Class: False
+Identified By: 'FEmplName,FOrigSbsSid'
+Legacy Identified By: 'EmplId'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Employee.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Employee.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Employee.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Employee.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified with time zone','Employee.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','Employee.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,        respectively.  this is the same value that will be used in licensing applications.','Employee.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Employee.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value.','Employee.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Employee.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TEmployeeStatus>
+Database Column: 'STATUS', [], 1, 0
+Documentation: '0-Pending,1-Completed','Employee.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record.','Employee.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplNo1
+Data Type: Nullable<string>
+Database Column: 'EMPL_NO1',[],15
+Documentation: 'employee id number.','Employee.13'
+Legacy Column: 'EMPL_NO1'
+
+------------------------------------------------------
+
+Name: EmplNo2
+Data Type: Nullable<string>
+Database Column: 'EMPL_NO2',[],15
+Documentation: 'employee id number.','Employee.14'
+Legacy Column: 'EMPL_NO2'
+
+------------------------------------------------------
+
+Name: EmplName
+Data Type: Nullable<string>
+Database Column: 'EMPL_NAME',[],8
+Documentation: 'employee code.','Employee.15'
+Legacy Column: 'EMPL_NAME'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates employee record is enabled.','Employee.16'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: FullName
+Data Type: Nullable<string>
+Database Column: 'FULL_NAME',[],60
+Documentation: 'employees full name, typically last, first middle-initial','Employee.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommLvl
+Data Type: Nullable<string>
+Database Column: 'COMM_LVL',[],1
+Documentation: 'price level used for this employee when making purchases.','Employee.18'
+Legacy Column: 'COMM_LVL'
+
+------------------------------------------------------
+
+Name: Drawer
+Data Type: Nullable<Int16>
+Database Column: 'DRAWER',[],5,0
+Documentation: 'drawer this employee uses at a point of sale station when acting as clerk','Employee.19'
+Legacy Column: 'DRAWER'
+
+------------------------------------------------------
+
+Name: TimeShiftNo
+Data Type: Nullable<Int16>
+Database Column: 'TIME_SHIFT_NO',[],5,0
+Documentation: 'time shift number','Employee.20'
+Legacy Column: 'TIME_SHIFT_NO'
+
+------------------------------------------------------
+
+Name: MaxDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'MAX_DISC_PERC',[],16,4
+Documentation: 'maximum amount of discount that can be used for purchases made by this employee.  override price        level amount where applicable.','Employee.21'
+Legacy Column: 'MAX_DISC_PERC'
+
+------------------------------------------------------
+
+Name: JobSid
+Data Type: Nullable<Int64>
+Database Column: 'JOB_SID',[],19,0
+Documentation: 'reference to job description record.','Employee.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustSid
+Data Type: Nullable<Int64>
+Database Column: 'CUST_SID',[],19,0
+Documentation: 'reference to customer record, if applicable, associated with this employee when making purchases.','Employee.23'
+Legacy Column: 'CUST_SID'
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],200
+Documentation: 'short free text description of this employee.','Employee.24'
+Legacy Column: 'DESCRIPTION'
+
+------------------------------------------------------
+
+Name: HireDate
+Data Type: Nullable<TDateTime>
+Database Column: 'HIRE_DATE',[
+Documentation: 'date of hire','Employee.25'
+Legacy Column: 'HIRE_DATE'
+
+------------------------------------------------------
+
+Name: Exempt
+Data Type: boolean
+Database Column: 'EXEMPT',[cpRequired,cpNotNull],1,0
+Documentation: 'employee is exempt from time tracking; salaried.','Employee.26'
+Legacy Column: 'EXEMPT'
+
+------------------------------------------------------
+
+Name: OrigSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_SBS_SID',[],19,0
+Documentation: 'When a new employee is created, the subsidiary that created the employee record is recorded in this field.This is a field that cannot be edited by the user from within Application','Employee.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseSbsSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BaseStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'BASE_STORE_SID',[],19,0
+Documentation: 'when a new employee is created, the subsidiary/store that created the employee record is recorded in this field.this is a field that cannot be edited by the user from within application','Employee.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSbsSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSid
+Data Type: Nullable<Int64>
+Database Column: 'TILL_SID',[],19,0
+Documentation: 'reference to till record.','Employee.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RequiredPassword
+Data Type: boolean
+Database Column: 'REQUIRED_PASSWORD',[],1,0
+Documentation: '1 - when a employee logs on, they are required to provide a new password.0 - no need to change password on logs on.','Employee.30'
+Legacy Column: 'REQ_PASS_CHNG'
+
+------------------------------------------------------
+
+Name: EmplId
+Data Type: Nullable<Integer>
+Database Column: 'EMPL_ID',[],10,0
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','Employee.31'
+Legacy Column: 'EMPL_ID'
+
+------------------------------------------------------
+
+Name: OverrideProfile
+Data Type: boolean
+Database Column: 'OVERRIDE_PROFILE',[],1,0
+Documentation: 'Password never expires if set to 1','Employee.32'
+Legacy Column: 'OVERRIDE_PROFILE'
+
+------------------------------------------------------
+
+Name: UserName
+Data Type: Nullable<string>
+Database Column: 'USER_NAME',[cpRequired,cpNotNull],30
+Documentation: 'login username','Employee.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserActive
+Data Type: boolean
+Database Column: 'USER_ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates whether user is active and can access the system.','Employee.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Password
+Data Type: Nullable<string>
+Database Column: 'PASSWORD',[],60
+Documentation: 'encrypted password value used to authenticate user.','Employee.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PasswordModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'PWD_MODIFIED_DATE',[
+Documentation: 'Shows last date/time when password was modified','Employee.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Admin
+Data Type: boolean
+Database Column: 'ADMIN',[],1,0
+Documentation: 'admin 0=false 1=true, means this user has "admin" role granted and can access any resources','Employee.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Locked
+Data Type: boolean
+Database Column: 'LOCKED',[],1,0
+Documentation: '0 (null) - user is not locked, 1 - user is locked','Employee.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LockedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'LOCKED_DATE',[
+Documentation: 'Shows the date/time when password was locked','Employee.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FailureAttempts
+Data Type: Nullable<Int16>
+Database Column: 'FAILURE_ATTEMPTS',[],4,0
+Documentation: 'number of failure login attempts in a row','Employee.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Xoutsettings
+Data Type: Nullable<string>
+Database Column: 'XOUTSETTINGS',[],300
+Documentation: 'Name value pairs containing the default filter settings used by the user for running xout reports','Employee.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Internal
+Data Type: boolean
+Database Column: 'INTERNAL',[],1,0
+Documentation: '0 (null) - normal, 1 - for internal authentication only','Employee.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeStore
+Data Type: IList<TEmployeeStore>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeSubsidiary
+Data Type: IList<TEmployeeSubsidiary>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupUser
+Data Type: IList<TUserGroupUser>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeExtend
+Data Type: IList<TEmployeeExtend>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: JobTitle
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'short descriptive name of job.','Employee.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FirstName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'FirstName','Employee.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LastName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'LastName','Employee.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplAddress
+Data Type: IList<TCustAddress>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Date
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'StoreCode','Employee.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'store name','Employee.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EMail
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplPhone
+Data Type: IList<TCustPhone>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmplEmail
+Data Type: IList<TCustEmail>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'SbsNo','Employee.48'
+Legacy Column: 'BASE_SBS_NO'
+
+------------------------------------------------------
+
+Name: TillName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Unique name of the till.  Till name is unique within the scope of the controller.','Employee.49'
+Legacy Column: 'TILL_Name'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Employee.50'
+Legacy Column: 'BASE_STORE_NO'
+
+------------------------------------------------------
+
+Name: OrigSbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Employee.51'
+Legacy Column: 'HOME_SBS_NO'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Employee.52'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: TillSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'SbsNo','Employee.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'StoreNo','Employee.54'
+Legacy Column: NA
+
+------------------------------------------------------
+

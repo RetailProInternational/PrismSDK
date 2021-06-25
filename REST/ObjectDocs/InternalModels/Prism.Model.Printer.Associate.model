@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.Printer.Associate.pas
+##########################################################################################################
+Class Name: TPrinterAssociate
+Base Class Name: 
+Database Table: PRINTER
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrinterName
+Data Type: Nullable<string>
+Database Column: 'PRINTER_NAME',[],200
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

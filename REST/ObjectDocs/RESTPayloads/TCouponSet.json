@@ -1,0 +1,39 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "setid" : "0",
+      "setname" : null,
+      "codeprefix" : null,
+      "codelength" : 0,
+      "datetype" : 0,
+      "startdate" : null,
+      "startdatedays" : null,
+      "enddate" : null,
+      "enddatedays" : null,
+      "autogenerate" : false,
+      "validationcount" : 0,
+      "totalcount" : null,
+      "issuedcount" : null,
+      "usedcount" : null,
+      "status" : false,
+      "active" : false,
+      "calcissuedcount" : null,
+      "calcusedcount" : null,
+      "availableissue" : null,
+      "availableuse" : null,
+      "sbsno" : null
+    }
+  ]
+}
+

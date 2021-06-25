@@ -1,0 +1,85 @@
+##########################################################################################################
+File Name: Prism.Model.Receiving.Associate.pas
+##########################################################################################################
+Class Name: TReceivingAssociate
+Base Class Name: 
+Database Table: VOUCHER
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouClass
+Data Type: Int16
+Database Column: 'VOU_CLASS',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Held
+Data Type: boolean
+Database Column: 'HELD',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<Integer>
+Database Column: 'STATUS',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AsnNo
+Data Type: Nullable<Integer>
+Database Column: 'ASN_NO',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouNo
+Data Type: Integer
+Database Column: 'VOU_NO',[cpRequired,cpNotNull],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PkgNo
+Data Type: Nullable<string>
+Database Column: 'PKG_NO',[],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TrackingNo
+Data Type: Nullable<string>
+Database Column: 'TRACKING_NO',[],40
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

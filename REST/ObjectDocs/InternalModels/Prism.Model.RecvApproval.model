@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.RecvApproval.pas
+##########################################################################################################
+Class Name: TRecvApproval
+Base Class Name: TModelBase
+Database Table: VOU_APPROVAL
+Associate Class: False
+Identified By: 'FVouSid,FApprovLevel'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','RecvApproval.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','RecvApproval.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','RecvApproval.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','RecvApproval.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','RecvApproval.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','RecvApproval.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','RecvApproval.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','RecvApproval.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','RecvApproval.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','RecvApproval.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSid
+Data Type: Int64
+Database Column: 'VOU_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VouSid','RecvApproval.11'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: ApprovLevel
+Data Type: Int16
+Database Column: 'APPROV_LEVEL',[cpRequired,cpNotNull],5,0
+Documentation: 'ApprovLevel','RecvApproval.12'
+Legacy Column: 'APPROV_LEVEL'
+
+------------------------------------------------------
+
+Name: ApprovbyId
+Data Type: Nullable<Integer>
+Database Column: 'APPROVBY_ID',[],10,0
+Documentation: 'ApprovbyId','RecvApproval.13'
+Legacy Column: 'APPROVBY_ID'
+
+------------------------------------------------------
+
+Name: ApprovDate
+Data Type: Nullable<TDateTime>
+Database Column: 'APPROV_DATE',[
+Documentation: 'ApprovDate','RecvApproval.14'
+Legacy Column: 'APPROV_DATE'
+
+------------------------------------------------------
+
+Name: ApprovNotes
+Data Type: Nullable<string>
+Database Column: 'APPROV_NOTES',[],255
+Documentation: 'ApprovNotes','RecvApproval.15'
+Legacy Column: 'APPROV_NOTES'
+
+------------------------------------------------------
+
+Name: ApprovStatus
+Data Type: Nullable<Int16>
+Database Column: 'APPROV_STATUS',[],5,0
+Documentation: 'ApprovStatus','RecvApproval.16'
+Legacy Column: 'APPROV_STATUS'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','RecvApproval.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovBySid
+Data Type: Nullable<Int64>
+Database Column: 'APPROVBY_SID',[],19,0
+Documentation: 'ApprovBySid','RecvApproval.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByEmplName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'employee code.','RecvApproval.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ApprovedByOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','RecvApproval.20'
+Legacy Column: NA
+
+------------------------------------------------------
+

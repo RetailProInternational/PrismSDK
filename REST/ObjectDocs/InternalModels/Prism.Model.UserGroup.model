@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.UserGroup.pas
+##########################################################################################################
+Class Name: TUserGroup
+Base Class Name: TModelBase
+Database Table: USER_GROUP
+Associate Class: False
+Identified By: 'FUserGroupName'
+Legacy Identified By: 'UserGroupId'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','UserGroup.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','UserGroup.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','UserGroup.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','UserGroup.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','UserGroup.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','UserGroup.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','UserGroup.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','UserGroup.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','UserGroup.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','UserGroup.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupName
+Data Type: string
+Database Column: 'USER_GROUP_NAME',[cpRequired,cpNotNull],30
+Documentation: 'UserGroupName','UserGroup.11'
+Legacy Column: 'USER_GRP_NAME'
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],200
+Documentation: 'Description','UserGroup.12'
+Legacy Column: 'USER_GRP_DESC'
+
+------------------------------------------------------
+
+Name: UserGroupId
+Data Type: Nullable<Integer>
+Database Column: 'USER_GROUP_ID',[],10,0
+Documentation: 'UserGroupId','UserGroup.13'
+Legacy Column: 'USER_GRP_ID'
+
+------------------------------------------------------
+
+Name: PermissionsString
+Data Type: Nullable<string>
+Database Column: 'PERMISSIONS',[], 2001)] {2001 tells Marshmallow that this is a CLOB}
+Documentation: 'All Permissions valid for this group','UserGroup.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1
+Documentation: 'Active','UserGroup.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Permissions
+Data Type: TGroupPermissions
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

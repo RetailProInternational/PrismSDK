@@ -1,0 +1,61 @@
+##########################################################################################################
+File Name: Prism.Model.Subsidiary.Associate.pas
+##########################################################################################################
+Class Name: TSubsidiaryAssociate
+Base Class Name: 
+Database Table: SUBSIDIARY
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: 'SBS_NAME',[],15
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivePriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_PRICE_LVL_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActiveSeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_SEASON_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsMaster
+Data Type: Boolean
+Database Column: 'MASTER',[cpRequired,cpNotNull],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

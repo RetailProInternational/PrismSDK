@@ -1,0 +1,205 @@
+##########################################################################################################
+File Name: Prism.Model.POQuantity.pas
+##########################################################################################################
+Class Name: TPOQuantity
+Base Class Name: TModelBase
+Database Table: PO_QTY
+Associate Class: False
+Identified By: 'FStoreSid, FPoItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','POQuantity.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','POQuantity.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','POQuantity.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','POQuantity.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','POQuantity.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','POQuantity.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','POQuantity.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','POQuantity.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','POQuantity.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','POQuantity.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PoItemSid
+Data Type: Int64
+Database Column: 'PO_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PoItemSid','POQuantity.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','POQuantity.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','POQuantity.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrdQty
+Data Type: Nullable<Double>
+Database Column: 'ORD_QTY',[],10,3
+Documentation: 'OrdQty','POQuantity.14'
+Legacy Column: 'ORD_QTY'
+
+------------------------------------------------------
+
+Name: RcvdQty
+Data Type: Nullable<Double>
+Database Column: 'RCVD_QTY',[],10,3
+Documentation: 'RcvdQty','POQuantity.15'
+Legacy Column: 'RCVD_QTY'
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','POQuantity.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreMinQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreMaxQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DueQty
+Data Type: Double
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','POQuantity.17'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','POQuantity.18'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'StoreCode','POQuantity.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'store name','POQuantity.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnItemSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemSid','POQuantity.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

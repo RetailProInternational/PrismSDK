@@ -1,0 +1,69 @@
+##########################################################################################################
+File Name: Prism.Model.LotInfo.pas
+##########################################################################################################
+Class Name: TLotInfo
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: LNSid
+Data Type: Int64
+Database Column: 'SID',[cpPrimaryKey],19,0
+Documentation: 'LNSid','LotInfo.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotNo
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotNote
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotExpiryDate
+Data Type: Nullable<TDateTime>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LNQtySid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LNQty
+Data Type: Nullable<Integer>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LNActive
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

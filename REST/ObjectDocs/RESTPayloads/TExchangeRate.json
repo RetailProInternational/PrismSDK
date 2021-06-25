@@ -1,0 +1,30 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "currencysid" : "0",
+      "basecurrencysid" : "0",
+      "effectivedate" : null,
+      "takerate" : 0,
+      "giverate" : 0,
+      "costrate" : null,
+      "officialrate" : null,
+      "currencyabbreviation" : null,
+      "basecurrencyabbreviation" : null,
+      "costforeignrate" : 0,
+      "giveforeignrate" : 0,
+      "takeforeignrate" : 0,
+      "origintimezone" : "-07:00"
+    }
+  ]
+}
+

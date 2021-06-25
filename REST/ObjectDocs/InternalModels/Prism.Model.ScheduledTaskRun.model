@@ -1,0 +1,165 @@
+##########################################################################################################
+File Name: Prism.Model.ScheduledTaskRun.pas
+##########################################################################################################
+Class Name: TScheduledTaskRun
+Base Class Name: TModelBase
+Database Table: SCHEDULED_TASK_RUN
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ScheduledTaskRun.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],40
+Documentation: 'employee id of row creator using application ui','ScheduledTaskRun.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ScheduledTaskRun.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],40
+Documentation: 'employee id of last modifier using application ui','ScheduledTaskRun.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ScheduledTaskRun.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','ScheduledTaskRun.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],40
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','ScheduledTaskRun.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ScheduledTaskRun.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: TDateTime
+Database Column: 'POST_DATE',[cpRequired,cpNotNull
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','ScheduledTaskRun.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','ScheduledTaskRun.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartrunDatetime
+Data Type: TDateTime
+Database Column: 'STARTRUN_DATETIME',[cpRequired,cpNotNull
+Documentation: 'date and time this task instance started','ScheduledTaskRun.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndrunDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'ENDRUN_DATETIME',[
+Documentation: 'date and time this task instance ended','ScheduledTaskRun.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RunResultMessage
+Data Type: string
+Database Column: 'RUN_RESULT_MESSAGE',[cpRequired,cpNotNull],255
+Documentation: 'result message with a status code','ScheduledTaskRun.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: TSchedRunstatus
+Database Column: 'STATUS',[cpRequired,cpNotNull],1,0
+Documentation: '0=active, 1=completed, 2=cancelled, 3=failed','ScheduledTaskRun.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScheduledtaskSid
+Data Type: Int64
+Database Column: 'SCHEDULEDTASK_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'foreign join to scheduled task','ScheduledTaskRun.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RunResponsePayload
+Data Type: Nullable<string>
+Database Column: 'RUN_RESPONSE_PAYLOAD',[],2001
+Documentation: 'response payload','ScheduledTaskRun.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RunUrl
+Data Type: string
+Database Column: 'RUN_URL',[cpRequired,cpNotNull],1000
+Documentation: 'may be useful for analyzing history since task url may change over time','ScheduledTaskRun.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RunRequestPayload
+Data Type: Nullable<string>
+Database Column: 'RUN_REQUEST_PAYLOAD',[],2001
+Documentation: 'RequestPayload actually run with including any replaceable params','ScheduledTaskRun.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Workstation
+Data Type: Nullable<string>
+Database Column: 'WORKSTATION',[],64
+Documentation: 'Unique WS name in this format: Scheduler_sbs<n> for subsid task will run for','ScheduledTaskRun.19'
+Legacy Column: NA
+
+------------------------------------------------------
+

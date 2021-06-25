@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.LtyLevelProgram.pas
+##########################################################################################################
+Class Name: TLtyLevelProgram
+Base Class Name: TModelBase
+Database Table: LTY_LEVEL_PROGRAM
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','LtyLevelProgram.1'
+Legacy Column: 'LTY_PGM_SID'
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','LtyLevelProgram.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','LtyLevelProgram.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','LtyLevelProgram.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','LtyLevelProgram.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','LtyLevelProgram.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively. this is the same value that will be used in licensing applications.','LtyLevelProgram.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','LtyLevelProgram.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','LtyLevelProgram.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','LtyLevelProgram.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyLvlSid
+Data Type: Int64
+Database Column: 'LTY_LVL_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'LtyLvlSid','LtyLevelProgram.11'
+Legacy Column: 'LTY_LVL_SID'
+
+------------------------------------------------------
+
+Name: LtyPgmName
+Data Type: Nullable<string>
+Database Column: 'LTY_PGM_NAME',[],40
+Documentation: 'LtyPgmName','LtyLevelProgram.12'
+Legacy Column: 'LTY_PGM_NAME'
+
+------------------------------------------------------
+
+Name: EarnType
+Data Type: Nullable<Int16>
+Database Column: 'EARN_TYPE',[],1,0
+Documentation: 'EarnType','LtyLevelProgram.13'
+Legacy Column: 'EARN_TYPE'
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'DiscPerc','LtyLevelProgram.14'
+Legacy Column: 'DISC_PERC'
+
+------------------------------------------------------
+
+Name: RedeemType
+Data Type: Nullable<Int16>
+Database Column: 'REDEEM_TYPE',[],1,0
+Documentation: 'RedeemType','LtyLevelProgram.15'
+Legacy Column: 'REDEEM_TYPE'
+
+------------------------------------------------------
+
+Name: StartDate
+Data Type: Nullable<TDateTime>
+Database Column: 'START_DATE',[
+Documentation: 'StartDate','LtyLevelProgram.16'
+Legacy Column: 'START_DATE'
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'EndDate','LtyLevelProgram.17'
+Legacy Column: 'END_DATE'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: '1 = Record is active, 0 = Record is de-activated.','LtyLevelProgram.18'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: RedeemMultiplier
+Data Type: Nullable<Double>
+Database Column: 'REDEEM_MULTIPLIER',[],16,8
+Documentation: 'RedeemMultiplier','LtyLevelProgram.19'
+Legacy Column: 'REDEEM_MULTIPLIER'
+
+------------------------------------------------------
+
+Name: EarnMultiplier
+Data Type: Nullable<Double>
+Database Column: 'EARN_MULTIPLIER',[],16,8
+Documentation: 'EarnMultiplier','LtyLevelProgram.20'
+Legacy Column: 'EARN_MULTIPLIER'
+
+------------------------------------------------------
+
+Name: LtyLvlName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'Customer Loyalty level description i.e. Gold, Silver or Bronze.','LtyLevelProgram.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

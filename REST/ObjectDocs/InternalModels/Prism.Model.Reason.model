@@ -1,0 +1,205 @@
+##########################################################################################################
+File Name: Prism.Model.Reason.pas
+##########################################################################################################
+Class Name: TReason
+Base Class Name: TModelBase
+Database Table: PREF_REASON
+Associate Class: False
+Identified By: 'FName,FReasonType,FSbsSid'
+Legacy Identified By: 'Name,ReasonType,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Reason.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Reason.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Reason.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Reason.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Reason.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Reason.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Reason.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Reason.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Reason.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Reason.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','Reason.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReasonType
+Data Type: TReasonType
+Database Column: 'REASON_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: 'Document Type. 1=Sales,2=TO,3=PO,4=SO,5=Adj,6=Slip,7=Vouchers,8=Return Reasons,9=Void Reasons,10=Discount,11=Paid Out,12=Paid In,13=ASN,14=Check in,15=Check out,16=Cash Drop,17=Misc Draw','Reason.12'
+Legacy Column: 'REASON_TYPE'
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<string>
+Database Column: 'NAME',[],80
+Documentation: 'Reason definition','Reason.13'
+Legacy Column: 'REASON_NAME'
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION',[],30
+Documentation: 'Description of reason code','Reason.14'
+Legacy Column: 'DESCRIPTION'
+
+------------------------------------------------------
+
+Name: IsActive
+Data Type: Boolean
+Database Column: 'IS_ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: '1= active, 0= inactive.','Reason.15'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: IsDefault
+Data Type: Boolean
+Database Column: 'IS_DEFAULT',[cpRequired,cpNotNull],1,0
+Documentation: '1= Default selected, 0= Not a default reason','Reason.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShrinkFlag
+Data Type: Nullable<Int16>
+Database Column: 'SHRINK_FLAG',[],1,0
+Documentation: 'Only valid when doc_type is Adjustment','Reason.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CheckInoutType
+Data Type: Nullable<TCheckInOutType>
+Database Column: 'CHECK_INOUT_TYPE',[],1,0
+Documentation: 'Only valid when doc_type is Employee check in/out1 - Open Event, 2 - Sub open event, 3- Close Event, 4- Sub close event','Reason.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CheckInoutEventType
+Data Type: Nullable<Int16>
+Database Column: 'CHECK_INOUT_EVENT_TYPE',[],1,0
+Documentation: 'Only valid when doc_type is Employee check in/outEither paid event(1) or non-paid event(0).','Reason.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CheckInoutTypePair
+Data Type: Nullable<Int16>
+Database Column: 'CHECK_INOUT_TYPE_PAIR',[],5,0
+Documentation: 'Only valid when doc_type is Employee check in/outSequential number. Every 2 reasons (open and close) should share same value to make a pair.','Reason.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsCustRequired
+Data Type: Boolean
+Database Column: 'IS_CUST_REQUIRED',[],1,0
+Documentation: 'Is_Cust_Required: Reason requires customer to be on document (0 = Not Required, 1= Required, Default is 0)','Reason.21'
+Legacy Column: 'CUST_REQ'
+
+------------------------------------------------------
+
+Name: ReasonId
+Data Type: Integer
+Database Column: 'REASON_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'helps in identifying a reason in V9. Used in prism to identify modifications','Reason.22'
+Legacy Column: 'REASON_ID'
+
+------------------------------------------------------
+
+Name: Manual
+Data Type: Boolean
+Database Column: 'MANUAL',[cpRequired,cpNotNull],1,0
+Documentation: '1= enable for manual discount, 0= unable for manual discount','Reason.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Reason.24'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

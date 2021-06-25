@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.SysInfoModule.pas
+##########################################################################################################
+Class Name: TSysInfoModule
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Trademark
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FileName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Name
+Data Type: Nullable<String>
+Database Column: 'Name', [cpPrimaryKey], 50
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Product
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Company
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BuildInfo
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ProductVersion
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Copyright
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BuildDate
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FileVersion
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InternalName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Comments
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginalFileName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

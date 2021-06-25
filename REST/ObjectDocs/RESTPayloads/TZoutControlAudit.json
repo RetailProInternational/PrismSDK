@@ -1,0 +1,27 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "zoutcontrolsid" : "0",
+      "tendertotalopen" : 0,
+      "tendertotalclose" : 0,
+      "overshortamt" : 0,
+      "drawerleaveamount" : 0,
+      "depositamount" : 0,
+      "reportxml" : null,
+      "currencyeventsid" : null,
+      "totalsales" : null,
+      "auditno" : 0
+    }
+  ]
+}
+

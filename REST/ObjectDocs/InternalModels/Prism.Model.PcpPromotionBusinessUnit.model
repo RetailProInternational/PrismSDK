@@ -1,0 +1,109 @@
+##########################################################################################################
+File Name: Prism.Model.PcpPromotionBusinessUnit.pas
+##########################################################################################################
+Class Name: TPcpPromotionBusinessUnit
+Base Class Name: TModelBase
+Database Table: PCP_PROMOTION_BUSINESS_UNIT
+Associate Class: False
+Identified By: 'FPromoSid,FBuSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','PcpPromotionBusinessUnit.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','PcpPromotionBusinessUnit.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','PcpPromotionBusinessUnit.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','PcpPromotionBusinessUnit.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','PcpPromotionBusinessUnit.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','PcpPromotionBusinessUnit.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','PcpPromotionBusinessUnit.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','PcpPromotionBusinessUnit.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','PcpPromotionBusinessUnit.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','PcpPromotionBusinessUnit.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoSid
+Data Type: Int64
+Database Column: 'PROMO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PromoSid','PcpPromotionBusinessUnit.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BuSid
+Data Type: Int64
+Database Column: 'BU_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'BuSid','PcpPromotionBusinessUnit.12'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,2109 @@
+##########################################################################################################
+File Name: Prism.Model.DocItem.pas
+##########################################################################################################
+Class Name: TDocItem
+Base Class Name: TModelBase
+Database Table: DOCUMENT_ITEM
+Associate Class: False
+Identified By: 'FDocSid,FItemPos'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','DocItem.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','DocItem.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','DocItem.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','DocItem.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','DocItem.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','DocItem.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','DocItem.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','DocItem.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','DocItem.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocSid
+Data Type: Int64
+Database Column: 'DOC_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'DocSid','DocItem.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemPos
+Data Type: Int16
+Database Column: 'ITEM_POS',[cpRequired,cpNotNull],5,0
+Documentation: 'ItemPos','DocItem.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InternalItemPos
+Data Type: Nullable<Int16>
+Database Column: 'INTERNAL_ITEM_POS',[],5,0
+Documentation: 'InternalItemPos','DocItem.258'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'References to INVN_SBS_ITEM table SID','DocItem.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DetaxFlag
+Data Type: Boolean
+Database Column: 'DETAX_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'DetaxFlag','DocItem.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: KitFlag
+Data Type: TItemKitFlag
+Database Column: 'KIT_FLAG',[cpRequired,cpNotNull],2,0
+Documentation: 'The commit state of central returns:0=NotCommunicated, 1-RegisteredWithCentrals, 2=CommitedWhenDocFinalized, 3=CommitedByResiliency, 4=AReplicatedCopy','DocItem.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromotionFlag
+Data Type: Boolean
+Database Column: 'PROMOTION_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'PromotionFlag','DocItem.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftAddValue
+Data Type: Boolean
+Database Column: 'GIFT_ADD_VALUE',[cpRequired,cpNotNull],1,0
+Documentation: 'GiftAddValue','DocItem.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Int16
+Database Column: 'ARCHIVED',[cpRequired,cpNotNull],1,0
+Documentation: 'Archived','DocItem.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPrimary
+Data Type: Boolean
+Database Column: 'ST_PRIMARY',[cpRequired,cpNotNull],1,0
+Documentation: 'StPrimary','DocItem.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Int16
+Database Column: 'STORE_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'StoreNo','DocItem.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommCode
+Data Type: Nullable<Int16>
+Database Column: 'COMM_CODE',[],5,0
+Documentation: 'CommCode','DocItem.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPriceLvl
+Data Type: Nullable<Int16>
+Database Column: 'ST_PRICE_LVL',[],5,0
+Documentation: 'StPriceLvl','DocItem.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','DocItem.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigPrice
+Data Type: Nullable<Double>
+Database Column: 'ORIG_PRICE',[],16,4
+Documentation: 'OrigPrice','DocItem.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigTaxAmt
+Data Type: Nullable<Double>
+Database Column: 'ORIG_TAX_AMT',[],16,4
+Documentation: 'OrigTaxAmt','DocItem.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Price
+Data Type: Nullable<Double>
+Database Column: 'PRICE',[],16,4
+Documentation: 'Price','DocItem.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','DocItem.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAmt
+Data Type: Nullable<Double>
+Database Column: 'TAX_AMT',[],17,5
+Documentation: 'TaxAmt','DocItem.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Tax2Perc
+Data Type: Nullable<Double>
+Database Column: 'TAX2_PERC',[],16,4
+Documentation: 'Tax2Perc','DocItem.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Tax2Amt
+Data Type: Nullable<Double>
+Database Column: 'TAX2_AMT',[],17,5
+Documentation: 'Tax2Amt','DocItem.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceBeforeDetax
+Data Type: Nullable<Double>
+Database Column: 'PRICE_BEFORE_DETAX',[],16,4
+Documentation: 'PriceBeforeDetax','DocItem.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigPriceBeforeDetax
+Data Type: Nullable<Double>
+Database Column: 'ORIG_PRICE_BEFORE_DETAX',[],16,4
+Documentation: 'OrigPriceBeforeDetax','DocItem.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cost
+Data Type: Nullable<Double>
+Database Column: 'COST',[],16,4
+Documentation: 'Cost','DocItem.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Spif
+Data Type: Nullable<Double>
+Database Column: 'SPIF',[],16,4
+Documentation: 'Spif','DocItem.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScheduleNo
+Data Type: Nullable<Int16>
+Database Column: 'SCHEDULE_NO',[],5,0
+Documentation: 'ScheduleNo','DocItem.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScanUpc
+Data Type: Nullable<Int64>
+Database Column: 'SCAN_UPC',[],18,0
+Documentation: 'ScanUpc','DocItem.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialNo
+Data Type: Nullable<string>
+Database Column: 'SERIAL_NO',[],25
+Documentation: 'SerialNo','DocItem.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PackageInvnSbsItemSid
+Data Type: Nullable<Int64>
+Database Column: 'PACKAGE_INVN_SBS_ITEM_SID',[],19,0
+Documentation: 'References to INVN_SBS_ITEM table SID','DocItem.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigCmpntInvnSbsItemSid
+Data Type: Nullable<Int64>
+Database Column: 'ORIG_CMPNT_INVN_SBS_ITEM_SID',[],19,0
+Documentation: 'References to INVN_SBS_ITEM table SID','DocItem.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserDiscPerc
+Data Type: Nullable<Double>
+Database Column: 'USER_DISC_PERC',[],16,4
+Documentation: 'UserDiscPerc','DocItem.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PackageSequenceNo
+Data Type: Nullable<Int16>
+Database Column: 'PACKAGE_SEQUENCE_NO',[],5,0
+Documentation: 'PackageSequenceNo','DocItem.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotNo
+Data Type: Nullable<string>
+Database Column: 'LOT_NO',[],25
+Documentation: 'LotNo','DocItem.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivityPerc
+Data Type: Nullable<Double>
+Database Column: 'ACTIVITY_PERC',[],16,4
+Documentation: 'ActivityPerc','DocItem.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Activity2Perc
+Data Type: Nullable<Double>
+Database Column: 'ACTIVITY2_PERC',[],16,4
+Documentation: 'Activity2Perc','DocItem.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Activity3Perc
+Data Type: Nullable<Double>
+Database Column: 'ACTIVITY3_PERC',[],16,4
+Documentation: 'Activity3Perc','DocItem.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Activity4Perc
+Data Type: Nullable<Double>
+Database Column: 'ACTIVITY4_PERC',[],16,4
+Documentation: 'Activity4Perc','DocItem.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Activity5Perc
+Data Type: Nullable<Double>
+Database Column: 'ACTIVITY5_PERC',[],16,4
+Documentation: 'Activity5Perc','DocItem.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommAmt
+Data Type: Nullable<Double>
+Database Column: 'COMM_AMT',[],16,4
+Documentation: 'CommAmt','DocItem.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Comm2Amt
+Data Type: Nullable<Double>
+Database Column: 'COMM2_AMT',[],16,4
+Documentation: 'Comm2Amt','DocItem.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Comm3Amt
+Data Type: Nullable<Double>
+Database Column: 'COMM3_AMT',[],16,4
+Documentation: 'Comm3Amt','DocItem.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Comm4Amt
+Data Type: Nullable<Double>
+Database Column: 'COMM4_AMT',[],16,4
+Documentation: 'Comm4Amt','DocItem.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Comm5Amt
+Data Type: Nullable<Double>
+Database Column: 'COMM5_AMT',[],16,4
+Documentation: 'Comm5Amt','DocItem.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemOrigin
+Data Type: Nullable<Int16>
+Database Column: 'ITEM_ORIGIN',[],1,0
+Documentation: 'ItemOrigin','DocItem.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PackageNo
+Data Type: Nullable<string>
+Database Column: 'PACKAGE_NO',[],20
+Documentation: 'PackageNo','DocItem.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipId
+Data Type: Nullable<Integer>
+Database Column: 'SHIP_ID',[],10,0
+Documentation: 'ShipId','DocItem.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigCost
+Data Type: Nullable<Double>
+Database Column: 'ORIG_COST',[],16,4
+Documentation: 'OrigCost','DocItem.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftActivationCode
+Data Type: Nullable<string>
+Database Column: 'GIFT_ACTIVATION_CODE',[],26
+Documentation: 'GiftActivationCode','DocItem.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftTransactionId
+Data Type: Nullable<string>
+Database Column: 'GIFT_TRANSACTION_ID',[],26
+Documentation: 'GiftTransactionId','DocItem.57'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustField
+Data Type: Nullable<string>
+Database Column: 'CUST_FIELD',[],47
+Documentation: 'CustField','DocItem.58'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1String
+Data Type: Nullable<string>
+Database Column: 'UDF1_STRING',[],50
+Documentation: 'Udf1String','DocItem.59'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2String
+Data Type: Nullable<string>
+Database Column: 'UDF2_STRING',[],50
+Documentation: 'Udf2String','DocItem.60'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3String
+Data Type: Nullable<string>
+Database Column: 'UDF3_STRING',[],50
+Documentation: 'Udf3String','DocItem.61'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf4String
+Data Type: Nullable<string>
+Database Column: 'UDF4_STRING',[],50
+Documentation: 'Udf4String','DocItem.62'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf5String
+Data Type: Nullable<string>
+Database Column: 'UDF5_STRING',[],50
+Documentation: 'Udf5String','DocItem.63'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Float
+Data Type: Nullable<Double>
+Database Column: 'UDF1_FLOAT',[],16,4
+Documentation: 'Udf1Float','DocItem.64'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf2Float
+Data Type: Nullable<Double>
+Database Column: 'UDF2_FLOAT',[],16,4
+Documentation: 'Udf2Float','DocItem.65'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf3Float
+Data Type: Nullable<Double>
+Database Column: 'UDF3_FLOAT',[],16,4
+Documentation: 'Udf3Float','DocItem.66'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PERC',[],16,4
+Documentation: 'DiscPerc','DocItem.67'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note1
+Data Type: Nullable<string>
+Database Column: 'NOTE1',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.68'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note2
+Data Type: Nullable<string>
+Database Column: 'NOTE2',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.69'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note3
+Data Type: Nullable<string>
+Database Column: 'NOTE3',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.70'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note4
+Data Type: Nullable<string>
+Database Column: 'NOTE4',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.71'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note5
+Data Type: Nullable<string>
+Database Column: 'NOTE5',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.72'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note6
+Data Type: Nullable<string>
+Database Column: 'NOTE6',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.73'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note7
+Data Type: Nullable<string>
+Database Column: 'NOTE7',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.74'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note8
+Data Type: Nullable<string>
+Database Column: 'NOTE8',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.75'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note9
+Data Type: Nullable<string>
+Database Column: 'NOTE9',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.76'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Note10
+Data Type: Nullable<string>
+Database Column: 'NOTE10',[],350
+Documentation: 'Used in Item note mapping document preference','DocItem.77'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscAmt
+Data Type: Nullable<Double>
+Database Column: 'DISC_AMT',[],16,4
+Documentation: 'Item level discount amount.  Used if disc_perc is null.','DocItem.78'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemType
+Data Type: TDocumentItemType
+Database Column: 'ITEM_TYPE',[],1,0
+Documentation: 'Item type placed on the document. A single document can carry items from sale, return or orders1-Sale,2-Return,3-Order,4-Exchange','DocItem.79'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<string>
+Database Column: 'DCS_CODE',[],9
+Documentation: 'Used for historical purposes only. Records original DCS Code for the item at the time the document was created.','DocItem.80'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendCode
+Data Type: Nullable<string>
+Database Column: 'VEND_CODE',[],6
+Documentation: 'Used for historical purposes only. Records original Vendor Code for the item at the time the document was created.','DocItem.81'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description1
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION1',[],30
+Documentation: 'Used for historical purposes only. Records original Description1 for the item at the time the document was created.','DocItem.82'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description2
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION2',[],30
+Documentation: 'Used for historical purposes only. Records original Description2 for the item at the time the document was created.','DocItem.83'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description3
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION3',[],30
+Documentation: 'Used for historical purposes only. Records original Description3 for the item at the time the document was created.','DocItem.84'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Description4
+Data Type: Nullable<string>
+Database Column: 'DESCRIPTION4',[],30
+Documentation: 'Used for historical purposes only. Records original Description4 for the item at the time the document was created.','DocItem.85'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Attribute
+Data Type: Nullable<string>
+Database Column: 'ATTRIBUTE',[],8
+Documentation: 'Used for historical purposes only. Records original Attribute for the item at the time the document was created.','DocItem.86'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemSize
+Data Type: Nullable<string>
+Database Column: 'ITEM_SIZE',[],8
+Documentation: 'Used for historical purposes only. Records original Item Size for the item at the time the document was created.','DocItem.87'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Alu
+Data Type: Nullable<string>
+Database Column: 'ALU',[],20
+Documentation: 'Used for historical purposes only. Records original ALU for the item at the time the document was created.','DocItem.88'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode
+Data Type: Nullable<string>
+Database Column: 'TAX_CODE',[],5
+Documentation: 'TaxCode','DocItem.89'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCode2
+Data Type: Nullable<string>
+Database Column: 'TAX_CODE2',[],5
+Documentation: 'TaxCode2','DocItem.90'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommLvl
+Data Type: Nullable<string>
+Database Column: 'COMM_LVL',[],1
+Documentation: 'CommLvl','DocItem.91'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CommPerc
+Data Type: Nullable<Double>
+Database Column: 'COMM_PERC',[],16,4
+Documentation: 'CommPerc','DocItem.92'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine1
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE1',[],40
+Documentation: 'StAddressLine1','DocItem.93'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine2
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE2',[],40
+Documentation: 'StAddressLine2','DocItem.94'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine3
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE3',[],40
+Documentation: 'StAddressLine3','DocItem.95'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine4
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE4',[],40
+Documentation: 'StAddressLine4','DocItem.96'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine5
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE5',[],40
+Documentation: 'StAddressLine5','DocItem.97'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressLine6
+Data Type: Nullable<string>
+Database Column: 'ST_ADDRESS_LINE6',[],40
+Documentation: 'StAddressLine6','DocItem.98'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StCountry
+Data Type: Nullable<string>
+Database Column: 'ST_COUNTRY',[],35
+Documentation: 'StCountry','DocItem.99'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPostalCode
+Data Type: Nullable<string>
+Database Column: 'ST_POSTAL_CODE',[],10
+Documentation: 'StPostalCode','DocItem.100'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPostalCodeExtension
+Data Type: Nullable<string>
+Database Column: 'ST_POSTAL_CODE_EXTENSION',[],5
+Documentation: 'StPostalCodeExtension','DocItem.101'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1LoginName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE1_LOGIN_NAME',[],20
+Documentation: 'keeps the login name of clerk 2 who created the document','DocItem.102'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1FullName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE1_FULL_NAME',[],60
+Documentation: 'keeps the full name of clerk 2 who created the document','DocItem.103'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2LoginName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE2_LOGIN_NAME',[],20
+Documentation: 'keeps the login name of clerk 3 who created the document','DocItem.104'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2FullName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE2_FULL_NAME',[],60
+Documentation: 'keeps the full name of clerk 3 who created the document','DocItem.105'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3LoginName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE3_LOGIN_NAME',[],20
+Documentation: 'keeps the login name of clerk 4 who created the document','DocItem.106'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3FullName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE3_FULL_NAME',[],60
+Documentation: 'keeps the full name of clerk 4 who created the document','DocItem.107'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4LoginName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE4_LOGIN_NAME',[],20
+Documentation: 'keeps the login name of clerk 5 who created the document','DocItem.108'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4FullName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE4_FULL_NAME',[],60
+Documentation: 'keeps the full name of clerk 5 who created the document','DocItem.109'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5LoginName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE5_LOGIN_NAME',[],20
+Documentation: 'keeps the login name of clerk 6 who created the document','DocItem.110'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5FullName
+Data Type: Nullable<string>
+Database Column: 'EMPLOYEE5_FULL_NAME',[],60
+Documentation: 'keeps the full name of clerk 6 who created the document','DocItem.111'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StCuid
+Data Type: Nullable<Int64>
+Database Column: 'ST_CUID',[],19,0
+Documentation: 'keeps the ship to customer unique identifier for the item','DocItem.112'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StId
+Data Type: Nullable<Integer>
+Database Column: 'ST_ID',[],10,0
+Documentation: 'StId','DocItem.113'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StCompanyName
+Data Type: Nullable<string>
+Database Column: 'ST_COMPANY_NAME',[],100
+Documentation: 'StCompanyName','DocItem.114'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StLastName
+Data Type: Nullable<string>
+Database Column: 'ST_LAST_NAME',[],30
+Documentation: 'StLastName','DocItem.115'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StFirstName
+Data Type: Nullable<string>
+Database Column: 'ST_FIRST_NAME',[],30
+Documentation: 'StFirstName','DocItem.116'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StTitle
+Data Type: Nullable<string>
+Database Column: 'ST_TITLE',[],15
+Documentation: 'StTitle','DocItem.117'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StTaxAreaName
+Data Type: Nullable<string>
+Database Column: 'ST_TAX_AREA_NAME',[],11
+Documentation: 'StTaxAreaName','DocItem.118'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StTaxArea2Name
+Data Type: Nullable<string>
+Database Column: 'ST_TAX_AREA2_NAME',[],11
+Documentation: 'StTaxArea2Name','DocItem.119'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPriceLvlName
+Data Type: Nullable<string>
+Database Column: 'ST_PRICE_LVL_NAME',[],6
+Documentation: 'StPriceLvlName','DocItem.120'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StDetaxFlag
+Data Type: Boolean
+Database Column: 'ST_DETAX_FLAG',[],1,0
+Documentation: 'StDetaxFlag','DocItem.121'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StPrimaryPhoneNo
+Data Type: Nullable<string>
+Database Column: 'ST_PRIMARY_PHONE_NO',[],30
+Documentation: 'StPrimaryPhoneNo','DocItem.122'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DiscountReason
+Data Type: Nullable<string>
+Database Column: 'DISCOUNT_REASON',[],80
+Documentation: 'DiscountReason','DocItem.123'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderType
+Data Type: Nullable<TOrderItemType>
+Database Column: 'ORDER_TYPE',[],5,0
+Documentation: '0-CustomerOrder,1-SpecialOrder,2-LayAway,3-StoreRegistry,4-CompanyRegistry,5-WebOrder,6-SendSale','DocItem.124'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StEmail
+Data Type: Nullable<string>
+Database Column: 'ST_EMAIL',[],100
+Documentation: 'StEmail','DocItem.125'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SoNumber
+Data Type: Nullable<Int64>
+Database Column: 'SO_NUMBER',[],14,0
+Documentation: 'SoNumber','DocItem.126'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipMethod
+Data Type: Nullable<string>
+Database Column: 'SHIP_METHOD',[],20
+Documentation: 'stores description of how the item is shipped','DocItem.127'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipAmt
+Data Type: Nullable<Double>
+Database Column: 'SHIP_AMT',[],16,4
+Documentation: 'ShipAmt','DocItem.128'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscAmt1
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_AMT1',[],16,4
+Documentation: 'HistDiscAmt1','DocItem.129'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscPerc1
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_PERC1',[],16,4
+Documentation: 'HistDiscPerc1','DocItem.130'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscReason1
+Data Type: Nullable<string>
+Database Column: 'HIST_DISC_REASON1',[],80
+Documentation: 'HistDiscReason1','DocItem.131'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscAmt2
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_AMT2',[],16,4
+Documentation: 'HistDiscAmt2','DocItem.132'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscPerc2
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_PERC2',[],16,4
+Documentation: 'HistDiscPerc2','DocItem.133'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscReason2
+Data Type: Nullable<string>
+Database Column: 'HIST_DISC_REASON2',[],80
+Documentation: 'HistDiscReason2','DocItem.134'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscAmt3
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_AMT3',[],16,4
+Documentation: 'HistDiscAmt3','DocItem.135'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscPerc3
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_PERC3',[],16,4
+Documentation: 'HistDiscPerc3','DocItem.136'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscReason3
+Data Type: Nullable<string>
+Database Column: 'HIST_DISC_REASON3',[],80
+Documentation: 'HistDiscReason3','DocItem.137'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscAmt4
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_AMT4',[],16,4
+Documentation: 'HistDiscAmt4','DocItem.138'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscPerc4
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_PERC4',[],16,4
+Documentation: 'HistDiscPerc4','DocItem.139'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscReason4
+Data Type: Nullable<string>
+Database Column: 'HIST_DISC_REASON4',[],80
+Documentation: 'HistDiscReason4','DocItem.140'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscAmt5
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_AMT5',[],16,4
+Documentation: 'HistDiscAmt5','DocItem.141'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscPerc5
+Data Type: Nullable<Double>
+Database Column: 'HIST_DISC_PERC5',[],16,4
+Documentation: 'HistDiscPerc5','DocItem.142'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: HistDiscReason5
+Data Type: Nullable<string>
+Database Column: 'HIST_DISC_REASON5',[],80
+Documentation: 'HistDiscReason5','DocItem.143'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','DocItem.144'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Udf1Date
+Data Type: Nullable<TDateTime>
+Database Column: 'UDF1_DATE',[
+Documentation: 'Udf1Date','DocItem.145'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvl
+Data Type: Nullable<Int16>
+Database Column: 'PRICE_LVL',[],5,0
+Documentation: 'PriceLvl','DocItem.146'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlName
+Data Type: Nullable<string>
+Database Column: 'PRICE_LVL_NAME',[],6
+Documentation: 'PriceLvlName','DocItem.147'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StSecurityLvl
+Data Type: Nullable<Int16>
+Database Column: 'ST_SECURITY_LVL',[],5,0
+Documentation: 'StSecurityLvl','DocItem.148'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TrackingNo
+Data Type: Nullable<string>
+Database Column: 'TRACKING_NO',[],24
+Documentation: 'stores a tracking number of the item shipment','DocItem.149'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InventoryItemType
+Data Type: Nullable<Int16>
+Database Column: 'INVENTORY_ITEM_TYPE',[],1,0
+Documentation: 'Used to record inventory Item type Kit, Package etc.','DocItem.150'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InventoryOhQty
+Data Type: Nullable<Double>
+Database Column: 'INVENTORY_OH_QTY',[],10,3
+Documentation: 'Used to record OH qty at the time the document is created','DocItem.151'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InventoryQtyPerCase
+Data Type: Nullable<Double>
+Database Column: 'INVENTORY_QTY_PER_CASE',[],10,3
+Documentation: 'InventoryQtyPerCase','DocItem.152'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Int16
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'SbsNo','DocItem.153'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnedItemQty
+Data Type: Nullable<Double>
+Database Column: 'RETURNED_ITEM_QTY',[],10,3
+Documentation: 'Quantity returned by customer against original receipt','DocItem.154'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnedItemInvoiceSid
+Data Type: Nullable<Int64>
+Database Column: 'RETURNED_ITEM_INVOICE_SID',[],19,0
+Documentation: 'Refers to the invoice sid from the original receipt','DocItem.155'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnReason
+Data Type: Nullable<string>
+Database Column: 'RETURN_REASON',[],80
+Documentation: 'reason the item is being returned','DocItem.156'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'PRICE_LVL_SID',[],19,0
+Documentation: 'Reference to the price level','DocItem.157'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderQuantityFilled
+Data Type: Nullable<Double>
+Database Column: 'ORDER_QUANTITY_FILLED',[],10,3
+Documentation: 'quantity of an order item that has already been filled','DocItem.158'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftQuantity
+Data Type: Nullable<Double>
+Database Column: 'GIFT_QUANTITY',[],10,3
+Documentation: 'Quantity for gift receipt','DocItem.159'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SoDepositAmt
+Data Type: Nullable<Double>
+Database Column: 'SO_DEPOSIT_AMT',[],16,4
+Documentation: 'stores calculated minimum deposit amount for the item based on the item price, so item type and preferences.','DocItem.160'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefOrderItemSid
+Data Type: Nullable<Int64>
+Database Column: 'REF_ORDER_ITEM_SID',[],19,0
+Documentation: 'keeps the reference to the item on ref. document to fulfill.','DocItem.161'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxAreaName
+Data Type: Nullable<string>
+Database Column: 'TAX_AREA_NAME',[],11
+Documentation: 'TaxAreaName','DocItem.162'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxArea2Name
+Data Type: Nullable<string>
+Database Column: 'TAX_AREA2_NAME',[],11
+Documentation: 'TaxArea2Name','DocItem.163'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialType
+Data Type: Nullable<TInventorySerialType>
+Database Column: 'SERIAL_TYPE',[],1,0
+Documentation: 'serial-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).0-None,1-Partial,2-Full.','DocItem.164'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotType
+Data Type: Nullable<Int16>
+Database Column: 'LOT_TYPE',[],1,0
+Documentation: 'lot-type from V9 invn_sbs.ext_flag.(V9 ext-flag contains serial-type and lot-type).','DocItem.165'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SendSaleFlag
+Data Type: Boolean
+Database Column: 'SEND_SALE_FLAG',[],1,0
+Documentation: 'Flag to indicate this item will be fulfilled at an alternate location.','DocItem.166'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FulfillStoreNo
+Data Type: Nullable<Int16>
+Database Column: 'FULFILL_STORE_NO',[],5,0
+Documentation: 'The sbs no of the store that will fulfill a send sale request.','DocItem.167'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FulfillStoreSid
+Data Type: Nullable<Int64>
+Database Column: 'FULFILL_STORE_SID',[],19,0
+Documentation: 'The SID of the store that will fulfill a send sale request.','DocItem.168'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FulfillSbsNo
+Data Type: Nullable<Int16>
+Database Column: 'FULFILL_SBS_NO',[],5,0
+Documentation: 'the sbs no for the store that will fulfill a send sale request.','DocItem.169'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SoCancelFlag
+Data Type: Boolean
+Database Column: 'SO_CANCEL_FLAG',[],1,0
+Documentation: 'Flag to indicate that the remaining amount of the due SO items are canceled','DocItem.170'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralDocumentSid
+Data Type: Nullable<Int64>
+Database Column: 'CENTRAL_DOCUMENT_SID',[],19,0
+Documentation: 'a reference to the central document this item relates to','DocItem.171'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralItemPos
+Data Type: Nullable<Int16>
+Database Column: 'CENTRAL_ITEM_POS',[],5,0
+Documentation: 'the position of this item on a central document','DocItem.172'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1Sid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE1_SID',[],19,0
+Documentation: 'Employee1Sid','DocItem.173'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2Sid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE2_SID',[],19,0
+Documentation: 'Employee2Sid','DocItem.174'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3Sid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE3_SID',[],19,0
+Documentation: 'Employee3Sid','DocItem.175'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4Sid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE4_SID',[],19,0
+Documentation: 'Employee4Sid','DocItem.176'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5Sid
+Data Type: Nullable<Int64>
+Database Column: 'EMPLOYEE5_SID',[],19,0
+Documentation: 'Employee5Sid','DocItem.177'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DipPrice
+Data Type: Nullable<Double>
+Database Column: 'DIP_PRICE',[],16,4
+Documentation: 'Final virtual price of the item','DocItem.178'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DipPriceBDT
+Data Type: Nullable<Double>
+Database Column: 'DIP_PRICE_BDT',[],16,4
+Documentation: 'Final virtual price of the item','DocItem.178'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DipDiscAmt
+Data Type: Nullable<Double>
+Database Column: 'DIP_DISC_AMT',[],16,4
+Documentation: 'Final virtual discount of the item','DocItem.179'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DipTaxAmt
+Data Type: Nullable<Double>
+Database Column: 'DIP_TAX_AMT',[],17,5
+Documentation: 'Final virtual tax amount of the item','DocItem.180'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DipTax2Amt
+Data Type: Nullable<Double>
+Database Column: 'DIP_TAX2_AMT',[],17,5
+Documentation: 'Final virtual tax2 amount of the item','DocItem.181'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ItemStatus
+Data Type: Int16
+Database Column: 'ITEM_STATUS',[cpRequired,cpNotNull],1,0
+Documentation: '1 = incomplete package, 0 = valid','DocItem.182'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EnhancedItemPos
+Data Type: Nullable<Integer>
+Database Column: 'ENHANCED_ITEM_POS',[],10,0
+Documentation: 'Logical sort order in which items/Pkgs/Components etc. are to be displayed, so that pkg components appear right after pkg header.','DocItem.183'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IsCompetingComponent
+Data Type: Boolean
+Database Column: 'IS_COMPETING_COMPONENT',[],1,0
+Documentation: '0 ?package component is not competing, 1 - package component is competing.','DocItem.184'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoMandisc
+Data Type: Boolean
+Database Column: 'PROMO_MANDISC',[],1,0
+Documentation: 'Promotions: Discount was modified manually','DocItem.185'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipMethodSid
+Data Type: Nullable<Int64>
+Database Column: 'SHIP_METHOD_SID',[],19,0
+Documentation: 'Stores the shipping method SID from the SHIP_METHOD table','DocItem.186'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipMethodId
+Data Type: Nullable<Int16>
+Database Column: 'SHIP_METHOD_ID',[],5,0
+Documentation: 'The ID of the specific shipping method and backward compatible with V9','DocItem.187'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderShipMethodSid
+Data Type: Nullable<Int64>
+Database Column: 'ORDER_SHIP_METHOD_SID',[],19,0
+Documentation: 'Stores the shipping method SID from the SHIP_METHOD table','DocItem.188'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderShipMethodId
+Data Type: Nullable<Int16>
+Database Column: 'ORDER_SHIP_METHOD_ID',[],5,0
+Documentation: 'The ID of the specific shipping method and backward compatible with V9','DocItem.189'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrderShipMethod
+Data Type: Nullable<string>
+Database Column: 'ORDER_SHIP_METHOD',[],20
+Documentation: 'Text field describing the specific shipping method','DocItem.190'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxPercLock
+Data Type: Boolean
+Database Column: 'TAX_PERC_LOCK',[],1,0
+Documentation: 'lock tax percentage (1=Enable, 0=Disable)','DocItem.191'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: QtyAvailableForReturn
+Data Type: Nullable<Double>
+Database Column: 'QTY_AVAILABLE_FOR_RETURN',[],10,3
+Documentation: 'quantity of referenced sale item that still available for return','DocItem.192'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralReturnCommitState
+Data Type: Nullable<TCentralTenderStatus>
+Database Column: 'CENTRAL_RETURN_COMMIT_STATE',[],1,0
+Documentation: 'The commit state of central returns:0=NotCommunicated, 1-RegisteredWithCentrals, 2=CommitedWhenDocFinalized, 3=CommitedByResiliency, 4=AReplicatedCopy','DocItem.193'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnUseQtyDecimals
+Data Type: Nullable<Int16>
+Database Column: 'INVN_USE_QTY_DECIMALS',[],1,0
+Documentation: 'InvnUseQtyDecimals','DocItem.194'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ShipAmtBdt
+Data Type: Nullable<Double>
+Database Column: 'SHIP_AMT_BDT',[],16,4
+Documentation: 'shipping amount before detaxation','DocItem.195'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeRuleSid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_RULE_SID',[],19,0
+Documentation: 'TaxCodeRuleSid','DocItem.196'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaxCodeRule2Sid
+Data Type: Nullable<Int64>
+Database Column: 'TAX_CODE_RULE2_SID',[],19,0
+Documentation: 'TaxCodeRule2Sid','DocItem.197'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressUid
+Data Type: Nullable<Int64>
+Database Column: 'ST_ADDRESS_UID',[],19,0
+Documentation: 'refers to customer address that is used for shipping, not enforced at database','DocItem.198'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigSalePrice
+Data Type: Nullable<Double>
+Database Column: 'ORIG_SALE_PRICE',[],16,4
+Documentation: 'original sale price of returned item','DocItem.199'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPgmSid
+Data Type: Nullable<Int64>
+Database Column: 'LTY_PGM_SID',[],19,0
+Documentation: 'LtyPgmSid','DocItem.200'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPgmName
+Data Type: Nullable<string>
+Database Column: 'LTY_PGM_NAME',[],40
+Documentation: 'LtyPgmName','DocItem.201'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPointsEarned
+Data Type: Nullable<Double>
+Database Column: 'LTY_POINTS_EARNED',[],24,8
+Documentation: 'LtyPointsEarned','DocItem.202'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyOrigPointsEarned
+Data Type: Nullable<Double>
+Database Column: 'LTY_ORIG_POINTS_EARNED',[],24,8
+Documentation: 'LtyOrigPointsEarned','DocItem.203'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPriceInPoints
+Data Type: Nullable<Double>
+Database Column: 'LTY_PRICE_IN_POINTS',[],24,8
+Documentation: 'LtyPriceInPoints','DocItem.204'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyOrigPriceInPoints
+Data Type: Nullable<Double>
+Database Column: 'LTY_ORIG_PRICE_IN_POINTS',[],24,8
+Documentation: 'LtyOrigPriceInPoints','DocItem.205'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyType
+Data Type: Nullable<TLoyaltyType>
+Database Column: 'LTY_TYPE',[],1,0
+Documentation: '1 - earn, 2 - redeem, 3 - reward.','DocItem.206'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPieceOfTbePoints
+Data Type: Nullable<Double>
+Database Column: 'LTY_PIECE_OF_TBE_POINTS',[],16,4
+Documentation: 'Virtual value: proportional piece of loyalty points earned by Total Base Earn program.','DocItem.207'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPieceOfTbrPoints
+Data Type: Nullable<Double>
+Database Column: 'LTY_PIECE_OF_TBR_POINTS',[],16,4
+Documentation: 'Virtual value: proportional piece of loyalty points redeemed by Total Base Redeem program.','DocItem.208'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LtyPieceOfTbrDiscAmt
+Data Type: Nullable<Double>
+Database Column: 'LTY_PIECE_OF_TBR_DISC_AMT',[],16,4
+Documentation: 'Virtual value: proportional piece of transaction discount received by applying Total Base Redeem program.','DocItem.209'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata1
+Data Type: Nullable<string>
+Database Column: 'EFTDATA1',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.210'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata2
+Data Type: Nullable<string>
+Database Column: 'EFTDATA2',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.211'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata3
+Data Type: Nullable<string>
+Database Column: 'EFTDATA3',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.212'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata4
+Data Type: Nullable<string>
+Database Column: 'EFTDATA4',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.213'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata5
+Data Type: Nullable<string>
+Database Column: 'EFTDATA5',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.214'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata6
+Data Type: Nullable<string>
+Database Column: 'EFTDATA6',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.215'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata7
+Data Type: Nullable<string>
+Database Column: 'EFTDATA7',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.216'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata8
+Data Type: Nullable<string>
+Database Column: 'EFTDATA8',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.217'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata9
+Data Type: Nullable<string>
+Database Column: 'EFTDATA9',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.218'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata0
+Data Type: Nullable<string>
+Database Column: 'EFTDATA0',[],2001
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.219'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata11
+Data Type: Nullable<string>
+Database Column: 'EFTDATA11',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.220'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata12
+Data Type: Nullable<string>
+Database Column: 'EFTDATA12',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.221'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata13
+Data Type: Nullable<string>
+Database Column: 'EFTDATA13',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.222'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata14
+Data Type: Nullable<string>
+Database Column: 'EFTDATA14',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.223'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata15
+Data Type: Nullable<string>
+Database Column: 'EFTDATA15',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.224'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata16
+Data Type: Nullable<string>
+Database Column: 'EFTDATA16',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.225'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata17
+Data Type: Nullable<string>
+Database Column: 'EFTDATA17',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.226'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata18
+Data Type: Nullable<string>
+Database Column: 'EFTDATA18',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.227'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata19
+Data Type: Nullable<string>
+Database Column: 'EFTDATA19',[],32
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.228'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Eftdata10
+Data Type: Nullable<string>
+Database Column: 'EFTDATA10',[],2001
+Documentation: 'additional data that is needed for printing on the invoice','DocItem.229'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftdataBSMer
+Data Type: Nullable<string>
+Database Column: 'EFTDATABSMER',[],2001
+Documentation: 'Merchant Receipt text','DocItem.230'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EftdataBSCust
+Data Type: Nullable<string>
+Database Column: 'EFTDATABSCUST',[],2001
+Documentation: 'Customer Receipt text','DocItem.231'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActivationSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVATION_SID',[],19,0
+Documentation: 'pre-auth will provide this if card was previously activated','DocItem.232'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AuthorizeDate
+Data Type: Nullable<TDateTime>
+Database Column: 'AUTHORIZE_DATE',[
+Documentation: 'last time card action was authorized (can check if request is stale/old)','DocItem.233'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftExpireDate
+Data Type: Nullable<TDateTime>
+Database Column: 'GIFT_EXPIRE_DATE',[
+Documentation: 'Expire date of Central Gift Card','DocItem.234'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PromoGiftItem
+Data Type: Nullable<Int16>
+Database Column: 'PROMO_GIFTITEM',[cpRequired,cpNotNull],1,0
+Documentation: 'Item is used for promo gift item','DocItem.235'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DocItemDiscount
+Data Type: IList<TDocItemDiscount>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1Id
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','DocItem.236'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2Id
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','DocItem.237'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3Id
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','DocItem.238'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4Id
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','DocItem.239'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5Id
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','DocItem.240'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','DocItem.241'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OrigCmpntInvnSbsItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','DocItem.242'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PackageInvnSbsItemUID
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'ItemUID','DocItem.243'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StAddressSeqNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'SeqNo','DocItem.244'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefOrderItemDocSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'DocSid','DocItem.245'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RefOrderInternalItemPos
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'DocSid','DocItem.245'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnedItemInvoiceDocSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: 'DocSid','DocItem.246'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnedItemInvoiceItemPos
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'ItemPos','DocItem.247'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1Name
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','DocItem.248'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee1OrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DocItem.249'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2Name
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','DocItem.250'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee2OrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DocItem.251'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3Name
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','DocItem.252'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee3OrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DocItem.253'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4Name
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','DocItem.254'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee4OrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DocItem.255'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5Name
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','DocItem.256'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Employee5OrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','DocItem.257'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReturnedItemInvoiceInternalItemPos
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'InternalItemPos','DocItem.259'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,24 @@
+{
+  "data" : [
+    {
+      "servicename" : null,
+      "displayname" : null,
+      "servicestate" : 0,
+      "ownprocess" : false,
+      "interactive" : false,
+      "starttype" : 0,
+      "starttypedesc" : null,
+      "delayedstart" : false,
+      "binarypath" : null,
+      "username" : null,
+      "coreservice" : false,
+      "scalable" : false,
+      "scaledto" : 0,
+      "prismconfig" : null,
+      "dependentcount" : 0,
+      "dependents" : [
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "emplname" : null,
+      "emplid" : null,
+      "username" : null,
+      "useractive" : false,
+      "locked" : false,
+      "sbsno" : null,
+      "origsbsno" : null
+    }
+  ]
+}
+

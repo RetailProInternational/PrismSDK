@@ -1,0 +1,14 @@
+{
+  "data" : [
+    {
+      "logfilename" : null,
+      "logfiletype" : null,
+      "logfiledate" : null,
+      "logfilesize" : null,
+      "errorcount" : null,
+      "logfilepath" : null,
+      "logfileendpoint" : null
+    }
+  ]
+}
+

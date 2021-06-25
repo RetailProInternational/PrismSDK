@@ -1,0 +1,117 @@
+##########################################################################################################
+File Name: Prism.Model.MarkdownAdj.pas
+##########################################################################################################
+Class Name: TMarkdownAdj
+Base Class Name: TModelBase
+Database Table: MARKDOWN_ADJ
+Associate Class: False
+Identified By: 'FMarkdownSid,FAdjSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','MarkdownAdj.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','MarkdownAdj.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','MarkdownAdj.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','MarkdownAdj.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','MarkdownAdj.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','MarkdownAdj.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','MarkdownAdj.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','MarkdownAdj.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','MarkdownAdj.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','MarkdownAdj.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MarkdownSid
+Data Type: Int64
+Database Column: 'MARKDOWN_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Reference to Markdown table SID','MarkdownAdj.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Restore
+Data Type: boolean
+Database Column: 'RESTORE',[],1
+Documentation: 'Adjustemt for restore markdown','MarkdownAdj.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjSid
+Data Type: Int64
+Database Column: 'ADJ_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'Reference to Adjustment table SID','MarkdownAdj.13'
+Legacy Column: 'ADJ_SID'
+
+------------------------------------------------------
+

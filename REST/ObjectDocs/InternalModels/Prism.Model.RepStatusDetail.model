@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.RepStatusDetail.pas
+##########################################################################################################
+Class Name: TRepStatusDetail
+Base Class Name: TModelBase
+Database Table: REP_STATUS_DETAIL
+Associate Class: False
+Identified By: 'FRepStatusResSid,FIdentifiedBy,FDirection'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','RepStatusDetail.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','RepStatusDetail.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','RepStatusDetail.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','RepStatusDetail.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','RepStatusDetail.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row.','RepStatusDetail.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 respectively.  this is the same value that will be used in licensing applications.','RepStatusDetail.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as  created/modified datetime.','RepStatusDetail.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','RepStatusDetail.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','RepStatusDetail.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RepStatusResSid
+Data Type: Int64
+Database Column: 'REP_STATUS_RES_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to replication status resource record','RepStatusDetail.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<string>
+Database Column: 'STATUS',[],1000
+Documentation: 'status of event, success, or an error message','RepStatusDetail.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: IdentifiedBy
+Data Type: Nullable<string>
+Database Column: 'IDENTIFIED_BY',[],200
+Documentation: 'fields that identify this record, on the sending system','RepStatusDetail.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SourceUrl
+Data Type: Nullable<string>
+Database Column: 'SOURCE_URL',[],500
+Documentation: 'url that can be used to retrieve the data from the source system. /api/common/<resourcename>?filter=(key,eq,value). .  or for v9  /api/common/<resourcename>?action=getv9resourcefilter=(key,eq,value) . . .','RepStatusDetail.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Direction
+Data Type: TMsgDirection
+Database Column: 'DIRECTION',[],1,0
+Documentation: '0 - incoming, 1 - outgoing. Defines the direction of the message. Incoming messages are ones received and outgoing messages are ones that were sent','RepStatusDetail.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

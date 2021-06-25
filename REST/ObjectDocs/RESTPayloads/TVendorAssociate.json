@@ -1,0 +1,21 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "vendcode" : null,
+      "vendname" : null,
+      "vendid" : null,
+      "termtype" : null,
+      "udf1string" : null,
+      "udf2string" : null,
+      "udf3string" : null,
+      "udf4string" : null,
+      "udf5string" : null,
+      "udf6string" : null,
+      "udf1date" : null,
+      "udf2date" : null,
+      "regional" : false
+    }
+  ]
+}
+

@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.Transformdesign.pas
+##########################################################################################################
+Class Name: TTransformdesign
+Base Class Name: TModelBase
+Database Table: TRANSFORMDESIGN
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Transformdesign.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Transformdesign.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Transformdesign.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Transformdesign.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Transformdesign.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Transformdesign.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','Transformdesign.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','Transformdesign.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Transformdesign.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Transformdesign.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DesignName
+Data Type: string
+Database Column: 'DESIGN_NAME',[cpRequired,cpNotNull],256
+Documentation: 'Name of the design that can be displayed by a GUI component.','Transformdesign.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResourceName
+Data Type: string
+Database Column: 'RESOURCE_NAME',[cpRequired,cpNotNull],50
+Documentation: 'Resource supported by this design template','Transformdesign.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Namespace
+Data Type: string
+Database Column: 'NAMESPACE',[cpRequired,cpNotNull],50
+Documentation: 'The specific purpose for this template (ie Document.Receipt, Document.Receipt.Gift, Document.Reports.XZOut etc)','Transformdesign.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Bocolumns
+Data Type: string
+Database Column: 'BOCOLUMNS',[cpRequired,cpNotNull],2000
+Documentation: 'Columns from underlying Business Object that should be surfaced','Transformdesign.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Designcontent
+Data Type: string
+Database Column: 'DESIGNCONTENT',[cpRequired,cpNotNull], 2001
+Documentation: 'The XSLT template to use for the transformation, (for now this is XSLT but if we go to another design type these contents could change)','Transformdesign.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PrintFl
+Data Type: Boolean
+Database Column: 'PRINT_FL',[],1,0
+Documentation: 'Printer Output supported for this Template','Transformdesign.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmailFl
+Data Type: Boolean
+Database Column: 'EMAIL_FL',[],1,0
+Documentation: 'Email output supported for this template','Transformdesign.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PreviewFl
+Data Type: Boolean
+Database Column: 'PREVIEW_FL',[],1,0
+Documentation: 'Preview output supported for this template','Transformdesign.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserdefinedFlag
+Data Type: Boolean
+Database Column: 'USERDEFINED_FLAG',[cpRequired,cpNotNull],1,0
+Documentation: 'UserdefinedFlag','Transformdesign.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CustomSchemaSid
+Data Type: Nullable<Int64>
+Database Column: 'CUSTOM_SCHEMA_SID',[],19,0
+Documentation: 'Points to a custom schema record if needed','Transformdesign.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DesignType
+Data Type: Nullable<TDesignType>
+Database Column: 'DESIGN_TYPE',[],1,0
+Documentation: 'type of design. 0 - standard, 1 - OPOS','Transformdesign.21'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,157 @@
+##########################################################################################################
+File Name: Prism.Model.RecvTerm.pas
+##########################################################################################################
+Class Name: TRecvTerm
+Base Class Name: TModelBase
+Database Table: VOU_TERM
+Associate Class: False
+Identified By: 'FVouSid,FTermType,FTermNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','RecvTerm.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','RecvTerm.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','RecvTerm.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','RecvTerm.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','RecvTerm.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','RecvTerm.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','RecvTerm.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','RecvTerm.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','RecvTerm.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','RecvTerm.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VouSid
+Data Type: Int64
+Database Column: 'VOU_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'VouSid','RecvTerm.11'
+Legacy Column: 'VOU_SID'
+
+------------------------------------------------------
+
+Name: TermType
+Data Type: TTermKind
+Database Column: 'TERM_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-term_days,1-term_cod,2-term_credit,3-term_replace,4-term_prepaid,5-term_due,6-term_pays,7-term_eom','RecvTerm.12'
+Legacy Column: 'TERM_TYPE'
+
+------------------------------------------------------
+
+Name: TermNo
+Data Type: Int16
+Database Column: 'TERM_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'TermNo','RecvTerm.13'
+Legacy Column: 'TERM_NO'
+
+------------------------------------------------------
+
+Name: Days
+Data Type: Nullable<Integer>
+Database Column: 'DAYS',[],10,0
+Documentation: 'Days','RecvTerm.14'
+Legacy Column: 'DAYS'
+
+------------------------------------------------------
+
+Name: DiscPmtPerc
+Data Type: Nullable<Double>
+Database Column: 'DISC_PMT_PERC',[],16,4
+Documentation: 'DiscPmtPerc','RecvTerm.15'
+Legacy Column: 'DISC_PMT_PERC'
+
+------------------------------------------------------
+
+Name: TermDate
+Data Type: Nullable<TDateTime>
+Database Column: 'TERM_DATE',[
+Documentation: 'TermDate','RecvTerm.16'
+Legacy Column: 'TERM_DATE'
+
+------------------------------------------------------
+
+Name: Amt
+Data Type: Nullable<Double>
+Database Column: 'AMT',[],16,4
+Documentation: 'Amt','RecvTerm.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Nullable<Int16>
+Database Column: 'ARCHIVED',[],5,0
+Documentation: 'Archived','RecvTerm.18'
+Legacy Column: NA
+
+------------------------------------------------------
+

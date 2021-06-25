@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "description1" : null,
+      "description2" : null,
+      "vendsid" : null,
+      "vendcode" : null,
+      "vendname" : null,
+      "upc" : null,
+      "alu" : null,
+      "itemno" : null,
+      "cost" : null,
+      "altvendsid" : null,
+      "altvendcode" : null,
+      "altvendname" : null,
+      "altupc" : null,
+      "altalu" : null,
+      "altcost" : null,
+      "sbssid" : "0",
+      "active" : false
+    }
+  ]
+}
+

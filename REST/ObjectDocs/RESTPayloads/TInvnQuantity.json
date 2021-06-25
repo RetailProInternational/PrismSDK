@@ -1,0 +1,52 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "storesid" : null,
+      "qty" : null,
+      "minqty" : null,
+      "maxqty" : null,
+      "newminqty" : null,
+      "newmaxqty" : null,
+      "transferinqty" : null,
+      "transferoutqty" : null,
+      "minmaxbegindate" : null,
+      "minmaxenddate" : null,
+      "soldqty" : null,
+      "rcvdqty" : null,
+      "onorderedqty" : null,
+      "toinorderedqty" : null,
+      "toinsentqty" : null,
+      "tooutorderedqty" : null,
+      "tooutsentqty" : null,
+      "poorderedqty" : null,
+      "porcvdqty" : null,
+      "soorderedqty" : null,
+      "sosentqty" : null,
+      "asnintransitqty" : null,
+      "lastonhandqtydate" : null,
+      "invnsbsitemsid" : "0",
+      "serialinfo" : [
+      ],
+      "lotinfo" : [
+      ],
+      "availableqty" : null,
+      "sbsno" : null,
+      "sbsname" : null,
+      "storename" : null,
+      "storeno" : null,
+      "storecode" : null
+    }
+  ]
+}
+

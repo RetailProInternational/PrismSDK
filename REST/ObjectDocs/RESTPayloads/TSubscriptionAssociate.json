@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "active" : false,
+      "subscriptionname" : null,
+      "subscriptiontype" : null,
+      "globalfilter" : null
+    }
+  ]
+}
+

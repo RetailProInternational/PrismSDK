@@ -1,0 +1,293 @@
+##########################################################################################################
+File Name: Prism.Model.ScheduledTask.pas
+##########################################################################################################
+Class Name: TScheduledTask
+Base Class Name: TModelBase
+Database Table: SCHEDULED_TASK
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ScheduledTask.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],40
+Documentation: 'employee id of row creator using application ui','ScheduledTask.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','ScheduledTask.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],40
+Documentation: 'employee id of last modifier using application ui','ScheduledTask.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ScheduledTask.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to store record for database where that owns row','ScheduledTask.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],40
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','ScheduledTask.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ScheduledTask.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: TDateTime
+Database Column: 'POST_DATE',[cpRequired,cpNotNull
+Documentation: 'date and time row was created/last modified in this system. may not be the same as created/modified datetime.','ScheduledTask.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'reference to tenant description','ScheduledTask.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartDate
+Data Type: TDateTime
+Database Column: 'START_DATE',[cpRequired,cpNotNull
+Documentation: 'date the task will initiate  (do not store timezone)','ScheduledTask.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'END_DATE',[
+Documentation: 'date the task will end, if null then no end date. (do not store timezone)','ScheduledTask.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartTime
+Data Type: Nullable<TDateTime>
+Database Column: 'START_TIME',[
+Documentation: 'start time for the time frame that the task is allowed to be run','ScheduledTask.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EndTime
+Data Type: Nullable<TDateTime>
+Database Column: 'END_TIME',[
+Documentation: 'end time for the time frame that the task is allowed to be run','ScheduledTask.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Daysofweek
+Data Type: Nullable<string>
+Database Column: 'DAYSOFWEEK',[],7
+Documentation: '7 character string of zero or 1 specifying smtwtfs zero being false and 1 being true. if null, can run every day.','ScheduledTask.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Frequency
+Data Type: TSchedTaskFrequency
+Database Column: 'FREQUENCY',[cpRequired,cpNotNull],1,0
+Documentation: 'enum for no limit, onetime, daily, weekly','ScheduledTask.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Allowduplicates
+Data Type: Boolean
+Database Column: 'ALLOWDUPLICATES',[cpRequired,cpNotNull],1,0
+Documentation: 'boolean - 0 means only 1 instance can run at a time','ScheduledTask.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActionUrl
+Data Type: string
+Database Column: 'ACTION_URL',[cpRequired,cpNotNull],1000
+Documentation: 'action url with parameters','ScheduledTask.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ActionPayload
+Data Type: Nullable<string>
+Database Column: 'ACTION_PAYLOAD',[],2001
+Documentation: 'if required a json clob for the request payload','ScheduledTask.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'boolean - on/off switch','ScheduledTask.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PublicFlg
+Data Type: Boolean
+Database Column: 'PUBLIC_REPLICATE',[cpRequired,cpNotNull],1,0
+Documentation: 'boolean - yes means replicate','ScheduledTask.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DaysOfRunhistory
+Data Type: Nullable<Integer>
+Database Column: 'DAYS_OF_RUNHISTORY',[],6,0
+Documentation: '0 means keep all history, positive number = days of run history to keep prior to last run date','ScheduledTask.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaskName
+Data Type: string
+Database Column: 'TASK_NAME',[cpRequired,cpNotNull],35
+Documentation: 'every task must have a name assigned','ScheduledTask.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaskDescription
+Data Type: Nullable<string>
+Database Column: 'TASK_DESCRIPTION',[],100
+Documentation: 'TaskDescription','ScheduledTask.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RecurEvery
+Data Type: Int16
+Database Column: 'RECUR_EVERY',[cpRequired,cpNotNull],1,0
+Documentation: 'enum based on frequency, for instance if set to daily and recur every is 1 the task will run every day, if set to 2 the task will run every other day if weekly and set to 1 the task will run every week and also will run on the daysofweek specified in days','ScheduledTask.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RepeatEvery
+Data Type: Nullable<Int16>
+Database Column: 'REPEAT_EVERY',[],5,0
+Documentation: 'an interval setting-run every n minutes','ScheduledTask.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultTimeout
+Data Type: Nullable<Integer>
+Database Column: 'DEFAULT_TIMEOUT',[],8,0
+Documentation: 'a fall-back timeout if messaging.api can not send the message within the api s timeout','ScheduledTask.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkStation
+Data Type: Nullable<string>
+Database Column: 'WORKSTATION',[],64
+Documentation: 'Unique WS name in this format: Scheduler_sbs<n> for subsid task will run for','ScheduledTask.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaskSbsList
+Data Type: Nullable<string>
+Database Column: 'TASK_SBS_LIST',[],35
+Documentation: 'Comma deliminated string of additional subsidiaries to run the task for','ScheduledTask.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxRetries
+Data Type: Nullable<Int16>
+Database Column: 'MAX_RETRIES',[],3,0
+Documentation: 'Set a scheduler retry limit after successive <n> task executions returning error code > 299','ScheduledTask.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Internalflag
+Data Type: TSchedInternalFlag
+Database Column: 'INTERNAL_FLAG',[],1,0
+Documentation: 'enum 0 - Allow task edit and delete; 1 - No edit or delete; 2 - Allow edit, no delete 3 - No edit, allow delete','ScheduledTask.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TaskTypeCd
+Data Type: Nullable<string>
+Database Column: 'TASK_TYPE_CD',[],4
+Documentation: 'Allows for optional grouping of tasks for user interfaces','ScheduledTask.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AllowMultiple
+Data Type: TSchedMultipleTasks
+Database Column: 'ALLOWMULTIPLE',[],1,0
+Documentation: 'To manage multiple task records attempting to run same action url simultaneously: enum 0 - BlockWaitRun; 1 - BlockDeactivate; 2 - BlockDelete 3 - Allow','ScheduledTask.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: TSchedTaskStatus
+Database Column: 'STATUS',[],1,0
+Documentation: 'To hold current task status: enum 0 - Running, 1-Idle, 2 - Error, 3-Scheduled (meaning not yet run','ScheduledTask.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ScheduledTaskRun
+Data Type: IList<TScheduledTaskRun>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

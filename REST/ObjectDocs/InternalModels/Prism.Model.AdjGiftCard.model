@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.AdjGiftCard.pas
+##########################################################################################################
+Class Name: TAdjGiftCard
+Base Class Name: TModelBase
+Database Table: ADJ_GIFT_CARD
+Associate Class: False
+Identified By: 'FAdjItemSid, FGisfCardNo'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','AdjGiftCard.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','AdjGiftCard.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','AdjGiftCard.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','AdjGiftCard.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','AdjGiftCard.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','AdjGiftCard.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','AdjGiftCard.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','AdjGiftCard.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','AdjGiftCard.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','AdjGiftCard.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AdjItemSid
+Data Type: Int64
+Database Column: 'ADJ_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'unique identifier of the adjusted item referenced in the adj_item table.','AdjGiftCard.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: GiftCardNo
+Data Type: string
+Database Column: 'GIFT_CARD_NO',[cpRequired,cpNotNull],25
+Documentation: 'this is the older non-central gift card numbers.','AdjGiftCard.12'
+Legacy Column: 'GIFT_CARD_NO'
+
+------------------------------------------------------
+
+Name: OrigQty
+Data Type: Nullable<Double>
+Database Column: 'ORIG_QTY',[],10,3
+Documentation: 'the original qty of the gift card item (older non-central gift card numbers).','AdjGiftCard.13'
+Legacy Column: 'ORIG_QTY'
+
+------------------------------------------------------
+
+Name: AdjQty
+Data Type: Nullable<Double>
+Database Column: 'ADJ_QTY',[],10,3
+Documentation: 'the adjusted qty made to the gift card (older non-central gift card numbers) via qty adjustment memos.','AdjGiftCard.14'
+Legacy Column: 'ADJ_QTY'
+
+------------------------------------------------------
+

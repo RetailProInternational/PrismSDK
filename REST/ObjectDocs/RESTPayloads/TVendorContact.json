@@ -1,0 +1,36 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "vendsid" : "0",
+      "firstname" : null,
+      "lastname" : null,
+      "titlesid" : null,
+      "contacttypesid" : null,
+      "primaryflag" : false,
+      "emailtypesid" : null,
+      "emailaddress" : null,
+      "phone1typesid" : null,
+      "phone1no" : null,
+      "phone2typesid" : null,
+      "phone2no" : null,
+      "active" : false,
+      "seqno" : 0,
+      "title" : null,
+      "phonetype1" : null,
+      "phonetype2" : null,
+      "emailtype" : null,
+      "titleid" : null
+    }
+  ]
+}
+

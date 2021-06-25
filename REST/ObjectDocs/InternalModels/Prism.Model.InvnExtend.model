@@ -1,0 +1,197 @@
+##########################################################################################################
+File Name: Prism.Model.InvnExtend.pas
+##########################################################################################################
+Class Name: TInvnExtend
+Base Class Name: TModelBase
+Database Table: INVN_SBS_EXTEND
+Associate Class: False
+Identified By: 'FInvnSbsItemSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','InvnExtend.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','InvnExtend.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','InvnExtend.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','InvnExtend.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','InvnExtend.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','InvnExtend.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','InvnExtend.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','InvnExtend.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','InvnExtend.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','InvnExtend.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'InvnSbsItemSid','InvnExtend.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF6String
+Data Type: Nullable<string>
+Database Column: 'UDF6_STRING',[],50
+Documentation: 'UDF6String','InvnExtend.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF7String
+Data Type: Nullable<string>
+Database Column: 'UDF7_STRING',[],50
+Documentation: 'UDF7String','InvnExtend.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF8String
+Data Type: Nullable<string>
+Database Column: 'UDF8_STRING',[],50
+Documentation: 'UDF8String','InvnExtend.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF9String
+Data Type: Nullable<string>
+Database Column: 'UDF9_STRING',[],50
+Documentation: 'UDF9String','InvnExtend.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF10String
+Data Type: Nullable<string>
+Database Column: 'UDF10_STRING',[],50
+Documentation: 'UDF10String','InvnExtend.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF11String
+Data Type: Nullable<string>
+Database Column: 'UDF11_STRING',[],50
+Documentation: 'UDF11String','InvnExtend.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF12String
+Data Type: Nullable<string>
+Database Column: 'UDF12_STRING',[],50
+Documentation: 'UDF12String','InvnExtend.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF13String
+Data Type: Nullable<string>
+Database Column: 'UDF13_STRING',[],50
+Documentation: 'UDF13String','InvnExtend.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF14String
+Data Type: Nullable<string>
+Database Column: 'UDF14_STRING',[],50
+Documentation: 'UDF14String','InvnExtend.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF15String
+Data Type: Nullable<string>
+Database Column: 'UDF15_STRING',[],50
+Documentation: 'UDF15String','InvnExtend.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF1LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF1_LARGE_STRING',[],2000
+Documentation: 'UDF1LargeString','InvnExtend.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UDF2LargeString
+Data Type: Nullable<string>
+Database Column: 'UDF2_LARGE_STRING',[],2000
+Documentation: 'UDF2LargeString','InvnExtend.23'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,53 @@
+##########################################################################################################
+File Name: Prism.Model.DCS.Associate.pas
+##########################################################################################################
+Class Name: TDcsAssociate
+Base Class Name: TModelBase
+Database Table: DCS
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<String>
+Database Column: 'DCS_CODE',[cpRequired,cpNotNull],9
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CName
+Data Type: Nullable<string>
+Database Column: 'C_NAME',[cpRequired,cpNotNull],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DName
+Data Type: Nullable<string>
+Database Column: 'D_NAME',[cpRequired,cpNotNull],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SName
+Data Type: Nullable<string>
+Database Column: 'S_NAME',[cpRequired,cpNotNull],20
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

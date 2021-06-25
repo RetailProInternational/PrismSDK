@@ -1,0 +1,117 @@
+##########################################################################################################
+File Name: Prism.Model.TenderGiftCertificate.pas
+##########################################################################################################
+Class Name: TTenderGiftCertificate
+Base Class Name: TModelBase
+Database Table: TENDER_GIFT_CERTIFICATE
+Associate Class: False
+Identified By: 'FTenderSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','TenderGiftCertificate.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','TenderGiftCertificate.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','TenderGiftCertificate.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','TenderGiftCertificate.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','TenderGiftCertificate.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','TenderGiftCertificate.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and9, respectively.  this is the same value that will be used in licensing applications.','TenderGiftCertificate.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same ascreated/modified datetime.','TenderGiftCertificate.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','TenderGiftCertificate.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','TenderGiftCertificate.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderSid
+Data Type: Int64
+Database Column: 'TENDER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to document tender record','TenderGiftCertificate.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CertificateNo
+Data Type: string
+Database Column: 'CERTIFICATE_NO',[cpRequired,cpNotNull],20
+Documentation: 'gift certificate number','TenderGiftCertificate.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AuthCode
+Data Type: Nullable<string>
+Database Column: 'AUTH_CODE',[],20
+Documentation: 'processor authorization code','TenderGiftCertificate.13'
+Legacy Column: NA
+
+------------------------------------------------------
+

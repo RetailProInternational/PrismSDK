@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.TranFeeType.Associate.pas
+##########################################################################################################
+Class Name: TTranFeeTypeAssociate
+Base Class Name: TModelBase
+Database Table: TRAN_FEE_TYPE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Nullable<Int16>
+Database Column: 'FEE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: 'FEE_NAME',[],6
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,357 @@
+##########################################################################################################
+File Name: Prism.Model.InvnQuantity.pas
+##########################################################################################################
+Class Name: TInvnQuantity
+Base Class Name: TModelBase
+Database Table: INVN_SBS_ITEM_QTY
+Associate Class: False
+Identified By: 'FInvnSbsItemSid,FStoreSid,FSbsSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','InvnQuantity.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','InvnQuantity.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','InvnQuantity.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','InvnQuantity.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','InvnQuantity.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','InvnQuantity.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and9, respectively.  this is the same value that will be used in licensing applications.','InvnQuantity.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same ascreated/modified datetime.','InvnQuantity.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','InvnQuantity.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','InvnQuantity.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary sid','InvnQuantity.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'reference to store.sid','InvnQuantity.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: 'Qty','InvnQuantity.13'
+Legacy Column: 'QTY'
+
+------------------------------------------------------
+
+Name: MinQty
+Data Type: Nullable<Double>
+Database Column: 'MIN_QTY',[],10,3
+Documentation: 'MinQty','InvnQuantity.14'
+Legacy Column: 'MIN_QTY'
+
+------------------------------------------------------
+
+Name: MaxQty
+Data Type: Nullable<Double>
+Database Column: 'MAX_QTY',[],10,3
+Documentation: 'MaxQty','InvnQuantity.15'
+Legacy Column: 'MAX_QTY'
+
+------------------------------------------------------
+
+Name: NewMinQty
+Data Type: Nullable<Double>
+Database Column: 'NEW_MIN_QTY',[],10,3
+Documentation: 'NewMinQty','InvnQuantity.16'
+Legacy Column: 'NEW_MIN_QTY'
+
+------------------------------------------------------
+
+Name: NewMaxQty
+Data Type: Nullable<Double>
+Database Column: 'NEW_MAX_QTY',[],10,3
+Documentation: 'NewMaxQty','InvnQuantity.17'
+Legacy Column: 'NEW_MAX_QTY'
+
+------------------------------------------------------
+
+Name: TransferInQty
+Data Type: Nullable<Double>
+Database Column: 'TRANSFER_IN_QTY',[],10,3
+Documentation: 'TransferInQty','InvnQuantity.18'
+Legacy Column: 'TRANSFER_IN_QTY'
+
+------------------------------------------------------
+
+Name: TransferOutQty
+Data Type: Nullable<Double>
+Database Column: 'TRANSFER_OUT_QTY',[],10,3
+Documentation: 'TransferOutQty','InvnQuantity.19'
+Legacy Column: 'TRANSFER_OUT_QTY'
+
+------------------------------------------------------
+
+Name: MinmaxBeginDate
+Data Type: Nullable<TDateTime>
+Database Column: 'MINMAX_BEGIN_DATE',[
+Documentation: 'MinmaxBeginDate','InvnQuantity.20'
+Legacy Column: 'MINMAX_BEGIN_DATE'
+
+------------------------------------------------------
+
+Name: MinmaxEndDate
+Data Type: Nullable<TDateTime>
+Database Column: 'MINMAX_END_DATE',[
+Documentation: 'MinmaxEndDate','InvnQuantity.21'
+Legacy Column: 'MINMAX_END_DATE'
+
+------------------------------------------------------
+
+Name: SoldQty
+Data Type: Nullable<Double>
+Database Column: 'SOLD_QTY',[],10,3
+Documentation: 'used to record the sold quantity of an item.','InvnQuantity.22'
+Legacy Column: 'SOLD_QTY'
+
+------------------------------------------------------
+
+Name: RcvdQty
+Data Type: Nullable<Double>
+Database Column: 'RCVD_QTY',[],10,3
+Documentation: 'used to record the received quantity of an item.','InvnQuantity.23'
+Legacy Column: 'RCVD_QTY'
+
+------------------------------------------------------
+
+Name: OnOrderedQty
+Data Type: Nullable<Double>
+Database Column: 'ON_ORDERED_QTY',[],10,3
+Documentation: 'used to record the on order quantity of an item.','InvnQuantity.24'
+Legacy Column: 'ONORDER_QTY'
+
+------------------------------------------------------
+
+Name: ToInOrderedQty
+Data Type: Nullable<Double>
+Database Column: 'TO_IN_ORDERED_QTY',[],10,3
+Documentation: 'committed: planned transfer order to move item qty into inventory from another inventory.  updated when transfer order is updated.','InvnQuantity.25'
+Legacy Column: 'TO_IN_ORD_QTY'
+
+------------------------------------------------------
+
+Name: ToInSentQty
+Data Type: Nullable<Double>
+Database Column: 'TO_IN_SENT_QTY',[],10,3
+Documentation: 'committed: item qty transferred into inventory from another inventory.  updated when transfer order is updated.','InvnQuantity.26'
+Legacy Column: 'TO_IN_SENT_QTY'
+
+------------------------------------------------------
+
+Name: ToOutOrderedQty
+Data Type: Nullable<Double>
+Database Column: 'TO_OUT_ORDERED_QTY',[],10,3
+Documentation: 'committed: planned transfer order to move item qty out of inventory into another inventory.  updated when transfer order is updated.','InvnQuantity.27'
+Legacy Column: 'TO_OUT_ORD_QTY'
+
+------------------------------------------------------
+
+Name: ToOutSentQty
+Data Type: Nullable<Double>
+Database Column: 'TO_OUT_SENT_QTY',[],10,3
+Documentation: 'committed: item qty transferred out of inventory into another inventory.  updated when transfer order is updated.','InvnQuantity.28'
+Legacy Column: 'TO_OUT_SENT_QTY'
+
+------------------------------------------------------
+
+Name: PoOrderedQty
+Data Type: Nullable<Double>
+Database Column: 'PO_ORDERED_QTY',[],10,3
+Documentation: 'committed: item qty on order from vendor.  updated when purchase order is updated.','InvnQuantity.29'
+Legacy Column: 'PO_ORD_QTY'
+
+------------------------------------------------------
+
+Name: PoRcvdQty
+Data Type: Nullable<Double>
+Database Column: 'PO_RCVD_QTY',[],10,3
+Documentation: 'committed: item qty received to date from vendor. updated when purchase order is updated.','InvnQuantity.30'
+Legacy Column: 'PO_RCVD_QTY'
+
+------------------------------------------------------
+
+Name: SoOrderedQty
+Data Type: Nullable<Double>
+Database Column: 'SO_ORDERED_QTY',[],10,3
+Documentation: 'committed: item qty on order for a customer.  updated when sales order is updated.','InvnQuantity.31'
+Legacy Column: 'SO_ORD_QTY'
+
+------------------------------------------------------
+
+Name: SoSentQty
+Data Type: Nullable<Double>
+Database Column: 'SO_SENT_QTY',[],10,3
+Documentation: 'committed: item qty sent to a customer.  updated when sales order is updated.','InvnQuantity.32'
+Legacy Column: 'SO_SENT_QTY'
+
+------------------------------------------------------
+
+Name: AsnInTransitQty
+Data Type: Nullable<Double>
+Database Column: 'ASN_IN_TRANSIT_QTY',[],10,3
+Documentation: 'used to record the in-transit net qty in regular (receive/return) asn.','InvnQuantity.33'
+Legacy Column: 'ASN_IN_TRANSIT_QTY'
+
+------------------------------------------------------
+
+Name: LastOnHandQtyDate
+Data Type: Nullable<TDateTime>
+Database Column: 'LAST_ON_HAND_QTY_DATE',[
+Documentation: 'used to record the date when the quantity changed to zero last time.','InvnQuantity.34'
+Legacy Column: 'LST_OH_QTY_DATE'
+
+------------------------------------------------------
+
+Name: InvnSbsItemSid
+Data Type: Int64
+Database Column: 'INVN_SBS_ITEM_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'used by api to navigate to invn_sbs_item resource','InvnQuantity.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SerialInfo
+Data Type: IList<TSerialInfo>
+Database Column: NA
+Documentation: 'non-persisted list for supplying serial numbers while working with InventorySaveItems action', ''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LotInfo
+Data Type: IList<TLotInfo>
+Database Column: NA
+Documentation: 'non-persisted list for supplying lot numbers while working with InventorySaveItems action', ''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AvailableQty
+Data Type: Nullable<Double>
+Database Column: NA
+Documentation: 'Non-persisted field for store committed quantity', ''
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','InvnQuantity.36'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'user defined name for the subsidiary','InvnQuantity.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreName
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'store name','InvnQuantity.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','InvnQuantity.39'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+
+Name: StoreCode
+Data Type: TNullableString
+Database Column: NA
+Documentation: 'StoreCode','InvnQuantity.40'
+Legacy Column: NA
+
+------------------------------------------------------
+

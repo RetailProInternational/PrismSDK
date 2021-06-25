@@ -1,0 +1,31 @@
+{
+  "data" : [
+    {
+      "machinename" : null,
+      "os" : null,
+      "osdetail" : null,
+      "osversion" : null,
+      "osarchitecture" : null,
+      "osplatform" : null,
+      "ospath" : null,
+      "cpuname" : null,
+      "cpuspeed" : null,
+      "cpucount" : null,
+      "cpuarchitecture" : null,
+      "cpuidentifier" : null,
+      "cpurevision" : null,
+      "memorytotal" : null,
+      "memoryavailable" : null,
+      "memoryusage" : null,
+      "hdtotalspace" : null,
+      "hdavailablespace" : null,
+      "hdtype" : null,
+      "hdfilesystype" : null,
+      "hdvolumename" : null,
+      "host" : null,
+      "sysinfomodule" : [
+      ]
+    }
+  ]
+}
+

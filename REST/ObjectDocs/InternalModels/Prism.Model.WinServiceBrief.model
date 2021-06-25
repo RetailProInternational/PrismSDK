@@ -1,0 +1,61 @@
+##########################################################################################################
+File Name: Prism.Model.WinServiceBrief.pas
+##########################################################################################################
+Class Name: TWinServiceBrief
+Base Class Name: TModelBase
+Database Table: 
+Associate Class: False
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: ServiceName
+Data Type: string
+Database Column: 'ServiceName', [cpPrimaryKey], 80
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ServiceState
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DisplayName
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartType
+Data Type: integer
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StartTypeDesc
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: BinaryPath
+Data Type: string
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

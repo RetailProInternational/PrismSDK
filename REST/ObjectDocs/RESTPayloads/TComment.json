@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "sbssid" : "0",
+      "doctype" : 0,
+      "comments" : null,
+      "active" : false,
+      "defaultvalue" : false,
+      "commentorder" : null,
+      "commentid" : 0,
+      "sbsno" : null
+    }
+  ]
+}
+

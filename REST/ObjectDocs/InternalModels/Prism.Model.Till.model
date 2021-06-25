@@ -1,0 +1,181 @@
+##########################################################################################################
+File Name: Prism.Model.Till.pas
+##########################################################################################################
+Class Name: TTill
+Base Class Name: TModelBase
+Database Table: TILL
+Associate Class: False
+Identified By: 'FTillName, FStoreSid, FSbsSid'
+Legacy Identified By: 'TillName, StoreNo, SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Till.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Till.2'
+Legacy Column: 'CREATEDBY_ID'
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Till.3'
+Legacy Column: 'CREATED_DATE'
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Till.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Till.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','Till.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','Till.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Till.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Till.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Till.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','Till.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Int64
+Database Column: 'STORE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'StoreSid','Till.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultDrawerSid
+Data Type: Nullable<Int64>
+Database Column: 'DEFAULT_DRAWER_SID',[],19,0
+Documentation: 'Default drawer till is assigned to.','Till.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillName
+Data Type: Nullable<string>
+Database Column: 'TILL_NAME',[],40
+Documentation: 'Unique name of the till.  Till name is unique within the scope of the controller.','Till.14'
+Legacy Column: 'TILL_NAME'
+
+------------------------------------------------------
+
+Name: CurrentDrawerSid
+Data Type: Nullable<Int64>
+Database Column: 'CURRENT_DRAWER_SID',[],19,0
+Documentation: 'Current drawer that till is assigned to.','Till.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: MaxCashAmt
+Data Type: Nullable<Double>
+Database Column: 'MAX_CASH_AMT',[],16,4
+Documentation: 'Used to trigger a cash drop message when the amount of cash exceeds the maximum cash amount.','Till.16'
+Legacy Column: 'MAX_CASH_AMT'
+
+------------------------------------------------------
+
+Name: MinCashAmt
+Data Type: Nullable<Double>
+Database Column: 'MIN_CASH_AMT',[],16,4
+Documentation: 'Suggested cash drop amount when the cashier exceeds the maximum till amount set in system preferences.','Till.17'
+Legacy Column: 'MIN_CASH_AMT'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','Till.18'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: TillId
+Data Type: Integer
+Database Column: 'TILL_ID',[cpRequired,cpNotNull],10,0
+Documentation: 'TillId','Till.19'
+Legacy Column: 'TILL_ID'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Till.20'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Till.21'
+Legacy Column: 'STORE_NO'
+
+------------------------------------------------------
+

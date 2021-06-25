@@ -1,0 +1,28 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "promosid" : "0",
+      "pos" : 0,
+      "qty" : null,
+      "disctype" : null,
+      "discvalue" : null,
+      "rewardvalidationplsid" : null,
+      "additionaldisctype" : null,
+      "additionaldiscvalue" : null,
+      "pcprewardfilterelement" : [
+      ],
+      "rewardvalidationpl" : null
+    }
+  ]
+}
+

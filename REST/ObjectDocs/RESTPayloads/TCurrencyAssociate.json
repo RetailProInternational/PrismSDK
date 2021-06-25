@@ -1,0 +1,17 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "currencyname" : null,
+      "discrepancy" : null,
+      "rounding" : null,
+      "decimals" : null,
+      "active" : false,
+      "alphabeticcode" : null,
+      "numericcode" : null,
+      "minorunit" : null,
+      "symbol" : null
+    }
+  ]
+}
+

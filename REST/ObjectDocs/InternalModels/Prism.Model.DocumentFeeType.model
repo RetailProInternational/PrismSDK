@@ -1,0 +1,173 @@
+##########################################################################################################
+File Name: Prism.Model.DocumentFeeType.pas
+##########################################################################################################
+Class Name: TDocumentFeeType
+Base Class Name: TModelBase
+Database Table: DOCUMENT_FEE_TYPE
+Associate Class: False
+Identified By: 'FFeeType,FSbsSid'
+Legacy Identified By: 'FeeType,SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','DocumentFeeType.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','DocumentFeeType.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','DocumentFeeType.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','DocumentFeeType.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','DocumentFeeType.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','DocumentFeeType.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','DocumentFeeType.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','DocumentFeeType.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','DocumentFeeType.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','DocumentFeeType.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'SbsSid','DocumentFeeType.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Int16
+Database Column: 'FEE_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '1-Other fees, 9-shipping fee, All negative numbers are fixed fee types, and are populated as default data.','DocumentFeeType.12'
+Legacy Column: 'FEE_TYPE'
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: 'FEE_NAME',[],25
+Documentation: 'FeeName','DocumentFeeType.13'
+Legacy Column: 'FEE_NAME'
+
+------------------------------------------------------
+
+Name: TaxPerc
+Data Type: Nullable<Double>
+Database Column: 'TAX_PERC',[],16,4
+Documentation: 'TaxPerc','DocumentFeeType.14'
+Legacy Column: 'TAX_PERC'
+
+------------------------------------------------------
+
+Name: TaxIncluded
+Data Type: Boolean
+Database Column: 'TAX_INCLUDED',[cpRequired,cpNotNull],1,0
+Documentation: 'TaxIncluded','DocumentFeeType.15'
+Legacy Column: 'TAX_INCL'
+
+------------------------------------------------------
+
+Name: FeeClass
+Data Type: Nullable<Int16>
+Database Column: 'FEE_CLASS',[],5,0
+Documentation: 'FeeClass','DocumentFeeType.16'
+Legacy Column: 'FEE_CLASS'
+
+------------------------------------------------------
+
+Name: CustRequired
+Data Type: Boolean
+Database Column: 'CUST_REQUIRED',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates that a customer is required before this fee type can be listed on a document.','DocumentFeeType.17'
+Legacy Column: 'CUST_REQ'
+
+------------------------------------------------------
+
+Name: AllowTaxExemption
+Data Type: Boolean
+Database Column: 'ALLOW_TAX_EXEMPTION',[cpRequired,cpNotNull],1,0
+Documentation: 'allow tax exemption 0=false 1=true','DocumentFeeType.18'
+Legacy Column: 'TAX_EXEMPT_FLAG'
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Active','DocumentFeeType.19'
+Legacy Column: 'ACTIVE'
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','DocumentFeeType.20'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+

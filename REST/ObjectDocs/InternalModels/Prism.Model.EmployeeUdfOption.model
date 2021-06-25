@@ -1,0 +1,125 @@
+##########################################################################################################
+File Name: Prism.Model.EmployeeUdfOption.pas
+##########################################################################################################
+Class Name: TEmployeeUdfOption
+Base Class Name: TModelBase
+Database Table: EMPLOYEE_UDF_OPTION
+Associate Class: False
+Identified By: 'FUdfOption, FUdfSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','EmployeeUdfOption.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','EmployeeUdfOption.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','EmployeeUdfOption.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','EmployeeUdfOption.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','EmployeeUdfOption.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','EmployeeUdfOption.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','EmployeeUdfOption.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','EmployeeUdfOption.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','EmployeeUdfOption.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','EmployeeUdfOption.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfSid
+Data Type: Int64
+Database Column: 'UDF_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'UdfSid','EmployeeUdfOption.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FlagId
+Data Type: Int16
+Database Column: 'FLAG_ID',[cpRequired,cpNotNull],5,0
+Documentation: 'FlagId','EmployeeUdfOption.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UdfOption
+Data Type: string
+Database Column: 'UDF_OPTION',[cpRequired,cpNotNull],50
+Documentation: 'UdfOption','EmployeeUdfOption.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','EmployeeUdfOption.14'
+Legacy Column: NA
+
+------------------------------------------------------
+

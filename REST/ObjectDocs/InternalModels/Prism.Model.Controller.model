@@ -1,0 +1,309 @@
+##########################################################################################################
+File Name: Prism.Model.Controller.pas
+##########################################################################################################
+Class Name: TController
+Base Class Name: TModelBase
+Database Table: CONTROLLER
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Controller.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Controller.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Controller.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Controller.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Controller.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','Controller.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Controller.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','Controller.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Controller.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Controller.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerNo
+Data Type: Nullable<Int32>
+Database Column: 'CONTROLLER_NO',[],5,0
+Documentation: 'user defined database number','Controller.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerName
+Data Type: Nullable<string>
+Database Column: 'CONTROLLER_NAME',[],15
+Documentation: 'user defined database name','Controller.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DefaultSbsSid
+Data Type: Nullable<Int64>
+Database Column: 'DEFAULT_SBS_SID',[],19,0
+Documentation: 'reference to default subsidiary for this database.','Controller.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'reference to default store for this database.','Controller.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerType
+Data Type: TControllerType
+Database Column: 'CONTROLLER_TYPE',[cpRequired,cpNotNull],5,0
+Documentation: '0-NotUsed,1-Local,2-Remote,3-Custom','Controller.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[cpRequired,cpNotNull],1,0
+Documentation: 'Indicates whether the controller record is active','Controller.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Address
+Data Type: Nullable<string>
+Database Column: 'ADDRESS',[],64
+Documentation: 'ip address of this computer to be used within VPN','Controller.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhysicalAddress1
+Data Type: Nullable<string>
+Database Column: 'PHYSICAL_ADDRESS_1',[],40
+Documentation: 'Postal address of server installation line 1','Controller.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhysicalAddress2
+Data Type: Nullable<string>
+Database Column: 'PHYSICAL_ADDRESS_2',[],40
+Documentation: 'Postal address of server installation line 2','Controller.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PhysicalAddress3
+Data Type: Nullable<string>
+Database Column: 'PHYSICAL_ADDRESS_3',[],40
+Documentation: 'Postal address of server installation line 3','Controller.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: City
+Data Type: Nullable<string>
+Database Column: 'CITY',[],40
+Documentation: 'Postal address of server installation city','Controller.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: State
+Data Type: Nullable<string>
+Database Column: 'STATE',[],5
+Documentation: 'Postal address of server installation state or province','Controller.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostalCode
+Data Type: Nullable<string>
+Database Column: 'POSTAL_CODE',[],10
+Documentation: 'Postal address of server installation postal code','Controller.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ServerLocation
+Data Type: Nullable<string>
+Database Column: 'SERVER_LOCATION',[
+Documentation: 'Location of server at the postal address.','Controller.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: V9Address
+Data Type: Nullable<string>
+Database Column: 'V9_ADDRESS',[],40
+Documentation: 'Address of the v9 at this physical location','Controller.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: POAControllerSid
+Data Type: Nullable<Int64>
+Database Column: 'POA_CONTROLLER_SID',[],19,0
+Documentation: 'reference to a sid in controller table','Controller.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CentralsConnectionSid
+Data Type: Nullable<int64>
+Database Column: 'CENTRALS_CONNECTION_SID',[],19,0
+Documentation: 'Centrals server connection identifier','Controller.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Archived
+Data Type: Boolean
+Database Column: 'ARCHIVED',[],1,0
+Documentation: 'Archived','Controller.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SSLFlag
+Data Type: Boolean
+Database Column: 'SSL_FLAG',[],1,0
+Documentation: '0-not using SSL, 1-using SSL','Controller.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ServerAddress
+Data Type: Nullable<string>
+Database Column: 'SERVER_ADDRESS',[],100
+Documentation: 'Centrals server IP address or URL','Controller.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ServerPort
+Data Type: Nullable<Int32>
+Database Column: 'SERVER_PORT',[],5,0
+Documentation: 'Centrals server port number','Controller.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Timeout
+Data Type: Nullable<Int32>
+Database Column: 'TIMEOUT',[],10,0
+Documentation: 'Centrals server timeout','Controller.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ResiliencyInterval
+Data Type: Nullable<Int16>
+Database Column: 'RESILIENCY_INTERVAL',[],5,0
+Documentation: 'Centrals server resiliency interval','Controller.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreAssignments
+Data Type: Nullable<string>
+Database Column: 'STORE_ASSIGNMENTS',[],2001
+Documentation: 'Store assignments for day 2 day replacation','Controller.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DomainName
+Data Type: Nullable<string>
+Database Column: 'DOMAIN_NAME',[],100
+Documentation: 'Prism server''s Domain Name, used by Web TTK client','Controller.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','Controller.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','Controller.31'
+Legacy Column: NA
+
+------------------------------------------------------
+

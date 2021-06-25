@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.Workstation.Associate.pas
+##########################################################################################################
+Class Name: TWorkstationAssociate
+Base Class Name: 
+Database Table: Workstation
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<integer>
+Database Column: 'WORKSTATION_NO', [], 5
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

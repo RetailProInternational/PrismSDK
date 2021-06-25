@@ -1,0 +1,133 @@
+##########################################################################################################
+File Name: Prism.Model.POFee.pas
+##########################################################################################################
+Class Name: TPOFee
+Base Class Name: TModelBase
+Database Table: PO_FEE
+Associate Class: False
+Identified By: 'FPoSid,FPurchFeeTypeSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'Sid','POFee.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'CreatedBy','POFee.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'CreatedDatetime','POFee.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'ModifiedBy','POFee.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'ModifiedDatetime','POFee.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'ControllerSid','POFee.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'OriginApplication','POFee.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'PostDate','POFee.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'RowVersion','POFee.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'TenantSid','POFee.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PoSid
+Data Type: Int64
+Database Column: 'PO_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'PoSid','POFee.11'
+Legacy Column: 'PO_SID'
+
+------------------------------------------------------
+
+Name: Amt
+Data Type: Nullable<Double>
+Database Column: 'AMT',[],16,4
+Documentation: 'Amt','POFee.12'
+Legacy Column: 'AMT'
+
+------------------------------------------------------
+
+Name: PurchFeeTypeSid
+Data Type: Nullable<Int64>
+Database Column: 'PURCH_FEE_TYPE_SID',[],19,0
+Documentation: 'points to the corresponding purch_fee_type record','POFee.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: FeeType
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'FeeType','POFee.14'
+Legacy Column: 'FEE_TYPE'
+
+------------------------------------------------------
+
+Name: FeeName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'FeeName','POFee.15'
+Legacy Column: NA
+
+------------------------------------------------------
+

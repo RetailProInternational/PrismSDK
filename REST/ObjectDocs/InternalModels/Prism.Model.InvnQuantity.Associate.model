@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.InvnQuantity.Associate.pas
+##########################################################################################################
+Class Name: TInvnQuantityAssociate
+Base Class Name: 
+Database Table: INVN_SBS_ITEM_QTY
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Qty
+Data Type: Nullable<Double>
+Database Column: 'QTY',[],10,3
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

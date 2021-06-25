@@ -1,0 +1,301 @@
+##########################################################################################################
+File Name: Prism.Model.Subsidiary.pas
+##########################################################################################################
+Class Name: TSubsidiary
+Base Class Name: TModelBase
+Database Table: SUBSIDIARY
+Associate Class: False
+Identified By: 'FSbsNo'
+Legacy Identified By: 'SbsNo'
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','Subsidiary.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','Subsidiary.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','Subsidiary.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','Subsidiary.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','Subsidiary.5'
+Legacy Column: 'MODIFIED_DATE'
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to subsidiary record for database where that owns row.','Subsidiary.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','Subsidiary.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modifieddatetime.','Subsidiary.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','Subsidiary.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','Subsidiary.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Int16
+Database Column: 'SBS_NO',[cpRequired,cpNotNull],5,0
+Documentation: 'uniquely identifying subsidiary number','Subsidiary.11'
+Legacy Column: 'SBS_NO'
+
+------------------------------------------------------
+
+Name: SbsName
+Data Type: Nullable<string>
+Database Column: 'SBS_NAME',[],15
+Documentation: 'user defined name for the subsidiary','Subsidiary.12'
+Legacy Column: 'SBS_NAME'
+
+------------------------------------------------------
+
+Name: StyleDef
+Data Type: Nullable<TStyleDefinitionDescType>
+Database Column: 'STYLE_DEF',[],5,0
+Documentation: 'indicates which inventory field the style should be based on.  1=desc1, 2=desc2, 3=both.','Subsidiary.13'
+Legacy Column: 'STYLE_DEF'
+
+------------------------------------------------------
+
+Name: BaseCurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'BASE_CURRENCY_SID',[],19,0
+Documentation: 'reference to currency record.','Subsidiary.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForeignCurrencySid
+Data Type: Nullable<Int64>
+Database Column: 'FOREIGN_CURRENCY_SID',[],19,0
+Documentation: 'Default foreign currency for this subsidiary.','Subsidiary.15'
+Legacy Column: 'FOREIGN_CURRENCY1_ID'
+
+------------------------------------------------------
+
+Name: ActivePriceLvlSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_PRICE_LVL_SID',[],19,0
+Documentation: 'reference to price level record.  this price level is used to set the price level on inventoryitems within this subsidiary.','Subsidiary.16'
+Legacy Column: 'ACTIVE_PRICE_LVL'
+
+------------------------------------------------------
+
+Name: ActiveSeasonSid
+Data Type: Nullable<Int64>
+Database Column: 'ACTIVE_SEASON_SID',[],19,0
+Documentation: 'reference to season record.','Subsidiary.17'
+Legacy Column: 'ACTIVE_SEASON_ID'
+
+------------------------------------------------------
+
+Name: DocNoPrefix
+Data Type: Nullable<string>
+Database Column: 'DOC_NO_PREFIX',[],2
+Documentation: 'characters prepended to document numbers to differentiate them from documents in other subsidiaries.','Subsidiary.18'
+Legacy Column: 'DOC_NO_PREFIX'
+
+------------------------------------------------------
+
+Name: CalendarSid
+Data Type: Nullable<Int64>
+Database Column: 'CALENDAR_SID',[],19,0
+Documentation: 'reference to calendar record.','Subsidiary.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<Int16>
+Database Column: 'STATUS',[],5,0
+Documentation: 'used for voucher collection.','Subsidiary.20'
+Legacy Column: 'STATUS'
+
+------------------------------------------------------
+
+Name: Master
+Data Type: Boolean
+Database Column: 'MASTER',[cpRequired,cpNotNull],1,0
+Documentation: 'indicates that this subsidiary is the master subsidiary within its region.  there can be only one master subsidiary.','Subsidiary.21'
+Legacy Column: 'MASTER'
+
+------------------------------------------------------
+
+Name: DimUnits
+Data Type: Nullable<Int16>
+Database Column: 'DIM_UNITS',[],5,0
+Documentation: '0=u.s.  1=metric.','Subsidiary.22'
+Legacy Column: 'DIM_UNITS'
+
+------------------------------------------------------
+
+Name: WeightUnits
+Data Type: Nullable<Int16>
+Database Column: 'WEIGHT_UNITS',[],5,0
+Documentation: '0=u.s.  1=metric.','Subsidiary.23'
+Legacy Column: 'WEIGHT_UNITS'
+
+------------------------------------------------------
+
+Name: LanguageSid
+Data Type: Nullable<Int64>
+Database Column: 'LANGUAGE_SID',[],19,0
+Documentation: 'Default language for this subsidiary','Subsidiary.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CountrySid
+Data Type: Nullable<Int64>
+Database Column: 'COUNTRY_SID',[],19,0
+Documentation: 'Default country for this subsidiary','Subsidiary.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Preferences
+Data Type: Nullable<string>
+Database Column: 'PREFERENCES',[],2001
+Documentation: 'Default Preferences at subsidiary level','Subsidiary.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Active
+Data Type: Boolean
+Database Column: 'ACTIVE',[],1,0
+Documentation: 'Active','Subsidiary.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: AutoSeason
+Data Type: Boolean
+Database Column: 'AUTO_SEASON',[],1,0
+Documentation: '0 - applied manually, 1 - applied automatically','Subsidiary.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonAppliedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'SEASON_APPLIED_DATETIME',[
+Documentation: 'SeasonAppliedDatetime','Subsidiary.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PriceLevel
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'price level','Subsidiary.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SeasonCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'season code','Subsidiary.31'
+Legacy Column: 'SEASON_CODE'
+
+------------------------------------------------------
+
+Name: CalendarName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Name','Subsidiary.32'
+Legacy Column: 'CAL_NAME'
+
+------------------------------------------------------
+
+Name: CurrencyCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','Subsidiary.33'
+Legacy Column: 'CURRENCYCODE')]                                          // This looks wrong, should be 'CURRENCY_ABBR'
+
+------------------------------------------------------
+
+Name: LanguageName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Language name','Subsidiary.34'
+Legacy Column: 'LANGUAGENAME'
+
+------------------------------------------------------
+
+Name: CountryCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'country code','Subsidiary.35'
+Legacy Column: 'COUNTRYCODE'
+
+------------------------------------------------------
+
+Name: ForeignCurrencyCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: '3 letter alphabetic currency code as defined by ISO 4217','Subsidiary.36'
+Legacy Column: 'CURRENCY_ABBR'
+
+------------------------------------------------------
+

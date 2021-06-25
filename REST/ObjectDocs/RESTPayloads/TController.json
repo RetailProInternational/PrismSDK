@@ -1,0 +1,44 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "createdby" : null,
+      "createddatetime" : null,
+      "modifiedby" : null,
+      "modifieddatetime" : null,
+      "controllersid" : "0",
+      "originapplication" : null,
+      "postdate" : null,
+      "rowversion" : 0,
+      "tenantsid" : null,
+      "controllerno" : null,
+      "controllername" : null,
+      "defaultsbssid" : null,
+      "storesid" : null,
+      "controllertype" : 0,
+      "active" : false,
+      "address" : null,
+      "physicaladdress1" : null,
+      "physicaladdress2" : null,
+      "physicaladdress3" : null,
+      "city" : null,
+      "state" : null,
+      "postalcode" : null,
+      "serverlocation" : null,
+      "v9address" : null,
+      "poacontrollersid" : null,
+      "centralsconnectionsid" : null,
+      "archived" : false,
+      "sslflag" : false,
+      "storeno" : null,
+      "sbsno" : null,
+      "serveraddress" : null,
+      "serverport" : null,
+      "timeout" : null,
+      "resiliencyinterval" : null,
+      "storeassignments" : null,
+      "domainname" : null
+    }
+  ]
+}
+

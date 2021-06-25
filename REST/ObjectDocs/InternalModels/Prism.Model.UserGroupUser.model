@@ -1,0 +1,141 @@
+##########################################################################################################
+File Name: Prism.Model.UserGroupUser.pas
+##########################################################################################################
+Class Name: TUserGroupUser
+Base Class Name: TModelBase
+Database Table: USER_GROUP_USER
+Associate Class: False
+Identified By: 'FEmployeeSid,FUserGroupSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','UserGroupUser.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','UserGroupUser.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: TDateTime
+Database Column: 'CREATED_DATETIME',[cpRequired,cpNotNull
+Documentation: 'datetime row was created','UserGroupUser.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','UserGroupUser.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','UserGroupUser.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','UserGroupUser.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9,respectively.  this is the same value that will be used in licensing applications.','UserGroupUser.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','UserGroupUser.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','UserGroupUser.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','UserGroupUser.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserGroupSid
+Data Type: Int64
+Database Column: 'USER_GROUP_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to user_group record','UserGroupUser.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: EmployeeSid
+Data Type: Int64
+Database Column: 'EMPLOYEE_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to employee record','UserGroupUser.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: UserName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'login username','UserGroupUser.13'
+Legacy Column: 'USER_NAME'
+
+------------------------------------------------------
+
+Name: UserGroupName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'UserGroupName','UserGroupUser.14'
+Legacy Column: 'USER_GRP_NAME'
+
+------------------------------------------------------
+
+Name: UserGroupId
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'UserGroupId','UserGroupUser.15'
+Legacy Column: 'USER_GRP_ID'
+
+------------------------------------------------------
+
+Name: UserGroupActive
+Data Type: boolean
+Database Column: NA
+Documentation: 'Active','UserGroupUser.16'
+Legacy Column: NA
+
+------------------------------------------------------
+

@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.CurrencyDenomination.Associate.pas
+##########################################################################################################
+Class Name: TCurrencyDenominationAssociate
+Base Class Name: 
+Database Table: CURRENCY_DENOMINATION
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CurrencySid
+Data Type: Int64
+Database Column: 'CURRENCY_SID',[cpRequired,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DenominationName
+Data Type: string
+Database Column: 'DENOMINATION_NAME',[cpRequired,cpNotNull],15,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Multiplier
+Data Type: Double
+Database Column: 'MULTIPLIER',[cpRequired,cpNotNull],15,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

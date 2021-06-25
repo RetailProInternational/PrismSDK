@@ -1,0 +1,493 @@
+##########################################################################################################
+File Name: Prism.Model.ZoutControl.pas
+##########################################################################################################
+Class Name: TZoutControl
+Base Class Name: TModelBase
+Database Table: ZOUT_CONTROL
+Associate Class: False
+Identified By: 'FSid'
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: 'unique identifying value','ZoutControl.1'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedBy
+Data Type: string
+Database Column: 'CREATED_BY',[cpRequired,cpNotNull],30
+Documentation: 'employee id of row creator using application ui','ZoutControl.2'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CreatedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'CREATED_DATETIME',[
+Documentation: 'datetime row was created','ZoutControl.3'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedBy
+Data Type: Nullable<string>
+Database Column: 'MODIFIED_BY',[],30
+Documentation: 'employee id of last modifier using application ui','ZoutControl.4'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ModifiedDatetime
+Data Type: Nullable<TDateTime>
+Database Column: 'MODIFIED_DATETIME',[
+Documentation: 'datetime row was last modified','ZoutControl.5'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ControllerSid
+Data Type: Int64
+Database Column: 'CONTROLLER_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'reference to controller record for database where that owns row.','ZoutControl.6'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginApplication
+Data Type: string
+Database Column: 'ORIGIN_APPLICATION',[cpRequired,cpNotNull],20
+Documentation: 'indicates application used to create row.  v9 and v8 are reserved for rpro versions 8 and 9, respectively.  this is the same value that will be used in licensing applications.','ZoutControl.7'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PostDate
+Data Type: Nullable<TDateTime>
+Database Column: 'POST_DATE',[
+Documentation: 'date and time row was created/last modified in this system.  may not be the same as created/modified datetime.','ZoutControl.8'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RowVersion
+Data Type: Integer
+Database Column: NA
+Documentation: 'optimistic locking value','ZoutControl.9'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenantSid
+Data Type: Nullable<Int64>
+Database Column: 'TENANT_SID',[],19,0
+Documentation: 'Reference to tenant description','ZoutControl.10'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerNumber
+Data Type: Nullable<Int16>
+Database Column: 'DRAWER_NUMBER',[],1,0
+Documentation: 'Drawer number used to filter X/Z Out report','ZoutControl.11'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OpenDrawerEventSid
+Data Type: Nullable<Int64>
+Database Column: 'OPEN_DRAWER_EVENT_SID',[],19,0
+Documentation: 'Open drawer event that X/Z Out report start with','ZoutControl.12'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CloseDrawerEventSid
+Data Type: Nullable<Int64>
+Database Column: 'CLOSE_DRAWER_EVENT_SID',[],19,0
+Documentation: 'Closing drawer event that X/Z Out report ends with','ZoutControl.13'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PeriodBegin
+Data Type: Nullable<TDateTime>
+Database Column: 'PERIOD_BEGIN',[
+Documentation: 'Beginning of period X/Z Out report was run against','ZoutControl.14'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: PeriodEnd
+Data Type: Nullable<TDateTime>
+Database Column: 'PERIOD_END',[
+Documentation: 'End of period X/Z Out report was run against','ZoutControl.15'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderTotalOpen
+Data Type: Double
+Database Column: 'TENDER_TOTAL_OPEN',[cpRequired,cpNotNull],16,4
+Documentation: 'Tender total at beginning of report, either from the open drawer event or calculated based on the last open prior to the period being and the tenders up to the period beginning.','ZoutControl.16'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TenderTotalClose
+Data Type: Double
+Database Column: 'TENDER_TOTAL_CLOSE',[cpRequired,cpNotNull],16,4
+Documentation: 'Tender total at ending of report, either from the close drawer event or calculated based on the last close during the period and the tenders up to the period ending.','ZoutControl.17'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OverShortAmt
+Data Type: Double
+Database Column: 'OVER_SHORT_AMT',[cpRequired,cpNotNull],16,4
+Documentation: 'Amount drawer was over/short based on drawer open and close currency counts and document totals.','ZoutControl.18'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DrawerLeaveAmount
+Data Type: Double
+Database Column: 'DRAWER_LEAVE_AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: 'Amount left in drawer following closing cash drop.','ZoutControl.19'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DepositAmount
+Data Type: Double
+Database Column: 'DEPOSIT_AMOUNT',[cpRequired,cpNotNull],16,4
+Documentation: 'Amount of cash deposits made during period','ZoutControl.20'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: RetryCount
+Data Type: Int16
+Database Column: 'RETRY_COUNT',[cpRequired,cpNotNull],5,0
+Documentation: 'Number of attempts to balance drawer','ZoutControl.21'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReportXml
+Data Type: Nullable<string>
+Database Column: 'REPORT_XML',[],2001
+Documentation: 'XML generated by X/Z Out report process to be sent to printer service.','ZoutControl.22'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Int64
+Database Column: 'SBS_SID',[cpRequired,cpNotNull],19,0
+Documentation: 'optional reference to subsidiary.  used to filter zout report.','ZoutControl.23'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreSid
+Data Type: Nullable<Int64>
+Database Column: 'STORE_SID',[],19,0
+Documentation: 'optional reference to store.  used to filter zout report.','ZoutControl.24'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSbsSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreSid
+Data Type: Nullable<Int64>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSid
+Data Type: Nullable<Int64>
+Database Column: 'TILL_SID',[],19,0
+Documentation: 'optional reference to till.used to filter zout report.','ZoutControl.25'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationSid
+Data Type: Nullable<Int64>
+Database Column: 'WORKSTATION_SID',[],19,0
+Documentation: 'optional reference to workstation. used to filter zout report.','ZoutControl.26'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierSid
+Data Type: Nullable<Int64>
+Database Column: 'CASHIER_SID',[],19,0
+Documentation: 'optional reference to employee record for cashier.  used to filter zout report.','ZoutControl.27'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkSid
+Data Type: Nullable<Int64>
+Database Column: 'CLERK_SID',[],19,0
+Documentation: 'optional reference to employee record for clerk. used to filter zout report.','ZoutControl.28'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsSid
+Data Type: Nullable<Int64>
+Database Column: 'DCS_SID',[],19,0
+Documentation: 'optional reference to department record.used to filter zout report','ZoutControl.29'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorSid
+Data Type: Nullable<Int64>
+Database Column: 'VENDOR_SID',[],19,0
+Documentation: 'optional reference to vendor. used to filter zout report.','ZoutControl.30'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Status
+Data Type: Nullable<TZOutStatus>
+Database Column: 'STATUS',[],1,0
+Documentation: 'zoNone =0. No status has been set yet, zoOpen =1 OpenedSID is not empty, ClosedSID is empty and Report is empty,      zoClosed =2 OpenedSID and ClosedSID are not empty but Report is empty. This status is currently not achievable and will not be a filter e','ZoutControl.31'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ReportType
+Data Type: Nullable<TReportType>
+Database Column: 'REPORT_TYPE',[],1,0
+Documentation: 'This indicates the type of record. 1 = XOut, 2 = ZOut, 3 = SZOut','ZoutControl.32'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForceClose
+Data Type: Boolean
+Database Column: 'FORCE_CLOSE',[],1,0
+Documentation: 'Indicates the current record was force closed','ZoutControl.33'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForceUserSid
+Data Type: Nullable<Int64>
+Database Column: 'FORCE_USER_SID',[],19,0
+Documentation: 'employee sid that force closed','ZoutControl.34'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TotalSales
+Data Type: Nullable<Double>
+Database Column: 'TOTAL_SALES',[],16,4
+Documentation: 'TotalSales','ZoutControl.35'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TimezoneOffset
+Data Type: Nullable<Int16>
+Database Column: 'TIMEZONE_OFFSET',[],5,0
+Documentation: 'Time offset in minutes from GMT/UTC','ZoutControl.36'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClosedBy
+Data Type: Nullable<String>
+Database Column: 'CLOSED_BY',[],30
+Documentation: 'Indicates the user that closed this register','ZoutControl.37'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationNo
+Data Type: Nullable<integer>
+Database Column: 'WORKSTATION_NO', [], 5
+Documentation: 'Workstation number that created this record','ZoutControl.38'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: WorkstationName
+Data Type: Nullable<string>
+Database Column: 'WORKSTATION_NAME', [], 20
+Documentation: 'Name of the workstation that created this record','ZoutControl.39'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Sequence
+Data Type: Nullable<Int64>
+Database Column: 'SEQUENCE',[],19,0
+Documentation: 'OrigSbsNo','ZoutControl.56'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Clerk
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','ZoutControl.40'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForceUser
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','ZoutControl.41'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Cashier
+Data Type: Nullable<integer>
+Database Column: NA
+Documentation: 'Unique employee identifier in Rpro9. Used for reverse lookup of the employee SID for data coming from Rpro9','ZoutControl.42'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ZOutControlAudit
+Data Type: IList<TZoutControlAudit>
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'uniquely identifying subsidiary number','ZoutControl.43'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: VendorCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'VendCode','ZoutControl.44'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillName
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'Unique name of the till.  Till name is unique within the scope of the controller.','ZoutControl.45'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'SbsNo','ZoutControl.46'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TillStoreNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'StoreNo','ZoutControl.47'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: StoreNo
+Data Type: Nullable<Int16>
+Database Column: NA
+Documentation: 'Number','ZoutControl.48'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: DcsCode
+Data Type: Nullable<string>
+Database Column: NA
+Documentation: 'DcsCode','ZoutControl.49'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','ZoutControl.50'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ClerkOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','ZoutControl.51'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','ZoutControl.52'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: CashierOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','ZoutControl.53'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForceUserName
+Data Type: Nullable<String>
+Database Column: NA
+Documentation: 'employee code.','ZoutControl.54'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: ForceUserOrigSbsNo
+Data Type: Nullable<int16>
+Database Column: NA
+Documentation: 'OrigSbsNo','ZoutControl.55'
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: OriginTimeZone
+Data Type: 
+Database Column: NA
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

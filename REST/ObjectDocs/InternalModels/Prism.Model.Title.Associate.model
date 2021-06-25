@@ -1,0 +1,45 @@
+##########################################################################################################
+File Name: Prism.Model.Title.Associate.pas
+##########################################################################################################
+Class Name: TTitleAssociate
+Base Class Name: 
+Database Table: TITLE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: SbsSid
+Data Type: Nullable<Int64>
+Database Column: 'SBS_SID',[],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: Title
+Data Type: Nullable<string>
+Database Column: 'TITLE',[],15
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: TitleId
+Data Type: Nullable<Integer>
+Database Column: 'TITLE_ID',[],10,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

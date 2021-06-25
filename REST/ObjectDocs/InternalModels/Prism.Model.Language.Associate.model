@@ -1,0 +1,29 @@
+##########################################################################################################
+File Name: Prism.Model.Language.Associate.pas
+##########################################################################################################
+Class Name: TLanguageAssociate
+Base Class Name: 
+Database Table: RPS_LANGUAGE
+Associate Class: True
+Identified By: NA
+Legacy Identified By: NA
+
+Members
+===========================================================================================
+
+Name: Sid
+Data Type: Int64
+Database Column: 'SID',[cpRequired,cpPrimaryKey,cpNotNull],19,0
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+
+Name: LanguageName
+Data Type: Nullable<string>
+Database Column: 'LANGUAGE_NAME',[cpRequired,cpNotNull],30
+Documentation: NA
+Legacy Column: NA
+
+------------------------------------------------------
+

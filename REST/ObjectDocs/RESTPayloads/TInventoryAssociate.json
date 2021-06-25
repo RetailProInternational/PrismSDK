@@ -1,0 +1,37 @@
+{
+  "data" : [
+    {
+      "sid" : "0",
+      "itemuid" : null,
+      "stylesid" : null,
+      "upc" : null,
+      "description1" : null,
+      "description2" : null,
+      "description3" : null,
+      "description4" : null,
+      "itemsize" : null,
+      "attribute" : null,
+      "vendsid" : null,
+      "useqtydecimals" : null,
+      "serialtype" : null,
+      "lottype" : null,
+      "kittype" : null,
+      "alu" : null,
+      "vendorlistcost" : null,
+      "tradediscpercent" : null,
+      "cost" : null,
+      "fccost" : null,
+      "minordqty" : null,
+      "taxcodesid" : null,
+      "lastrcvddate" : null,
+      "active" : false,
+      "dcscode" : null,
+      "vendcode" : null,
+      "vendname" : null,
+      "dname" : null,
+      "cname" : null,
+      "sname" : null
+    }
+  ]
+}
+
