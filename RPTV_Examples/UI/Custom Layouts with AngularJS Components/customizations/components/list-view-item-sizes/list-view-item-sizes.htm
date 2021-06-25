@@ -1,0 +1,42 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4></span>Available Item Sizes</span></h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid" style="height:240px;">
+          <table class="table table-responsive table-striped" style="width:560px;">
+            <thead>
+              <tr>
+                <th>Item Description</th>
+                <th>Item Size</th>
+                <th>Item Attribute</th>
+                <th>Store Qty</th>
+                <th>UPC</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="thisItem in listViewItemSizesCtrl.availableItemSizesList">
+              <tr style="text-align:center;">
+                <td>{{thisItem.description1}}</td>
+                <td>{{thisItem.itemsize}}</td>
+                <td>{{thisItem.attribute}}</td>
+                <td>{{thisItem.actstrohqty}}</td>
+                <td>{{thisItem.upc}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-lg btn-default" ng-click="listViewItemSizesCtrl.handleClose()"><span data-translate="1.1">Ok</span></button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

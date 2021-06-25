@@ -19,3 +19,5 @@ Walk through the tutorials that interest you. If you don't find a tutorial for t
 ### Have Questions? ###
 
 Log into the Retail Pro Developer Support Forums and ask your question the correct Retail Pro Prism group. A technical support person or one of our developers will do their best to answer your questions.
+
+### ALL INFORMATION IN THIS REPOSITORY IS PROPRIETARY AND CONFIDENTIAL, AND ANY ACCESS IS SUBJECT TO THE APPLICABLE RETAIL PRO DEVELOPMENT PARTNER LICENSE(S). ALL OTHER ACCESS IS UNAUTHORIZED AND STRICTLY FORBIDDEN. IN ADDITION, ALL DOCUMENTATION, CODE EXAMPLES, AND SOURCE CODE ARE SUBJECT TO THE COPYRIGHTS HELD BY RETAIL PRO INTERNATIONAL, LLC REGARDING SAID INFORMATION ###
